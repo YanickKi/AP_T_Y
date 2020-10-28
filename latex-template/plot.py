@@ -1,19 +1,20 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
+x,y1,p1,y2,p2,w=np.genfromtxt('Daten.txt', unpack=True)
 
 plt.subplot(1, 2, 1)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
+plt.plot(x, y1+273.15, label='T_1')
+plt.plot(x, y2+273.15, label='T_2')
+plt.xlabel(r'$\symup{Zeit}\,t\:/\: \si{\minute}$')
+plt.ylabel(r'$\symup{Temperatur} \:/\: \si{\kelvin}$')
 plt.legend(loc='best')
 
 plt.subplot(1, 2, 2)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
+plt.plot(x,p1,label='P_1')
+plt.plot(x,p2,label='P_2')
+plt.xlabel(r'$\symup{Zeit}\,t \:/\: \si{\minute}$')
+plt.ylabel(r'$\symup{Druck}\,p \:/\: \si{\bar}$')
 plt.legend(loc='best')
 
 # in matplotlibrc leider (noch) nicht möglich
