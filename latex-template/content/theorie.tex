@@ -1,6 +1,70 @@
 \section{Theorie}
 \label{sec:Theorie}
-Der zweite Hauptsatz der Thermodynamik besagt:"Wärme kann nicht von selbst von einem Körper niedriger Temperatur auf einen Körper höherer Temperatur übergehen".
-Da der Körper niedriger Temperatur dies nicht von selbst kann, wird weitere Energie in das System gesteckt, zum Beispiel in Form von mechanischer Arbeit.
- In diesem Versuch werden wir genau dieses Phänomen untersuchen.
-\cite{sample}
+Ohne äußere Einflüsse ist die Richtung des Wärmeflusses immer vom warmen Reservoir in das kalte Reservoir.
+Durch anwenden von mechanischer Arbeit $A$ lässt sich dieser Prozess auch in die andere Richtung durchführen.
+\subsection{Das Prinzip der Wärmepumpe}
+Nach dem ersten Hauptsatz der Thermodynamik beträgt die an das wärmere Medium abgegebene Wärmemenge $Q_1$, die summe der vom kühleren Medium aufgenommenen
+Wärmeenergie $Q_2$ und der Arbeit $A$. Also gilt
+\begin{equation}
+    Q_1=Q_2+A
+    \label{eqn:H1}
+\end{equation}
+
+Die Güteziffer $\nu$ der Wärmepumpe beschreibt das Verhältnis der abgegebenen
+Wärmemenge $Q_1$ zur aufgewandten Arbeit $A$
+
+\begin{equation}
+    \nu=\frac{Q_1}{A}
+    \label{eqn:Güte}
+\end{equation}
+
+Der zweite Hauptsatz der Thermodynamik führt für die reduzierten Wärmemengen 
+zu der Beziehung, dass deren Summe $\int \frac{\symup{d}Q}{T}$ null beträgt. 
+Aus dieser folgt
+
+\begin{equation}
+    \frac{Q_1}{T_1} - \frac{Q_2}{T_2} = 0
+    \label{eqn:redWärm}
+\end{equation}
+
+Jedoch gilt dies nur bei Idealen reversiblen Prozessen. In der technischen Anwendung gilt
+
+\begin{equation}
+    \frac{Q_1}{T_1} - \frac{Q_2}{T_2} > 0
+    \label{eqn:ungWärme}
+\end{equation}
+
+aus \ref{eqn:H1} und \ref{eqn:redWärm} folgt
+
+\begin{equation*}
+    Q_1 = A + \frac{T_2}{T_1} \cdot Q_1 \; \text{,}
+\end{equation*}
+
+aus der Formel für die Güteziffer\ref{eqn:Güte}, für einen reversiblen Vorgang, folgt die Güteziffer einer Idealen Wärmepumpe
+\begin{equation}
+    \nu_\text{id} = \frac{Q_1}{A} = \frac{T_1}{T_1 - T_2}
+    \label{eqn:Id}
+\end{equation}
+
+Für die reale Wärmepumpe folgt aus \ref{eqn:H1} und \ref{eqn:ungWärme}
+
+\begin{equation}
+    \nu_\text{real} < \frac{T_1}{T_1 - T_2} \; \text{.}
+    \label{eqn:Re}
+\end{equation}
+
+Aus den Gleichungen \ref{eqn:Id} und \ref{eqn:Re} folgt, dass eine Wärmepumpe effizienter Arbeitet, je kleiner die Temperaturdifferenz
+zwischen den beiden Wärmereservoirs ist. Der Vorteil einer Wärmepumpe liegt außerdem in der möglichkeit eine Wärmemenge $Q_2$, welche frei Verfügbar ist 
+auszunutzen um Preisgünstig $Q_1$ zu heizen. Damit kann die verrichtete Arbeit, unter günstigen Bedingungen erheblich kleiner sein als die gewonnene Wärmemenge $Q_1$.
+Damit folgt das eine Wärmepumpe gegenüber einem Wärmegewinnungsverfahren, welches machanische Energie direkt in Wärme umwandelt, effizienter ist.
+Hier ist die erhaltene Wärmemenge höchstens gleich der mechanischen Arbeit, also
+\begin{equation*}
+    Q_{1_\text{direkt}}\leq A
+\end{equation*}
+
+im Gegensatz zu
+
+\begin{equation*}
+    Q_{1_\text{rev}}=A \frac{T_1}{T_1-T_2}
+\end{equation*}.
+\subsection{Der Massendurchsatz}
