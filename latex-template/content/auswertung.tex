@@ -4,7 +4,7 @@
 \begin{figure}
   \centering
   \includegraphics{temperatur.pdf}
-  \caption{Temperaturverleif beider Reservoirs.}
+  \caption{Temperaturverlauf beider Reservoirs.}
   \label{fig:temperatur}
 \end{figure}
 \subsection{Nicht-lineare Ausgleichsrechnung}
@@ -18,7 +18,7 @@ beschrieben wird, approximieren. Mittels Rechnungen in Python ergaben sich die A
   T_2(t) &= \phantom{-}  0.0034 t^2 - 0.6725 t + 295.8702
 \end{align}
 \subsection{Differentialquotient}
-Der Differentialquotienten von $T_1(t)$ und $T_2(t)$ sind durch
+Die Differentialquotienten von $T_1(t)$ und $T_2(t)$ sind durch
 \begin{align}
   \frac{\symup{d} T_1(t)}{\symup{d}t} = - 0.0232t + 1.2168  \\
   \frac{\symup{d} T_2(t)}{\symup{d}t} = \phantom{-} 0.0068 t - 0.6725 
@@ -31,13 +31,36 @@ gegeben. Die in die Differentialquotienten eingesetzen Zeitpunkte $t = 10$, $t =
   \sisetup{table-format = 1.4}
   \begin{tabular}{S[table-format = 2.0] S S}
     \toprule
-    {$t \mathbin{/} \si{\minute}$} & {$\frac{\symup{d} T_1(t)}{\symup{d}t} \mathbin{/} \si{\kelvin\minute\tothe{-1}}$} & 
-    {$\frac{\symup{d} T_2(t)}{\symup{d}t} \mathbin{/} \si{\kelvin\minute\tothe{-1}}$} \\
+    {$t \mathbin{/} \si{\second}$} & {$\frac{\symup{d} T_1(t)}{\symup{d}t} \mathbin{/} \si{\kelvin\second\tothe{-1}}$} & 
+    {$\frac{\symup{d} T_2(t)}{\symup{d}t} \mathbin{/} \si{\kelvin\second\tothe{-1}}$} \\
     \midrule
-    10 & 0.9848 &-0.6045 \\
-    15 & 0.8688 &-0.5705 \\
-    20 & 0.7528 &-0.5365 \\
-    35 & 0.4048 &-0.4345 \\
-    \bottomrule                         
+    600  & 0.0164 &-0.0101 \\
+    900  & 0,0145 &-0.0095 \\
+    1200 & 0.0125 &-0.0089 \\
+    2400 & 0.0067 &-0.0072 \\
+    \bottomrule
   \end{tabular}
+\end{table}
+\subsection{Güteziffer}
+Um die reale Güteziffer zu bestimmen dient die Gleichung \eqref{eqn:Güteziffer}.
+Für die Wärmekapazität des Wassers gilt $m_1 c_\text{w}(T) = \SI{4}{\kilo\gram}\cdot c_\text{w}(T)$,
+für die der Kupferschlangen $m_\text{k}c_\text{k} = \SI{750} {\joule\per\kelvin}$. Um die Genauigkeit der Rechnung zu erhöhen wurde hier die Temperaturabhängigkeit
+der spezifischen Wärmekapazität $c_\text{w}(T)$ von Wasser berücksichtigt. Für die Berechnung der idealen Güterziffer $\nu_\text{id}$ ist die Beziehung \eqref{eqn:Id} von Nutzen.
+Mittels Rechnungen ergaben sich die Werte zu: 
+\begin{table}
+  \centering
+  \caption{Ergebnisse der Differentialquotienten}
+  \label{tab:TabelleDifferentialquotient}
+  \sisetup{table-format = 2.4}
+  \begin{tabular}{S[table-format = 3.2] S[table-format = 1.4] S[table-format = 1.4] S S}
+    \toprule
+    {$T_1 \mathbin{/} \si{\kelvin}$} & {$ c_\text{w}(T_1) \mathbin{/} \SI{1e3}{\joule\kilo\tothe{-1}\gram\tothe{-1}\kelvin\tothe{-1}}$} & 
+    {$\nu_\text{re}$} & {$\nu_\text{id}$} & {$\frac{\nu_\text{re}} {\nu_\text{id}} \si{\percent}$} \\
+    \midrule
+    306.05 & 4.1783 & 2.3866 & 18.3263 & 13.0230\\
+    310.75 & 4.1783 & 2.1101 & 12.6321 & 16.7045\\    %\frac{\nu_\text{re}} {\nu_\text{id}}} \si{\percent}
+    314.55 & 4.1787 & 1.8193 & 10.1468 & 17.9293\\    %\nu_\text{id}
+    323.45 & 4.1807 & 0.9596 &  6.8238 & 14.0621\\    %\nu_\text{re}
+    \bottomrule                                       %m_1 c_\text{w}(T) \mathbin{/} \SI{1e3}{\joule\kilo\tothe{-1}\gram\tothe{-1}\kelvin\tothe{-1}}
+  \end{tabular}                                       %T_1 \mathbin{/} \si{\kelvin}
 \end{table}
