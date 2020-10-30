@@ -46,10 +46,10 @@ Um die reale Güteziffer zu bestimmen dient die Gleichung \eqref{eqn:Güteziffer
 Für die Wärmekapazität des Wassers gilt $m_1 c_\text{w}(T) = \SI{4}{\kilo\gram}\cdot c_\text{w}(T)$,
 für die der Kupferschlangen $m_\text{k}c_\text{k} = \SI{750} {\joule\per\kelvin}$. Um die Genauigkeit der Rechnung zu erhöhen wurde hier die Temperaturabhängigkeit
 der spezifischen Wärmekapazität $c_\text{w}(T)$ von Wasser berücksichtigt. Für die Berechnung der idealen Güterziffer $\nu_\text{id}$ ist die Beziehung \eqref{eqn:Id} von Nutzen.
-Mittels Rechnungen ergaben sich die Werte zu: 
+Mittels Rechnungen ergaben sich die Werte der Güterziffern zu:
 \begin{table}
   \centering
-  \caption{Ergebnisse der Differentialquotienten}
+  \caption{Vergleich $\nu_\text{re}$ zu $\nu_\text{id}$}
   \label{tab:TabelleDifferentialquotient}
   \sisetup{table-format = 2.4}
   \begin{tabular}{S[table-format = 3.2] S[table-format = 1.4] S[table-format = 1.4] S S}
@@ -58,9 +58,13 @@ Mittels Rechnungen ergaben sich die Werte zu:
     {$\nu_\text{re}$} & {$\nu_\text{id}$} & {$\frac{\nu_\text{re}} {\nu_\text{id}} \si{\percent}$} \\
     \midrule
     306.05 & 4.1783 & 2.3866 & 18.3263 & 13.0230\\
-    310.75 & 4.1783 & 2.1101 & 12.6321 & 16.7045\\    %\frac{\nu_\text{re}} {\nu_\text{id}}} \si{\percent}
-    314.55 & 4.1787 & 1.8193 & 10.1468 & 17.9293\\    %\nu_\text{id}
-    323.45 & 4.1807 & 0.9596 &  6.8238 & 14.0621\\    %\nu_\text{re}
-    \bottomrule                                       %m_1 c_\text{w}(T) \mathbin{/} \SI{1e3}{\joule\kilo\tothe{-1}\gram\tothe{-1}\kelvin\tothe{-1}}
-  \end{tabular}                                       %T_1 \mathbin{/} \si{\kelvin}
-\end{table}
+    310.75 & 4.1783 & 2.1101 & 12.6321 & 16.7045\\    
+    314.55 & 4.1787 & 1.8193 & 10.1468 & 17.9293\\  
+    323.45 & 4.1807 & 0.9596 &  6.8238 & 14.0621\\    
+    \bottomrule                                       
+  \end{tabular}                                     
+\end{table}\\
+Während des Vergleichens beider Güteziffern wird auffällig, dass das Verhältnis sehr niedrig, im Bereich von $10$ bis $\SI{20}{\percent}$, liegt.
+In der Gleichung \eqref{eqn:redWärm} wird gefordert, dass der Prozess der Wärmeübertragung ein reversibler Prozess ist,
+und somit jede Energie, welche kurzfristig verloren geht, zurückgewonnen werden kann. Doch in der Realität ist diese nicht mehr 
+zurück zu gewinnen. Beispielsweise kann die Energie in Form von Wärmeenergie an die Umwelt abgegeben werden.
