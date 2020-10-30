@@ -118,3 +118,33 @@ verrichtet der Kompressor die Arbeit
 \begin{equation}
     A = - \int^{V_\text{b}}_{V_\text{a}} p \; \symup{d}V \; \; \text{.}
 \end{equation}
+Für die adiabatische komprimierung gilt die Poissonsche Gleichung
+\begin{equation}
+    p_\text{a} V^\kappa_\text{a} = p_\text{b} V^\kappa_\text{b} = p V^\kappa \; \;
+    \text{,}
+\end{equation}
+Damit folgt für $A$
+\begin{equation}
+    \begin{split}
+        A &= - p_\text{a} V^\kappa_\text{a} \int^{V_\text{b}}_{V_\text{a}} V^{-\kappa}
+        \; \symup{d}V = \frac{1}{\kappa - 1} p_\text{a} V^\kappa_\text{a} \left(
+        V^{-\kappa + 1}_\text{b} - V^{-\kappa + 1}_\text{a} \right) \\
+        &= \frac{1}{\kappa - 1} \left(p_\text{b} \sqrt[\kappa]{
+        \frac{p_\text{a}}{p_\text{b}}} - p_\text{a}\right) V_\text{a}
+    \end{split}
+\end{equation}
+und für die mechanische Kompressionsleistung
+\begin{equation}
+    \begin{split}
+        N_\text{mech} &= \frac{\symup{d}A}{\symup{d}t} = \frac{1}{\kappa - 1}
+        \left(p_\text{b} \sqrt[\kappa]{ \frac{p_\text{a}}{p_\text{b}}} 
+        - p_\text{a} \right) \frac{\symup{d}V_\text{a}}{\symup{d}t} \\
+        &= \frac{1}{\kappa - 1} \left(p_\text{b} \sqrt[\kappa]{ 
+        \frac{p_\text{a}}{p_\text{b}}} - p_\text{a}\right) \frac{1}{\rho}
+        \frac{\symup{d}m}{\symup{d}t}
+        \label{eqn:Kompressor}
+    \end{split}
+\end{equation}
+mit $\rho$ als die Dichte des Transportmediums im gasförmigen Zustand unter dem Druck $p_1$.
+Mit hilfe der idealen Gasgleichung lässt sich $\rho$ unter den Normalbedingungen 
+$p = \SI{1}{\bar}$ und $T = \SI{0}{\celsius}$ bestimmen.
