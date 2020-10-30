@@ -89,7 +89,7 @@ Ergebnissen einer Messreihe, die man mit der in \ref{fig:aufbau2} dargestellten 
 Für die Zeitabhängige Messungen der Drücke $p_1$, $p_2$ gibt es zwei zwischen den Reservoirs und dem Drosselventil D installierte Manometer. Die 
 Temperaturverläufe werden mit zwei digitalen Thermometern in den Reservoirs gemessen und für die Leistungsaufnahme ist ein Wattmeter an den Motor des Kompressors geschaltet.\\
 Die Reservoirs sind in thermisch isolierten Gefäßen und werden während der Messung von zwei Rührmotoren umgerührt.\\
-\subsection{Die reale Güteziffer}
+\subsubsection{Die reale Güteziffer}
 Mit der Messung der Temperatur $T_1$ in Abhängigkeit von der Zeit $t$ lässt sich die reale Güteziffer als 
 \begin{equation}
     \nu = (m_1 c_\text{w} + m_\text{k} c_\text{k})\cdot 
@@ -100,5 +100,21 @@ berechnen.\\
 Dabei ist $m_1$ die Wassermasse und $c_\text{w}$ deren Wärmekapazität. Die Masse der Kupferschlange und des Eimers werden durch $m_\text{k}$ beschrieben und deren Wärmekapazität
 durch $c_\text{k}$. Die am Wattmeter abgelesenen Werte $N$, geben über das Zeitintervall $\increment t$ gemittelte Leistungsaufnahme des Kompressors an.
 
-\subsection{Der Massendurchsatz}
+\subsubsection{Der Massendurchsatz}
+Mit der Messung der Temperatur $T_2$ lässt sich, bei bekannter Verdampfungswärme $L$, der Massenduchsatz durch\\
+\begin{equation}
+    \frac{\symup{d} m}{\symup{d}t} = (m_2 c_\text{w} + m_\text{k} c_\text{k}) \cdot 
+    \frac{\symup{d} T_2}{\symup{d}t} \cdot  \frac{1}{L}
+    \label{eqn:Massendurchsatz}
+\end{equation}
+bestimmen.\\
+Mit der Wassermasse $m_2$ des Reservoirs 2.\\
+Zur Bestimmung des Massenduchsatzes wird außerdem die Verdampfungswärme $L$ benötigt.
+Berechnen lässt sich diese mithilfe der Clausius-Clapeyron'schen Gleichung.
 
+\subsubsection{Die mechanische Kompressorleistung}
+Bei der Komprimierung eines Gasvolumens $V_\text{a}$ zu dem Volumen $V_\text{b}$ 
+verrichtet der Kompressor die Arbeit
+\begin{equation}
+    A = - \int^{V_\text{b}}_{V_\text{a}} p \; \symup{d}V \; \; \text{.}
+\end{equation}
