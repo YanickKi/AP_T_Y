@@ -1,6 +1,6 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-\subsection{Graphische Visualisierung}
+\subsection{Temperaturverlauf mit Fit}
 \begin{figure}
   \centering
   \includegraphics{temperatur.pdf}
@@ -10,57 +10,64 @@
 \subsection{Nicht-lineare Ausgleichsrechnung}
 Der nicht-lineare Zusammenhang zwischen der Zeit und der Temperatur lässt sich mittels einer quadtratischen Ausgleichskurve, welche durch 
 \begin{equation}
-  T(t) = At^2 + Bt + C
+  T(t) = \symup{A}t^2 + \symup{B}t + \symup{C}
 \end{equation}
-beschrieben wird, approximieren. Mittels Rechnungen in Python ergaben sich die Ausgleichskfunktionen zu
+beschrieben wird, approximieren. Mittels Rechnungen in Python ergaben sich die Koeffizienten zu
 \begin{align}
-  T_1(t) &= - 0.0116t^2 + 1.2168 t + 294.7008 \\
-  T_2(t) &= \phantom{-}  0.0034 t^2 - 0.6725 t + 295.8702
+  \intertext{Für T1 ergaben sich:}
+  \symup{A}1 &= \SI{-3.22(4)}{\micro\kelvin\per\second\tothe{2}} \\ 
+  \symup{B}1 &= \SI{20.28(9)}{\milli\kelvin\per\second} \\
+  \symup{C}1 &= \SI{294.97(4)}{\kelvin}  \\
+  \intertext{für T2:}
+  \symup{A}2 &= \SI{0.95(7)}{\micro\kelvin\per\second\tothe{2}}\\
+  \symup{B}2 &= \SI{-11.21(10)}{\milli\kelvin\per\second}\\
+  \symup{C}2 &= \SI{295.87(26)}{\kelvin}
 \end{align}
 \subsection{Differentialquotient}
-Die Differentialquotienten von $T_1(t)$ und $T_2(t)$ sind durch
-\begin{align}
-  \frac{\symup{d} T_1(t)}{\symup{d}t} = - 0.0232t + 1.2168  \\
-  \frac{\symup{d} T_2(t)}{\symup{d}t} = \phantom{-} 0.0068 t - 0.6725 
-\end{align}
-gegeben. Die in die Differentialquotienten eingesetzen Zeitpunkte $t = 10$, $t = 15$, $t = 20$ und $t = 35$ ergeben folgende Tabelle:
+Der Differentialquotient der approximierenden Funktion ist durch
+\begin{equation}
+  \frac{\symup{d} T(t)}{\symup{d}t} = 2\symup{A}t + \symup{B}  
+\end{equation}
+gegeben. Die in die Differentialquotienten eingesetzen Zeitpunkte $t = 600s$, $t = 900$, $t = 1200$ und $t = 2100$ ergeben folgende Tabelle:
 \begin{table}
   \centering
   \caption{Ergebnisse der Differentialquotienten}
   \label{tab:Differentialquotient}
   \sisetup{table-format = 1.4}
-  \begin{tabular}{S[table-format = 2.0] S S}
+  \begin{tabular}{S[table-format = 4.0] S [table-format = 2.2] @{${}\pm{}$} S[table-format = 0.2] S[table-format= 2.2] @{${}\pm{}$} S[table-format = 0.2]}
     \toprule
-    {$t \mathbin{/} \si{\second}$} & {$\frac{\symup{d} T_1(t)}{\symup{d}t} \mathbin{/} \si{\kelvin\second\tothe{-1}}$} & 
-    {$\frac{\symup{d} T_2(t)}{\symup{d}t} \mathbin{/} \si{\kelvin\second\tothe{-1}}$} \\
+    {$t \mathbin{/} \si{\second}$} & \multicolumn{2}{c}{$\frac{\symup{d} T_1}{\symup{d}t} \mathbin{/} \si{\milli\kelvin\second\tothe{-1}}$}
+    & \multicolumn{2}{c}{$\frac{\symup{d} T_2}{\symup{d}t} \mathbin{/} \si{\milli\kelvin\second\tothe{-1}}$} \\
+    \cmidrule(lr){2-3} \cmidrule(lr){4-5}
     \midrule
-    600  & 0.0164 &-0.0101 \\
-    900  & 0,0145 &-0.0095 \\
-    1200 & 0.0125 &-0.0089 \\
-    2400 & 0.0067 &-0.0072 \\
+    600  & 16.42 & 0.10 & -10.07 & 0.13\\
+    900  & 14.48 & 0.12 & -9.50  & 0.16\\
+    1200 & 12.55 & 0.13 & -8.93  & 0.20\\
+    2100 & 67.56 & 0.19 & -7.22  & 0.31\\
     \bottomrule
   \end{tabular}
 \end{table}
 \subsection{Güteziffer}
 Um die reale Güteziffer zu bestimmen dient die Gleichung \eqref{eqn:Güteziffer}.
 Für die Wärmekapazität des Wassers gilt $m_1 c_\text{w}(T) = \SI{4}{\kilo\gram}\cdot c_\text{w}(T)$,
-für die der Kupferschlangen $m_\text{k}c_\text{k} = \SI{750} {\joule\per\kelvin}$. Um die Genauigkeit der Rechnung zu erhöhen wurde hier die Temperaturabhängigkeit
-der spezifischen Wärmekapazität $c_\text{w}(T)$ von Wasser berücksichtigt. Für die Berechnung der idealen Güterziffer $\nu_\text{id}$ ist die Beziehung \eqref{eqn:Id} von Nutzen.
+für die der Kupferschlangen $m_\text{k}c_\text{k} = \SI{750} {\joule\per\kelvin}$. Für die Berechnung der idealen Güterziffer $\nu_\text{id}$ ist die Beziehung \eqref{eqn:Id} von Nutzen.
 Mittels Rechnungen ergaben sich die Werte der Güterziffern zu:
 \begin{table}
   \centering
   \caption{Vergleich $\nu_\text{re}$ zu $\nu_\text{id}$}
   \label{tab:Gueterziffer}
   \sisetup{table-format = 2.4}
-  \begin{tabular}{S[table-format = 3.2] S[table-format = 1.4] S[table-format = 1.4] S S}
+  \begin{tabular}{S[table-format = 4.0] S[table-format = 1.2] @{${}\pm{}$} S[table-format = 0.2] S[table-format = 2.2] @{${}\pm{}$} S[table-format = 0.2] 
+    s[table-format = 2.2] @{${}\pm{}$} S[table-format = 0.2]}
     \toprule
-    {$T_1 \mathbin{/} \si{\kelvin}$} & {$ c_\text{w}(T_1) \mathbin{/} \si{\kilo\joule\kilo\tothe{-1}\gram\tothe{-1}\kelvin\tothe{-1}}$} & 
-    {$\nu_\text{re}$} & {$\nu_\text{id}$} & {$\frac{\nu_\text{re}} {\nu_\text{id}} \si{\percent}$} \\
+    {$t \mathbin{/} \si{\second}$} & \multicolumn{2}{c}{$\nu_\text{re}$} & \multicolumn{2}{c}{$\nu_\text{id}$}  
+    & \multicolumn{2}{c}{$\frac{\nu_\text{re}} {\nu_\text{id}} \si{\percent}$} \\
+    \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
     \midrule
-    306.05 & 4.1783 & 2.3866 & 18.3263 & 13.0230\\
-    310.75 & 4.1783 & 2.1101 & 12.6321 & 16.7045\\    
-    314.55 & 4.1787 & 1.8193 & 10.1468 & 17.9293\\  
-    323.45 & 4.1807 & 0.9596 &  6.8238 & 14.0621\\    
+     600  & 2.39 & 0.01 & 18.32 & 0.30 & 13.04 & 0.22\\
+     900  & 2.11 & 0.02 & 12.63 & 0.14 & 16.69 & 0.23\\    
+    1200  & 1.83 & 0.02 & 10.15 & 0.09 & 18.00 & 0.25\\  
+    2100  & 0.97 & 0.03 &  6.82 & 0.04 & 14.17 & 0.41\\    
     \bottomrule                                       
   \end{tabular}                                     
 \end{table}

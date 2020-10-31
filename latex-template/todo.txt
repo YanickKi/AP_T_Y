@@ -6,3 +6,4 @@
 -über die Befüllung der Resovoirs disskutieren
 -Gründe für die schlechte Güteziffer in g) schreiben
 -ideale Gasgleichung in Theorie packen
+-ideale Gasgleichung refernzieren
