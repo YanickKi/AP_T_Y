@@ -68,3 +68,22 @@ Während des Vergleichens beider Güteziffern wird auffällig, dass das Verhält
 In der Gleichung \eqref{eqn:redWärm} wird gefordert, dass der Prozess der Wärmeübertragung ein reversibler Prozess ist,
 und somit jede Energie, welche kurzfristig verloren geht, zurückgewonnen werden kann. Doch in der Realität ist diese nicht mehr 
 zurück zu gewinnen. Beispielsweise kann die Energie in Form von Wärmeenergie an die Umwelt abgegeben werden.
+\subsection{Massendurchsatz}
+Der Massendurchsatz lässt sich mittels Gleichung \eqref{eqn:Massendurchsatz} ermitteln, jedoch fehlt zunächst der Wert der Verdampfungswärme L, welche 
+mit Hilfe einer Dampfdruck-Kurve bestimmt werden kann. Diese Kurve wird durch 
+\begin{equation}
+  \ln (p) = -\frac{L}{RT} + const 
+\end{equation}
+beschrieben, wobei R die allgemeine Gaskonstante ist. Zwecks der Substitution $a \coloneq -\frac{L}{R}$ erhält man die Vereinfachung
+\begin{equation}
+  \ln (p) = \frac{a}{T} + const
+\end{equation}
+\begin{figure}
+  \centering
+  \includegraphics{Verdampfungswaerme.pdf}
+  \caption{Dampfdruck-Kurve}
+  \label{fig:Dampfdruck}
+\end{figure}\\
+Nach der Durchführung der linearen Regression, ergeben sich $a = -2794.1306$ und die Konstante zu $11.0828$.
+Rücksubstituieren von $a \coloneq -\frac{L}{R}$ und umstellen nach L führt zu $ L = - Ra$. Einsetzen von $a$ und der allgemeinen Gaskonstante 
+$R = \SI{8.314472}{\joule\mole\tothe{-1}\kelvin\tothe{-1}}$ liefert $L = \SI{23231.7206}{\joule\per\mol}$

@@ -1,11 +1,13 @@
 all: build/main.pdf
 
+build/Verdampfungswaerme.pdf: Verdampfungswaerme.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python Verdampfungswaerme.py
 # hier Python-Skripte:
 build/temperatur.pdf: temperatur.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python temperatur.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/temperatur.pdf
+build/main.pdf: build/temperatur.pdf build/Verdampfungswaerme.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
