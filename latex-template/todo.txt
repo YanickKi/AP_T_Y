@@ -2,3 +2,7 @@
 -gleichung für ln(p) mit Literaturverweis versehen
 -Unsicherheiten ergänzen
 -Literaturverweis allg. Gaskonstante https://www.chemie.de/lexikon/Universelle_Gaskonstante.html
+-Literaturverweis von Molare Masse-
+-über die Befüllung der Resovoirs disskutieren
+-Gründe für die schlechte Güteziffer in g) schreiben
+-ideale Gasgleichung in Theorie packen

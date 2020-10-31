@@ -27,7 +27,7 @@ gegeben. Die in die Differentialquotienten eingesetzen Zeitpunkte $t = 10$, $t =
 \begin{table}
   \centering
   \caption{Ergebnisse der Differentialquotienten}
-  \label{tab:TabelleDifferentialquotient}
+  \label{tab:Differentialquotient}
   \sisetup{table-format = 1.4}
   \begin{tabular}{S[table-format = 2.0] S S}
     \toprule
@@ -50,7 +50,7 @@ Mittels Rechnungen ergaben sich die Werte der Güterziffern zu:
 \begin{table}
   \centering
   \caption{Vergleich $\nu_\text{re}$ zu $\nu_\text{id}$}
-  \label{tab:TabelleDifferentialquotient}
+  \label{tab:Gueterziffer}
   \sisetup{table-format = 2.4}
   \begin{tabular}{S[table-format = 3.2] S[table-format = 1.4] S[table-format = 1.4] S S}
     \toprule
@@ -63,18 +63,14 @@ Mittels Rechnungen ergaben sich die Werte der Güterziffern zu:
     323.45 & 4.1807 & 0.9596 &  6.8238 & 14.0621\\    
     \bottomrule                                       
   \end{tabular}                                     
-\end{table}\\
-Während des Vergleichens beider Güteziffern wird auffällig, dass das Verhältnis sehr niedrig, im Bereich von $10$ bis $\SI{20}{\percent}$, liegt.
-In der Gleichung \eqref{eqn:redWärm} wird gefordert, dass der Prozess der Wärmeübertragung ein reversibler Prozess ist,
-und somit jede Energie, welche kurzfristig verloren geht, zurückgewonnen werden kann. Doch in der Realität ist diese nicht mehr 
-zurück zu gewinnen. Beispielsweise kann die Energie in Form von Wärmeenergie an die Umwelt abgegeben werden.
+\end{table}
 \subsection{Massendurchsatz}
 Der Massendurchsatz lässt sich mittels Gleichung \eqref{eqn:Massendurchsatz} ermitteln, jedoch fehlt zunächst der Wert der Verdampfungswärme L, welche 
 mit Hilfe einer Dampfdruck-Kurve bestimmt werden kann. Diese Kurve wird durch 
 \begin{equation}
-  \ln (p) = -\frac{L}{RT} + const 
+  \ln (p) = -\frac{L}{RT} + const \label{eqn:Verdampfungswaerme}
 \end{equation}
-beschrieben, wobei R die allgemeine Gaskonstante ist. Zwecks der Substitution $a \coloneq -\frac{L}{R}$ erhält man die Vereinfachung
+beschrieben, wobei R die allgemeine Gaskonstante ist. Zwecks der Definition $a \coloneq -\frac{L}{R}$ erhält man die Vereinfachung
 \begin{equation}
   \ln (p) = \frac{a}{T} + const
 \end{equation}
@@ -83,7 +79,59 @@ beschrieben, wobei R die allgemeine Gaskonstante ist. Zwecks der Substitution $a
   \includegraphics{Verdampfungswaerme.pdf}
   \caption{Dampfdruck-Kurve}
   \label{fig:Dampfdruck}
-\end{figure}\\
-Nach der Durchführung der linearen Regression, ergeben sich $a = -2794.1306$ und die Konstante zu $11.0828$.
-Rücksubstituieren von $a \coloneq -\frac{L}{R}$ und umstellen nach L führt zu $ L = - Ra$. Einsetzen von $a$ und der allgemeinen Gaskonstante 
-$R = \SI{8.314472}{\joule\mole\tothe{-1}\kelvin\tothe{-1}}$ liefert $L = \SI{23231.7206}{\joule\per\mol}$
+\end{figure}
+Hierbei ist zu beachten, dass das Argument des natürlichen Logarithmus nicht einheitslos ist (was normalerweise
+der Fall sein müsste), da die Gleichung \eqref{eqn:Verdampfungswaerme} durch Vereinfachungen angenähert wurde.
+Nach der Durchführung der linearen Regression, ergeben sich $a = -2462.4863$ und die Konstante zu $10.1354$.
+Rücksubstituieren von $a = -\frac{L}{R}$ und umstellen nach $L$ führt zu $ L = - Ra$. Einsetzen von $a$ und der allgemeinen Gaskonstante 
+$R = \SI{8.314472}{\joule\per\mole\per\kelvin}$ liefert
+\begin{equation}
+  L = \SI{20474.2733}{\joule\per\mol}\, .
+\end{equation}
+Um die Einheit von $\si{\joule\per\mole}$ auf Energie pro Masse, also $\si{\joule\per\gram}$ umzurechnen, dividiert man durch die Molare
+Masse von Dichlordifluormethan ($M = \SI{120.91}{\gram\per\mole}$), sodass man letzendlich
+\begin{equation}
+  L = \SI{106.5588}{\joule\per\gram}
+\end{equation}
+erhält.
+Nach der Bestimmung der Verdampfungswärme folgt die Bestimmung des Massendurchsatzes,
+wobei in diesem Fall die Temperaturabhängigkeit der spezifischen Wärmekapazität erneut berücksichtigt wird.
+\begin{table}
+  \centering
+  \caption{Errechneter Massendurchsatz}
+  \label{tab:Massendurchsatz}
+  \sisetup{table-format = 1.4}
+  \begin{tabular}{S[table-format = 3.2] S S S}
+    \toprule
+    {$T_2 \mathbin{/} \si{\kelvin}$} & {$ c_\text{w}(T_2) \mathbin{/} \si{\kilo\joule\kilo\tothe{-1}\gram\tothe{-1}\kelvin\tothe{-1}}$} & 
+    {$\frac{\symup{d} T_2(t)}{\symup{d}t} \mathbin{/} \si{\kelvin\second\tothe{-1}}$} & {$\frac{\symup{d}m}{\symup{d}t} \mathbin{/} \si{\gram\second\tothe{-1}}$} \\
+    \midrule
+    289.35 & 4.1849 & -0.0101 &-1.6577\\
+    286.15 & 4.1880 & -0.0095 &-1.5603\\    
+    283.55 & 4.1922 & -0.0089 &-1.4632\\  
+    276.05 & 4.2077 & -0.0072 &-1.1879\\    
+    \bottomrule                                       
+  \end{tabular}                                     
+\end{table}\\
+\subsection{Mechanische Kompressorleistung}
+\begin{table}
+  \centering
+  \caption{Errechnete mechanische Kompressorleistung}
+  \label{tab:Mechanische Kompressorleistung}
+  \begin{tabular}{S[table-format = 3.2] S[table-format = 2.0] S[table-format = 1.0] S[table-format = 2.4] S[table-format = 2.4]}
+    \toprule
+    {$T_2 \mathbin{/} \si{\kelvin}$} & {$p_1 \mathbin{/} \si{bar}$} & {$p_2 \mathbin{/} \si{bar}$}
+    & {$\rho \mathbin{/} \si{\gram\liter\tothe{-3}}$} & {$N_\text{mech} \mathbin{/} \si{W}$}\\
+    \midrule
+    289.35 & 8.0  & 4.0 & 20.8060 & 20.2264\\
+    286.15 & 9.0  & 3.6 & 18.9348 & 25.2380\\    
+    283.55 & 10.0 & 3.4 & 18.0469 & 27.8938\\  
+    276.05 & 12.0 & 3.2 & 17.4468 & 27.4276\\    
+    \bottomrule                                       
+  \end{tabular}                                     
+\end{table}
+\subsection{Gründe für die vergleichsweise schlechte Güteziffer}
+Während des Vergleichens beider Güteziffern wird auffällig, dass das Verhältnis sehr niedrig, im Bereich von $10$ bis $\SI{20}{\percent}$, liegt.
+In der Gleichung \eqref{eqn:redWärm} wird gefordert, dass der Prozess der Wärmeübertragung ein reversibler Prozess ist,
+und somit jede Energie, welche kurzfristig verloren geht, zurückgewonnen werden kann. Doch in der Realität ist diese nicht mehr 
+zurück zu gewinnen. Beispielsweise kann die Energie in Form von Wärmeenergie an die Umwelt abgegeben werden.
