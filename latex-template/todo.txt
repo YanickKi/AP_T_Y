@@ -2,6 +2,3 @@
 -gleichung für ln(p) mit Literaturverweis versehen
 -Literaturverweis allg. Gaskonstante https://www.chemie.de/lexikon/Universelle_Gaskonstante.html
 -Literaturverweis von Molare Masse
--über die Befüllung der Resovoirs disskutieren
--ideale Gasgleichung in Theorie packen
--ideale Gasgleichung refernzieren
