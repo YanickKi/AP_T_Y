@@ -22,8 +22,8 @@ for name2, value2, error2 in zip('abc', params2, errors2):
 
 plt.plot(t, T1, '.', label='$T_1$')
 plt.plot(t, T2, '.', label='$T_2$')
-plt.plot(x, params1[0] * x**2 + params1[1] * x + params1[2], label = 'Ausgleichsgerade für $T_1$')
-plt.plot(x, params2[0] * x**2 + params2[1] * x + params2[2], label = 'Ausgleichsgerade für $T_2$')
+plt.plot(x, params1[0] * x**2 + params1[1] * x + params1[2], label = 'Ausgleichskurve für $T_1$')
+plt.plot(x, params2[0] * x**2 + params2[1] * x + params2[2], label = 'Ausgleichskurve für $T_2$')
 plt.xlabel(r'$t\:/\: \si{\second}$')
 plt.ylabel(r'$t \:/\: \si{\kelvin}$')
 plt.legend(loc='best')
