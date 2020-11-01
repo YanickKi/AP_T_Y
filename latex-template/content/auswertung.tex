@@ -15,13 +15,13 @@ Der nicht-lineare Zusammenhang zwischen der Zeit und der Temperatur lässt sich 
 beschrieben wird, approximieren. Mittels Rechnungen in Python ergaben sich die Koeffizienten zu
 \begin{align}
   \intertext{Für T1 ergaben sich:}
-  \symup{A}1 &= \SI{-3.22(4)}{\micro\kelvin\per\second\tothe{2}} \\ 
-  \symup{B}1 &= \SI{20.28(9)}{\milli\kelvin\per\second} \\
-  \symup{C}1 &= \SI{294.97(4)}{\kelvin}  \\
+  \symup{A}_1 &= \SI{-3.22(4)}{\micro\kelvin\per\second\tothe{2}} \\ 
+  \symup{B}_1 &= \SI{20.28(9)}{\milli\kelvin\per\second} \\
+  \symup{C}_1 &= \SI{294.97(4)}{\kelvin}  \\
   \intertext{für T2:}
-  \symup{A}2 &= \SI{0.95(7)}{\micro\kelvin\per\second\tothe{2}}\\
-  \symup{B}2 &= \SI{-11.21(10)}{\milli\kelvin\per\second}\\
-  \symup{C}2 &= \SI{295.87(26)}{\kelvin}
+  \symup{A}_2 &= \SI{0.95(7)}{\micro\kelvin\per\second\tothe{2}}\\
+  \symup{B}_2 &= \SI{-11.21(10)}{\milli\kelvin\per\second}\\
+  \symup{C}_2 &= \SI{295.87(26)}{\kelvin}
 \end{align}
 \subsection{Differentialquotient}
 Der Differentialquotient der approximierenden Funktion ist durch
@@ -34,7 +34,7 @@ gegeben. Die in die Differentialquotienten eingesetzen Zeitpunkte $t = 600s$, $t
   \caption{Ergebnisse der Differentialquotienten}
   \label{tab:Differentialquotient}
   \sisetup{table-format = 1.4}
-  \begin{tabular}{S[table-format = 4.0] S [table-format = 2.2] @{${}\pm{}$} S[table-format = 0.2] S[table-format= 2.2] @{${}\pm{}$} S[table-format = 0.2]}
+  \begin{tabular}{S[table-format = 4.0] S[table-format = 2.2] @{${}\pm{}$} S[table-format = 0.2] S[table-format= 3.2] @{${}\pm{}$} S[table-format = 0.2]}
     \toprule
     {$t \mathbin{/} \si{\second}$} & \multicolumn{2}{c}{$\frac{\symup{d} T_1}{\symup{d}t} \mathbin{/} \si{\milli\kelvin\second\tothe{-1}}$}
     & \multicolumn{2}{c}{$\frac{\symup{d} T_2}{\symup{d}t} \mathbin{/} \si{\milli\kelvin\second\tothe{-1}}$} \\
@@ -49,7 +49,7 @@ gegeben. Die in die Differentialquotienten eingesetzen Zeitpunkte $t = 600s$, $t
 \end{table}
 \subsection{Güteziffer}
 Um die reale Güteziffer zu bestimmen dient die Gleichung \eqref{eqn:Güteziffer}.
-Für die Wärmekapazität des Wassers gilt $m_1 c_\text{w}(T) = \SI{4}{\kilo\gram}\cdot c_\text{w}(T)$,
+Für die Wärmekapazität des Wassers gilt $m_1 c_\text{w} = \SI{4}{\kilo\gram}\cdot \SI{4.186}{\kilo\joule\per\kilo\gram\per\kelvin}$,
 für die der Kupferschlangen $m_\text{k}c_\text{k} = \SI{750} {\joule\per\kelvin}$. Für die Berechnung der idealen Güterziffer $\nu_\text{id}$ ist die Beziehung \eqref{eqn:Id} von Nutzen.
 Mittels Rechnungen ergaben sich die Werte der Güterziffern zu:
 \begin{table}
@@ -58,7 +58,7 @@ Mittels Rechnungen ergaben sich die Werte der Güterziffern zu:
   \label{tab:Gueterziffer}
   \sisetup{table-format = 2.4}
   \begin{tabular}{S[table-format = 4.0] S[table-format = 1.2] @{${}\pm{}$} S[table-format = 0.2] S[table-format = 2.2] @{${}\pm{}$} S[table-format = 0.2] 
-    s[table-format = 2.2] @{${}\pm{}$} S[table-format = 0.2]}
+    S[table-format = 2.2] @{${}\pm{}$} S[table-format = 0.2]}
     \toprule
     {$t \mathbin{/} \si{\second}$} & \multicolumn{2}{c}{$\nu_\text{re}$} & \multicolumn{2}{c}{$\nu_\text{id}$}  
     & \multicolumn{2}{c}{$\frac{\nu_\text{re}} {\nu_\text{id}} \si{\percent}$} \\
@@ -89,56 +89,57 @@ beschrieben, wobei R die allgemeine Gaskonstante ist. Zwecks der Definition $a \
 \end{figure}
 Hierbei ist zu beachten, dass das Argument des natürlichen Logarithmus nicht einheitslos ist (was normalerweise
 der Fall sein müsste), da die Gleichung \eqref{eqn:Verdampfungswaerme} durch Vereinfachungen angenähert wurde.
-Nach der Durchführung der linearen Regression, ergeben sich $a = -2462.4863$ und die Konstante zu $10.1354$.
+Nach der Durchführung der linearen Regression, ergeben sich $a = \num{-2462.4863(705436)}$ und die Konstante zu $\num{10.1354(2268)}$.
 Rücksubstituieren von $a = -\frac{L}{R}$ und umstellen nach $L$ führt zu $ L = - Ra$. Einsetzen von $a$ und der allgemeinen Gaskonstante 
-$R = \SI{8.314472}{\joule\per\mole\per\kelvin}$ liefert
+$R = \SI{8.314462}{\joule\per\mole\per\kelvin}$ liefert
 \begin{equation}
-  L = \SI{20474.2733}{\joule\per\mol}\, .
+  L = \SI{20500(600)}{\joule\per\mol}\, .
 \end{equation}
 Um die Einheit von $\si{\joule\per\mole}$ auf Energie pro Masse, also $\si{\joule\per\gram}$ umzurechnen, dividiert man durch die Molare
 Masse von Dichlordifluormethan ($M = \SI{120.91}{\gram\per\mole}$), sodass man letzendlich
 \begin{equation}
-  L = \SI{106.5588}{\joule\per\gram}
+  L = \SI{169(5)}{\joule\per\gram}
 \end{equation}
 erhält.
-Nach der Bestimmung der Verdampfungswärme folgt die Bestimmung des Massendurchsatzes,
-wobei in diesem Fall die Temperaturabhängigkeit der spezifischen Wärmekapazität erneut berücksichtigt wird.
+Nach der Bestimmung der Verdampfungswärme kennt man alle Größen, so dass die Berechnung des Massendurchsatzes folgt.
 \begin{table}
   \centering
-  \caption{Errechneter Massendurchsatz}
+  \caption{Ergebnisse des Massendurchsatzes}
   \label{tab:Massendurchsatz}
-  \sisetup{table-format = 1.4}
-  \begin{tabular}{S[table-format = 3.2] S S S}
+  \begin{tabular}{S[table-format = 4.0] S[table-format = 3.2] @{${}\pm{}$} S[table-format = 0.2] S[table-format= 2.2] @{${}\pm{}$} S[table-format = 0.2]}
     \toprule
-    {$T_2 \mathbin{/} \si{\kelvin}$} & {$ c_\text{w}(T_2) \mathbin{/} \si{\kilo\joule\kilo\tothe{-1}\gram\tothe{-1}\kelvin\tothe{-1}}$} & 
-    {$\frac{\symup{d} T_2(t)}{\symup{d}t} \mathbin{/} \si{\kelvin\second\tothe{-1}}$} & {$\frac{\symup{d}m}{\symup{d}t} \mathbin{/} \si{\gram\second\tothe{-1}}$} \\
+    {$t \mathbin{/} \si{\second}$} & \multicolumn{2}{c}{$\frac{\symup{d} T_2}{\symup{d}t} \mathbin{/} \si{\milli\kelvin\second\tothe{-1}}$}
+    & \multicolumn{2}{c} {$\frac{\symup{d} m2}{\symup{d}t} \mathbin{/} \si{\gram\second\tothe{-1}}$} \\
+    \cmidrule(lr){2-3} \cmidrule(lr){4-5}
     \midrule
-    289.35 & 4.1849 & -0.0101 &-1.6577\\
-    286.15 & 4.1880 & -0.0095 &-1.5603\\    
-    283.55 & 4.1922 & -0.0089 &-1.4632\\  
-    276.05 & 4.2077 & -0.0072 &-1.1879\\    
-    \bottomrule                                       
-  \end{tabular}                                     
-\end{table}\\
+    600  & -10.07 & 0.13 & -1.04 & 0.03\\
+    900  & -9.50  & 0.16 & -0.98 & 0.03\\
+    1200 & -8.93  & 0.20 & -0.92 & 0.03\\
+    2100 & -7.22  & 0.31 & -0.75 & 0.04\\
+    \bottomrule
+  \end{tabular}
+\end{table}
 \subsection{Mechanische Kompressorleistung}
 \begin{table}
   \centering
-  \caption{Errechnete mechanische Kompressorleistung}
+  \caption{Errechnete mechanische Kompressorleistungen}
   \label{tab:Mechanische Kompressorleistung}
-  \begin{tabular}{S[table-format = 3.2] S[table-format = 2.0] S[table-format = 1.0] S[table-format = 2.4] S[table-format = 2.4]}
+  \begin{tabular}{S[table-format = 4.0] S[table-format = 2.1] S[table-format = 1.1] S[table-format= 2.2] @{${}\pm{}$} S[table-format = 0.2] S[table-format = 2.2]
+    @{${}\pm{}$} S[table-format = 0.2]}
     \toprule
-    {$T_2 \mathbin{/} \si{\kelvin}$} & {$p_1 \mathbin{/} \si{bar}$} & {$p_2 \mathbin{/} \si{bar}$}
-    & {$\rho \mathbin{/} \si{\gram\liter\tothe{-3}}$} & {$N_\text{mech} \mathbin{/} \si{W}$}\\
+    {$t \mathbin{/} \si{\second}$} & {$p_ 1 \mathbin{/} \si{bar}$} & {$p_ 2 \mathbin{/} \si{bar}$} & \multicolumn{2}{c}{$\rho \mathbin{/} \si{\gram\liter\tothe{-1}}$} 
+    & \multicolumn{2}{c}{$N_\text{mech} \mathbin{/} \si{\watt}$}\\
+    \cmidrule(lr){4-5} \cmidrule(lr){6-7}
     \midrule
-    289.35 & 8.0  & 4.0 & 20.8060 & 20.2264\\
-    286.15 & 9.0  & 3.6 & 18.9348 & 25.2380\\    
-    283.55 & 10.0 & 3.4 & 18.0469 & 27.8938\\  
-    276.05 & 12.0 & 3.2 & 17.4468 & 27.4276\\    
+     600 &  8.0 & 4.0 & 20.81 & 0.01 & 12.70 & 0.41\\
+     900 &  9.0 & 3.6 & 18.93 & 0.01 & 15.88 & 0.54\\    
+    1200 & 10.0 & 3.4 & 18.05 & 0.01 & 17.59 & 0.65\\  
+    2100 & 12.0 & 3.2 & 17.45 & 0.01 & 17.22 & 0.90\\    
     \bottomrule                                       
   \end{tabular}                                     
 \end{table}
 \subsection{Gründe für die vergleichsweise schlechte Güteziffer}
-Während des Vergleichens beider Güteziffern wird auffällig, dass das Verhältnis sehr niedrig, im Bereich von $10$ bis $\SI{20}{\percent}$, liegt.
+Während des Vergleichens beider Güteziffern \eqref{tab:Gueterziffer} wird auffällig, dass das Verhältnis sehr niedrig, im Bereich von $10$ bis $\SI{20}{\percent}$, liegt.
 In der Gleichung \eqref{eqn:redWärm} wird gefordert, dass der Prozess der Wärmeübertragung ein reversibler Prozess ist,
 und somit jede Energie, welche kurzfristig verloren geht, zurückgewonnen werden kann. Doch in der Realität ist diese nicht mehr 
 zurück zu gewinnen. Beispielsweise kann die Energie in Form von Wärmeenergie an die Umwelt abgegeben werden.
