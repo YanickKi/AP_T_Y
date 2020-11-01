@@ -4,11 +4,11 @@
 \begin{table}
   \centering
   \label{Aufgenommene Messdaten}
-  \caption{Aufgenommene Messdaten}
+  \caption{Aufgenommene Messdaten \footnote{Die Daten wurden von der TU Dortmund bereitgestellt und aus dem Dokument \cite{DatenundHinweise} entnommen}}
   \begin{tabular}{S[table-format = 2.0] S[table-format = 2.1] S[table-format = 2.2] S[table-format = 2.1]
      S[table-format = 1.1] S[table-format = 3.0]}
      \toprule
-     {$t \mathbin{/} \si{\second}$} & {$T_1 \mathbin{/}\si{\celsius}$} & {$p_1 \mathbin{/} \si{\bar}$} & {$T_2 \mathbin{/} \si{\celsius}$}
+     {$t \mathbin{/} \si{\second}$} & {$T_1 \mathbin{/} \si{\celsius}$} & {$p_1 \mathbin{/} \si{\bar}$} & {$T_2 \mathbin{/} \si{\celsius}$}
      & {$p_2 \mathbin{/} \si{\bar}$} & {$N \mathbin{/} \si{\watt}$} \\
      \midrule
      0	& 21.7 &	4.0    &	21.7 & 4.1 & 120 \\
@@ -35,30 +35,30 @@
     21	& 42.2 &	9.0    &	9.9	 & 2.4 & 120 \\
     22	& 42.9 &	9.5    &	9.5	 & 2.4 & 120 \\
     23	& 43.6 &	9.5    &	9.1	 & 2.4 & 120 \\
-    24	& 44.3 &	10.0   &  8.7  &2.4  & 120 \\
-    25	& 44.9 &	10.0   &  8.3  &2.4  & 120 \\
-    26	& 45.5 &	10.0   &  8.0  &2.3  & 120 \\
-    27	& 46.1 &	10.0   &  7.7  &2.2  & 122 \\
-    28	& 46.7 &	10.5   &  7.4  &2.2  & 122 \\
-    29	& 47.3 &	10.5   &  7.1  &2.2  & 122 \\
-    30	& 47.8 &	10.75  &  6.8  &2.2  & 122 \\
-    31	& 48.4 &	11.0   &  5.6  &2.2  & 122 \\
-    32	& 48.9 &	11.0   &  4.3  &2.2  & 122 \\
-    33	& 49.4 &	11.0   &  3.4  &2.2  & 122 \\
-    34	& 49.9 &	11.0   &  3.0  &2.2  & 122 \\
-    35	& 50.3 &	11.0   &  2.9  &2.2  & 122 \\
+    24	& 44.3 &	10.0   &  8.7  & 2.4 & 120 \\
+    25	& 44.9 &	10.0   &  8.3  & 2.4 & 120 \\
+    26	& 45.5 &	10.0   &  8.0  & 2.3 & 120 \\
+    27	& 46.1 &	10.0   &  7.7  & 2.2 & 122 \\
+    28	& 46.7 &	10.5   &  7.4  & 2.2 & 122 \\
+    29	& 47.3 &	10.5   &  7.1  & 2.2 & 122 \\
+    30	& 47.8 &	10.75  &  6.8  & 2.2 & 122 \\
+    31	& 48.4 &	11.0   &  5.6  & 2.2 & 122 \\
+    32	& 48.9 &	11.0   &  4.3  & 2.2 & 122 \\
+    33	& 49.4 &	11.0   &  3.4  & 2.2 & 122 \\
+    34	& 49.9 &	11.0   &  3.0  & 2.2 & 122 \\
+    35	& 50.3 &	11.0   &  2.9  & 2.2 & 122 \\
     \bottomrule 
   \end{tabular}
 \end{table}
 %\footnotetext{Die Daten wurden von der TU Dortmund bereitgestellt und aus dem Dokument \cite{DatenundHinweise} entnommen}
-%\subsection{Temperaturverlauf mit Fit}
+\subsection{Temperaturverlauf mit Fit}
 \begin{figure}
   \centering
   \includegraphics{temperatur.pdf}
   \caption{Temperaturverlauf beider Reservoirs.}
   \label{fig:temperatur}
 \end{figure}
-%\subsection{Nicht-lineare Ausgleichsrechnung}
+\subsection{Nicht-lineare Ausgleichsrechnung}
 Der nicht-lineare Zusammenhang zwischen der Zeit und der Temperatur lässt sich mittels einer quadtratischen Ausgleichskurve, welche durch 
 \begin{equation}
   T(t) = \symup{A}t^2 + \symup{B}t + \symup{C}
@@ -74,7 +74,7 @@ beschrieben wird, approximieren. Mittels Rechnungen in numpy \cite{numpy} werden
   \symup{B}_2 &= \SI{-11.21(10)}{\milli\kelvin\per\second}\\
   \symup{C}_2 &= \SI{295.87(26)}{\kelvin}
 \end{align}
-%\subsection{Differentialquotient}
+\subsection{Differentialquotient}
 Der Differentialquotient der approximierenden Funktion ist durch
 \begin{equation}
   \frac{\symup{d} T(t)}{\symup{d}t} = 2\symup{A}t + \symup{B}  
@@ -98,7 +98,7 @@ gegeben. Die in die Differentialquotienten eingesetzen Zeitpunkte $t = 600s$, $t
     \bottomrule
   \end{tabular}
 \end{table}
-%\subsection{Güteziffer}
+\subsection{Güteziffer}
 Um die reale Güteziffer zu bestimmen dient die Gleichung \eqref{eqn:Güteziffer}.
 Für die Wärmekapazität des Wassers (Masse: $m_\text{w} = \SI{4}{\kilo\gram}$ \cite{DatenundHinweise}, 
 Spezifische Wärmekapazität: $c_\text{w} = \SI{4.186}{\kilo\joule\per\kilo\gram\per\kelvin}$ \cite{spezWärmeKap})
@@ -124,7 +124,7 @@ Mittels Rechnungen ergaben sich die Werte der Güterziffern zu:
     \bottomrule                                       
   \end{tabular}                                     
 \end{table}
-%\subsection{Massendurchsatz}
+\subsection{Massendurchsatz}
 Der Massendurchsatz lässt sich mittels Gleichung \eqref{eqn:Massendurchsatz} ermitteln, jedoch fehlt zunächst der Wert der Verdampfungswärme L, welche 
 mit Hilfe einer Dampfdruck-Kurve gewonnen werden kann. Diese Kurve wird durch 
 \begin{equation}
@@ -172,7 +172,7 @@ Nach der Bestimmung der Verdampfungswärme kennt man alle Größen, so dass die 
     \bottomrule
   \end{tabular}
 \end{table}
-%\subsection{Mechanische Kompressorleistung}
+\subsection{Mechanische Kompressorleistung}
 Um die mechanische Kompressorleistung zu bestimmen, wird die Gleichung \eqref{eqn:Kompressor} benötigt. Bevor man aber mit der Berechnung fortfahren kann, benötigt
 man noch die Dichte des Transportmediums $\rho$. Diese lässt sich mittels der idealen Gasgleichung \eqref{eqn:gasgleichung} errechnen. Für die gemessenen Werte 
 $p_1$, $p_2$ und $T_2$, die gegebenen Werte $\rho_0 = \SI{5.51}{\gram\per\liter}$, $p_0 = \SI{1}{\bar}$ und $T_0 = \SI{273.15}{\kelvin}$ \cite{DatenundHinweise}
@@ -197,5 +197,5 @@ Anschließend erhält man die mechanische Kompressorleistung als:
     \bottomrule                                       
   \end{tabular}                                     
 \end{table}
-%\subsection{Fehlerrechnung}
+\subsection{Fehlerrechnung}
 Jegliche Fehlerrechnung wurde mit Hilfe der Python-Bibliothek Uncertainties \cite{uncertainties} automatisiert und effizient absolviert.
