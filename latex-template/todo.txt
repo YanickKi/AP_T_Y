@@ -1,4 +1,3 @@
 #Hier kommt rein was noch gemacht werden muss (damit es hinterher nicht mehr vergisst)
 -gleichung für ln(p) mit Literaturverweis versehen
 -Literaturverweis allg. Gaskonstante https://www.chemie.de/lexikon/Universelle_Gaskonstante.html
--Literaturverweis von Molare Masse
