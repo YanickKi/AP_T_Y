@@ -15,10 +15,10 @@ errors1 = np.sqrt(np.diag(covariance_matrix1))
 errors2 = np.sqrt(np.diag(covariance_matrix2))
 
 x = np.linspace(t[0], t[-1], 100)
-for name1, value1, error1 in zip('abc', params1, errors1):
-    print(f'{name1} = {value1} ± {error1}')
-for name2, value2, error2 in zip('abc', params2, errors2):
-    print(f'{name2} = {value2} ± {error2}')
+#for name1, value1, error1 in zip('abc', params1, errors1):
+#    print(f'{name1} = {value1} ± {error1}')
+#for name2, value2, error2 in zip('abc', params2, errors2):
+#    print(f'{name2} = {value2} ± {error2}')
 
 plt.plot(t, T1, '.', label='$T_1$')
 plt.plot(t, T2, '.', label='$T_2$')
