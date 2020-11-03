@@ -9,7 +9,7 @@ Die Daten wurden von der TU Dortmund bereitgestellt und aus dem Dokument \cite{D
   \begin{tabular}{S[table-format = 2.0] S[table-format = 2.1] S[table-format = 2.2] S[table-format = 2.1]
      S[table-format = 1.1] S[table-format = 3.0]}
      \toprule
-     {$t \mathbin{/} \si{\second}$} & {$T_1 \mathbin{/} \si{\celsius}$} & {$p_1 \mathbin{/} \si{\bar}$} & {$T_2 \mathbin{/} \si{\celsius}$}
+     {$t \mathbin{/} \si{\minute}$} & {$T_1 \mathbin{/} \si{\celsius}$} & {$p_1 \mathbin{/} \si{\bar}$} & {$T_2 \mathbin{/} \si{\celsius}$}
      & {$p_2 \mathbin{/} \si{\bar}$} & {$N \mathbin{/} \si{\watt}$} \\
      \midrule
      0	& 21.7 &	4.0    &	21.7 & 4.1 & 120 \\
@@ -52,7 +52,7 @@ Die Daten wurden von der TU Dortmund bereitgestellt und aus dem Dokument \cite{D
   \end{tabular}
 \end{table}
 \newpage
-\subsection{Temperaturverlauf mit Fit}
+\subsection{Temperaturverlauf mit Ausgleichskurve}
 \begin{figure}
   \centering
   \includegraphics{temperatur.pdf}
@@ -66,7 +66,7 @@ Der nicht-lineare Zusammenhang zwischen der Zeit und der Temperatur lässt sich 
 \end{equation}
 beschrieben wird, approximieren. Mittels Rechnungen in numpy \cite{numpy} werden die Koeffizienten berechnet.
 \begin{align}
-  \intertext{Für T1 ergaben sich:}
+  \intertext{Für T1 ergibt sich:}
   \symup{A}_1 &= \SI{-3.22(4)}{\micro\kelvin\per\second\tothe{2}} \\ 
   \symup{B}_1 &= \SI{20.28(9)}{\milli\kelvin\per\second} \\
   \symup{C}_1 &= \SI{294.97(4)}{\kelvin}  \\
@@ -104,8 +104,9 @@ Um die reale Güteziffer zu bestimmen dient die Gleichung \eqref{eqn:Güteziffer
 Für die Wärmekapazität des Wassers (Masse: $m_\text{w} = \SI{4}{\kilo\gram}$ \cite{DatenundHinweise}, 
 Spezifische Wärmekapazität: $c_\text{w} = \SI{4.186}{\kilo\joule\per\kilo\gram\per\kelvin}$ \cite{spezWärmeKap})
 gilt $m_1 c_\text{w} = \SI{16744}{\joule\per\kelvin}$,
-für die der Kupferschlangen $m_\text{k}c_\text{k} = \SI{750} {\joule\per\kelvin}$ \cite{DatenundHinweise}. Für die Berechnung der idealen Güterziffer $\nu_\text{id}$ ist die Beziehung \eqref{eqn:Id} von Nutzen.
-Mittels Rechnungen ergaben sich die Werte der Güterziffern zu:
+für die der Kupferschlangen $m_\text{k}c_\text{k} = \SI{750} {\joule\per\kelvin}$ \cite{DatenundHinweise}.  
+Für die Berechnung der idealen Güterziffer $\nu_\text{id}$ ist die Beziehung \eqref{eqn:Id} von Nutzen.
+Mittels Rechnungen ergeben sich die Werte der Güterziffern zu:
 \begin{table}
   \centering
   \caption{Vergleich $\nu_\text{re}$ zu $\nu_\text{id}$}
@@ -126,11 +127,11 @@ Mittels Rechnungen ergaben sich die Werte der Güterziffern zu:
   \end{tabular}                                     
 \end{table}
 \subsection{Massendurchsatz}
-Der Massendurchsatz lässt sich mittels Gleichung \eqref{eqn:Massendurchsatz} ermitteln, jedoch fehlt zunächst der Wert der Verdampfungswärme L, welche 
+Der Massendurchsatz lässt sich mittels Gleichung \eqref{eqn:Massendurchsatz} ermitteln, jedoch fehlt zunächst der Wert der Verdampfungswärme $L$, welcher 
 mit Hilfe einer Dampfdruck-Kurve gewonnen werden kann. Diese Kurve wird durch 
 \begin{equation}
   \ln (p) = -\frac{L}{\symup{R}T} + \symup{const} \label{eqn:Verdampfungswaerme}
-\end{equation}
+\end{equation} \cite{203}
 beschrieben, wobei R die allgemeine Gaskonstante ist. Zwecks der Definition $a \coloneq -\frac{L}{\symup{R}}$ erhält man die Vereinfachung
 \begin{equation}
   \ln (p) = \frac{a}{T} + \symup{const}
@@ -143,11 +144,11 @@ beschrieben, wobei R die allgemeine Gaskonstante ist. Zwecks der Definition $a \
 \end{figure}
 Hierbei ist zu beachten, dass das Argument des natürlichen Logarithmus nicht einheitslos ist (was normalerweise
 der Fall sein müsste), da die Gleichung \eqref{eqn:Verdampfungswaerme} durch Vereinfachungen angenähert wurde.
-Nach der Durchführung der linearen Regression, erhält man, dass $a = \SI{-2462.4863(705436)}{\kelvin}$ gilt und der Wert der Konstante zu $\num{10.1354(2268)}$ ist.
+Nach der Durchführung der linearen Regression, erhält man, dass $a = \SI{-2462.4863(705436)}{\kelvin}$ gilt und der Wert der Konstante $\num{10.1354(2268)}$ ist.
 Rücksubstituieren von $a = -\frac{L}{\symup{R}}$ und umstellen nach $L$ führt zu $ L = - \symup{R}a$. Einsetzen von $a$ und der allgemeinen Gaskonstante 
 $\symup{R} = \SI{8.314462}{\joule\per\mole\per\kelvin}$ \cite{allgGaskonstante} liefert
 \begin{equation}
-  L = \SI{20500(600)}{\joule\per\mol}\, .
+  L = \SI{20500(600)}{\joule\per\mol} \; \text{.}
 \end{equation}
 Um die Einheit von $\si{\joule\per\mole}$ auf Energie pro Masse, also $\si{\joule\per\gram}$ umzurechnen, dividiert man durch die Molare
 Masse von Dichlordifluormethan ($M = \SI{120.91}{\gram\per\mole}$), sodass man letzendlich
@@ -174,10 +175,10 @@ Nach der Bestimmung der Verdampfungswärme kennt man alle Größen, so dass die 
   \end{tabular}
 \end{table}
 \subsection{Mechanische Kompressorleistung}
-Um die mechanische Kompressorleistung zu bestimmen, wird die Gleichung \eqref{eqn:Kompressor} benötigt. Bevor man aber mit der Berechnung fortfahren kann, benötigt
+Um die mechanische Kompressorleistung zu bestimmen, wird die Gleichung \eqref{eqn:Kompressor} benötigt. Bevor man mit der Berechnung fortfahren kann, benötigt
 man noch die Dichte des Transportmediums $\rho$. Diese lässt sich mittels der idealen Gasgleichung \eqref{eqn:gasgleichung} errechnen. Für die gemessenen Werte 
 $p_1$, $p_2$ und $T_2$, die gegebenen Werte $\rho_0 = \SI{5.51}{\gram\per\liter}$, $p_0 = \SI{1}{\bar}$ und $T_0 = \SI{273.15}{\kelvin}$ \cite{DatenundHinweise}
-ergaben sich für Dichte des Mediums, die in der Tabelle 
+ergaben sich für Dichte des Mediums die in der Tabelle 
 \eqref{tab:Mechanische Kompressorleistung} stehenden, Werte.
 Anschließend erhält man die mechanische Kompressorleistung als:
 \begin{table}
