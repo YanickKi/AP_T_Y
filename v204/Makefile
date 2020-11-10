@@ -1,11 +1,18 @@
 all: build/main.pdf
 
 # hier Python-Skripte:
-build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python plot.py
+build/dynamisch40.pdf: data_scripts/dynamisch40.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/dynamisch40.py
+
+build/dynamisch200.pdf: data_scripts/dynamisch200.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/dynamisch200.py
+
+build/statisch.pdf: data_scripts/statisch.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/statisch.py
+	
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/plot.pdf
+build/main.pdf: build/statisch.pdf build/dynamisch200.pdf build/dynamisch40.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

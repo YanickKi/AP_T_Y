@@ -456,9 +456,9 @@ INPUT ./content/durchfuehrung.tex
 INPUT ./content/durchfuehrung.tex
 INPUT ./content/auswertung.tex
 INPUT ./content/auswertung.tex
-INPUT build/plot.pdf
-INPUT build/plot.pdf
-INPUT build/plot.pdf
+INPUT ./build/dynamisch200.pdf
+INPUT ./build/dynamisch200.pdf
+INPUT ./build/dynamisch200.pdf
 INPUT ./content/diskussion.tex
 INPUT ./content/diskussion.tex
 INPUT /home/yanick/.local/texlive/2020/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc
