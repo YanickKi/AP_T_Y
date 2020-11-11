@@ -31,15 +31,16 @@ Die Lösung der Wärmeleitungsgleichung ist abhägig von den Anfangsbedingungen 
 \label{sec:dyM}
 Wird ein Stab mit der Periode $\tau$ erwärmt und abgekühlt, so entsteht eine räumliche und zeitliche Temperaturwelle
 \begin{equation}
-    T(x,t)=T_{max} \exp \left({-\sqrt{\frac{w \rho c}{2 \kappa}}}\right)\cos \left( wt-\sqrt{\frac{w \rho c}{2 \kappa}} x\right)\, ,
+    T(x,t)=T_{max} \exp \left({-\sqrt{\frac{w \rho c}{2 \kappa}}}\right)\cos \left( wt-\sqrt{\frac{w \rho c}{2 \kappa}}\, x\right)\, ,
 \end{equation}
 welche sich über den Stab fortsetzt. Die Phasengeschwindigkeit $v$ der Welle ist folglich
 \begin{equation}
-    v=\frac{w}{k}=w / \sqrt{\frac{w \rho c}{2 \kappa}}=\sqrt{\frac{2\kappa w}{\rho c}}\, .
+    v=\frac{w}{k}=\frac{w}{\sqrt{\frac{w \rho c}{2 \kappa}}}=\sqrt{\frac{2\kappa w}{\rho c}}\, .
 \end{equation}
 Das Amplitudenverhältnis $A_{nah}$ und $A_{fern}$ der Welle an zwei Messstellen $x_{nah}$ und $x_{fern}$, ergibt die Dämpfung der Welle.
 Mit $w=\frac{2\pi}{\tau}$ und $\phi=2\pi \frac{\symup{\Delta}t}{\tau}$\footnote{die Phase $\phi$ und die Periodendauer $\tau$} erhält man für die Wärmeleitfähigkeit
 \begin{equation}
     \kappa=\frac{\rho\, c (\symup{\Delta}x)^2}{2\symup{\Delta}t \ln (A_{nah}/A_{fern})}\, .
 \end{equation}
+Dabei beschreibt $\symup{\Delta}x$ den Abstand der Messstellen und $\symup{\Delta}t$ die Phasendifferenz der Temperaturwelle zwischen den beiden Messstellen.
 \cite{sample}
