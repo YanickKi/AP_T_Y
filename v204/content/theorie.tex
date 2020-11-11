@@ -1,4 +1,45 @@
 \section{Theorie}
 \label{sec:Theorie}
-
+Ein Wärmetransport findet statt, wenn Temperaturdifferenzen zwischen zwei Orten auftreten.
+Dieser Wärmetransport geht entlang des Temperaturgefälles. Grundsätzlich gibt es drei verschiedene Mechanismen des Wärmetransportes.
+Dabei unterscheidet man zwischen: der Konvektion, der Wärmeleitung und der Wärmestrahlung.
+In diesem Versuch behandeln wir jedoch nur die Wärmeleitung von Metallen.
+Der Wärmetransport mittels Wärmeleitung erfolgt über Phononen und frei bewegliche Elektronen. Der Betrag des Gitters ist bei Metallen zu vernachlässigen.
+\subsection{Statische Methode}
+\label{sec:stM}
+Betrachtet wird ein Stab der Länge L und der Querschnittsfläche A mit der Dichte $p$ und der spezifischen Wärme $c$ des Materials.
+Wird ein Ende des Stabes durch Wärmekontakt mit einem Wärmereservoir erhitzt, so fließt in der Zeit $dt$ durch die Querschnittsfläche A, die Wärmemenge
+\begin{equation}
+    dQ=-\kappa A \frac{\partial T}{\partial x} dt\,.
+    \label{eqn:Wärmemenge}
+\end{equation}
+Dabei ist $\kappa$ ([$\kappa$]=$\frac{\symup{W}}{\symup{m K}}$) die Wärmeleitfähigkeit des Materials. Da der Wärmestrom 
+in Richtung des kälteren Ortes verläuft, ist das Minuszeichen in der Gleichung gegeben. Die Wärmestromdichte $j_w$ lässt sich berechnen durch
+\begin{equation}
+    j_w=-\kappa \frac{\partial T}{\partial x}\,.
+    \label{eqn:wärmedichte}
+\end{equation}
+Aus dieser Gleichung und der Kontinuitätsgleichung lässt sich die eindimensionale Wärmeleitungsgleichung
+\begin{equation}
+    \frac{\partial T}{\partial t}=\frac{\kappa}{\rho c}\frac{\partial^2 T}{\partial x^2}
+    \label{eqn:Wärmeleitungsgleichung}
+\end{equation}
+herleiten. Die Wärmeleitungsgleichung beschreibt die räumliche- und zeitliche Entwicklung der Temperaturverteilung. Dabei ist die Größe $\sigma_T=\frac{\kappa}{\rho c}$
+die Temperaturleitfähigkeit. Die Temperaturleitfähigkeit ist eine Materialeigenschaft, die die 'Schnelligkeit' angibt, mit der sich ein Temperaturunterschied ausgleicht.
+Die Lösung der Wärmeleitungsgleichung ist abhägig von den Anfangsbedingungen und der Stabgeometrie.
+\subsection{Dynamische Methode}
+\label{sec:dyM}
+Wird ein Stab mit der Periode $\tau$ erwärmt und abgekühlt, so entsteht eine räumliche und zeitliche Temperaturwelle
+\begin{equation}
+    T(x,t)=T_{max} \exp \left({-\sqrt{\frac{w \rho c}{2 \kappa}}}\right)\cos \left( wt-\sqrt{\frac{w \rho c}{2 \kappa}} x\right)\, ,
+\end{equation}
+welche sich über den Stab fortsetzt. Die Phasengeschwindigkeit $v$ der Welle ist folglich
+\begin{equation}
+    v=\frac{w}{k}=w / \sqrt{\frac{w \rho c}{2 \kappa}}=\sqrt{\frac{2\kappa w}{\rho c}}\, .
+\end{equation}
+Das Amplitudenverhältnis $A_{nah}$ und $A_{fern}$ der Welle an zwei Messstellen $x_{nah}$ und $x_{fern}$, ergibt die Dämpfung der Welle.
+Mit $w=\frac{2\pi}{\tau}$ und $\phi=2\pi \frac{\symup{\Delta}t}{\tau}$\footnote{die Phase $\phi$ und die Periodendauer $\tau$} erhält man für die Wärmeleitfähigkeit
+\begin{equation}
+    \kappa=\frac{\rho\, c (\symup{\Delta}x)^2}{2\symup{\Delta}t \ln (A_{nah}/A_{fern})}\, .
+\end{equation}
 \cite{sample}
