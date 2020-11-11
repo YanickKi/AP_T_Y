@@ -1,2 +1,33 @@
 \section{Durchführung}
 \label{sec:Durchführung}
+\subsection{Vorbereitung}
+Als Vorbereitungsaufgabe sollte man sich über die Dichte $\rho$, die spezifische Wärme $c$ und die Wärmeleitfähigkeit $\kappa$ für 
+Aluminium, Messing, Edelstahl und Wasser. Da die Werte von Wasser nicht relevant sind, werden dies nicht aufgeführt.
+\begin{table}
+    \centering
+    \caption{Literaturwerte von Aluminium, Messing und Edelstahl}
+    \label{tab:litwerte}
+    \begin{tabular}{c c c c}
+        \toprule
+        $\text{Metall}$ & $\rho\,([\rho]=\si{\kilo\gram\meter\tothe{-3}})$ 
+        & $c\, ([c]=\si{\joule\kilo\gram\kelvin\tothe{-1}})$ & $\kappa\,([\kappa]=\si{\watt\meter\tothe{-1}\kelvin\tothe{-1}})$\\
+        \midrule
+        Aluminium & 2800 & 830& 236 \\
+        Messing & 8520 & 385 & 120\\
+        Edelstahl &8000 & 400 & 21\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\subsection{Aufbau}
+Das Experiment wird wie in Abbildung \ref{fig:aufbau} aufgebaut. Auf der Grundplatte befinden sich vier rechteckige Probestäbe aus den Materialien:
+Aluminium, Messing(2x) und Edelstahl. Ein Peltierelement heizt bzw. kühlt die vier Probestäbe simultan bei einer Spannung von $U_P=\SI{5}{\volt}$
+und $U_P=\SI{8}{\volt}$ bei der dynamischen Methode. An jedem Probestab wird an zwei Stellen die Temperatur gemessen und über ein 'Temperatur Array'
+an einen Datenlogger (Xplorer GLX) weitergegeben. Die Daten können über den Datenlogger simultan gemessen und aufgezeichnet werden.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{build/aufbau.pdf}
+    \caption{Aufbau des Experiments}
+    \label{fig:aufbau}
+\end{figure}
+\subsection{Versuchsdurchführung}
+\label{sec:Vdurch}
