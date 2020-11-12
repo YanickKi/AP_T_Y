@@ -12,22 +12,20 @@ T6 += 273.15
 T7 += 273.15
 T8 += 273.15
 
-def f1(s, A, w, k):
-    return A * np.exp(-np.sqrt(w * 8520 * 0.385 / (2 * k)) * 0.03) * np.cos(w * s - np.sqrt(w * 8520 * 0.385 / (2 * k)) * 0.03)
+def f(s, A, w, k, x):
+    return A * np.exp(-np.sqrt(w * 8520 * 0.385 / (2 * k)) * x) * np.cos(w * s - np.sqrt(w * 8520 * 0.385 / (2 * k)) * x)
 
-def f2(s, A, w):
-    return A * np.cos(w * s)
 
-params1, pcov1 = curve_fit(f1, t, T1)
-params2, pcov2 = curve_fit(f2, t, T1)
-params = np.sqrt(params1**2)
-params = np.sqrt(params2**2)
+params1, pcov1 = curve_fit(f, t * 2, T1, p0 = (40, 0.05 * np.pi, 120, 0.03))
+params2, pcov2 = curve_fit(f, t * 2, T2)
 µ = np.linspace(0, 420, 420)
 
-plt.plot(t, f1(µ, params1[0], params1[1], params1[2]))
-plt.plot(t, f2(µ, params2[0], params2[1]))
+print(params1)
+
+plt.plot(µ * 2, f(µ * 2, *params1), label = 'T1fit')
+plt.plot(µ * 2, f(µ * 2, *params2), label = 'T2fit')
 plt.plot(t*2, T1, label = 'T1')
 plt.plot(t*2, T2, label = 'T2')
 plt.legend()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('Me.pdf')
+plt.savefig('fitWellengleichung.pdf')
