@@ -22,7 +22,8 @@ Aluminium, Messing, Edelstahl und Wasser. Da die Werte von Wasser nicht relevant
 Das Experiment wird wie in Abbildung \ref{fig:aufbau} aufgebaut. Auf der Grundplatte befinden sich vier rechteckige Probestäbe aus den Materialien:
 Aluminium, Messing(2x) und Edelstahl. Ein Peltierelement heizt bzw. kühlt die vier Probestäbe simultan bei einer Spannung von $U_P=\SI{5}{\volt}$
 und $U_P=\SI{8}{\volt}$ bei der dynamischen Methode. An jedem Probestab wird an zwei Stellen die Temperatur gemessen und über ein 'Temperatur Array'
-an einen Datenlogger (Xplorer GLX) weitergegeben. Die Daten können über den Datenlogger simultan gemessen und aufgezeichnet werden.
+an einen Datenlogger (Xplorer GLX) weitergegeben. Die Daten können über den Datenlogger simultan gemessen und aufgezeichnet werden. 
+Es wird außerdem eine Stoppuhr für das dynamische Verfahren benötigt.
 \begin{figure}
     \centering
     \includegraphics[scale=0.7]{Aufbau.pdf}
@@ -31,3 +32,22 @@ an einen Datenlogger (Xplorer GLX) weitergegeben. Die Daten können über den Da
 \end{figure}
 \subsection{Versuchsdurchführung}
 \label{sec:Vdurch}
+Zuerst muss die Verkabelung überprüft werden und gegebenenfalls korrigiert werden. 
+Zudem wird der Abstand x zwischen den Thermoelementen gemessen.
+Um den Wärmeaustausch mit der Umgebung zu minimieren, wird bei jeder
+Messung die Wärmeisolierung über die Stäbe gelegt. Nach jeder Messung müssen die Isolierungen entfernt werden und die Stäbe werden mit Hilfe des Peltier Elements gekühlt.
+Das System ist träge und benötigt Zeit um abzukühlen. Die gesammelten Daten werden nach der Messung auf einen USB-Stick gezogen und können dann benutzt werden.\\
+\subsubsection{Statische Methode}
+Es wird an jedem Stab an jeweils zwei Stellen die Temperatur als Funktion der Zeit gemessen. 
+Der Datenlogger wird auf eine Abtastzeit von $\symup{\Delta} t_{GLX}=\SI{5}{\second}$ eingestellt, während die Spannung für das Peltier Element auf $U_P=5\si{\volt}$ gestellt wird.
+Die Messung wird durchgeführt bis das Thermoelement T7 die Temperatur $\SI{45}{\celsius}$ erreicht. Danach wird die Messung beendet und die Probestäbe werden gekühlt.
+Es werden die Temperaturverläufe für T1 und T4, sowie für T5 und T8 in jeweils einer Graphik dargestellt.
+\subsubsection{Dynamische Methode}
+Es wird das Angström-Meßverfahren verwendet, bei dem die Probestäbe periodisch geheizt und gekühlt werden.
+Der Datenlogger wird auf eine Abtastzeit von $\symup{\Delta}t_{GLX}=\SI{2}{\second}}$ eingestellt.
+Bevor die neue Messung erfolgt, sollte die Temperatur der Thermoelemente unter $\SI{30}{\celsius}$ sein.
+Die erste dynamische Messung hat eine Periode von $\SI{80}{\second}$, dabei werden die Probestäbe $\SI{40}{\second}$ geheizt und dann $\SI{40}{\second}$ gekühlt, ohne die Isolierung zu entfernen.
+Die Messung wird beendet nach mindestens 10 Perioden und anschließend wird wieder gekühlt.
+Nachdem die Themoelemente wieder hinreichend gekühlt sind, wird der Versuch mit einer Periodendauer von $\SI{200}{\second}$ wiederholt.
+Die Messung wird gestoppt, sobald eins der Thermoelemente über $\SI{80}{\celsius}$ fällt.
+Zuletzt wird noch einmal gekühlt und dann ausgewertet.
