@@ -41,13 +41,14 @@ alle Kurven einen leichten Abfall bei $t \approx \SI{620}{\second}$ erleiden.
 Wie man anhand der Tabelle \eqref{tab:Waeremleitfaehigkeit} erkennen kann, hat Aluminium die beste Leitfähigkeit.
 \subsubsection{Wärmestrom}
 Für die Berechnung des Wärmestroms dient die Gleichung \eqref{eqn:Wärmemenge}. Jedoch lässt sich in diesem Fall die Wärmestromdichte
-$j_w$ nicht mit dem Differntialquotient $\frac{\partial T}{\partial x}$ sondern "nur" mit dem Differenzenquotienten $\frac{\symup{\Delta}T}{\symup{\Delta} x}$
-berechnen. Für den Abstand zwischen zwei Thermoelementen  wurde $\symup{\Delta} x = \SI{0.03}{\meter}$ gemessen.
+$j_w$ nicht mit dem Differntialquotient $\sfrac{\partial T}{\partial x}$ sondern nur mit dem Differenzenquotienten $\sfrac{\symup{\Delta}T}{\symup{\Delta} x}$
+berechnen, so dass der Wärmestrom auch durch einen Differenzenquotienten dargestellt wird. 
+Für den Abstand zwischen zwei Thermoelementen  wurde $\symup{\Delta} x = \SI{0.03}{\meter}$ gemessen.
 
 \begin{table}
   \centering
-  \caption{Ergebnisse der Differentialquotienten}
-  \label{tab:Differentialquotient}
+  \caption{Errechnete Wärmeströme}
+  \label{tab:Wärmestrom}
   \sisetup{table-format = 1.4}
   \begin{tabular}{S[table-format = 3.0] 
     S[table-format = 1.2] @{${}\pm{}$} S[table-format = 0.2] 
@@ -56,16 +57,48 @@ berechnen. Für den Abstand zwischen zwei Thermoelementen  wurde $\symup{\Delta}
     S[table-format = 1.2] @{${}\pm{}$} S[table-format = 0.2]}
     \toprule
     {$t \mathbin{/} \si{\second}$} 
-    & \multicolumn{2}{c}{$\frac{\symup{\Delta} Q_\text{M}}    {\symup{\Delta}t} \mathbin{/} \si{\joule\second\tothe{-1}}$}
-    & \multicolumn{2}{c}{$\frac{\symup{\Delta} Q_\text{M, k}} {\symup{\Delta}t} \mathbin{/} \si{\joule\second\tothe{-1}}$}  
-    & \multicolumn{2}{c}{$\frac{\symup{\Delta} Q_\text{A}}    {\symup{\Delta}t} \mathbin{/} \si{\joule\second\tothe{-1}}$}
-    & \multicolumn{2}{c}{$\frac{\symup{\Delta} Q_\text{E}}    {\symup{\Delta}t} \mathbin{/} \si{\joule\second\tothe{-1}}$}\\
+    & \multicolumn{2}{c}{$\frac{\symup{\Delta} Q_\text{Me}}    {\symup{\Delta}t} \mathbin{/} \si{\joule\second\tothe{-1}}$}
+    & \multicolumn{2}{c}{$\frac{\symup{\Delta} Q_\text{Me,k}} {\symup{\Delta}t} \mathbin{/} \si{\joule\second\tothe{-1}}$}  
+    & \multicolumn{2}{c}{$\frac{\symup{\Delta} Q_\text{Al}}    {\symup{\Delta}t} \mathbin{/} \si{\joule\second\tothe{-1}}$}
+    & \multicolumn{2}{c}{$\frac{\symup{\Delta} Q_\text{St}}    {\symup{\Delta}t} \mathbin{/} \si{\joule\second\tothe{-1}}$}\\
     \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
     \midrule
-    600  & 16.42 & 0.10 & -10.07 & 0.13 & 0.10 & 0.10& 0.10 & 0.10\\
-    900  & 14.48 & 0.12 & -9.50  & 0.16 & 0.12 & 0.12& 0.12 & 0.12 \\
-    1200 & 12.55 & 0.13 & -8.93  & 0.20 & 0.13 & 0.13& 0.13 & 0.13\\
-    2100 & 67.56 & 0.19 & -7.22  & 0.31 & 0.19 & 0.19& 0.19 & 0.19\\
+    100 & 7.49 & 0.19 & 4.65 & 0.11 & 7.51 & 0.38 & 3.57 & 0.03 \\
+    200 & 5.18 & 0.19 & 3.43 & 0.11 & 5.08 & 0.38 & 3.10 & 0.03 \\
+    300 & 4.63 & 0.19 & 3.16 & 0.11 & 4.66 & 0.38 & 2.82 & 0.03 \\
+    500 & 4.63 & 0.19 & 3.15 & 0.11 & 4.78 & 0.38 & 2.61 & 0.03 \\
+    700 & 4.28 & 0.19 & 2.92 & 0.11 & 4.44 & 0.38 & 2.35 & 0.03 \\
     \bottomrule
   \end{tabular}
 \end{table}
+Der Fehler lässt sich mittels der Fehlerfortpfllanzung nach Gauß berechnen:
+\begin{equation}
+  \symup{\Delta} \frac{\symup{\Delta}Q}{\symup{\Delta} t}= \kappa A \frac{1}{0.03} \cdot 0.1
+\end{equation}
+\subsubsection{Vergleich der Temperaturdiffernzen}
+\begin{figure}
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width = \textwidth]{build/statDifSt.pdf}
+    \caption{Temperaturdifferenz $\symup{\Delta}T_\text{St}$}
+    \label{fig:statDifSt}
+  \end{subfigure}
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width = \textwidth]{build/statDifMek.pdf}
+    \caption{Temperaturdifferenz $\symup{\Delta}T_\text{Me,k}$}
+    \label{fig:statDifMek}
+  \end{subfigure}
+\end{figure}
+Bei der Betrachtung beider Grpahen erkennt man instantan, dass bei beiden Kurven ein Maximum kur vor $t = \SI{100}{\second}$ erreicht wird, wobei beide danach 
+wieder abfallen. Dies lieg der Ursache zu Grunde, dass die Temperaturen an den inneren und äußeren Thermoelementen im Bereich der Raumtemperatur liegen. 
+Erwärmt man jedoch den Stab steigt die Temperatur am inneren  Thermoelement deutlich schneller an als die an dem äußeren Thermoelement, da die Wärme erstmal
+in einer gewissen Zeit nach außen srömen muss, so dass ein zeitlicher Verzug entsteht. Bei näherer Betrachung wird die Stärk des Abfalls auffällig, da die
+Temperaturdifferenz des Stahlstabes deutlich langsamer abfällt als die des großen Messingstabes. Der Grund hierfür ist die unterschidlich hohe
+Wärmeleitfähigkeit der Stäbe, welche schon durch die Tabelle \eqref{tab:Waeremleitfaehigkeit} aufgezeigt wird. Da die Wärmeleitfähigkeit des
+Messingstabes besser ist, kann die Temperatur am äußeren Messpunkt schneller ansteigen, da mehr Wärme pro Zeit geleitet wird.
+\subsection{Dynamisches Verfahren}
+\begin{figure}
+  \centering
+  \includegraphics[width = \textwidth]{build/Me.pdf}
+\end{figure}
