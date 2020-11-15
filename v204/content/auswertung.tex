@@ -1,6 +1,6 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Für die Temperatur wurde eine Messunsicherheit von $\symup{\Delta} T = 0.1$ angenommen.
+Für die Temperatur wurde eine Messunsicherheit von $\symup{\Delta} T = 0.2$ angenommen. Die Messunsicherheit der Zeit wird als $\symup{\Delta} t = \SI{0.1}{\second}$.
 \subsection{Statisches Vefahren}  
 \subsubsection{Vergleich der Temperaturverläufe}
 \begin{figure}
@@ -93,12 +93,130 @@ Der Fehler lässt sich mittels der Fehlerfortpfllanzung nach Gauß berechnen:
 Bei der Betrachtung beider Grpahen erkennt man instantan, dass bei beiden Kurven ein Maximum kur vor $t = \SI{100}{\second}$ erreicht wird, wobei beide danach 
 wieder abfallen. Dies lieg der Ursache zu Grunde, dass die Temperaturen an den inneren und äußeren Thermoelementen im Bereich der Raumtemperatur liegen. 
 Erwärmt man jedoch den Stab steigt die Temperatur am inneren  Thermoelement deutlich schneller an als die an dem äußeren Thermoelement, da die Wärme erstmal
-in einer gewissen Zeit nach außen srömen muss, so dass ein zeitlicher Verzug entsteht. Bei näherer Betrachung wird die Stärk des Abfalls auffällig, da die
-Temperaturdifferenz des Stahlstabes deutlich langsamer abfällt als die des großen Messingstabes. Der Grund hierfür ist die unterschidlich hohe
+in einer gewissen Zeit nach außen strömen muss, so dass ein zeitlicher Verzug entsteht. Bei näherer Betrachung wird die Stärke des Abfalls auffällig, da die
+Temperaturdifferenz des Stahlstabes deutlich langsamer abfällt als die des großen Messingstabes. Der Grund hierfür ist die unterschiedlich hohe
 Wärmeleitfähigkeit der Stäbe, welche schon durch die Tabelle \eqref{tab:Waeremleitfaehigkeit} aufgezeigt wird. Da die Wärmeleitfähigkeit des
 Messingstabes besser ist, kann die Temperatur am äußeren Messpunkt schneller ansteigen, da mehr Wärme pro Zeit geleitet wird.
 \subsection{Dynamisches Verfahren}
 \begin{figure}
+  \caption{Temperaturen des großen Messingstabs}
   \centering
   \includegraphics[width = \textwidth]{build/Me.pdf}
 \end{figure}
+\begin{table}
+  \centering
+  \label{tab:AmplitudeMessing}
+  \caption{Amplituden und Phasendifferenzen des großen Messingstabs}
+  \sisetup{table-format = 1.2}
+  \begin{tabular}
+    {S @{${}\pm{}$} S[table-format = 1.2]
+     S @{${}\pm{}$} S[table-format = 1.2]
+     S @{${}\pm{}$} S[table-format = 1.2]
+     S[table-format = 2.2] @{${}\pm{}$} S[table-format = 1.2]}
+     \toprule
+     \multicolumn{2}{c}{$A_1 \mathbin{/} \si{\kelvin}$}       &
+     \multicolumn{2}{c}{$A_2 \mathbin{/} \si{\kelvin}$}       & 
+     \multicolumn{2}{c}{$\ln \left (\frac{A_2}{A_1} \right)$} &
+     \multicolumn{2}{c} {$\symup{\Delta} t \mathbin{/} \si{\second}$}\\
+     \cmidrule(lr){1-2} \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
+     \midrule
+     0.20 & 0.28 & 2.48 & 0.28 & 2.52 & 1.40 & 26.00 & 0.14 \\
+     0.71 & 0.28 & 4.21 & 0.28 & 1.78 & 0.40 & 20.00 & 0.14 \\
+     1.05 & 0.28 & 4.75 & 0.28 & 1.51 & 0.28 & 16.00 & 0.14 \\
+     1.30 & 0.28 & 4.97 & 0.28 & 1.34 & 0.22 & 16.00 & 0.14 \\
+     1.57 & 0.28 & 5.34 & 0.28 & 1.22 & 0.19 & 14.00 & 0.14 \\
+     1.69 & 0.28 & 5.32 & 0.28 & 1.15 & 0.17 & 14.00 & 0.14 \\
+     1.80 & 0.28 & 5.45 & 0.28 & 1.11 & 0.16 & 14.00 & 0.14 \\
+     1.88 & 0.28 & 5.48 & 0.28 & 1.07 & 0.16 & 14.00 & 0.14 \\
+     2.01 & 0.28 & 5.64 & 0.28 & 1.03 & 0.15 & 12.00 & 0.14 \\
+     2.09 & 0.28 & 5.70 & 0.28 & 1.00 & 0.14 & 12.00 & 0.14 \\
+      \bottomrule
+  \end{tabular}
+\end{table}
+Zur Berechnung der Wärmeleitfähigkeit werden zunächst die Mittelwerte von der Phasendifferenz und  $\ln \left (  \frac{A_2}{A_1} \right)$ berechnet.
+Die Mittelwerte ergeben sich zu:  
+\begin{align}
+  \overline{\symup{\Delta} t}                     &= \SI{15.8(4)}{\second} \\
+  \overline{\ln \left (  \frac{A_2}{A_1} \right)} & = \num{1.37(13)}        
+\end{align}
+Mit dem gegebenen Literaturwert für Dichte von Messing $\rho = \SI{8520}{\kilogram\per\meter\cubed}$, der gegebenen. spezifischen Wärmekapazität 
+$c = \SI{385}{\joule\per\kilogram\per\kelvin}$ und dem gemessen Abstand $\symup{\Delta} x = \SI{0.03}{\meter}$ lässt sich die berechnete Wärmeleitfähigkeit zu
+\begin{equation}
+\kappa = \SI{68(6)}{\watt\per\metre\per\kelvin}
+\end{equation}
+berechnen.
+\begin{figure}
+  \caption{Temperaturen des Aluminiumstabs}
+  \centering
+  \includegraphics[width = \textwidth]{build/Al.pdf}
+\end{figure}
+\begin{table}
+  \centering
+  \label{tab:AmplitudeAluminium}
+  \caption{Amplituden und Phasendifferenzen des Aluminiumstabs}
+  \sisetup{table-format = 1.2}
+  \begin{tabular}{
+    S @{${}\pm{}$} S[table-format = 1.2]
+    S[table-format = 2.2] @{${}\pm{}$} S[table-format = 1.2]
+    S @{${}\pm{}$} S[table-format = 1.2]
+    S[table-format = 2.2] @{${}\pm{}$} S[table-format = 1.2]}
+     \toprule
+     \multicolumn{2}{c}{$A_5 \mathbin{/} \si{\kelvin}$}       &
+     \multicolumn{2}{c}{$A_6 \mathbin{/} \si{\kelvin}$}       & 
+     \multicolumn{2}{c}{$\ln \left (\frac{A_6}{A_5} \right)$} &
+     \multicolumn{2}{c} {$\symup{\Delta} t \mathbin{/} \si{\second}$}\\
+     \cmidrule(lr){1-2} \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
+     \midrule
+     2.48 & 0.28 &  9.44 & 0.28 & 1.34 & 0.12 & 12.00 & 0.14 \\
+     4.21 & 0.28 & 11.21 & 0.28 & 0.98 & 0.07 &  8.00 & 0.14 \\
+     4.75 & 0.28 & 11.50 & 0.28 & 0.88 & 0.06 &  8.00 & 0.14 \\
+     4.97 & 0.28 & 11.70 & 0.28 & 0.86 & 0.06 &  8.00 & 0.14 \\
+     5.34 & 0.28 & 12.12 & 0.28 & 0.82 & 0.06 &  8.00 & 0.14 \\
+     5.32 & 0.28 & 12.08 & 0.28 & 0.82 & 0.06 &  8.00 & 0.14 \\
+     5.45 & 0.28 & 12.22 & 0.28 & 0.81 & 0.06 &  6.00 & 0.14 \\
+     5.48 & 0.28 & 12.22 & 0.28 & 0.80 & 0.06 &  6.00 & 0.14 \\
+     5.64 & 0.28 & 12.37 & 0.28 & 0.79 & 0.05 &  6.00 & 0.14 \\
+     5.70 & 0.28 & 12.41 & 0.28 & 0.78 & 0.05 &  6.00 & 0.14 \\
+      \bottomrule
+  \end{tabular}
+\end{table}
+Die Mittelwerte der Größen von Aluminium sind
+\begin{align}
+  \overline{\symup{\Delta} t}                     &= \SI{7.6(4)}{\second} \; \text{.}\\
+  \overline{\ln \left (  \frac{A_2}{A_1} \right)} & = \num{0.89(13)}
+\end{align}
+Mit der Dichte von Aluminium $\rho = \SI{2800}{\kilogram\per\cubic\metre}$, der spezifischen Wärmekapazität $c = \SI{830}{\joule\per\gram\per\kelvin}$
+und dem Abstand $\symup{\Delta} x = \SI{0.03}{\meter}$ lässt sich die Wärmeleitfähigkeit zu 
+\begin{equation}
+  \kappa = \SI{155(22)}{\watt\per\metre\per\kelvin}
+\end{equation}
+berechnen.
+\begin{figure}
+  \caption{Temperaturen des Stahlstab}
+  \centering
+  \includegraphics[width = \textwidth]{build/St.pdf}
+\end{figure}
+\begin{table}
+  \centering
+  \label{tab:AmplitudeAluminium}
+  \caption{Amplituden und Phasendifferenzen des Aluminiumstabs}
+  \sisetup{table-format = 2.2}
+  \begin{tabular}{
+    S @{${}\pm{}$} S[table-format = 1.2]
+    S[table-format = 1.2] @{${}\pm{}$} S[table-format = 1.2]
+    S[table-format = 1.2] @{${}\pm{}$} S[table-format = 1.2]
+    S[table-format = 2.0] @{${}\pm{}$} S[table-format = 1.2]}
+     \toprule
+     \multicolumn{2}{c}{$A_7 \mathbin{/} \si{\kelvin}$}       &
+     \multicolumn{2}{c}{$A_8 \mathbin{/} \si{\kelvin}$}       & 
+     \multicolumn{2}{c}{$\ln \left (\frac{A_7}{A_8} \right)$} &
+     \multicolumn{2}{c} {$\symup{\Delta} t \mathbin{/} \si{\second}$}\\
+     \cmidrule(lr){1-2} \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
+     \midrule
+     14.57 & 0.28 & 0.07 & 0.28 & 5.33 & 4.04 & 80 & 0.14 \\
+     15.84 & 0.28 & 0.25 & 0.28 & 4.15 & 1.13 & 72 & 0.14 \\
+     14.94 & 0.28 & 0.53 & 0.28 & 3.33 & 0.53 & 56 & 0.14 \\
+     17.32 & 0.28 & 0.86 & 0.28 & 3.23 & 0.33 & 60 & 0.14 \\
+      \bottomrule
+  \end{tabular}
+\end{table}

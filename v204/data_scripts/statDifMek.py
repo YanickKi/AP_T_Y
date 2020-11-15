@@ -11,7 +11,7 @@ T6 += 273.15
 T7 += 273.15
 T8 += 273.15
 
-plt.plot(t/10, T2 - T1, label = r'$\symup{\Delta} T_2 - T_1$')
+plt.plot(t/10, T2 - T1, label = r'$\symup{\Delta} T_2 - T_1$', color = "tab:blue")
 plt.xlabel(r'$t \mathbin{/} \si{\second}$')
 plt.ylabel(r'$T \mathbin{/} \si{\kelvin}$')
 plt.legend()
