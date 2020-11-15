@@ -29,10 +29,10 @@ TMK= T4 - T3
 TA = T5 - T6
 TE = T8 - T7
 
-DM = unp.uarray([TM[1000], TM[2000], TM[3000], TM[5000], TM[7000]], 0.1) 
-DMK= unp.uarray([TMK[1000], TMK[2000], TMK[3000], TMK[5000], TMK[7000]], 0.1) 
-DA = unp.uarray([TA[1000], TA[2000], TA[3000], TA[5000], TA[7000]], 0.1)
-DE = unp.uarray([TE[1000], TE[2000], TE[3000], TE[5000], TE[7000]], 0.1)
+DM = unp.uarray([TM[1000], TM[2000], TM[3000], TM[5000], TM[7000]], 0.2) 
+DMK= unp.uarray([TMK[1000], TMK[2000], TMK[3000], TMK[5000], TMK[7000]], 0.2) 
+DA = unp.uarray([TA[1000], TA[2000], TA[3000], TA[5000], TA[7000]], 0.2)
+DE = unp.uarray([TE[1000], TE[2000], TE[3000], TE[5000], TE[7000]], 0.2)
 ka = np.array([120, 237, 21]) 
 
 
@@ -42,14 +42,12 @@ def DQDT(k, A , DT):
 #print( A1[1] * A1[2])
 #print( A2[1] * A2[2])
 
-#print(DQDT(ka[0], Ag, DM))
-#print(DQDT(ka[0], Ak, DMK))
-#print(DQDT(ka[1], Ag, DA))
-#print(DQDT(ka[2], Ag, DE))
+print(DQDT(ka[0], Ag, DM))
+print(DQDT(ka[0], Ak, DMK))
+print(DQDT(ka[1], Ag, DA))
+print(DQDT(ka[2], Ag, DE))
 
 peaks1, _ = find_peaks(T1, distance = 15)
-
-print(peaks1)
 
 
 

@@ -19,8 +19,14 @@ build/statDifSt.pdf: data_scripts/statDifSt.py matplotlibrc header-matplotlib.te
 build/statDifMek.pdf: data_scripts/statDifMek.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/statDifMek.py
 
+build/Al.pdf: data_scripts/Al.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/Al.py
+
+build/St.pdf: data_scripts/St.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/St.py
+
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/stat14.pdf build/stat58.pdf build/dynamisch200.pdf build/Me.pdf build/statDifSt.pdf build/statDifMek.pdf
+build/main.pdf: build/stat14.pdf build/stat58.pdf build/dynamisch200.pdf build/Me.pdf build/statDifSt.pdf build/statDifMek.pdf build/Al.pdf build/St.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

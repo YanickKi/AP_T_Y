@@ -36,10 +36,13 @@ T8my = unp.uarray(T8[peaksm8s], 0.2)
 
 A7 = T7y - T7my  
 A8 = T8y - T8my
+
+kappaA7 = 8000 * 400 * 0.03**2 / (2 * np.mean(peaks7se - peaks8se) * np.mean(unp.log(A7 / A8)))
+
 #print(peaks7,  peaksm7)
 #print(A7)
 #print(peaks8,  peaksm8)
 #print(A8)
 #print(unp.log(A7 / A8))
-print((peaks8se - peaks7se))
+print(kappaA7)
 

@@ -44,7 +44,6 @@ Für die Berechnung des Wärmestroms dient die Gleichung \eqref{eqn:Wärmemenge}
 $j_w$ nicht mit dem Differntialquotient $\sfrac{\partial T}{\partial x}$ sondern nur mit dem Differenzenquotienten $\sfrac{\symup{\Delta}T}{\symup{\Delta} x}$
 berechnen, so dass der Wärmestrom auch durch einen Differenzenquotienten dargestellt wird. 
 Für den Abstand zwischen zwei Thermoelementen  wurde $\symup{\Delta} x = \SI{0.03}{\meter}$ gemessen.
-
 \begin{table}
   \centering
   \caption{Errechnete Wärmeströme}
@@ -58,22 +57,22 @@ Für den Abstand zwischen zwei Thermoelementen  wurde $\symup{\Delta} x = \SI{0.
     \toprule
     {$t \mathbin{/} \si{\second}$} 
     & \multicolumn{2}{c}{$\frac{\symup{\Delta} Q_\text{Me}}    {\symup{\Delta}t} \mathbin{/} \si{\joule\second\tothe{-1}}$}
-    & \multicolumn{2}{c}{$\frac{\symup{\Delta} Q_\text{Me,k}} {\symup{\Delta}t} \mathbin{/} \si{\joule\second\tothe{-1}}$}  
+    & \multicolumn{2}{c}{$\frac{\symup{\Delta} Q_\text{Me,k}}  {\symup{\Delta}t} \mathbin{/} \si{\joule\second\tothe{-1}}$}  
     & \multicolumn{2}{c}{$\frac{\symup{\Delta} Q_\text{Al}}    {\symup{\Delta}t} \mathbin{/} \si{\joule\second\tothe{-1}}$}
     & \multicolumn{2}{c}{$\frac{\symup{\Delta} Q_\text{St}}    {\symup{\Delta}t} \mathbin{/} \si{\joule\second\tothe{-1}}$}\\
     \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
     \midrule
-    100 & 7.49 & 0.19 & 4.65 & 0.11 & 7.51 & 0.38 & 3.57 & 0.03 \\
-    200 & 5.18 & 0.19 & 3.43 & 0.11 & 5.08 & 0.38 & 3.10 & 0.03 \\
-    300 & 4.63 & 0.19 & 3.16 & 0.11 & 4.66 & 0.38 & 2.82 & 0.03 \\
-    500 & 4.63 & 0.19 & 3.15 & 0.11 & 4.78 & 0.38 & 2.61 & 0.03 \\
-    700 & 4.28 & 0.19 & 2.92 & 0.11 & 4.44 & 0.38 & 2.35 & 0.03 \\
+    100 & 7.49 & 0.38 & 4.65 & 0.22 & 7.51 & 0.76 & 3.57 & 0.07 \\
+    200 & 5.18 & 0.38 & 3.43 & 0.22 & 5.08 & 0.76 & 3.10 & 0.07 \\
+    300 & 4.63 & 0.38 & 3.16 & 0.22 & 4.66 & 0.76 & 2.82 & 0.07 \\
+    500 & 4.63 & 0.38 & 3.15 & 0.22 & 4.78 & 0.76 & 2.61 & 0.07 \\
+    700 & 4.28 & 0.38 & 2.92 & 0.22 & 4.44 & 0.76 & 2.35 & 0.07 \\
     \bottomrule
   \end{tabular}
 \end{table}
 Der Fehler lässt sich mittels der Fehlerfortpfllanzung nach Gauß berechnen:
 \begin{equation}
-  \symup{\Delta} \frac{\symup{\Delta}Q}{\symup{\Delta} t}= \kappa A \frac{1}{0.03} \cdot 0.1
+  \symup{\Delta} \frac{\symup{\Delta}Q}{\symup{\Delta} t}= \kappa A \frac{\symup{\Delta} T }{\SI{0.03}{\metre}}
 \end{equation}
 \subsubsection{Vergleich der Temperaturdiffernzen}
 \begin{figure}
@@ -220,3 +219,31 @@ berechnen.
       \bottomrule
   \end{tabular}
 \end{table}
+Der Mittelwert der Phasendifferenz und des natürlichen logarithmus des Verhältnis von den beiden Amplituden beträgt
+\begin{align}
+  \overline{\symup{\Delta} t}                     & = \SI{66.50(7)}{\second} \\
+  \overline{\ln \left (  \frac{A_7}{A_8} \right)} & = \num{4.0(11)}
+\end{align}
+Die Dichte von dem Edelstahl beträgt $\rho = \SI{8000}{\kilogram\per\cubic\metre}$, die spezifische Wärmekapazität 
+$c = \SI{400}{\joule\per\kilogram\kelvin}$. Auch der Abstand der beiden Thermoelemente von dem Stahlstab
+beträgt $\symup{\Delta} x = \SI{0.03}{\metre}$, so dass sich eine Wärmeleitfähigkeit von
+\begin{equation}
+  \kappa = \SI{10.7(28)}{\watt\per\metre\per\kelvin}
+\end{equation} 
+Der Fehler der Ampltiduden, des natürlichen logarithmus des Verhältnis der Amplituden und der Phasendifferenz 
+lassen sich mittels der Gaußschen Fehlerfortpfllanzung berechnen:
+\begin{align}
+  \symup{\Delta} A                                                      &= \sqrt{2} \symup{\Delta} T \\
+  \symup{\Delta} \left (\symup{\Delta} t \right )                       &= \sqrt{2} \symup{\Delta} t \\
+  \symup{\Delta} \ln \left ( \frac{A_\text{nah}}{A_\text{fern}} \right) &= 
+  \sqrt{\frac{1}{A_\text{nah}^2} \left ( \symup{\Delta} A \right )^2 + 
+  \frac{A_\text{nah}^2}{A_\text{fern}^4} \left ( \symup{\Delta} A \right ) ^2} 
+\end{align}
+Die Unsicherheit der Wärmeleitfähigkeit wird ebenfall mit der Fehlerfortpfllanzung nach Gauß berechnet:
+\begin{equation} 
+  \symup{\Delta} \kappa = \frac{\rho c \left ( \symup{\Delta} x \right )^2 }
+  {2\ln \left ( \frac{A_\text{nah}}{A_\text{fern}} \right ) \symup{\Delta} t} 
+  \sqrt{\frac{1}{\left( \symup{\Delta} t\right)^2}
+  \left ( \symup{\Delta} \left ( \symup{\Delta} t \right ) \right )^2 + \frac{1}{ \ln \left ( \frac{A_\text{nah}}{A_\text{fern}} \right )^2}
+ \left (  \symup{\Delta} \ln \left ( \frac{A_\text{nah}}{A_\text{fern}} \right ) \right )^2}
+\end{equation}
