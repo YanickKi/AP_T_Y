@@ -1,6 +1,7 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Für die Temperatur wurde eine Messunsicherheit von $\symup{\Delta} T = 0.2$ angenommen. Die Messunsicherheit der Zeit wird als $\symup{\Delta} t = \SI{0.1}{\second}$.
+Für die Temperatur wurde eine Messunsicherheit von $\symup{\Delta} T = \SI{0.2}{\kelvin}$ angenommen. Die Messunsicherheit der Zeit wird als
+$\symup{\Delta} t = \SI{0.1}{\second}$ angesehen.
 \subsection{Statisches Vefahren}  
 \subsubsection{Vergleich der Temperaturverläufe}
 \begin{figure}
@@ -17,7 +18,7 @@ Für die Temperatur wurde eine Messunsicherheit von $\symup{\Delta} T = 0.2$ ang
     \label{fig:stat58}
   \end{subfigure}
 \end{figure}
-Bei dem Verglichen der Kurven fällt es auf, dass alle vier Kurven zu Beginn einen starken Temperaturanstieg repräsentieren, welcher jedoch schnell wieder abschwächt.
+Bei dem Vergleichen der Kurven fällt auf, dass alle vier Kurven zu Beginn einen starken Temperaturanstieg repräsentieren, welcher jedoch schnell wieder abschwächt.
 Dennoch verhalten sich die Temperaturen $T_1$ und $T_4$ Anfangs beinahe identisch, wobei die Temperaturen $T_5$ und $T_8$ dort Diskrepanzen aufzeigen. $T_5$ steigt 
 sehr stark an und flacht vergleichsweise schnell wieder ab, während die Temperatur $T_8$ eine eher verhaltene Steigung aufweist, denn diese steigt sehr langsam an, besitzt
 im Gegenzug daszu keinen abrupten Steigungsverlust. Nach dem beinahe identischen Verhalten, fällt die Kurve von $T_4$ früher ab, wonach dann eine kleine, annähernd konstante
@@ -27,8 +28,8 @@ alle Kurven einen leichten Abfall bei $t \approx \SI{620}{\second}$ erleiden.
 \subsubsection{Die beste Wärmeleitfähigkeit}
 \begin{table}
   \centering
-  \label{tab:Waeremleitfaehigkeit}
   \caption{Temperaturen nach $\SI{700}{\second}$}
+  \label{tab:Waeremleitfaehigkeit}
   \sisetup{table-format = 3.2}
   \begin{tabular}{S S S S}
      \toprule
@@ -89,8 +90,9 @@ Der Fehler lässt sich mittels der Fehlerfortpfllanzung nach Gauß berechnen:
     \label{fig:statDifMek}
   \end{subfigure}
 \end{figure}
-Bei der Betrachtung beider Grpahen erkennt man instantan, dass bei beiden Kurven ein Maximum kur vor $t = \SI{100}{\second}$ erreicht wird, wobei beide danach 
-wieder abfallen. Dies lieg der Ursache zu Grunde, dass die Temperaturen an den inneren und äußeren Thermoelementen im Bereich der Raumtemperatur liegen. 
+Bei der Betrachtung der Graphen \eqref{fig:statDifSt} und \eqref{fig:statDifMek} erkennt man instantan, dass bei beiden
+Kurven ein Maximum kurz vor $t = \SI{100}{\second}$ erreicht wird, wobei beide danach 
+wieder abfallen. Dies liegt der Ursache zu Grunde, dass die Temperaturen an den inneren und äußeren Thermoelementen im Bereich der Raumtemperatur liegen. 
 Erwärmt man jedoch den Stab steigt die Temperatur am inneren  Thermoelement deutlich schneller an als die an dem äußeren Thermoelement, da die Wärme erstmal
 in einer gewissen Zeit nach außen strömen muss, so dass ein zeitlicher Verzug entsteht. Bei näherer Betrachung wird die Stärke des Abfalls auffällig, da die
 Temperaturdifferenz des Stahlstabes deutlich langsamer abfällt als die des großen Messingstabes. Der Grund hierfür ist die unterschiedlich hohe
@@ -116,7 +118,7 @@ Messingstabes besser ist, kann die Temperatur am äußeren Messpunkt schneller a
      \multicolumn{2}{c}{$A_1 \mathbin{/} \si{\kelvin}$}       &
      \multicolumn{2}{c}{$A_2 \mathbin{/} \si{\kelvin}$}       & 
      \multicolumn{2}{c}{$\ln \left (\frac{A_2}{A_1} \right)$} &
-     \multicolumn{2}{c} {$\symup{\Delta} t \mathbin{/} \si{\second}$}\\
+     \multicolumn{2}{c} {$\symup{\Delta} t_\text{Me} \mathbin{/} \si{\second}$}\\
      \cmidrule(lr){1-2} \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
      \midrule
      0.20 & 0.28 & 2.48 & 0.28 & 2.52 & 1.40 & 26.00 & 0.14 \\
@@ -133,15 +135,15 @@ Messingstabes besser ist, kann die Temperatur am äußeren Messpunkt schneller a
   \end{tabular}
 \end{table}
 Zur Berechnung der Wärmeleitfähigkeit werden zunächst die Mittelwerte von der Phasendifferenz und  $\ln \left (  \frac{A_2}{A_1} \right)$ berechnet.
-Die Mittelwerte ergeben sich zu:  
+Die Mittelwerte ergeben sich zu
 \begin{align}
-  \overline{\symup{\Delta} t}                     &= \SI{15.8(4)}{\second} \\
-  \overline{\ln \left (  \frac{A_2}{A_1} \right)} & = \num{1.37(13)}        
+  \overline{\symup{\Delta} t}_\text{Me}                     &= \SI{15.8(4)}{\second} \\
+  \overline{\ln \left (  \frac{A_2}{A_1} \right)} & = \num{1.37(13)} \; \text{.}        
 \end{align}
-Mit dem gegebenen Literaturwert für Dichte von Messing $\rho = \SI{8520}{\kilogram\per\meter\cubed}$, der gegebenen. spezifischen Wärmekapazität 
-$c = \SI{385}{\joule\per\kilogram\per\kelvin}$ und dem gemessen Abstand $\symup{\Delta} x = \SI{0.03}{\meter}$ lässt sich die berechnete Wärmeleitfähigkeit zu
+Mit dem gegebenen Literaturwert für Dichte von Messing $\rho_\text{Me} = \SI{8520}{\kilogram\per\meter\cubed}$, der gegebenen. spezifischen Wärmekapazität 
+$c_\text{Me} = \SI{385}{\joule\per\kilogram\per\kelvin}$ und dem gemessen Abstand $\symup{\Delta} x = \SI{0.03}{\meter}$ lässt sich die berechnete Wärmeleitfähigkeit zu
 \begin{equation}
-\kappa = \SI{68(6)}{\watt\per\metre\per\kelvin}
+\kappa_\text{Me} = \SI{68(6)}{\watt\per\metre\per\kelvin}
 \end{equation}
 berechnen.
 \begin{figure}
@@ -163,7 +165,7 @@ berechnen.
      \multicolumn{2}{c}{$A_5 \mathbin{/} \si{\kelvin}$}       &
      \multicolumn{2}{c}{$A_6 \mathbin{/} \si{\kelvin}$}       & 
      \multicolumn{2}{c}{$\ln \left (\frac{A_6}{A_5} \right)$} &
-     \multicolumn{2}{c} {$\symup{\Delta} t \mathbin{/} \si{\second}$}\\
+     \multicolumn{2}{c} {$\symup{\Delta} t_\text{Al}  \mathbin{/} \si{\second}$}\\
      \cmidrule(lr){1-2} \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
      \midrule
      2.48 & 0.28 &  9.44 & 0.28 & 1.34 & 0.12 & 12.00 & 0.14 \\
@@ -181,13 +183,13 @@ berechnen.
 \end{table}
 Die Mittelwerte der Größen von Aluminium sind
 \begin{align}
-  \overline{\symup{\Delta} t}                     &= \SI{7.6(4)}{\second} \; \text{.}\\
-  \overline{\ln \left (  \frac{A_2}{A_1} \right)} & = \num{0.89(13)}
+  \overline{\symup{\Delta} t}_\text{Al}                     &= \SI{7.6(4)}{\second} \\
+  \overline{\ln \left (  \frac{A_2}{A_1} \right)} & = \num{0.89(13)} \; \text{.}
 \end{align}
-Mit der Dichte von Aluminium $\rho = \SI{2800}{\kilogram\per\cubic\metre}$, der spezifischen Wärmekapazität $c = \SI{830}{\joule\per\gram\per\kelvin}$
+Mit der Dichte von Aluminium $\rho_\text{Al} = \SI{2800}{\kilogram\per\cubic\metre}$, der spezifischen Wärmekapazität $c_\text{Al} = \SI{830}{\joule\per\gram\per\kelvin}$
 und dem Abstand $\symup{\Delta} x = \SI{0.03}{\meter}$ lässt sich die Wärmeleitfähigkeit zu 
 \begin{equation}
-  \kappa = \SI{155(22)}{\watt\per\metre\per\kelvin}
+  \kappa_\text{Al} = \SI{155(22)}{\watt\per\metre\per\kelvin}
 \end{equation}
 berechnen.
 \begin{figure}
@@ -209,7 +211,7 @@ berechnen.
      \multicolumn{2}{c}{$A_7 \mathbin{/} \si{\kelvin}$}       &
      \multicolumn{2}{c}{$A_8 \mathbin{/} \si{\kelvin}$}       & 
      \multicolumn{2}{c}{$\ln \left (\frac{A_7}{A_8} \right)$} &
-     \multicolumn{2}{c} {$\symup{\Delta} t \mathbin{/} \si{\second}$}\\
+     \multicolumn{2}{c} {$\symup{\Delta} t_\text{St} \mathbin{/} \si{\second}$}\\
      \cmidrule(lr){1-2} \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
      \midrule
      14.57 & 0.28 & 0.07 & 0.28 & 5.33 & 4.04 & 80 & 0.14 \\
@@ -221,14 +223,14 @@ berechnen.
 \end{table}
 Der Mittelwert der Phasendifferenz und des natürlichen logarithmus des Verhältnis von den beiden Amplituden beträgt
 \begin{align}
-  \overline{\symup{\Delta} t}                     & = \SI{66.50(7)}{\second} \\
+  \overline{\symup{\Delta} t}_\text{St}                     & = \SI{66.50(7)}{\second} \\
   \overline{\ln \left (  \frac{A_7}{A_8} \right)} & = \num{4.0(11)}
 \end{align}
-Die Dichte von dem Edelstahl beträgt $\rho = \SI{8000}{\kilogram\per\cubic\metre}$, die spezifische Wärmekapazität 
-$c = \SI{400}{\joule\per\kilogram\kelvin}$. Auch der Abstand der beiden Thermoelemente von dem Stahlstab
+Die Dichte von dem Edelstahl beträgt $\rho_\text{St} = \SI{8000}{\kilogram\per\cubic\metre}$, die spezifische Wärmekapazität 
+$c_\text{St} = \SI{400}{\joule\per\kilogram\kelvin}$. Auch der Abstand der beiden Thermoelemente von dem Stahlstab
 beträgt $\symup{\Delta} x = \SI{0.03}{\metre}$, so dass sich eine Wärmeleitfähigkeit von
 \begin{equation}
-  \kappa = \SI{10.7(28)}{\watt\per\metre\per\kelvin}
+  \kappa_\text{St} = \SI{10.7(28)}{\watt\per\metre\per\kelvin}
 \end{equation} 
 Der Fehler der Ampltiduden, des natürlichen logarithmus des Verhältnis der Amplituden und der Phasendifferenz 
 lassen sich mittels der Gaußschen Fehlerfortpfllanzung berechnen:
