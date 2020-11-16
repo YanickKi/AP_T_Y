@@ -6,6 +6,7 @@ da das große $\Delta$ für die Phasendifferenz gebraucht wird.} angesehen.
 \subsection{Statisches Vefahren}  
 \subsubsection{Vergleich der Temperaturverläufe}
 \begin{figure}
+  \label{stat2}
   \begin{subfigure}{0.48\textwidth}
     \centering
     \includegraphics[width = \textwidth]{build/stat14.pdf}
@@ -74,7 +75,7 @@ Für den Abstand zwischen zwei Thermoelementen  wurde $\symup{\Delta} x = \SI{0.
 \end{table}
 Der Fehler lässt sich mittels der Fehlerfortpfllanzung nach Gauß berechnen:
 \begin{equation}
-  \symup{\Delta} \frac{\symup{\Delta}Q}{\symup{\Delta} t}= \kappa A \frac{\symup{\Delta} T }{\SI{0.03}{\metre}}
+  \symup{\Delta} \left ( \frac{\symup{\Delta}Q}{\symup{\Delta} t} \right) = \kappa A \frac{\symup{\Delta} T }{\SI{0.03}{\metre}}
 \end{equation}
 \subsubsection{Vergleich der Temperaturdiffernzen}
 \begin{figure}
@@ -87,7 +88,7 @@ Der Fehler lässt sich mittels der Fehlerfortpfllanzung nach Gauß berechnen:
   \begin{subfigure}{0.48\textwidth}
     \centering
     \includegraphics[width = \textwidth]{build/statDifMek.pdf}
-    \caption{Temperaturdifferenz $\symup{\Delta}T_\text{Me,k}$}
+    \caption{Temperaturdifferenz $\symup{\Delta}T_\text{Me}$}
     \label{fig:statDifMek}
   \end{subfigure}
 \end{figure}
@@ -122,23 +123,23 @@ Messingstabes besser ist, kann die Temperatur am äußeren Messpunkt schneller a
      \multicolumn{2}{c} {$\symup{\Delta} t_\text{Me} \mathbin{/} \si{\second}$}\\
      \cmidrule(lr){1-2} \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
      \midrule
-     0.20 & 0.28 & 2.48 & 0.28 & 2.52 & 1.40 & 26.00 & 0.14 \\
-     0.71 & 0.28 & 4.21 & 0.28 & 1.78 & 0.40 & 20.00 & 0.14 \\
-     1.05 & 0.28 & 4.75 & 0.28 & 1.51 & 0.28 & 16.00 & 0.14 \\
-     1.30 & 0.28 & 4.97 & 0.28 & 1.34 & 0.22 & 16.00 & 0.14 \\
-     1.57 & 0.28 & 5.34 & 0.28 & 1.22 & 0.19 & 14.00 & 0.14 \\
-     1.69 & 0.28 & 5.32 & 0.28 & 1.15 & 0.17 & 14.00 & 0.14 \\
-     1.80 & 0.28 & 5.45 & 0.28 & 1.11 & 0.16 & 14.00 & 0.14 \\
-     1.88 & 0.28 & 5.48 & 0.28 & 1.07 & 0.16 & 14.00 & 0.14 \\
-     2.01 & 0.28 & 5.64 & 0.28 & 1.03 & 0.15 & 12.00 & 0.14 \\
-     2.09 & 0.28 & 5.70 & 0.28 & 1.00 & 0.14 & 12.00 & 0.14 \\
+     0.10 & 0.28 & 1.24 & 0.28 & 2.52 & 1.40 & 26.00 & 0.14 \\
+     0.35 & 0.28 & 2.11 & 0.28 & 1.78 & 0.40 & 20.00 & 0.14 \\
+     0.53 & 0.28 & 2.34 & 0.28 & 1.51 & 0.28 & 16.00 & 0.14 \\
+     0.65 & 0.28 & 2.49 & 0.28 & 1.34 & 0.22 & 16.00 & 0.14 \\
+     0.78 & 0.28 & 2.67 & 0.28 & 1.22 & 0.19 & 14.00 & 0.14 \\
+     0.85 & 0.28 & 2.66 & 0.28 & 1.15 & 0.17 & 14.00 & 0.14 \\
+     0.90 & 0.28 & 2.73 & 0.28 & 1.11 & 0.16 & 14.00 & 0.14 \\
+     0.94 & 0.28 & 2.74 & 0.28 & 1.07 & 0.16 & 14.00 & 0.14 \\
+     1.01 & 0.28 & 2.82 & 0.28 & 1.03 & 0.15 & 12.00 & 0.14 \\
+     1.04 & 0.28 & 2.85 & 0.28 & 1.00 & 0.14 & 12.00 & 0.14 \\
       \bottomrule
   \end{tabular}
 \end{table}
 Zur Berechnung der Wärmeleitfähigkeit werden zunächst die Mittelwerte von der Phasendifferenz und  $\ln \left (  \frac{A_2}{A_1} \right)$ berechnet.
 Die Mittelwerte ergeben sich zu
 \begin{align}
-  \overline{\symup{\Delta} t}_\text{Me}                     &= \SI{15.8(4)}{\second} \\
+  \overline{\symup{\Delta} t}_\text{Me}                     &= \SI{15.80(14)}{\second} \\
   \overline{\ln \left (  \frac{A_2}{A_1} \right)} & = \num{1.37(13)} \; \text{.}        
 \end{align}
 Mit dem gegebenen Literaturwert für Dichte von Messing $\rho_\text{Me} = \SI{8520}{\kilogram\per\meter\cubed}$, der gegebenen. spezifischen Wärmekapazität 
@@ -169,22 +170,22 @@ berechnen.
      \multicolumn{2}{c} {$\symup{\Delta} t_\text{Al}  \mathbin{/} \si{\second}$}\\
      \cmidrule(lr){1-2} \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
      \midrule
-     2.48 & 0.28 &  9.44 & 0.28 & 1.34 & 0.12 & 12.00 & 0.14 \\
-     4.21 & 0.28 & 11.21 & 0.28 & 0.98 & 0.07 &  8.00 & 0.14 \\
-     4.75 & 0.28 & 11.50 & 0.28 & 0.88 & 0.06 &  8.00 & 0.14 \\
-     4.97 & 0.28 & 11.70 & 0.28 & 0.86 & 0.06 &  8.00 & 0.14 \\
-     5.34 & 0.28 & 12.12 & 0.28 & 0.82 & 0.06 &  8.00 & 0.14 \\
-     5.32 & 0.28 & 12.08 & 0.28 & 0.82 & 0.06 &  8.00 & 0.14 \\
-     5.45 & 0.28 & 12.22 & 0.28 & 0.81 & 0.06 &  6.00 & 0.14 \\
-     5.48 & 0.28 & 12.22 & 0.28 & 0.80 & 0.06 &  6.00 & 0.14 \\
-     5.64 & 0.28 & 12.37 & 0.28 & 0.79 & 0.05 &  6.00 & 0.14 \\
-     5.70 & 0.28 & 12.41 & 0.28 & 0.78 & 0.05 &  6.00 & 0.14 \\
+     1.24 & 0.28 & 4.72 & 0.28 & 1.34 & 0.12 & 12.00 & 0.14 \\
+     2.11 & 0.28 & 5.61 & 0.28 & 0.98 & 0.07 &  8.00 & 0.14 \\
+     2.38 & 0.28 & 5.75 & 0.28 & 0.88 & 0.06 &  8.00 & 0.14 \\
+     2.49 & 0.28 & 5.85 & 0.28 & 0.86 & 0.06 &  8.00 & 0.14 \\
+     2.67 & 0.28 & 6.61 & 0.28 & 0.82 & 0.06 &  8.00 & 0.14 \\
+     2.66 & 0.28 & 6.04 & 0.28 & 0.82 & 0.06 &  8.00 & 0.14 \\
+     2.73 & 0.28 & 6.11 & 0.28 & 0.81 & 0.06 &  6.00 & 0.14 \\
+     2.74 & 0.28 & 6.11 & 0.28 & 0.80 & 0.06 &  6.00 & 0.14 \\
+     2.82 & 0.28 & 6.19 & 0.28 & 0.79 & 0.05 &  6.00 & 0.14 \\
+     2.85 & 0.28 & 6.21 & 0.28 & 0.78 & 0.05 &  6.00 & 0.14 \\
       \bottomrule
   \end{tabular}
 \end{table}
 Die Mittelwerte der Größen von Aluminium sind
 \begin{align}
-  \overline{\symup{\Delta} t}_\text{Al}                     &= \SI{7.6(4)}{\second} \\
+  \overline{\symup{\Delta} t}_\text{Al}                     &= \SI{7.60(14)}{\second} \\
   \overline{\ln \left (  \frac{A_2}{A_1} \right)} & = \num{0.89(13)} \; \text{.}
 \end{align}
 Mit der Dichte von Aluminium $\rho_\text{Al} = \SI{2800}{\kilogram\per\cubic\metre}$, der spezifischen Wärmekapazität $c_\text{Al} = \SI{830}{\joule\per\gram\per\kelvin}$
@@ -194,14 +195,14 @@ und dem Abstand $\symup{\Delta} x = \SI{0.03}{\meter}$ lässt sich die Wärmelei
 \end{equation}
 berechnen.
 \begin{figure}
-  \caption{Temperaturen des Stahlstab}
+  \caption{Temperaturen des Stahlstabs}
   \centering
   \includegraphics[width = \textwidth]{build/St.pdf}
 \end{figure}
 \begin{table}
   \centering
   \label{tab:AmplitudeAluminium}
-  \caption{Amplituden und Phasendifferenzen des Aluminiumstabs}
+  \caption{Amplituden und Phasendifferenzen des Stahlstabs}
   \sisetup{table-format = 2.2}
   \begin{tabular}{
     S @{${}\pm{}$} S[table-format = 1.2]
@@ -215,16 +216,16 @@ berechnen.
      \multicolumn{2}{c} {$\symup{\Delta} t_\text{St} \mathbin{/} \si{\second}$}\\
      \cmidrule(lr){1-2} \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
      \midrule
-     14.57 & 0.28 & 0.07 & 0.28 & 5.33 & 4.04 & 80 & 0.14 \\
-     15.84 & 0.28 & 0.25 & 0.28 & 4.15 & 1.13 & 72 & 0.14 \\
-     14.94 & 0.28 & 0.53 & 0.28 & 3.33 & 0.53 & 56 & 0.14 \\
-     17.32 & 0.28 & 0.86 & 0.28 & 3.23 & 0.33 & 60 & 0.14 \\
+     7.23 & 0.28 & 0.03 & 0.28 & 5.33 & 4.04 & 80 & 0.14 \\
+     7.90 & 0.28 & 0.13 & 0.28 & 4.15 & 1.13 & 72 & 0.14 \\
+     7.47 & 0.28 & 0.27 & 0.28 & 3.33 & 0.53 & 56 & 0.14 \\
+     8.66 & 0.28 & 0.43 & 0.28 & 3.23 & 0.33 & 60 & 0.14 \\
       \bottomrule
   \end{tabular}
 \end{table}
 Der Mittelwert der Phasendifferenz und des natürlichen logarithmus des Verhältnis von den beiden Amplituden beträgt
 \begin{align}
-  \overline{\symup{\Delta} t}_\text{St}                     & = \SI{66.50(7)}{\second} \\
+  \overline{\symup{\Delta} t}_\text{St}                     & = \SI{66.50(14)}{\second} \\
   \overline{\ln \left (  \frac{A_7}{A_8} \right)} & = \num{4.0(11)}
 \end{align}
 Die Dichte von dem Edelstahl beträgt $\rho_\text{St} = \SI{8000}{\kilogram\per\cubic\metre}$, die spezifische Wärmekapazität 
@@ -250,3 +251,39 @@ Die Unsicherheit der Wärmeleitfähigkeit wird ebenfall mit der Fehlerfortpfllan
   \left ( \symup{\Delta} \left ( \symup{\Delta} t \right ) \right )^2 + \frac{1}{ \ln \left ( \frac{A_\text{nah}}{A_\text{fern}} \right )^2}
  \left (  \symup{\Delta} \ln \left ( \frac{A_\text{nah}}{A_\text{fern}} \right ) \right )^2}
 \end{equation}
+\subsubsection{Wellenlänge und Frequenz}
+Um die Frequenz zu erhalten benötigt man zunächst die Periodendauer $\tau$. Diese ist bereits durch die Durchführung gegeben,
+da für bei der dynamischen Methode alle $40$ bzw. $100$ Sekunden der Schalter auf heizen oder kühlen gestellt wurde.
+Mit Hilfe der Periodendauer kann man die Frequenz durch  
+\begin{equation}
+  f = \frac{1}{\tau}
+\end{equation}  
+bestimmen. Die Wellenlänge $\lambda$ lässt sich bei bekannter frequenz $f$ und Wellengeschwindigkeit $v$ berechnen. 
+Um die Wellengeschwindigkeit zu erhalten, berechnet man zunächst den Quotient des Abstandes der Messpunkte auf einem Stab und der Phasendifferenz
+zwischen dem inneren und äußeren Thermoelement auf einem Stab, so dass
+man für die Wellenlänge den Ausdruck
+\begin{equation}
+  \lambda = \frac{\symup{\Delta} x }{\symup{\Delta} t }  \cdot f
+\end{equation}
+erhält. Für die vier "Temperaturwellen" ergibt sich die Tabelle \eqref{tab:WellelängeFrequenz}, wobei für höhere Genauigkeit mit Mittelwerten gerechnet wurde. 
+\begin{table}
+  \centering
+  \label{tab:WellelängeFrequenz}
+  \caption{Wellen und Frequenz der "Tempteraturwellen"}
+  \sisetup{table-format = 2.2}
+  \begin{tabular}{
+    S[table-format = 14]
+    S[table-format = 1.6] @{${}\pm{}$} S[table-format = 1.2]
+    S[table-format = 1.2] @{${}\pm{}$} S[table-format = 1.2]}
+     \toprule
+     \multicolumn{2}{c}{$f \mathbin{/} \si{\second\tothe{-1}}$} &
+     \multicolumn{2}{c}{$v \mathbin{/} \si{\meter\second\tothe{-1}}$} \\
+     \cmidrule(lr){1-2} \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
+     \midrule
+     Messing        & 0.012438 & 0.000005 & 0.28 & 5.33 \\
+     Messing, klein & 0.012438 & 0.000005 & 0.28 & 4.15 \\
+     Aluminium      & 0.012438 & 0.000005 & 0.28 & 3.33 \\
+     Edelstahl      & 0.012438 & 0.000005 & 0.28 & 3.23 \\
+      \bottomrule
+  \end{tabular}
+\end{table}
