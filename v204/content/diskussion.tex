@@ -1,7 +1,31 @@
 \section{Diskussion}
 \label{sec:Diskussion}
-Bei Betrachtung der Graphen von Abbildung \ref{fig:stat2}, ist im späteren Verlauf eine Delle zu erkennen. 
-Mögliche Ursachen könnten die schwankende Heizspannung oder eine mögliche Berührung mit der Isolierung.
-Die schwankende Heizspannung ist während der Durchführung bereits aufgefallen, sie betrugen $\pm \SI{0.1}{\volt}$ und könnten somit, zu kleineren Abweichungen geführt haben.
-Auffällig ist jedoch, dass bei dem Graphen von T8, keine Delle vorhanden ist. Dies könnte zu dem Schluss führen, dass diese Delle Materialabhängig ist.
-Aus dieser Messung lässt sich aber nichts spezifisches sagen, da es sich auch um einen Messfehler handeln könnte.
+Bei Betrachtung der Graphen von Abbildung \ref{stat2}, fällt auf das die Graphen von T1, T4 und T5, jeweils eine Delle bei $t \approx \SI{700}{\second}$ haben.
+Jedoch ist bei dem Graphen von T8 so etwas nicht zu erkennen. Da alle Messungen gleichzeitig und mit gleichem Aufbau ausgeführt wurden, 
+könnte dies eine Materialabhängigkeit sein. Da aber der Graph von T8 anders verläuft als der Rest, ist die Abweichung vielleicht zu klein zum Erkennen.
+Wenn T8 auch eine Anomalie hätte, könnte man auf eine Schwankung des Peltier-Elements oder des Netzgeräts schließen.
+Die Fehler ließen sich untersuchen, wenn man die Geräte austauscht und die Daten erneut auswerten würde. 
+Zudem wäre für mehr Präzision, eine mehrfache Wiederholung des Versuches notwendig. Um Fehler mit Hilfe von Mittelwerten zu dezimieren.
+\\
+Bei der Statischen Methode liegen relativ große Abweichungen von den Literaturwerten \ref{tab:litwerte} vor:
+\begin{align*}
+    \kappa_\text{Messing, gemessen} &= \SI{68 \pm 6}{\watt\per\metre\per\kelvin} & \kappa_\text{Messing, Literatur} &= \SI{120}{\watt\per\metre\per\kelvin}\\
+    \kappa_\text{Aluminium, gemessen} &= \SI{155 \pm 22}{\watt\per\metre\per\kelvin} & \kappa_\text{Aluminium, Literatur} &= \SI{236}{\watt\per\metre\per\kelvin}\\
+    \kappa_\text{Edelstahl, gemessen} &= \SI{10.7 \pm 2.8}{\watt\per\metre\per\kelvin} & \kappa_\text{Edelstahl, Literatur} &= \SI{21}{\watt\per\metre\per\kelvin}
+\end{align*}
+Die relativen Abweichungen betragen:
+\begin{align*}
+    \implies \symup{relative\,Abweichung}_{\symup{Messing}} &\hat{=} 43.3 \%\\
+    \implies \symup{relative\,Abweichung}_{\symup{Aluminium}} &\hat{=} 17.3\%\\
+    \implies \symup{relative\,Abweichung}_{\symup{Edelstahl}} &\hat{=} 15.7 \%
+\end{align*}
+Auffällig ist, dass alle berechneten Wärmeleitfähigkeiten deutlich unter den Literaturwerten liegen.
+Eine genauere Messung wäre möglich, wenn man mehr Messpunkte auf einen Probestab plaziert. So könnte man die Wegabhängigkeit besser ermitteln.
+Durch das manuelle umschalten des Peltier-Elements, kommt es zu Abweichungen in der Periode und Frequenz, was auch einfluss auf die weitere Auswertung hat.
+\\
+Messfehler entsprangen auch den nicht komplett Isolierten Probestäben, sodass diese mit der Umgebung Interagieren konnten und Wärme abgaben.
+Da die Aperaturen, welche wir benutzt haben, schon relativ alt waren, könnte auch dies zu einigen Störungen geführt haben.
+\\
+Interessant ist auch der große Relativfehler von dem Aluminiumwert. Dieser könnte nur durch schlechte Isolierung oder durch einen bereits beschädigten Probestab geschehen sein.
+
+
