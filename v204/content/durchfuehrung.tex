@@ -5,22 +5,25 @@ Als Vorbereitungsaufgabe sollte man sich über die Dichte $\rho$, die spezifisch
 Aluminium, Messing, Edelstahl und Wasser. Da die Werte von Wasser nicht relevant sind, werden dies nicht aufgeführt.
 \begin{table}
     \centering
-    \caption{Literaturwerte von Aluminium, Messing und Edelstahl}
+    \caption{Literaturwerte von Aluminium, Messing und Edelstahl und Abmessungen der Probestäbe}
     \label{tab:litwerte}
-    \begin{tabular}{c c c c}
+    \begin{tabular}{c c c c c}
         \toprule
-        $\text{Metall}$ & $\rho \mathbin{/} \si{\kilogram\meter\tothe{-3}}$ 
+        $\text{Metall}$ & $\symup{Abmessungen} \mathbin{/} \si{\meter}$ &$\rho \mathbin{/} \si{\kilogram\meter\tothe{-3}}$ 
         & $c \mathbin{/} \si{\joule\kilogram\tothe{-1}\kelvin\tothe{-1}}$ & $\kappa \mathbin{/} \si{\watt\meter\tothe{-1}\kelvin\tothe{-1}}$\\
         \midrule
-        Aluminium & 2800 & 830 & 236 \\
-        Messing   & 8520 & 385 & 120 \\
-        Edelstahl & 8000 & 400 & 21  \\
+        Aluminium & 0,09 x 0,012 x 0,004 & 2800 & 830 & 236 \\
+        Messing(breit)   &  0,09 x 0,012 x 0,004 &8520 & 385 & 120 \\
+        Messing(schmal)   & 0,09 x 0,007 x 0,004 &8520 & 385 & 120 \\
+        Edelstahl &0,09 x 0,012 x 0,004  &8000 & 400 & 21  \\
+      
         \bottomrule
     \end{tabular}
 \end{table}
 \subsection{Aufbau}
 Das Experiment wird wie in Abbildung \ref{fig:aufbau} aufgebaut. Auf der Grundplatte befinden sich vier rechteckige Probestäbe aus den Materialien:
-Aluminium, Messing(2x) und Edelstahl. Ein Peltierelement heizt bzw. kühlt die vier Probestäbe simultan bei einer Spannung von $U_P=\SI{5}{\volt}$
+Aluminium, Messing(2x) und Edelstahl. Die Abmessungen der Probestäbe ist in \ref{tab:litwerte} aufgeführt.
+Ein Peltierelement heizt bzw. kühlt die vier Probestäbe simultan bei einer Spannung von $U_P=\SI{5}{\volt}$
 und $U_P=\SI{8}{\volt}$ bei der dynamischen Methode. An jedem Probestab wird an zwei Stellen die Temperatur gemessen und über ein 'Temperatur Array'
 an einen Datenlogger (Xplorer GLX) weitergegeben. Die Daten können über den Datenlogger simultan gemessen und aufgezeichnet werden. 
 Es wird außerdem eine Stoppuhr für das dynamische Verfahren benötigt.
