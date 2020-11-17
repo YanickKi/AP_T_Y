@@ -139,7 +139,7 @@ Messingstabes besser ist, kann die Temperatur am äußeren Messpunkt schneller a
 Zur Berechnung der Wärmeleitfähigkeit werden zunächst die Mittelwerte von der Phasendifferenz und  $\ln \left (  \frac{A_2}{A_1} \right)$ berechnet.
 Die Mittelwerte ergeben sich zu
 \begin{align}
-  \overline{\symup{\Delta} t}_\text{Me}                     &= \SI{15.80(14)}{\second} \\
+  \overline{\symup{\Delta} t}_\text{Me}                     &= \SI{15.80(4)}{\second} \\
   \overline{\ln \left (  \frac{A_2}{A_1} \right)} & = \num{1.37(13)} \; \text{.}        
 \end{align}
 Mit dem gegebenen Literaturwert für Dichte von Messing $\rho_\text{Me} = \SI{8520}{\kilogram\per\meter\cubed}$, der gegebenen. spezifischen Wärmekapazität 
@@ -185,7 +185,7 @@ berechnen.
 \end{table}
 Die Mittelwerte der Größen von Aluminium sind
 \begin{align}
-  \overline{\symup{\Delta} t}_\text{Al}                     &= \SI{7.60(14)}{\second} \\
+  \overline{\symup{\Delta} t}_\text{Al}                     &= \SI{7.60(4)}{\second} \\
   \overline{\ln \left (  \frac{A_2}{A_1} \right)} & = \num{0.89(13)} \; \text{.}
 \end{align}
 Mit der Dichte von Aluminium $\rho_\text{Al} = \SI{2800}{\kilogram\per\cubic\metre}$, der spezifischen Wärmekapazität $c_\text{Al} = \SI{830}{\joule\per\gram\per\kelvin}$
@@ -225,7 +225,7 @@ berechnen.
 \end{table}
 Der Mittelwert der Phasendifferenz und des natürlichen logarithmus des Verhältnis von den beiden Amplituden beträgt
 \begin{align}
-  \overline{\symup{\Delta} t}_\text{St}                     & = \SI{66.50(14)}{\second} \\
+  \overline{\symup{\Delta} t}_\text{St}                     & = \SI{67.00(7)}{\second} \\
   \overline{\ln \left (  \frac{A_7}{A_8} \right)} & = \num{4.0(11)}
 \end{align}
 Die Dichte von dem Edelstahl beträgt $\rho_\text{St} = \SI{8000}{\kilogram\per\cubic\metre}$, die spezifische Wärmekapazität 
@@ -259,17 +259,17 @@ Mit Hilfe der Periodendauer kann man die Frequenz durch
   f = \frac{1}{\tau}
 \end{equation}  
 bestimmen. Die Wellenlänge $\lambda$ lässt sich bei bekannter frequenz $f$ und Wellengeschwindigkeit $v$ berechnen. 
-Um die Wellengeschwindigkeit zu erhalten, berechnet man zunächst den Quotient des Abstandes der Messpunkte auf einem Stab und der Phasendifferenz
-zwischen dem inneren und äußeren Thermoelement auf einem Stab, so dass
+Um die Wellengeschwindigkeit zu erhalten, berechnet man zunächst den Quotient aus dem Abstandes der Messpunkte auf einem Stab und der Phasendifferenz
+zwischen dem inneren und äußeren Thermoelementen auf einem Stab, so dass
 man für die Wellenlänge den Ausdruck
 \begin{equation}
-  \lambda = \frac{\symup{\Delta} x }{\symup{\Delta} t }  \cdot f
+  \lambda = \frac{\symup{\Delta} x }{\symup{\Delta} t  f}
 \end{equation}
-erhält. Für die vier "Temperaturwellen" ergibt sich die Tabelle \eqref{tab:WellelängeFrequenz}, wobei für höhere Genauigkeit mit Mittelwerten gerechnet wurde. 
+erhält. Für die vier ''Temperaturwellen'' ergibt sich die Tabelle \eqref{tab:WellelängeFrequenz}, wobei für höhere Genauigkeit mit Mittelwerten gerechnet wurde. 
 \begin{table}
   \centering
-  \label{tab:WellelängeFrequenz}
   \caption{Wellen und Frequenz der "Tempteraturwellen"}
+  \label{tab:WellelängeFrequenz}
   \sisetup{table-format = 2.2}
   \begin{tabular}{
     S[table-format = 6]
@@ -281,9 +281,9 @@ erhält. Für die vier "Temperaturwellen" ergibt sich die Tabelle \eqref{tab:Wel
      \multicolumn{2}{c}{$v \mathbin{/} \si{\meter\second\tothe{-1}}$} \\
      \cmidrule(lr){2-3} \cmidrule(lr){4-5}
      \midrule
-     {Messing}        & 0.012438 & 0.000005 & 0.28 & 5.33 \\
-     {Messing, klein} & 0.012438 & 0.000005 & 0.28 & 4.15 \\
-     {Aluminium}      & 0.012438 & 0.000005 & 0.28 & 3.33 \\
+     {Messing}        & 0.012438 & 0.000005 & 0.1527 & 0.1527 \\
+     {Messing, klein} & 0.012438 & 0.000005 & 0.1827 & 0.0006 \\
+     {Aluminium}      & 0.012438 & 0.000005 & 0.317 & 0.006 \\
      {Edelstahl}      & 0.012438 & 0.000005 & 0.28 & 3.23 \\
       \bottomrule
   \end{tabular}
