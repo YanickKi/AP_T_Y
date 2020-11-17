@@ -24,9 +24,9 @@ peaks7s  = np.array([54, 154, 259, 354])
 peaks8s  = np.array([94, 190, 287, 384])
 peaksm8s = np.array([109, 213, 316, 418])
 
-peaks7se  = unp.uarray([54, 154, 259, 354], 0.1)
+peaks7se  = unp.uarray([2*54, 2*154, 2*259, 2*354], 0.1)
 peaksm7se = unp.uarray([103, 203, 303, 304], 0.1)
-peaks8se  = unp.uarray([94, 190, 287, 384], 0.1)
+peaks8se  = unp.uarray([2*94, 2*190, 2*287, 2*384], 0.1)
 peaksm8se = unp.uarray([109, 213, 316, 418], 0.1)
 
 T7y = unp.uarray(T7[peaks7s], 0.2) 
@@ -38,11 +38,10 @@ A7 = T7y - T7my
 A8 = T8y - T8my
 
 kappaA7 = 8000 * 400 * 0.03**2 / (2 * np.mean(peaks7se - peaks8se) * np.mean(unp.log(A7 / A8)))
-
+print(np.mean(peaks8se - peaks7se))
 #print(peaks7,  peaksm7)
-#print(A7)
+print(A7)
 #print(peaks8,  peaksm8)
-#print(A8)
+print(0.5 * A8)
 #print(unp.log(A7 / A8))
-print(kappaA7)
-
+#print(kappaA7)
