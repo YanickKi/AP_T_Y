@@ -2,20 +2,20 @@
 \label{sec:Theorie}
 Die Inhalte des Theorieteils, sind auf Grundlage von \cite{sample} und \cite{demtröder}, formuliert.
 Ein Wärmetransport findet statt, wenn Temperaturdifferenzen zwischen zwei Orten auftreten.
-Dieser Wärmetransport geht entlang des Temperaturgefälle. Grundsätzlich gibt es drei verschiedene Mechanismen des Wärmetransportes.
+Dieser Wärmetransport geht entlang des Temperaturgefälles. Grundsätzlich gibt es drei verschiedene Mechanismen des Wärmetransportes.
 Dabei unterscheidet man zwischen: der Konvektion, der Wärmeleitung und der Wärmestrahlung.
-In diesem Versuch behandeln wir jedoch nur die Wärmeleitung von Metallen.
-Der Wärmetransport mittels Wärmeleitung erfolgt über Phononen und frei beweglichen Elektronen. Der Betrag des Gitters ist bei Metallen zu vernachlässigen.
+In diesem Versuch behandeln wir, jedoch nur die Wärmeleitung von Metallen.
+Der Wärmetransport mittels Wärmeleitung erfolgt über Phononen und frei bewegliche Elektronen. Der Betrag des Gitters ist bei Metallen zu vernachlässigen.
 \subsection{Statische Methode}
 \label{sec:stM}
 Betrachtet wird ein Stab der Länge L und der Querschnittsfläche A mit der Dichte $\rho$ und der spezifischen Wärmekapazität $c$ des Materials.
-Wird ein Ende des Stabes durch Wärmekontakt mit einem Wärmereservoir erhitzt, so fließt in der Zeit $dt$ durch die Querschnittsfläche A die Wärmemenge
+Wird ein Ende des Stabes erhitzt, so fließt in der Zeit $dt$ durch die Querschnittsfläche A die Wärmemenge
 \begin{equation}
     \frac{dQ}{dt}=-\kappa A \frac{\partial T}{\partial x} \,.
     \label{eqn:Wärmemenge}
 \end{equation}
 Dabei ist $\kappa$ ([$\kappa$]=$\frac{\symup{W}}{\symup{m K}}$) die Wärmeleitfähigkeit des Materials. Da der Wärmestrom 
-in Richtung des kälteren Ortes verläuft, ist das Minuszeichen in der Gleichung gegeben. Die Wärmestromdichte $j_w$ lässt sich berechnen durch
+in Richtung des kälteren Ortes verläuft, ist das Minuszeichen in der Gleichung Konvention. Die Wärmestromdichte $j_w$ lässt sich berechnen durch
 \begin{equation}
     j_w=-\kappa \frac{\partial T}{\partial x}\,.
     \label{eqn:wärmedichte}
@@ -38,7 +38,13 @@ welche sich über den Stab fortsetzt. Die Phasengeschwindigkeit $v$ der Welle is
 \begin{equation}
     v=\frac{w}{k}=\frac{w}{\sqrt{\frac{w \rho c}{2 \kappa}}}=\sqrt{\frac{2\kappa w}{\rho c}}\; \text{.}
 \end{equation}
-Das Amplitudenverhältnis $A_\text{nah}$ zu $A_\text{fern}$ der Welle an zwei Messstellen $x_\text{nah}$ und $x_\text{fern}$ ergibt die Dämpfung der Welle.
+Die Wellenlänge lässt sich jetzt berechnen aus
+\begin{equation}
+    \lambda= \frac{v/f}= \frac{\sqrt{\frac{2\kappa w}{\rho c}}}{f} \, \text{.}
+    \label{eqn:wellenlänge}
+\end{equation}
+Dabei ist $f$ die Frequenz der Welle.
+Das Amplitudenverhältnis $A_\text{nah}$ zu $A_\text{fern}$, an zwei Messstellen $x_\text{nah}$ und $x_\text{fern}$, ergibt die Dämpfung der Welle.
 Mit $w=\frac{2\pi}{\tau}$ und $\phi=2\pi \frac{\symup{\Delta}t}{\tau}$\footnote{die Phase $\phi$ und die Periodendauer $\tau$} erhält man für die Wärmeleitfähigkeit
 \begin{equation}
     \kappa=\frac{\rho\, c (\symup{\Delta}x)^2}{2\symup{\Delta}t \ln (A_\text{nah}/A_\text{fern})}\; \text{.}
