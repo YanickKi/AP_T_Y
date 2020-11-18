@@ -22,9 +22,9 @@ uncertainties \cite{uncertainties} absolviert. Trotz dessen sind die Formeln fü
   \end{subfigure}
 \end{figure}
 Bei dem Vergleichen der Kurven fällt auf, dass alle vier Kurven zu Beginn einen starken Temperaturanstieg repräsentieren, welcher jedoch schnell wieder abschwächt.
-Dennoch verhalten sich die Temperaturen $T_1$ und $T_4$ Anfangs beinahe identisch, wobei die Temperaturen $T_5$ und $T_8$ dort Diskrepanzen aufzeigen. $T_5$ steigt 
+Dennoch verhalten sich die Temperaturen $T_1$ und $T_4$ anfangs beinahe identisch, wobei die Temperaturen $T_5$ und $T_8$ dort Diskrepanzen aufzeigen. $T_5$ steigt 
 sehr stark an und flacht vergleichsweise schnell wieder ab, während die Temperatur $T_8$ eine eher verhaltene Steigung aufweist, denn diese steigt sehr langsam an, besitzt
-im Gegenzug daszu keinen abrupten Steigungsverlust. Nach dem beinahe identischen Verhalten, fällt die Kurve von $T_4$ früher ab, wonach dann eine kleine, annähernd konstante
+im Gegenzug dazu keinen abrupten Steigungsverlust. Nach dem beinahe identischen Verhalten fällt die Kurve von $T_4$ früher ab, wonach dann eine kleine, annähernd konstante
 Differenz zwischen den beiden Temperaturen herrscht. Aufgrund der verhaltenen Steigung der Temperaturkurve von $T_8$ ist die Differenz zwischen den beiden Kurven aus der 
 Graphik \eqref{fig:stat58} schon von Anfang an sehr groß, wobei sich diese ab dem Zeitpunkt $t \approx \SI{150}{\second}$ eingestellt hat. Als letzte Gemeinsamkeit erkennt man leicht, dass
 alle Kurven einen leichten Abfall bei $t \approx \SI{620}{\second}$ erleiden.
@@ -98,9 +98,7 @@ Kurven ein Maximum kurz vor $t = \SI{100}{\second}$ erreicht wird, wobei beide d
 wieder abfallen. Dies liegt der Ursache zu Grunde, dass die Temperaturen an den inneren und äußeren Thermoelementen im Bereich der Raumtemperatur liegen. 
 Erwärmt man jedoch den Stab steigt die Temperatur am inneren  Thermoelement deutlich schneller an als die an dem äußeren Thermoelement, da die Wärme erstmal
 in einer gewissen Zeit nach außen strömen muss, so dass ein zeitlicher Verzug entsteht. Bei näherer Betrachung wird die Stärke des Abfalls auffällig, da die
-Temperaturdifferenz des Stahlstabes deutlich langsamer abfällt als die des großen Messingstabes. Der Grund hierfür ist die unterschiedlich hohe
-Wärmeleitfähigkeit der Stäbe, welche schon durch die Tabelle \eqref{tab:Waeremleitfaehigkeit} aufgezeigt wird. Da die Wärmeleitfähigkeit des
-Messingstabes besser ist, kann die Temperatur am äußeren Messpunkt schneller ansteigen, da mehr Wärme pro Zeit geleitet wird.
+Temperaturdifferenz des Stahlstabes deutlich langsamer abfällt als die des großen Messingstabes. 
 \subsection{Dynamisches Verfahren}
 \begin{figure}
   \caption{Temperaturen des großen Messingstabs}
@@ -137,7 +135,7 @@ Messingstabes besser ist, kann die Temperatur am äußeren Messpunkt schneller a
       \bottomrule
   \end{tabular}
 \end{table}
-Mit dem gegebenen Literaturwert für Dichte von Messing $\rho_\text{Me} = \SI{8520}{\kilogram\per\meter\cubed}$, der gegebenen. spezifischen Wärmekapazität 
+Mit dem gegebenen Literaturwert für Dichte von Messing $\rho_\text{Me} = \SI{8520}{\kilogram\per\meter\cubed}$, der gegebenen spezifischen Wärmekapazität 
 $c_\text{Me} = \SI{385}{\joule\per\kilogram\per\kelvin}$ und dem gemessen Abstand $\symup{\Delta} x = \SI{0.03}{\meter}$ lässt sich der Mittelwert 
 der Wärmeleitfähigkeit zu
 \begin{equation}
@@ -231,18 +229,18 @@ Die Dichte von dem Edelstahl beträgt $\rho_\text{St} = \SI{8000}{\kilogram\per\
 $c_\text{St} = \SI{400}{\joule\per\kilogram\kelvin}$. Auch der Abstand der beiden Thermoelemente von dem Stahlstab
 beträgt $\symup{\Delta} x = \SI{0.03}{\metre}$, so dass sich der Mittelwert der Wärmeleitfähigkeit von
 \begin{equation}
-  \kappa_\text{St} = \SI{6.0(17)}{\watt\per\metre\per\kelvin}
+  \overline{\kappa}_\text{St} = \SI{6.0(17)}{\watt\per\metre\per\kelvin}
 \end{equation}
 ergibt. Die hier betrachtete Temperaturwelle wurde mit einer Periodendauer von $\tau = \SI{200}{\second}$ erzeugt.
 Daraus resultiert eine Frequenz von 
 \begin{equation}
   f = \SI{0.0050000(25)}{\per\second} \; \text{.}
 \end{equation}
-Somit besitzt diese Temperwelle eine Wellenlänge von 
+Somit besitzt diese Temperaturwelle eine Wellenlänge von 
 \begin{equation}
-  \lambda_\text{St} = \SI{0.068(10)}{\metre}
+  \lambda_\text{St} = \SI{0.068(10)}{\metre} \; \text{.}
 \end{equation}
-Der Fehler der Ampltiduden, des natürlichen logarithmus des Verhältnis der Amplituden und der Phasendifferenz 
+Der Fehler der Ampltiuden, des natürlichen Logarithmus des Verhältnis der Amplituden und der Phasendifferenz 
 lassen sich mittels der Gaußschen Fehlerfortpfllanzung berechnen:
 \begin{align}
   \symup{\Delta} A                                                      &= \sqrt{2} \, \symup{\Delta} T \\
@@ -251,7 +249,7 @@ lassen sich mittels der Gaußschen Fehlerfortpfllanzung berechnen:
   \sqrt{\frac{1}{A_\text{nah}^2} \left ( \symup{\Delta} A \right )^2 + 
   \frac{A_\text{nah}^2}{A_\text{fern}^4} \left ( \symup{\Delta} A \right ) ^2} 
 \end{align}
-Die Unsicherheit der Wärmeleitfähigkeit wird ebenfall mit der Fehlerfortpfllanzung nach Gauß berechnet:
+Die Unsicherheit der Wärmeleitfähigkeit wird ebenfalls mit der Fehlerfortpfllanzung nach Gauß berechnet:
 \begin{equation} 
   \symup{\Delta} \kappa = \frac{\rho c \left ( \symup{\Delta} x \right )^2 }
   {2\ln \left ( \frac{A_\text{nah}}{A_\text{fern}} \right ) \symup{\Delta} t} 
