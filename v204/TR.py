@@ -42,12 +42,17 @@ def DQDT(k, A , DT):
 #print( A1[1] * A1[2])
 #print( A2[1] * A2[2])
 
-print(DQDT(ka[0], Ag, DM))
-print(DQDT(ka[0], Ak, DMK))
-print(DQDT(ka[1], Ag, DA))
-print(DQDT(ka[2], Ag, DE))
+#print(DQDT(ka[0], Ag, DM))
+#print(DQDT(ka[0], Ak, DMK))
+#print(DQDT(ka[1], Ag, DA))
+#print(DQDT(ka[2], Ag, DE))
 
 peaks1, _ = find_peaks(T1, distance = 15)
 
 
 
+
+
+qwodqw = np.array([9.44, 11.21, 11.50, 11.70, 12.12, 12.08, 12.22, 12.22, 12.37, 12.41])
+
+#print(0.5 * qwodqw)

@@ -28,7 +28,7 @@ peaks7se  = unp.uarray([2*54, 2*154, 2*259, 2*354], 0.1)
 peaksm7se = unp.uarray([103, 203, 303, 304], 0.1)
 peaks8se  = unp.uarray([2*94, 2*190, 2*287, 2*384], 0.1)
 peaksm8se = unp.uarray([109, 213, 316, 418], 0.1)
-
+print(peaks8se - peaks7se)
 T7y = unp.uarray(T7[peaks7s], 0.2) 
 T7my = unp.uarray(T7[peaksm7s], 0.2) 
 T8y = unp.uarray(T8[peaks8s], 0.2) 

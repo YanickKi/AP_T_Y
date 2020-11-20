@@ -16,8 +16,11 @@ T8 += 273.15
 
 peaks1, _ = find_peaks(T5, distance = 15)
 peaks2, _ = find_peaks(T6, distance = 15)
-
-
+#print(peaks1 * 2)
+print(peaks1, peaks2)
+Tau1 = np.mean(unp.uarray([80, 80, 80, 80, 80, 80, 80, 80, 80, 84], 0.1))
+#print(Tau1)
+#print(1 / np.mean(Tau1))
 p1 = np.array([47.99, 54.9 , 58.58, 61.52, 64.14, 66.03, 67.95, 69.56, 71.01, 72.19])
 p2 = np.array([38.55, 43.69, 47.08, 49.82, 52.02, 53.95, 55.73, 57.34, 58.64, 59.78])
 t1 = np.array([48, 128, 208, 288, 368, 448, 528, 608, 688, 768])
@@ -63,11 +66,26 @@ LNA56 = unp.uarray([1.34,0.98,0.88,0.86,0.82,0.82,0.81,0.79,0.80,0.78], 0.4)
 kappaA1 = 8520 * 385 * 0.03**2 / (2 * np.mean(dt1) * np.mean(LNA12))
 kappaA5 = 2800 * 830 * 0.03**2 / (2 * np.mean(dt5) * np.mean(LNA56))
 
-print(f'meandt1 : {np.mean(dt1)}')
-print(f'meandt5 : {np.mean(dt5)}')
-print(f'meanLNA12 : {np.mean(LNA12)}')
-print(f'meanLNA56 : {np.mean(LNA56)}')
-print(f'kappaA1: {kappaA1}')
-print(f'kappaA5: {kappaA5}')
-print(f'testln : {unp.log(A6m / A5m)}')
 
+
+#print(f'meandt1 : {np.mean(dt1)}')
+#print(f'meandt5 : {np.mean(dt5)}')
+#print(f'meanLNA12 : {np.mean(LNA12)}')
+#print(f'meanLNA56 : {np.mean(LNA56)}')
+#print(f'kappaA1: {kappaA1}')
+#print(f'kappaA5: {kappaA5}')
+#print(f'testln : {unp.log(A6m / A5m)}')
+
+dtxi = ufloat(13.20, 0.04)
+f = ufloat(0.012438, 0.000005)
+#print(0.03 / (dtxi * f))
+
+peaks7, _ = find_peaks(T7, distance = 15)
+peaks8, _ = find_peaks(T8, distance = 15)
+
+Max3 = unp.uarray([2 * 23, 2 * 63, 2 * 103, 2 * 143, 2 * 183, 2 * 223, 2 * 263, 2 * 303, 2 * 343, 2 * 383], 0.1) 
+Max4 = unp.uarray([2 * 33, 2 * 71, 2 * 110, 2 * 149, 2 * 189, 2 * 229, 2 * 269, 2 * 309, 2 * 349, 2 * 388], 0.1)
+
+
+#print(np.mean(Max4 - Max3))
+#print(peaks8)

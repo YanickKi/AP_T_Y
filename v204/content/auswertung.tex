@@ -1,13 +1,15 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 Für die Temperatur wurde eine Messunsicherheit von $\symup{\Delta} T = \SI{0.2}{\kelvin}$ angenommen. Die Messunsicherheit der Zeit wird als
-$\symup{\delta} t = \SI{0.1}{\second}$\footnote{Die Messunicherheit der Zeit wird mit dem kleinen $\symup{\delta}$ beschrieben, 
-da das große $\symup{\Delta}$ für die Phasendifferenz gebraucht wird.} angesehen. Jegliche Fehlerrechnung wurde mit der Python Bibliothek 
-uncertainties \cite{uncertainties} absolviert. Trotz dessen sind die Formeln für die Unsicherheiten am Ende der Auswertung angegeben. 
+$\symup{\delta} t = \SI{0.1}{\second}$ angesehen.\footnote{Die Messunicherheit der Zeit wird mit dem kleinen $\symup{\delta}$ beschrieben, 
+da das große $\symup{\Delta}$ für die Phasendifferenz gebraucht wird.} Jegliche Fehlerrechnung wurde mit der Python-Bibliothek 
+uncertainties \cite{uncertainties} absolviert. Trotz dessen sind die Formeln für die Unsicherheiten am Ende des jeweiligen Abschnitts angegeben. 
+Allgemeine Rechnungen wurden mit der Python-Bilbiothek numpy \cite{numpy} automatisiert.
+
 \subsection{Statisches Vefahren}  
 \subsubsection{Vergleich der Temperaturverläufe}
 \begin{figure}
-  \caption{Tempereaturverläufe der statischen Methode}
+  \caption{Temperaturverlauf der statischen Methode}
   \label{fig:stat2}
   \begin{subfigure}{0.48\textwidth}
     \centering
@@ -22,12 +24,12 @@ uncertainties \cite{uncertainties} absolviert. Trotz dessen sind die Formeln fü
     \label{fig:stat58}
   \end{subfigure}
 \end{figure}
-Bei dem Vergleichen der Kurven fällt auf, dass alle vier Kurven zu Beginn einen starken Temperaturanstieg repräsentieren, welcher jedoch schnell wieder abschwächt.
+Bei dem Vergleichen der Kurven aus Abbildung \ref{fig:stat2} fällt auf, dass alle vier Kurven zu Beginn einen starken Temperaturanstieg repräsentieren, welcher jedoch schnell wieder abschwächt.
 Dennoch verhalten sich die Temperaturen $T_1$ und $T_4$ anfangs beinahe identisch, wobei die Temperaturen $T_5$ und $T_8$ dort Diskrepanzen aufzeigen. $T_5$ steigt 
-sehr stark an und flacht vergleichsweise schnell wieder ab, während die Temperatur $T_8$ eine eher verhaltene Steigung aufweist, denn diese steigt sehr langsam an, besitzt
-im Gegenzug dazu keinen abrupten Steigungsverlust. Nach dem beinahe identischen Verhalten fällt die Kurve von $T_4$ früher ab, wonach dann eine kleine, annähernd konstante
+sehr stark an und flacht vergleichsweise schnell wieder ab, während die Temperatur $T_8$ eine eher verhaltene Steigung aufweist.
+Nach dem beinahe identischen Verhalten fällt die Kurve von $T_4$ früher ab, wonach dann eine kleine, annähernd konstante
 Differenz zwischen den beiden Temperaturen herrscht. Aufgrund der verhaltenen Steigung der Temperaturkurve von $T_8$ ist die Differenz zwischen den beiden Kurven aus der 
-Graphik \eqref{fig:stat58} schon von Anfang an sehr groß, wobei sich diese ab dem Zeitpunkt $t \approx \SI{150}{\second}$ eingestellt hat. Als letzte Gemeinsamkeit erkennt man leicht, dass
+Graphik \ref{fig:stat58} schon von Anfang an sehr groß, wobei sich diese ab dem Zeitpunkt $t \approx \SI{150}{\second}$ eingestellt hat. Als letzte Gemeinsamkeit erkennt man leicht, dass
 alle Kurven einen leichten Abfall bei $t \approx \SI{620}{\second}$ erleiden.
 \subsubsection{Die beste Wärmeleitfähigkeit}
 \begin{table}
@@ -43,7 +45,7 @@ alle Kurven einen leichten Abfall bei $t \approx \SI{620}{\second}$ erleiden.
       \bottomrule
   \end{tabular}
 \end{table}
-Wie man anhand der Tabelle \eqref{tab:Waeremleitfaehigkeit} erkennen kann, hat Aluminium die beste Leitfähigkeit.
+Der Tabelle \ref{tab:Waeremleitfaehigkeit} nach zu urteilen, kann man klar erkennen, dass der Aluminiumstab die beste Leitfähigkeit hat. 
 \subsubsection{Wärmestrom}
 Für die Berechnung des Wärmestroms dient die Gleichung \eqref{eqn:Wärmemenge}. Jedoch lässt sich in diesem Fall die Wärmestromdichte
 $j_w$ nicht mit dem Differntialquotient $\sfrac{\partial T}{\partial x}$ sondern nur mit dem Differenzenquotienten $\sfrac{\symup{\Delta}T}{\symup{\Delta} x}$
@@ -81,6 +83,8 @@ Der Fehler lässt sich mittels der Fehlerfortpfllanzung nach Gauß berechnen:
 \end{equation}
 \subsubsection{Vergleich der Temperaturdiffernzen}
 \begin{figure}
+  \caption{Differenzenen der Temperaturen der statischen Methode}
+  \label{fig:Differenz}
   \begin{subfigure}{0.48\textwidth}
     \centering
     \includegraphics[width = \textwidth]{build/statDifSt.pdf}
@@ -94,13 +98,16 @@ Der Fehler lässt sich mittels der Fehlerfortpfllanzung nach Gauß berechnen:
     \label{fig:statDifMek}
   \end{subfigure}
 \end{figure}
-Bei der Betrachtung der Graphen \eqref{fig:statDifSt} und \eqref{fig:statDifMek} erkennt man instantan, dass bei beiden
-Kurven ein Maximum kurz vor $t = \SI{100}{\second}$ erreicht wird, wobei beide danach 
-wieder abfallen. Dies liegt der Ursache zu Grunde, dass die Temperaturen an den inneren und äußeren Thermoelementen im Bereich der Raumtemperatur liegen. 
-Erwärmt man jedoch den Stab steigt die Temperatur am inneren  Thermoelement deutlich schneller an als die an dem äußeren Thermoelement, da die Wärme erstmal
-in einer gewissen Zeit nach außen strömen muss, so dass ein zeitlicher Verzug entsteht. Bei näherer Betrachung wird die Stärke des Abfalls auffällig, da die
-Temperaturdifferenz des Stahlstabes deutlich langsamer abfällt als die des großen Messingstabes. 
+Bei der Betrachtung der Graphen \ref{fig:statDifSt} und \ref{fig:statDifMek} erkennt man instantan, dass bei beiden
+Kurven ein Maximum kurz vor $t = \SI{100}{\second}$ erreicht wird, wobei beide Verläufe danach 
+wieder abfallen. Bei näherer Betrachung wird die Stärke des Abfalls auffällig, da die
+Temperaturdifferenz des Stahlstabes deutlich langsamer als die des großen Messingstabes abfällt.
+Wie bereits bei der Abbildung \ref{fig:stat2} angemerkt, erleiden beide Temperaturverläufe einen Knick bei $t \approx \SI{620}{\second}$.
 \subsection{Dynamisches Verfahren}
+Dieser Teil der Auswertung dient zu Bestimmung der Wärmeleitfähigkeit und den Eigenschaften (Frequenz und Wellenlänge) der Temperaturwellen.
+Hierzu wurden die jeweiligen Wärmeleitfähigkeiten zu den einzelnen Amplituden ermittelt,
+fortlaufend gemittelt um anschließend ein aussagekräftiges Resultat zu erzielen.
+\subsubsection{Temperaturwelle des großen Messingstabs}
 \begin{figure}
   \caption{Temperaturen des großen Messingstabs}
   \centering
@@ -109,7 +116,7 @@ Temperaturdifferenz des Stahlstabes deutlich langsamer abfällt als die des gro�
 \begin{table}
   \centering
   \label{tab:AmplitudeMessing}
-  \caption{Amplituden und Phasendifferenzen des großen Messingstabs}
+  \caption{Wärmeleitfähigkeiten des großen Messingstabs}
   \sisetup{table-format = 1.2}
   \begin{tabular}
     {S @{${}\pm{}$} S
@@ -136,7 +143,7 @@ Temperaturdifferenz des Stahlstabes deutlich langsamer abfällt als die des gro�
       \bottomrule
   \end{tabular}
 \end{table}
-Mit dem gegebenen Literaturwert für Dichte von Messing $\rho_\text{Me} = \SI{8520}{\kilogram\per\meter\cubed}$, der gegebenen spezifischen Wärmekapazität 
+Mit dem gegebenen Literaturwert für die Dichte von Messing $\rho_\text{Me} = \SI{8520}{\kilogram\per\meter\cubed}$, der gegebenen spezifischen Wärmekapazität 
 $c_\text{Me} = \SI{385}{\joule\per\kilogram\per\kelvin}$ und dem gemessen Abstand $\symup{\Delta} x = \SI{0.03}{\meter}$ lässt sich der Mittelwert 
 der Wärmeleitfähigkeit zu
 \begin{equation}
@@ -153,6 +160,7 @@ lässt sich die Wellenlänge zu
   \lambda_\text{Me} = \SI{0.157(8)}{\metre}
 \end{equation}
 berechnen.
+\subsubsection{Temperaturwelle des Aluminiumstabs}
 \begin{figure}
   \caption{Temperaturen des Aluminiumstabs}
   \centering
@@ -161,7 +169,7 @@ berechnen.
 \begin{table}
   \centering
   \label{tab:AmplitudeAluminium}
-  \caption{Amplituden und Phasendifferenzen des Aluminiumstabs}
+  \caption{Wärmeleitfähigkeiten des Aluminiumstabs}
   \sisetup{table-format = 1.2}
   \begin{tabular}{
     S @{${}\pm{}$} S
@@ -197,6 +205,7 @@ berechnen. Mit der Frequenz aus Gleichung \eqref{eqn:frequenz} erhält man als W
 \begin{equation}
   \lambda_\text{Al} = \SI{0.270(6)}{\metre}
 \end{equation}
+\subsubsection{Temperaturwelle des Stahlstabs}
 \begin{figure}
   \caption{Temperaturen des Stahlstabs}
   \centering
@@ -205,7 +214,7 @@ berechnen. Mit der Frequenz aus Gleichung \eqref{eqn:frequenz} erhält man als W
 \begin{table}
   \centering
   \label{tab:AmplitudeAluminium}
-  \caption{Amplituden und Phasendifferenzen des Stahlstabs}
+  \caption{Wärmeleitfähigkeiten des Stahlstabs}
   \sisetup{table-format = 1.2}
   \begin{tabular}{
     S @{${}\pm{}$} S
@@ -241,6 +250,7 @@ Somit besitzt diese Temperaturwelle eine Wellenlänge von
 \begin{equation}
   \lambda_\text{St} = \SI{0.068(10)}{\metre} \; \text{.}
 \end{equation}
+\subsubsection{Fehlerformeln des dynamischen Verfahrens}
 Der Fehler der Ampltiuden, des natürlichen Logarithmus des Verhältnis der Amplituden und der Phasendifferenz 
 lassen sich mittels der Gaußschen Fehlerfortpfllanzung berechnen:
 \begin{align}
