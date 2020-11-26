@@ -1,37 +1,63 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Mit der Wheatoneschen Brückenschaltung sollten zwei Unbekannte Widerstände ermittelt werden.
+\subsection{Wheatstonesche Brücke}
+Mit der Wheatstoneschen Brückenschaltung sollten zwei Unbekannte Widerstände ermittelt werden.
+In der folgenden Tabelle werden die Messwerte $R_2$ und $\frac{R_3}{R_4}$ der Messreihe aufgelistet. Zudem ist, der mit Hilfe von $\symbf{Zitat}$, berechnete 
+Wert für $R_\text{x}$ eingetragen. Der Fehler lässt mit Hilfe der Gaußschen Fehlerfortpflanzung
+\begin{equation}
+  \sigma_{R_x}=\sqrt{\left(\frac{R_3}{R_4}\right)^2 \cdot \left(\symup{\Delta}R_2\right)^2 + R_2^2 \cdot \left(\symup{\Delta}\frac{R_3}{R_4}\right)^2}
+\end{equation}
+berechnen. Die Fehler sind gegeben durch $\symup{\Delta}R_2$ = $ 0.02 \cdot R_2$
+und $\symup{\Delta}\frac{R_3}{R_4}$ = $ 0.05 \cdot \frac{R_3}{R_4}$.
+%
+%
+%
 \begin{table}
   \centering
-  \caption{Messdaten der Widerstände $R_2$, $R_3$ und $R_4$, für $R_\text{x}$= Wert 10 und $R_\text{x}$= Wert 11.}
-  \label{tab:widerstand}
-  \sisetup{table-format=4}
-  \begin{tabular}{c S S[table-format=3.1] S[table-format=3.1] S S S}
-    \toprule
-    &\multicolumn{3}{c}{{Wert 10}} & \multicolumn{3}{c}{{Wert 11}} \\
-    \cmidrule(lr){2-4}\cmidrule(lr){5-7}
-    {\,} & {$R_2 \mathbin{/} \si{\ohm}$} & {$R_3 \mathbin{/} \si{\ohm}$} & {$R_4 \mathbin{/} \si{\ohm}$} &{$R_2 \mathbin{/} \si{\ohm}$} 
-    & {$R_3 \mathbin{/} \si{\ohm}$} & {$R_4 \mathbin{/} \si{\ohm}$}\\
-    \midrule
-   Messung 1 &332 & 420 & 580 & 332 &597 & 403\\
-   Messung 2 & 664 & 264 & 736 &664 & 424 & 576\\
-   Messung 3 &1000 & 193.5 & 806.5 &1000 & 330 & 670\\
-    \bottomrule
+  \label{tab:Wert10}
+  \caption{Messwerte und berechnete Werte für Widerstand $R_\text{x}$ (Wert 10)}
+  \sisetup{table-format = 4}
+  \begin{tabular}{
+    c
+    S @{${}\pm{}$} S[table-format=2.2]
+    S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2]
+    S[table-format = 3.2] @{${}\pm{}$} S[table-format=2.2]}
+     \toprule
+     {Wert 10}  &
+     \multicolumn{2}{c}{$R_2 \mathbin{/} \si{\ohm}$}       &
+     \multicolumn{2}{c}{$\frac{R_3}{R_4}$}       & 
+     \multicolumn{2}{c} {$R_\text{x}  \mathbin{/} \si{\ohm}$}\\
+     \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+     \midrule
+     Messung 1 & 332  & 6.64  & 1.48 & 0.07 & 240.41 & 12.95\\
+     Messung 2 & 664  & 13.28 & 0.74 & 0.04 & 238.17 & 12.82\\
+     Messung 3 & 1000 & 20    & 0.49 & 0.02 & 239.93 & 12.92\\
+      \bottomrule
+  \end{tabular}
+\end{table}%
+%
+%
+\begin{table}
+  \centering
+  \label{tab:Wert11}
+  \caption{Messwerte und berechnete Werte für Widerstand $R_\text{x}$ (Wert 11)}
+  \sisetup{table-format = 4}
+  \begin{tabular}{
+    c
+    S @{${}\pm{}$} S[table-format=2.2]
+    S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2]
+    S[table-format = 3.2] @{${}\pm{}$} S[table-format=2.2]}
+     \toprule
+     {Wert 11}  &
+     \multicolumn{2}{c}{$R_2 \mathbin{/} \si{\ohm}$}       &
+     \multicolumn{2}{c}{$\frac{R_3}{R_4}$}       & 
+     \multicolumn{2}{c} {$R_\text{x}  \mathbin{/} \si{\ohm}$}\\
+     \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+     \midrule
+     Messung 1 & 332  & 6.64  & 0.72 & 0.04 & 491.82 & 26.49\\
+     Messung 2 & 664  & 13.28 & 0.35 & 0.02 & 488.78 & 26.32\\
+     Messung 3 & 1000 & 20    & 0.24 & 0.01 & 492.54 & 26.52\\
+      \bottomrule
   \end{tabular}
 \end{table}
-Mit den Messwerten aus \ref{tab:widerstand}, lässt sich mit Hilfe der Formel II der Widerstand $R_\text{x}$ berechnen.
-Als Ergebniss erhält man für den Wert 10:
-  \begin{align*}
-  R_\text{x}&=240.41 & R_\text{x}&=240.41 \\
-  R_\text{x}&=238.17 & R_\text{x}&=238.17 \\
-  R_\text{x}&=239.93 & R_\text{x}&=239.93
-\end{align*}
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
-
-
-Siehe \autoref{fig:plot}!
+\subsection{Kapazitätsmessbrücke}
