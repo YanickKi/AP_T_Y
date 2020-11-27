@@ -1,10 +1,12 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Wheatstonesche Brücke}
+\label{sec:Wheat}
 Mit der Wheatstoneschen Brückenschaltung sollten zwei Unbekannte Widerstände ermittelt werden.
 In der folgenden Tabelle werden die Messwerte $R_2$ und $\frac{R_3}{R_4}$ der Messreihe aufgelistet. Zudem ist, der mit Hilfe von $\symbf{Zitat}$, berechnete 
 Wert für $R_\text{x}$ eingetragen. Der Fehler lässt mit Hilfe der Gaußschen Fehlerfortpflanzung
 \begin{equation}
+  \label{eqn:fehR}
   \sigma_{R_x}=\sqrt{\left(\frac{R_3}{R_4}\right)^2 \cdot \left(\symup{\Delta}R_2\right)^2 + R_2^2 \cdot \left(\symup{\Delta}\frac{R_3}{R_4}\right)^2}
 \end{equation}
 berechnen. Die Fehler sind gegeben durch $\symup{\Delta}R_2$ = $ 0.02 \cdot R_2$
@@ -35,8 +37,13 @@ und $\symup{\Delta}\frac{R_3}{R_4}$ = $ 0.05 \cdot \frac{R_3}{R_4}$.
       \bottomrule
   \end{tabular}
 \end{table}%
-%
-Der Mittelwert:
+\\
+Der Mittelwert der $R_\text{x}$ lässt sich berechnen mit 
+\begin{equation}
+  \label{eqn:mit}
+  \bar{R_\text{x}}=\sum_{i=1}^3 \frac{1}{3}R_{x_i}\, .
+\end{equation}
+Daraus folgt für den Mittelwert des Widerstands Wert 10, $R_\text{x}= \SI{240\pm7}{\ohm}$.
 %
 \begin{table}
   \centering
@@ -61,5 +68,93 @@ Der Mittelwert:
       \bottomrule
   \end{tabular}
 \end{table}
-Der Mittelwert:
+\\
+Mit der Formel für den Mittelwert \ref{eqn:mit} folgt für Wert 11, $R_\text{x}=\SI{491\pm15}{\ohm}$
+\newpage%
+%
+%
+%
 \subsection{Kapazitätsmessbrücke}
+In der Messung um den realen Kondensator, ist dieser durch einen ohmschen Widerstand und eine Widerstandslose Kapazität ersetzt worden.
+Zum berechnen der Werte wurde die Gleichung $\symbf{Referenz}$ genutzt.
+Alle Messwerte, berechneten Kapazitäten und Widerstände für den Wert 8 sind in der Tabelle \ref{tab:Wert8} aufgeführt.
+Dabei wurden die Fehler des Widerstands mit der Formel \ref{eqn:fehR} und
+die der Kapazität mit 
+\begin{equation}
+  \symup{\Delta}C_x=\sqrt{\left(\frac{R4}{R3}\right)^2 \cdot \left(\symup{\Delta}C_2\right)^2
+  +\left(-C_2\frac{R4}{R3}\right)^2 \cdot \left(\symup{\Delta}\frac{R4}{R3}\right)^2}
+\end{equation}
+berechnet. Wobei $\symup{\Delta}R_2=0.03 \cdot R_2$ der Fehler von dem Variablen Widerstand ist und $\symup{\Delta}C_2=0.02 \cdot C_2$ der Fehler 
+der Kapazität ist. Die Abweichung von $\frac{R_3}{R_4}$ ist die selbe wie in Abschnitt \ref{sec:Wheat}.
+\begin{table}
+  \centering
+  \label{tab:Wert8}
+  \caption{Messwerte und berechnete Werte für realen Kondensator, 
+  $R_\text{x}$ und $C_\text{x}$ (Wert 8)}
+  \sisetup{table-format = 3}
+  \begin{tabular}{
+    c
+    S @{${}\pm{}$} S[table-format=2.2]
+    S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2]
+    S @{${}\pm{}$} S[table-format=2.2]
+    S[table-format=3.2] @{${}\pm{}$} S[table-format=2.2]
+    S[table-format = 3.2] @{${}\pm{}$} S[table-format=2.2]}
+     \toprule
+     {Wert 8}  &
+     \multicolumn{2}{c}{$R_2 \mathbin{/} \si{\ohm}$}       &
+     \multicolumn{2}{c}{$\frac{R_3}{R_4}$}                 & 
+     \multicolumn{2}{c}{$C_2 \mathbin{/} \si{\nano\farad}$} &
+     \multicolumn{2}{c}{$R_\text{x} \mathbin{/} \si{\ohm}$}&
+     \multicolumn{2}{c} {$C_\text{x}  \mathbin{/} \si{\nano\farad}$}\\
+     \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+     \midrule 
+     Messung 1 & 371  & 11.13  & 1.54 & 0.08 & 450 & 9    & 570.62& 33.27 & 292.57 & 15.76\\
+     Messung 2 & 418  & 12.54  & 1.37 & 0.07 & 399 & 7.89 & 572.52& 33.38 & 291.31 & 15.69\\
+     Messung 3 & 278  & 8.34   & 2.06 & 0.1  & 597 & 11.94& 572.15& 33.36 & 290.07 & 15.62\\
+      \bottomrule
+  \end{tabular}
+\end{table}
+\\
+Der Mittelwert wird ermittelt mit \ref{eqn:mit} und mit \begin{equation}
+  \label{eqn:mit2}
+  \bar{C_\text{x}}=\sum_{i=1}^3 \frac{1}{3}C_{x_i}\, .
+\end{equation}
+Somit bekommt man $C_\text{x}=\SI{291 \pm 9}{\nano\farad}$ und $R_\text{x}=\SI{572 \pm 19}{\ohm}$ für den Kondensator mit Wert 8.
+%
+\\
+Äquivalent dazu wurden für den zweiten Unbekannten Kondensator die Werte berechnet und in Tabelle \ref{tab:Wert9} eingetragen.
+\begin{table}
+  \centering
+  \label{tab:Wert9}
+  \caption{Messwerte und berechnete Werte für realen Kondensator,
+   $R_\text{x}$ und $C_\text{x}$ (Wert 9)}
+  \sisetup{table-format = 3}
+  \begin{tabular}{
+    c
+    S @{${}\pm{}$} S[table-format=2.2]
+    S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2]
+    S @{${}\pm{}$} S[table-format=2.2]
+    S[table-format=3.2] @{${}\pm{}$} S[table-format=2.2]
+    S[table-format = 3.2] @{${}\pm{}$} S[table-format=2.2]}
+     \toprule
+     {Wert 9}  &
+     \multicolumn{2}{c}{$R_2 \mathbin{/} \si{\ohm}$}       &
+     \multicolumn{2}{c}{$\frac{R_3}{R_4}$}                 & 
+     \multicolumn{2}{c}{$C_2 \mathbin{/} \si{\nano\farad}$} &
+     \multicolumn{2}{c}{$R_\text{x} \mathbin{/} \si{\ohm}$}&
+     \multicolumn{2}{c} {$C_\text{x}  \mathbin{/} \si{\nano\farad}$}\\
+     \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+     \midrule 
+     Messung 1 & 466  & 13.98  & 1.04 & 0.08 & 450 & 9    & 486.97 & 28.39 & 430.63 & 23.19\\
+     Messung 2 & 524  & 15.72  & 0.93 & 0.07 & 399 & 7.89 & 485.63 & 28.32 & 430.52 & 23.18\\
+     Messung 3 & 352  & 10.56  & 1.39 & 0.1  & 597 & 11.94& 488.1  & 28.46 & 430.54 & 23.19\\
+      \bottomrule
+  \end{tabular}
+\end{table}
+\\
+Entsprechend der Rechnung für Wert 8, werden die Mittelwerte für die Werte von Kondensator Wert 9 errechnet.
+Es resultiert für die Kapazität $C_\text{x}=\SI{431 \pm 13}{\nano\farad}$ und
+ für den Widerstand des Kondensators $R_\text{x}=\SI{487 \pm 16}{\ohm}$ .
+
+ \newpage
+  \subsection{Induktivitätsbrücke}
