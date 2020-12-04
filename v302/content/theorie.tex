@@ -116,7 +116,7 @@ Kapazität. Zur Berechnung der gesuchten Größen $R_x$ und $L_x$ dient erneut d
     L_x = R_2 R_3 C_4
 \end{equation}
 \subsection{Wien-Robinson-Brücke}
-Die Wien-Robinson-Brücke ist im Gegensatz zu den vorigen Brücken eine frequenzabhängige Brücke, bei welcher die Durchführung nur bei eine Frequenz möglichs ist.
+Die Wien-Robinson-Brücke ist im Gegensatz zu den vorigen Brücken eine frequenzabhängige Brücke, bei welcher die Durchführung nur bei eine Frequenz möglich ist.
 Außerdem besitzt diese Brücke keine Abgleichelemente.
 \begin{figure}
     \centering
@@ -124,3 +124,30 @@ Außerdem besitzt diese Brücke keine Abgleichelemente.
     \label{fig:WR}
     \includegraphics[width=0.5\textwidth]{bridges/WR.png}
 \end{figure}
+Für den Betrag der Brücken- und Speisepannung gilt
+\begin{equation}
+    \abs*{\frac{U_B}{U_S}}^2 = \frac{1}{9} \frac{\left(\omega^2 R^2 C^2 -1 \right)^2}{\left( \left( 1 - \omega^2 R^2 C^2 \right)^2 
+    + 9 w^2 R^2 C^2 \right)}
+\end{equation}
+Die Brückenspannung verschwindet bei der Frequenz 
+\begin{equation}
+    \omega_0 = 1/RC
+\end{equation}
+, wodurch die Brücke bei der Frequenz $\omega_0$ abgeglichen ist.
+Mit $\Omega \coloneq \frac{\omega}{\omega_0}$ erhält man 
+\begin{equation}
+    f(\Omega) = \abs*{\frac{U_B}{U_S}}^2 = \frac{1}{9} \frac{\left(\Omega^2 -1 \right)^2}{ \left( 1 - \Omega^2 R^2 \right)^2 
+    + 9 \Omega^2}
+\end{equation}
+Der Klirrfaktor $k$ wird mittels
+\begin{equation}
+    k = \sqrt{\frac{U_2^2 + U_3^2 + \dotsb }{U_1^2}}
+\end{equation}
+errechnet. Als Vereinfachung wir nur die Spannung $U_2$ der ersten Oberwelle mit einbezogen. Somit ergibt sich
+\begin{equation}
+    k = \frac{U_2}{U_1} \; \text{.}
+\end{equation} 
+Die Spannung $U_2$ erhält man mit Hilfe von 
+\begin{equation}
+    U_2 = \frac{U_B}{f(\Omega = 2)} \; \text{.}
+\end{equation}
