@@ -46,11 +46,11 @@ ergibt.
 Hierbei müssen manche manche Spannung über die jeweiligen Komponenten ein negatives Vorzeichen besitzen, damit die Gleichung \eqref{eqn:stitchrule} aufgeht.
 Die Spannungen, wessen Pfeile des Stroms gegen den Uhrzeigersinn laufen, erhalten ein negative Vorzeichen.
 \subsection{Abgleichbedingung}
-Damit man die Größen der gesuchten Bauteile errechnen kann, muss die Brücke abgeglichen sein. Dies bedeutet, dass die Spannung U zwischen den Punkten A und B (s. 
-Abbildung \ref{fig:allgBrücke}) gleich Null ist. Um zu messen, wie groß die Spannung U ist, benötigt man einen Nullindikator.
-Nach Anwendung der beiden Kirchhoffschen Gesetzen erhält man für $U_\text{S}$ den Ausdruck  
+Damit die Größen der gesuchten Bauteile errechnen werden können, muss die Brücke abgeglichen sein. Dies bedeutet, dass die Spannung U zwischen den Punkten A und B (s. 
+Abbildung \ref{fig:allgBrücke}) gleich Null ist. Um zu messen, wie groß die Spannung U ist, benötigt wird ein Nullindikator benötigt.
+Nach Anwendung der beiden Kirchhoffschen Gesetzen erhält ergibt sich für $U_\text{S}$ der Ausdruck  
 \begin{equation}
-    U = \frac{R_2 R_3 - R_1 R_4}{\left( R_3 + R_4 \right) \left( R_1 + R_2\right)} U_\text{S} \; \text{.} \label{eqn:U}
+    U = \frac{R_2 R_3 - R_1 R_4}{\left( R_3 + R_4 \right) \left( R_1 + R_2\right)} U_\text{S} \; \text{.} \label{eqn:matchingcondition}
 \end{equation}
 Damit die Spannung U verschwindet, muss der Zähler aus Gleichung \eqref{eqn:matchingcondition} Null ergeben, so dass sich die Abgleichbedigung mathematisch zu
 \begin{equation}
@@ -61,11 +61,66 @@ zusammenfassen lässt.
 Um einen unbekannten Ohmschen Widerstand $R_\text{x}$ auszumessen, kann die Wheatstonesche Brücke benutzt werden. 
 \begin{figure}
     \centering
-    \caption{Wheatstonsche Brücke}
+    \caption{Schaltskizze der Wheatstonschen Brücke}
     \label{fig:Wheatstone}
     \includegraphics[width = 0.5\textwidth]{bridges/wheat.png}
 \end{figure}
-Die Abgleichbedigung für diese Brückenschaltung lautet
+Die Formel für den unbekannte Widerstand $R_x$ lässt sich mit Hilfe der Abgleichbedigung \eqref{eqn:matchingcondition} durch umstellen errechnen. Somit folgt 
 \begin{equation}
-    R_\text{x} = R_2 \frac{R_3}{R_4} \; \text{.}
+    R_\text{x} = R_2 \frac{R_3}{R_4} \; \text{.} \label{eqn:wheat}
 \end{equation}
+\subsection{Kapazitätsmessbrücke} \label{subsec:capmesbridge}
+\begin{figure}
+    \centering  
+    \caption{Schaltskizze einer Kapazitätsmessbrücke}
+    \label{fig:capmesbridge}
+    \includegraphics[width = 0.5\textwidth]{bridges/capmesbridge.png}
+\end{figure}
+Die Eigenschaft, dass bei einer Kapazität Arbeit gegen den Strom verrichtet wird und somit ein Teil der Energie in Wärmeenergie verloren geht, muss, um ein genaues
+Ergebnis zu erzielen, diese Verlustenergie mit berücksichtigt werden. Um diese meist unerwünschte Eigenschaft zu realisieren, wird ein Ersatzwiderstand 
+hinter die Kapazität geschaltet. Somit wird der Energieverlust bei der Berechnung berücksichtigt. Mit der Ersatzschaltung ergibt sich die Schaltskizze 
+für die Kapazitätsmessbrücke \ref{fig:capmesbridge}. Die Formeln für die Berechnung der unbekannten Größen $R_x$ und $C_x$ sind einerseits in Gleichung
+\eqref{eqn:wheat} und ergeben sich aus 
+\begin{equation}
+    C_x = C_2 \frac{R_4}{R_3}
+\end{equation}
+\subsection{Induktivitätsmessbrücke} \label{subsec:inductance}
+Ähnlich wie bei der Kapazitätsmessbrücke \ref{subsec:capmesbridge} geht aufgrund der Spule Energie verloren.
+Dies geschieht, da diese einen Teil ihrer magnetischen Feldenergie in Form von Wärmeenergie an die Umwelt abgibt. Somit wird erneut ein Verlustwiderstand 
+hinter das jeweilige Bauteil(in diesem Fall eine Induktivität) geschaltet, sodass der Versuchsaufbau realistisch ist.
+\begin{figure}
+    \centering
+    \caption{Schaltskizze einer Induktivitätsmessbrücke}
+    \label{fig:inductance}
+    \includegraphics[width=0.5\textwidth]{bridges/inductance.png}
+\end{figure}
+Die zur Berechnung der unbekannten Größen $R_x$ und $L_x$ nötigen Formeln sind erneut einerseits durch Gleichung \eqref{eqn:wheat}
+und durch
+\begin{equation}
+    L_x = L_2 \frac{R_3}{R_4}
+\end{equation}
+gegeben.
+\subsection{Maxwell-Brücke}
+Die Maxwell-Brücke dient ebenfalls zur Induktivitätsmessung. Oftmals wird diese Brückenschaltung genutzt, da diese gegenüber der oben erwähnten Brücken
+schaltung \ref{subsec:inductance}den Vorteil besitzt, dass die Induktivität $L_2$ einen nicht so niedrigen Verlust haben muss. Dies ist ein großer Vorteil, da eine 
+effiziente Spule schwer zu realisieren ist.
+\begin{figure}
+    \centering
+    \caption{Schaltskizze der Maxwell-Brücke}
+    \label{fig:maxwell}
+    \includegraphics[width=0.5\textwidth]{bridges/maxwell.png}
+\end{figure}
+Hierbei werden die Regelwiderstände $R_3$ und $R_4$ als Abgleichelemente genutzt. Bei diesem Versuchsaufbau ist die Kapazität $C_4$ eine möglichst verlustfreie 
+Kapazität. Zur Berechnung der gesuchten Größen $R_x$ und $L_x$ dient erneut die Gleichung \eqref{eqn:wheat} und die Formel
+\begin{equation}
+    L_x = R_2 R_3 C_4
+\end{equation}
+\subsection{Wien-Robinson-Brücke}
+Die Wien-Robinson-Brücke ist im Gegensatz zu den vorigen Brücken eine frequenzabhängige Brücke, bei welcher die Durchführung nur bei eine Frequenz möglichs ist.
+Außerdem besitzt diese Brücke keine Abgleichelemente.
+\begin{figure}
+    \centering
+    \caption{Schaltskizze der Wien-Robinson-Brücke}
+    \label{fig:WR}
+    \includegraphics[width=0.5\textwidth]{bridges/WR.png}
+\end{figure}
