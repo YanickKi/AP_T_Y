@@ -1,21 +1,20 @@
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt    
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
+w,UB=np.genfromtxt('dataplots/WR_data.txt', unpack=True)
+US=5000
+w0=162.56
+print(w)
+print(UB/US)
+om=w/w0
 
-plt.subplot(1, 2, 1)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
-plt.legend(loc='best')
+plt.plot(om,UB/US,'r--', label= '$U_{Br} \mathbin{/} U_S')
+f=np.sqrt(1/9*(om**2-1)**2/((1-om**2)**2+9*om**2))
 
-plt.subplot(1, 2, 2)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
-plt.legend(loc='best')
-
-# in matplotlibrc leider (noch) nicht möglich
+plt.plot(om,f, label='$f(\symup{\Omega})$')
+plt.legend()
+plt.xscale('log')
+plt.ylabel('$U_{Br}$/$U_S$')
+plt.xlabel('$\Omega$')
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/plot.pdf')
