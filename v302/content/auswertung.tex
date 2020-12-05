@@ -3,7 +3,7 @@
 \subsection{Wheatstonesche Brücke}
 \label{sec:Wheat}
 Mit der Wheatstoneschen Brückenschaltung sollten zwei Unbekannte Widerstände ermittelt werden.
-In der folgenden Tabelle werden die Messwerte $R_2$ und $\frac{R_3}{R_4}$ der Messreihe aufgelistet. Zudem ist, der mit Hilfe von $\symbf{Zitat}$, berechnete 
+In der folgenden Tabelle werden die Messwerte $R_2$ und $\frac{R_3}{R_4}$ der Messreihe aufgelistet. Zudem ist, der mit Hilfe von Gleichung $\ref{eqn:wheat}$, berechnete 
 Wert für $R_\text{x}$ eingetragen. Der Fehler lässt sich mit Hilfe der Gaußschen Fehlerfortpflanzung
 \\
 \begin{equation}
@@ -47,6 +47,7 @@ Der Mittelwert von $R_\text{x}$ lässt sich berechnen mit
   \bar{R_\text{x}}=\sum_{i=1}^3 \frac{1}{3}R_{x_i}\, .
 \end{equation}
 Daraus folgt für den Mittelwert des Widerstands Wert 10, $R_\text{x}= \SI{239.5\pm0.7}{\ohm}$.
+Äquivalent dazu, wurden auch die Werte von dem anderen unbekannten Widerstand ermittelt und eingetragen.
 %
 \\
 \begin{table}
@@ -79,8 +80,8 @@ Mit der Formel für den Mittelwert \ref{eqn:mit} folgt für Wert 11, $R_\text{x}
 %
 %
 \subsection{Kapazitätsmessbrücke}
-In der Messung um den realen Kondensator, ist dieser durch einen ohmschen Widerstand und eine Widerstandslose Kapazität ersetzt worden.
-Zum berechnen der Werte wurde die Gleichung $\symbf{Referenz}$ genutzt.
+In der Messung um den realen Kondensator, ist dieser durch einen ohmschen Widerstand und eine widerstandslose Kapazität ersetzt worden.
+Zum berechnen der Werte wurde die Gleichung $\ref{eqn:capmes}$ genutzt.
 Alle Messwerte, berechneten Kapazitäten und Widerstände für den Wert 8 sind in der Tabelle \ref{tab:kapa} aufgeführt.
 Dabei wurden die Fehler des Widerstands mit der Formel \ref{eqn:fehR} und
 die der Kapazität mit
@@ -90,8 +91,8 @@ die der Kapazität mit
   +\left(-C_2\frac{R4}{R3}\right)^2 \cdot \left(\symup{\Delta}\frac{R4}{R3}\right)^2}
 \end{equation}
 \\
-berechnet. Wobei $\symup{\Delta}R_2=\pm0.03 \cdot R_2$ der Fehler von dem Variablen Widerstand ist und $\symup{\Delta}C_2=\pm0.002 \cdot C_2$ der Fehler 
-der Kapazität ist. Die Abweichung von $\frac{R_3}{R_4}$ ist die selbe wie in Abschnitt \ref{sec:Wheat}.
+berechnet. Wobei $\symup{\Delta}R_2=\pm0.03 \cdot R_2$ der Fehler von dem variablen Widerstand ist und $\symup{\Delta}C_2=\pm0.002 \cdot C_2$ der Fehler 
+der Kapazität. Die Abweichung von $\frac{R_3}{R_4}$ ist die selbe wie in Abschnitt \ref{sec:Wheat}.
 \begin{table}
   \centering
   \caption{Messwerte und berechnete Werte für realen Kondensator, 
@@ -121,7 +122,7 @@ der Kapazität ist. Die Abweichung von $\frac{R_3}{R_4}$ ist die selbe wie in Ab
   \end{tabular}
 \end{table}
 \\
-Der Mittelwert für $R_\text{x}$ und $L_\text{x}$ wird ermittelt mit \ref{eqn:mit} und mit \\
+Der Mittelwert für $R_\text{x}$ und $C_\text{x}$ wird ermittelt mit Gleichung \ref{eqn:mit} und mit \\
 \begin{equation}
   \label{eqn:mit2}
   \bar{C_\text{x}}=\sum_{i=1}^3 \frac{1}{3}C_{x_i}\, .
@@ -129,7 +130,7 @@ Der Mittelwert für $R_\text{x}$ und $L_\text{x}$ wird ermittelt mit \ref{eqn:mi
 Somit bekommt man $C_\text{x}=\SI{291.3 \pm 0.9}{\nano\farad}$ und $R_\text{x}=\SI{572 \pm 10}{\ohm}$ für den Kondensator mit Wert 8.
 %
 \\
-Äquivalent dazu wurden für den zweiten Unbekannten Kondensator die Werte berechnet und in Tabelle \ref{tab:kapar} eingetragen.
+Äquivalent dazu wurden für den zweiten unbekannten Kondensator die Werte berechnet und in Tabelle \ref{tab:kapar} eingetragen.
 \begin{table}
   \centering
   \caption{Messwerte und berechnete Werte für realen Kondensator,
@@ -165,8 +166,8 @@ Es resultiert für die Kapazität $C_\text{x}=\SI{430.6 \pm 1.3}{\nano\farad}$ u
 
  \newpage
   \subsection{Induktivitätsmessbrücke}
-  Bei der Induktivitätsmessbrücke wurde die reale Induktivität ersetzt durch einen ohmschen Widerstand und eine Widerstandslose Induktivität.
-  Zum berechnen der Werte wurde Gleichung $Refernz$ benutzt. Die Messwerte, so wie alle errechneten Widerstände und Induktivitäten sind in der Tabelle
+  Bei der Induktivitätsmessbrücke wurde die reale Induktivität ersetzt durch einen ohmschen Widerstand und eine widerstandslose Induktivität.
+  Zum berechnen der Werte wurde Gleichung $\ref{eqn:inducmes}$ benutzt. Die Messwerte, so wie alle errechneten Widerstände und Induktivitäten sind in der Tabelle
   \ref{tab:indu} eingetragen. Die Fehlerrechnung erfolgte mit Hilfe der Gaußschen Fehlerfortpflanzung. 
   Die Standardabweichung von $R_\text{x}$ lässt sich berechnen mit \ref{eqn:fehR}. Die Standardabweichung der Induktivität wird berechnet mit
   \begin{equation*}
@@ -203,7 +204,7 @@ Es resultiert für die Kapazität $C_\text{x}=\SI{430.6 \pm 1.3}{\nano\farad}$ u
     \end{tabular}
   \end{table}
   \\
-  Aus den Werten von $R_\text{x}$ und $L_\text{x}$, lässt sich der Mittelwert berechnen.
+  Aus den Werten von $R_\text{x}$ und $L_\text{x}$, lassen sich die Mittelwerte berechnen.
   Es ergibt sich für die Mittelwerte von Wert 10, $R_x=\SI{425\pm7}{\ohm}$ und $L_x=\SI{141.4\pm0.4}{\milli\henry}$.\\
   Für die zweite Induktivität ist die Berechnung äquivalent.
   \\
@@ -239,10 +240,10 @@ Es resultiert für die Kapazität $C_\text{x}=\SI{430.6 \pm 1.3}{\nano\farad}$ u
 Es folgen die Mittelwerte für Wert 18: $R_x=\SI{364\pm6}{\ohm}$ und $L_x=\SI{50.4\pm0.16}{\milli\henry}$.
 \newpage
 \subsection{Maxwell-Brücke}
-Für die Maxwell-Brücke wurde ein konstanter Widerstand $C_4 = \SI{399}{\nano\farad}$ verwendet. Zur Berechnung des Widerstands und der Induktivität,
-wurde erneut $Referenz$ genutzt. Die Werte wurden in die Tabelle \ref{tab:Wert10m} übertragen. Es wurden die Fehler $\symup{\Delta}R_3=\pm 0.03\cdot R_3$ 
-und $\symup{\Delta}R_4=\pm 0.03\cdot R_4$ verwendet. Außerdem beträgt der Fehler von $C_4$ und $R_2$, $0,2$\% .
-Die Fehlerrechnung für $R_\text{x}$ erfolgt über Gleichung \ref{eqn:fehR}, während der Fehler für $C_\text{x}$ mit
+Für die Maxwell-Brücke wurde ein konstanter Widerstand $C_4 = \SI{399}{\nano\farad}$ verwendet. Zur Berechnung des Widerstands und der Induktivität
+wurden die Gleichungen $\ref{eqn:wheat}$ und $\ref{eqn:inducmesmaxwell}$ genutzt. Die Werte wurden in die Tabelle \ref{tab:Wert10m} übertragen.\\ Es wurden die Fehler $\symup{\Delta}R_3=\pm 0.03\cdot R_3$ 
+und $\symup{\Delta}R_4=\pm 0.03\cdot R_4$ verwendet. Außerdem beträgt der Fehler von $C_4$ und $R_2$ $0.2$ Prozent.
+Die Fehlerrechnung für $R_\text{x}$ erfolgt über Gleichung \ref{eqn:fehR}, während der Fehler von $L_\text{x}$ mit
 \begin{equation}
   \label{eqn:fehl}
   \symup{\Delta}L_x=\sqrt{\left(R_3 C_4\right)^2 \cdot \left(\symup{\Delta}R_2\right)^2 + 
@@ -318,17 +319,19 @@ Es ergeben sich die Mittelwerte von Wert 18: $R_\text{x}=\SI{367\pm9}{\ohm}$
  \newpage
  \subsection{Wien-Robinson-Brücke}
  Um den Graphen zu plotten benötigt es zuerst die Frequenz $v_0$, welche in dem Versuch $v_0=\SI{162.56}{\hertz}$ beträgt.
- Beim vergleichen mit dem berrechneten Wert, $v_0= \SI{2272}{\hertz}$, mit Hilfe der Formel $referenz$, fällt auf.
+ Beim vergleichen mit dem berrechneten Wert, $w_0= \SI{2272}{\hertz}$ ermittelt mit Hilfe der Formel $\ref{eqn:omega0}$, fällt auf, dass dieser
+ sehr stark von dem beobachteten Wert abweicht.
  \begin{figure}
-  \caption{Frequenzsuche}
+  \caption{Plot zu einem Frequenzfilter}
   \centering
   \includegraphics[width = \textwidth]{build/plot.pdf}
 \end{figure}
-Die Messwerte liegen im Bereich um $\Omega=1$ und in der nähe, fast alle auf dem Graphen von $f(\Omega)$. Dabei fällt auf das bei größeren Distanzen zu 
- diesem Punkt, die Genauigkeit abnimmt. 
+Der Graph $\frac{U_\text{Br}}{U_S}$ ist durch die Messwerte gegeben, während der Graph $f(\Omega)$ durch die Gleichung \ref{eqn:fOmega} bestimmt wurde. 
+Bei Betrachtung der Graphen fällt auf, dass die Graphen um den Punkt $\Omega=1$ sehr gut übereinstimmen.
+Ab Werten mit $\Omega>10$ stimmen die Graphen nicht mehr überein. Der Graph $f(\Omega)$ stoppt früher sein Wachstum und endet so etwas tiefer, als der Graph der Messwerte.
 \newpage 
 \subsection{Klirrfaktor-Messung}
-Zur bestimmung des Klirrfaktors wird die Summe der Oberwellen auf die zweite Oberwelle beschränkt.
-Mit $f(2)\approx 0.149$ und $U_\text{Br}(2v_0)=\SI{0.8}{\volt}$ folgt für die zweite Oberwelle $U_2=\SI{5.37}{\volt}$.
-Hinzu kommt der Wert $U_1=\SI{0.009}{\volt}$, welcher die erste Oberwelle angibt.
-Dann lässt sich, mit der Formel $\symbf{Referenz}$ der Klirrfaktor, $k=596.57$ berechnen.
+Zur bestimmung des Klirrfaktors wird die Summe der Oberwellen (größer als 1) auf die zweite Oberwelle beschränkt.
+Mit $f(2)\approx 0.149$ und $U_\text{Br}(2v_0)=\SI{0.8}{\volt}$ folgt für die Spannung der zweiten Oberwelle $U_2=\SI{5.37}{\volt}$.
+Hinzu kommt der Wert $U_1=\SI{0.009}{\volt}$, welcher für die erste Oberwelle gemessen wurde.
+Dann lässt sich, mit der Formel $\ref{eqn:klirreasy}$ der Klirrfaktor, $k=596.57$ berechnen.
