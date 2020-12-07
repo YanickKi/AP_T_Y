@@ -1,11 +1,12 @@
 \section{Theorie}
 \label{sec:Theorie}
-Aufgrund der hohen Präzision werden üblicherwiese Brückenschaltungen eingesetzt. Um die Präzision zu gewährleisten wird die sogenannte Nullmethode eingesetzt.
-Mit Hilfe dieser Methode werden die Schaltungen abgeglichen, damit die zu messenden Größen mit einer hohen Genauigkeit bestimmt werden können. Außerdem lässt sich jede
-physikalische Größem, welche sich als elektrischer Widerstand darstellen lässt, sehr präzise messen.
+Da Brückenschaltung üblicherweise eine höhere Präsision als andere Schaltungen aufweisen, werden diese benutzt, um Komponenten in einem Schaltkreis zu bestimmen. 
+Hierzu wird sich die sogenannte Nullmethode zu Nutze gemacht. 
+Mit Hilfe dieser Methode werden die Schaltungen abgeglichen, so dass die zu messenden Größen mit einer hohen Genauigkeit bestimmt werden können. 
+Außerdem lässt sich jede physikalische Größe, welche sich als elektrischer Widerstand darstellen lässt, sehr präzise messen.
 \subsection{Allgemeine Brückenschaltung}
-Um die Ableichbedigung zu berechnen, betrachtet man zunächst die Spannung zwischen zwei Punkten auf zwei verschieden Leitern. Die dort anliegende Potentialdifferenz U
-zwischen den Punkten A und B, welche auch als Brückenspannung bezeichnet wird hängt von den Widerstandsverhältnissen ab,
+Um die Abgleichbedigung zu berechnen, betrachtet man zunächst die Spannung zwischen zwei Punkten. Die dort anliegende Potentialdifferenz U
+zwischen den Punkten A und B, welche auch als Brückenspannung bezeichnet wird, hängt von den Widerstandsverhältnissen ab,
 weswegen man dieses Verhätnis zum Abgleichen ausnutzt.
 Die allgemeine Gestalt einer Brückenschaltung wird in  Abbildung \ref{fig:allgBrücke}
 \begin{figure}
@@ -20,7 +21,7 @@ dargestellt. Allgemein kann man Schaltkreise mit Hilfe der Kirchhoffschen Gesetz
 Die erste Kirchhoffsche Regel ist die Knotenregel, welche besagt, dass die Summe aus den zufließenden und abfließenden Strömen Null ist.
 Mathematisch ausgedrückt sieht die Knotenregel wie foglt aus:
 \begin{equation}
-    \sum_{k=1}^N I_k = 0 \label{eqn:knotrule}
+    \sum_{k=1}^N I_k = 0 \label{eqn:knotrule} \; \text{.}
 \end{equation} 
 \begin{figure}
     \centering
@@ -29,8 +30,8 @@ Mathematisch ausgedrückt sieht die Knotenregel wie foglt aus:
     \includegraphics[width = 0.5\textwidth]{bridges/knotrule.png}
 \end{figure}
 Damit die Konfiguration in Abbildung \ref{fig:knotrule} gültig ist, müssen entweder die abfließenden Ströme $I_2$ und $I_3$ oder 
-der zufließende Strom $I_1$ ein negatives Vorzeichen haben, so dass die Gleichung \eqref{eqn:knotrule} ihre Gültigkeit 
-behält. Zwecks Konventionen besitzen die abfließenden Ströme negative Vorzeichen.
+der zufließende Strom $I_1$ ein negatives Vorzeichen haben. 
+Zwecks Konvention besitzen die abfließenden Ströme negative Vorzeichen.
 \subsubsection{Maschenregel}
 Die zweite und damit letzte Kirchhoffsche Regel sagt aus, dass die Summe der Spannungen in einer sogenannten Masche ebenfalls Null ergeben muss, so dass sich die Formel
 \begin{equation}
@@ -43,12 +44,12 @@ ergibt.
     \label{fig:stitchrule}
     \includegraphics[width=0.5\textwidth]{bridges/stitchrule.png}
 \end{figure}
-Hierbei müssen manche manche Spannung über die jeweiligen Komponenten ein negatives Vorzeichen besitzen, damit die Gleichung \eqref{eqn:stitchrule} aufgeht.
+Damit die Gleichung \eqref{eqn:stitchrule} aufgeht, müssen manche Spannung über die jeweiligen Komponenten ein negatives Vorzeichen besitzen.
 Die Spannungen, wessen Pfeile des Stroms gegen den Uhrzeigersinn laufen, erhalten ein negative Vorzeichen.
 \subsection{Abgleichbedingung}
-Damit die Größen der gesuchten Bauteile errechnen werden können, muss die Brücke abgeglichen sein. Dies bedeutet, dass die Spannung U zwischen den Punkten A und B (s. 
-Abbildung \ref{fig:allgBrücke}) gleich Null ist. Um zu messen, wie groß die Spannung U ist, benötigt wird ein Nullindikator benötigt.
-Nach Anwendung der beiden Kirchhoffschen Gesetzen erhält ergibt sich für $U_\text{S}$ der Ausdruck  
+Damit die Größen der gesuchten Bauteile errechnet werden können, muss die Brücke abgeglichen sein. Dies bedeutet, dass die Spannung U zwischen den Punkten A und B (s. 
+Abbildung \ref{fig:allgBrücke}) gleich Null ist. Um zu messen, wie groß die Spannung U ist, wird ein Nullindikator benötigt.
+Nach Anwendung der beiden Kirchhoffschen Gesetzen ergibt sich für $U$ der Ausdruck  
 \begin{equation}
     U = \frac{R_2 R_3 - R_1 R_4}{\left( R_3 + R_4 \right) \left( R_1 + R_2\right)} U_\text{S} \; \text{.} \label{eqn:matchingcondition}
 \end{equation}
