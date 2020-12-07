@@ -1,13 +1,13 @@
 \section{Theorie}
 \label{sec:Theorie}
-Da Brückenschaltung üblicherweise eine höhere Präsision als andere Schaltungen aufweisen, werden diese benutzt, um Komponenten in einem Schaltkreis zu bestimmen. 
+Da Brückenschaltungen üblicherweise eine höhere Präsision als andere Schaltungen aufweisen, werden diese benutzt, um Komponenten in einem Schaltkreis zu bestimmen. 
 Hierzu wird sich die sogenannte Nullmethode zu Nutze gemacht. 
 Mit Hilfe dieser Methode werden die Schaltungen abgeglichen, so dass die zu messenden Größen mit einer hohen Genauigkeit bestimmt werden können. 
 Außerdem lässt sich jede physikalische Größe, welche sich als elektrischer Widerstand darstellen lässt, sehr präzise messen.
 \subsection{Allgemeine Brückenschaltung}
 Um die Abgleichbedigung zu berechnen, betrachtet man zunächst die Spannung zwischen zwei Punkten. Die dort anliegende Potentialdifferenz U
 zwischen den Punkten A und B, welche auch als Brückenspannung bezeichnet wird, hängt von den Widerstandsverhältnissen ab,
-weswegen man dieses Verhätnis zum Abgleichen ausnutzt.
+weswegen man dieses Verhältnis zum Abgleichen ausnutzt.
 Die allgemeine Gestalt einer Brückenschaltung wird in  Abbildung \ref{fig:allgBrücke}
 \begin{figure}
     \centering
@@ -15,11 +15,11 @@ Die allgemeine Gestalt einer Brückenschaltung wird in  Abbildung \ref{fig:allgB
     \label{fig:allgBrücke}
     \includegraphics[width = 0.5\textwidth]{bridges/genbridge.png}
 \end{figure}
-dargestellt. Allgemein kann man Schaltkreise mit Hilfe der Kirchhoffschen Gesetzen beschreiben.
-\subsection{Kirchoffschen Gesetze}
+dargestellt. Allgemein kann man Schaltkreise mit Hilfe der Kirchhoffschen Gesetze beschreiben.
+\subsection{Kirchoffsche Gesetze}
 \subsubsection{Knotenregel}
 Die erste Kirchhoffsche Regel ist die Knotenregel, welche besagt, dass die Summe aus den zufließenden und abfließenden Strömen Null ist.
-Mathematisch ausgedrückt sieht die Knotenregel wie foglt aus:
+Mathematisch ausgedrückt sieht die Knotenregel wie folgt aus:
 \begin{equation}
     \sum_{k=1}^N I_k = 0 \label{eqn:knotrule} \; \text{.}
 \end{equation} 
@@ -45,11 +45,11 @@ ergibt.
     \includegraphics[width=0.5\textwidth]{bridges/stitchrule.png}
 \end{figure}
 Damit die Gleichung \eqref{eqn:stitchrule} aufgeht, müssen manche Spannung über die jeweiligen Komponenten ein negatives Vorzeichen besitzen.
-Die Spannungen, wessen Pfeile des Stroms gegen den Uhrzeigersinn laufen, erhalten ein negative Vorzeichen.
+Die Spannungen, dessen Pfeile des Stroms gegen den Uhrzeigersinn laufen, erhalten ein negatives Vorzeichen.
 \subsection{Abgleichbedingung}
 Damit die Größen der gesuchten Bauteile errechnet werden können, muss die Brücke abgeglichen sein. Dies bedeutet, dass die Spannung U zwischen den Punkten A und B (s. 
 Abbildung \ref{fig:allgBrücke}) gleich Null ist. Um zu messen, wie groß die Spannung U ist, wird ein Nullindikator benötigt.
-Nach Anwendung der beiden Kirchhoffschen Gesetzen ergibt sich für $U$ der Ausdruck  
+Nach Anwendung der beiden Kirchhoffschen Gesetze ergibt sich für $U$ der Ausdruck  
 \begin{equation}
     U = \frac{R_2 R_3 - R_1 R_4}{\left( R_3 + R_4 \right) \left( R_1 + R_2\right)} U_\text{S} \; \text{.} \label{eqn:matchingcondition}
 \end{equation}
@@ -71,7 +71,7 @@ Die Formel für den unbekannte Widerstand $R_x$ lässt sich mit Hilfe der Abglei
     R_\text{x} = R_2 \frac{R_3}{R_4} \; \text{.} \label{eqn:wheat}
 \end{equation}
 \subsection{Kapazitätsmessbrücke} \label{subsec:capmesbridge}
-\begin{figure}
+\begin{figure}[H]
     \centering  
     \caption{Schaltskizze einer Kapazitätsmessbrücke}
     \label{fig:capmesbridge}
@@ -102,8 +102,8 @@ und durch
 \end{equation}
 gegeben.
 \subsection{Maxwell-Brücke}
-Die Maxwell-Brücke dient ebenfalls zur Induktivitätsmessung. Oftmals wird diese Brückenschaltung genutzt, da diese gegenüber der oben erwähnten Brücken
-schaltung \ref{subsec:inductance}den Vorteil besitzt, dass die Induktivität $L_2$ einen nicht so niedrigen Verlust haben muss. Dies ist ein großer Vorteil, da eine 
+Die Maxwell-Brücke dient ebenfalls zur Induktivitätsmessung. Oftmals wird diese Brückenschaltung genutzt, da diese gegenüber der oben erwähnten Brückenschaltung 
+\ref{subsec:inductance}den Vorteil besitzt, dass die Induktivität $L_2$ einen nicht so niedrigen Verlust haben muss. Dies ist ein großer Vorteil, da eine 
 effiziente Spule schwer zu realisieren ist.
 \begin{figure}
     \centering
