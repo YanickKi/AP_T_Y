@@ -1,5 +1,6 @@
 \section{Theorie}
 \label{sec:Theorie}
+Die Inhalte des Theorieteils sind auf Grundlage von dem Dokument \cite{anleitung} formuliert.
 Da Brückenschaltungen üblicherweise eine höhere Präsision als andere Schaltungen aufweisen, werden diese benutzt, um Komponenten in einem Schaltkreis zu bestimmen. 
 Hierzu wird sich die sogenannte Nullmethode zu Nutze gemacht. 
 Mit Hilfe dieser Methode werden die Schaltungen abgeglichen, so dass die zu messenden Größen mit einer hohen Genauigkeit bestimmt werden können. 
@@ -7,7 +8,7 @@ Außerdem lässt sich jede physikalische Größe, welche sich als elektrischer W
 \subsection{Allgemeine Brückenschaltung}
 Um die Abgleichbedigung zu berechnen, betrachtet man zunächst die Spannung zwischen zwei Punkten. Die dort anliegende Potentialdifferenz U
 zwischen den Punkten A und B, welche auch als Brückenspannung bezeichnet wird, hängt von den Widerstandsverhältnissen ab,
-weswegen man dieses Verhältnis zum Abgleichen ausnutzt.
+weswegen dieses Verhältnis zum Abgleichen ausgenutzt wird.
 Die allgemeine Gestalt einer Brückenschaltung wird in  Abbildung \ref{fig:allgBrücke}
 \begin{figure}
     \centering
@@ -15,7 +16,7 @@ Die allgemeine Gestalt einer Brückenschaltung wird in  Abbildung \ref{fig:allgB
     \label{fig:allgBrücke}
     \includegraphics[width = 0.5\textwidth]{bridges/genbridge.png}
 \end{figure}
-dargestellt. Allgemein kann man Schaltkreise mit Hilfe der Kirchhoffschen Gesetze beschreiben.
+dargestellt. Schaltkreise können immer mit den Kirchhoffschen Gesetzen beschrieben werden.
 \subsection{Kirchoffsche Gesetze}
 \subsubsection{Knotenregel}
 Die erste Kirchhoffsche Regel ist die Knotenregel, welche besagt, dass die Summe aus den zufließenden und abfließenden Strömen Null ist.
@@ -44,16 +45,16 @@ ergibt.
     \label{fig:stitchrule}
     \includegraphics[width=0.5\textwidth]{bridges/stitchrule.png}
 \end{figure}
-Damit die Gleichung \eqref{eqn:stitchrule} aufgeht, müssen manche Spannung über die jeweiligen Komponenten ein negatives Vorzeichen besitzen.
+Damit die Gleichung \eqref{eqn:stitchrule} aufgeht, müssen manche Spannungen über die jeweiligen Komponenten ein negatives Vorzeichen besitzen.
 Die Spannungen, dessen Pfeile des Stroms gegen den Uhrzeigersinn laufen, erhalten ein negatives Vorzeichen.
 \subsection{Abgleichbedingung}
-Damit die Größen der gesuchten Bauteile errechnet werden können, muss die Brücke abgeglichen sein. Dies bedeutet, dass die Spannung U zwischen den Punkten A und B (s. 
-Abbildung \ref{fig:allgBrücke}) gleich Null ist. Um zu messen, wie groß die Spannung U ist, wird ein Nullindikator benötigt.
+Damit die Größen der gesuchten Bauteile errechnet werden können, muss die Brücke abgeglichen sein. Dies bedeutet, dass die Spannung $U$ zwischen den Punkten A und B (s. 
+Abbildung \ref{fig:allgBrücke}) gleich Null ist. Um zu messen wie groß die Spannung $U$ ist, wird ein Nullindikator benötigt.
 Nach Anwendung der beiden Kirchhoffschen Gesetze ergibt sich für $U$ der Ausdruck  
 \begin{equation}
     U = \frac{R_2 R_3 - R_1 R_4}{\left( R_3 + R_4 \right) \left( R_1 + R_2\right)} U_\text{S} \; \text{.} \label{eqn:matchingcondition}
 \end{equation}
-Damit die Spannung U verschwindet, muss der Zähler aus Gleichung \eqref{eqn:matchingcondition} Null ergeben, so dass sich die Abgleichbedigung mathematisch zu
+Damit die Spannung $U$ verschwindet, muss der Zähler aus Gleichung \eqref{eqn:matchingcondition} Null ergeben, so dass sich die Abgleichbedigung mathematisch zu
 \begin{equation}
     R_1 R_4 = R_2 R_3 \label{fig:matchingcondition}
 \end{equation}
@@ -77,18 +78,18 @@ Die Formel für den unbekannte Widerstand $R_x$ lässt sich mit Hilfe der Abglei
     \label{fig:capmesbridge}
     \includegraphics[width = 0.5\textwidth]{bridges/capmesbridge.png}
 \end{figure}
-Die Eigenschaft, dass bei einer Kapazität Arbeit gegen den Strom verrichtet wird und somit ein Teil der Energie in Wärmeenergie verloren geht, muss, um ein genaues
-Ergebnis zu erzielen, diese Verlustenergie mit berücksichtigt werden. Um diese meist unerwünschte Eigenschaft zu realisieren, wird ein Ersatzwiderstand 
+Die Eigenschaft, dass bei einer Kapazität Arbeit gegen den Strom verrichtet wird und somit ein Teil der Energie in Wärmeenergie verloren geht, muss, damit ein genaues
+Ergebnis erzielt wird, diese Verlustenergie mit berücksichtigt werden. Um diese meist unerwünschte Eigenschaft zu realisieren, wird ein Ersatzwiderstand 
 hinter die Kapazität geschaltet. Somit wird der Energieverlust bei der Berechnung berücksichtigt. Mit der Ersatzschaltung ergibt sich die Schaltskizze 
 für die Kapazitätsmessbrücke \ref{fig:capmesbridge}. Die Formeln für die Berechnung der unbekannten Größen $R_x$ und $C_x$ sind einerseits in Gleichung
 \eqref{eqn:wheat} und ergeben sich aus 
 \begin{equation}
-    C_x = C_2 \frac{R_4}{R_3} \label{eqn:capmes}
+    C_x = C_2 \frac{R_4}{R_3} \label{eqn:capmes} \; \text{.}
 \end{equation}
 \subsection{Induktivitätsmessbrücke} \label{subsec:inductance}
 Ähnlich wie bei der Kapazitätsmessbrücke \ref{subsec:capmesbridge} geht aufgrund der Spule Energie verloren.
 Dies geschieht, da diese einen Teil ihrer magnetischen Feldenergie in Form von Wärmeenergie an die Umwelt abgibt. Somit wird erneut ein Verlustwiderstand 
-hinter das jeweilige Bauteil(in diesem Fall eine Induktivität) geschaltet, sodass der Versuchsaufbau realistisch ist.
+hinter das jeweilige Bauteil (in diesem Fall eine Induktivität) geschaltet, so dass der Versuchsaufbau realistisch ist.
 \begin{figure}
     \centering
     \caption{Schaltskizze einer Induktivitätsmessbrücke}
@@ -103,7 +104,7 @@ und durch
 gegeben.
 \subsection{Maxwell-Brücke}
 Die Maxwell-Brücke dient ebenfalls zur Induktivitätsmessung. Oftmals wird diese Brückenschaltung genutzt, da diese gegenüber der oben erwähnten Brückenschaltung 
-\ref{subsec:inductance}den Vorteil besitzt, dass die Induktivität $L_2$ einen nicht so niedrigen Verlust haben muss. Dies ist ein großer Vorteil, da eine 
+\ref{subsec:inductance} den Vorteil besitzt, dass die Induktivität $L_2$ einen nicht so niedrigen Verlust haben muss. Dies ist ein großer Vorteil, da eine 
 effiziente Spule schwer zu realisieren ist.
 \begin{figure}
     \centering
@@ -114,10 +115,10 @@ effiziente Spule schwer zu realisieren ist.
 Hierbei werden die Regelwiderstände $R_3$ und $R_4$ als Abgleichelemente genutzt. Bei diesem Versuchsaufbau ist die Kapazität $C_4$ eine möglichst verlustfreie 
 Kapazität. Zur Berechnung der gesuchten Größen $R_x$ und $L_x$ dient erneut die Gleichung \eqref{eqn:wheat} und die Formel
 \begin{equation}
-    L_x = R_2 R_3 C_4 \label{eqn:inducmesmaxwell}
+    L_x = R_2 R_3 C_4 \label{eqn:inducmesmaxwell} \; \text{.}
 \end{equation}
 \subsection{Wien-Robinson-Brücke}
-Die Wien-Robinson-Brücke ist im Gegensatz zu den vorigen Brücken eine frequenzabhängige Brücke, bei welcher die Durchführung nur bei eine Frequenz möglich ist.
+Die Wien-Robinson-Brücke ist im Gegensatz zu den vorigen Brücken eine frequenzabhängige Brücke, bei welcher die Durchführung nur bei einer Frequenz möglich ist.
 Außerdem besitzt diese Brücke keine Abgleichelemente.
 \begin{figure}
     \centering
@@ -125,20 +126,20 @@ Außerdem besitzt diese Brücke keine Abgleichelemente.
     \label{fig:WR}
     \includegraphics[width=0.5\textwidth]{bridges/WR.png}
 \end{figure}
-Für das Betragsquadrat des Verhätnis der Brücken- und Speisepannung gilt
+Für das Betragsquadrat des Verhältnisses der Brücken- und Speisepannung gilt
 \begin{equation}
     \abs*{\frac{U_B}{U_S}}^2 = \frac{1}{9} \frac{\left(\omega^2 R^2 C^2 -1 \right)^2}{\left( \left( 1 - \omega^2 R^2 C^2 \right)^2 
-    + 9 w^2 R^2 C^2 \right)} \label{eqn:ratioUBUS}
+    + 9 w^2 R^2 C^2 \right)} \; \text{.} \label{eqn:ratioUBUS}
 \end{equation}
 Die Brückenspannung verschwindet bei der Frequenz 
 \begin{equation}
     \omega_0 = 1/RC \label{eqn:omega0}
 \end{equation}
 , wodurch die Brücke bei der Frequenz $\omega_0$ abgeglichen ist.
-Mit $\Omega \coloneq \frac{\omega}{\omega_0}$ erhält man 
+Mit $\Omega \coloneq \frac{\omega}{\omega_0}$ vereinfacht sich der Ausdruck zu 
 \begin{equation}
     f(\Omega) = \abs*{\frac{U_B}{U_S}}^2 = \frac{1}{9} \frac{\left(\Omega^2 -1 \right)^2}{ \left( 1 - \Omega^2 R^2 \right)^2 
-    + 9 \Omega^2} \label{eqn:fOmega}
+    + 9 \Omega^2} \; \text{.} \label{eqn:fOmega}
 \end{equation}
 Der Klirrfaktor $k$ wird mittels
 \begin{equation}

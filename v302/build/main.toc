@@ -2,8 +2,26 @@
 \babel@toc {ngerman}{}
 \contentsline {section}{\numberline {1}Ziel}{3}{section.1}%
 \contentsline {section}{\numberline {2}Theorie}{3}{section.2}%
-\contentsline {section}{\numberline {3}Durchführung}{3}{section.3}%
-\contentsline {section}{\numberline {4}Auswertung}{3}{section.4}%
-\contentsline {section}{\numberline {5}Diskussion}{4}{section.5}%
-\contentsline {section}{\nonumberline Literatur}{4}{section*.4}%
+\contentsline {subsection}{\numberline {2.1}Allgemeine Brückenschaltung}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Kirchoffsche Gesetze}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Knotenregel}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Maschenregel}{4}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Abgleichbedingung}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Wheatstonesche Brücke}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Kapazitätsmessbrücke}{6}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Induktivitätsmessbrücke}{6}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Maxwell-Brücke}{7}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Wien-Robinson-Brücke}{8}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Durchführung}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Frequenzunabhängige Messung}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Frequenzabhängige Messung}{9}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Auswertung}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Wheatstonesche Brücke}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Kapazitätsmessbrücke}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Induktivitätsmessbrücke}{12}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Maxwell-Brücke}{12}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Wien-Robinson-Brücke}{13}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Klirrfaktor-Messung}{15}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Diskussion}{15}{section.5}%
+\contentsline {section}{\nonumberline Literatur}{16}{section*.21}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

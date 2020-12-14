@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.31)  26 NOV 2020 15:10
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.31)  8 DEC 2020 01:43
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1464,36 +1464,164 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
 \openout4 = main.toc
  [2
 
-] (./content/ziel.tex) (./content/theorie.tex) (./content/durchfuehrung.tex) (./content/auswertung.tex
-<plot.pdf, id=34, 417.7206pt x 258.0049pt>
-File: plot.pdf Graphic file (type pdf)
-<use plot.pdf>
-Package luatex.def Info: plot.pdf  used on input line 6.
-(luatex.def)             Requested size: 417.71957pt x 258.00426pt.
-) (./content/diskussion.tex) [3<build/plot.pdf>] [4] (./build/main.aux)
+] (./content/ziel.tex) (./content/theorie.tex
+<bridges/genbridge.png, id=72, 402.00188pt x 399.74344pt>
+File: bridges/genbridge.png Graphic file (type png)
+<use bridges/genbridge.png>
+Package luatex.def Info: bridges/genbridge.png  used on input line 17.
+(luatex.def)             Requested size: 209.12778pt x 207.95317pt.
+ [3<./bridges/genbridge.png>]
+<bridges/knotrule.png, id=82, 423.83344pt x 119.69719pt>
+File: bridges/knotrule.png Graphic file (type png)
+<use bridges/knotrule.png>
+Package luatex.def Info: bridges/knotrule.png  used on input line 31.
+(luatex.def)             Requested size: 209.12778pt x 59.06125pt.
+<bridges/stitchrule.png, id=84, 478.78876pt x 299.61937pt>
+File: bridges/stitchrule.png Graphic file (type png)
+<use bridges/stitchrule.png>
+Package luatex.def Info: bridges/stitchrule.png  used on input line 46.
+(luatex.def)             Requested size: 209.12778pt x 130.86827pt.
+ [4<./bridges/knotrule.png><./bridges/stitchrule.png>]
+<bridges/wheat.png, id=101, 405.01312pt x 389.95688pt>
+File: bridges/wheat.png Graphic file (type png)
+<use bridges/wheat.png>
+Package luatex.def Info: bridges/wheat.png  used on input line 68.
+(luatex.def)             Requested size: 209.12778pt x 201.35663pt.
+<bridges/capmesbridge.png, id=103, 395.22656pt x 411.03563pt>
+File: bridges/capmesbridge.png Graphic file (type png)
+<use bridges/capmesbridge.png>
+Package luatex.def Info: bridges/capmesbridge.png  used on input line 79.
+(luatex.def)             Requested size: 209.12778pt x 217.49661pt.
+ [5<./bridges/wheat.png>]
+<bridges/inductance.png, id=118, 386.19281pt x 432.11438pt>
+File: bridges/inductance.png Graphic file (type png)
+<use bridges/inductance.png>
+Package luatex.def Info: bridges/inductance.png  used on input line 97.
+(luatex.def)             Requested size: 209.12778pt x 233.99104pt.
+<bridges/maxwell.png, id=121, 585.68813pt x 427.5975pt>
+File: bridges/maxwell.png Graphic file (type png)
+<use bridges/maxwell.png>
+Package luatex.def Info: bridges/maxwell.png  used on input line 113.
+(luatex.def)             Requested size: 209.12778pt x 152.68225pt.
+ [6<./bridges/capmesbridge.png>] [7<./bridges/inductance.png><./bridges/maxwell.png>]
+<bridges/WR.png, id=141, 653.44125pt x 431.36156pt>
+File: bridges/WR.png Graphic file (type png)
+<use bridges/WR.png>
+Package luatex.def Info: bridges/WR.png  used on input line 127.
+(luatex.def)             Requested size: 209.12778pt x 138.05168pt.
+ [8<./bridges/WR.png>]) (./content/durchfuehrung.tex
+LaTeX Font Info:    Calculating math sizes for size <7.63434> on input line 9.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 7.63515pt on input line 9.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 5.34457pt on input line 9.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 3.81757pt on input line 9.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 7.63351pt on input line 9.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 5.34343pt on input line 9.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 3.81676pt on input line 9.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--20
+
+ []
+
+) (./content/auswertung.tex [9]
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 18.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 18.
+ [10]
+Overfull \hbox (20.41855pt too wide) in paragraph at lines 89--110
+ [][] 
+ []
+
+
+Overfull \hbox (6.42444pt too wide) in paragraph at lines 125--146
+ [][] 
+ []
+
+
+Overfull \hbox (2.10304pt too wide) in paragraph at lines 115--150
+\TU/lmr/m/n/10.95 So-mit er-gibt sich für den Kon-den-sa-tor mit Wert 8 ei-ne Ka-pa-zi-tät von $[] \TU/LatinModernMath(1)/m/n/10.95 = [] []$
+ []
+
+[11]
+Overfull \hbox (3.99353pt too wide) in paragraph at lines 169--190
+ [][] 
+ []
+
+
+Overfull \hbox (9.46854pt too wide) in paragraph at lines 200--221
+ [][] 
+ []
+
+[12]
+Overfull \hbox (47.79358pt too wide) in paragraph at lines 242--263
+ [][] 
+ []
+
+
+Overfull \hbox (36.84357pt too wide) in paragraph at lines 273--294
+ [][] 
+ []
+
+<build/plot.pdf, id=212, 417.7206pt x 258.0049pt>
+File: build/plot.pdf Graphic file (type pdf)
+<use build/plot.pdf>
+Package luatex.def Info: build/plot.pdf  used on input line 307.
+(luatex.def)             Requested size: 418.25555pt x 258.33495pt.
+
+Overfull \hbox (5.475pt too wide) detected at line 335
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 336
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 337
+ 
+ []
+
+
+Overfull \hbox (12.77498pt too wide) detected at line 338
+ 
+ []
+
+
+Overfull \hbox (12.77498pt too wide) detected at line 339
+ 
+ []
+
+[13] [14]) (./content/diskussion.tex [15<./build/plot.pdf>]) [16] (./build/main.aux)
 Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: 7D3D969B65C9B696D314181FFC5550B3;4011.
+(rerunfilecheck)             Checksum: 7DBE64E00E538BE935D1E0392354CBEA;20012.
 Package rerunfilecheck Info: File `main.toc' has not changed.
-(rerunfilecheck)             Checksum: 4A64AAA84C643B59F1644C9092E16F26;581.
+(rerunfilecheck)             Checksum: 44A93CF10058347658F1532C5B0C1CC2;2170.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 35423 strings out of 479017
- 100000,1977958 words of node,token memory allocated
- 670 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 dir, 5 glue, 4 kern, 1 glyph, 12 attribute, 79 glue_spec, 8 attribute_list, 1 write nodes
-   avail lists: 1:3,2:397,3:146,4:10,5:91,6:25,7:1144,8:21,9:107,10:4,11:106
- 53740 multiletter control sequences out of 65536+600000
- 104 fonts using 36557003 bytes
- 110i,6n,114p,10617b,2933s stack positions out of 5000i,500n,10000p,200000b,200000s
-</home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (4 pages, 37097 bytes).
+ 35989 strings out of 479017
+ 125009,1977958 words of node,token memory allocated
+ 925 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 dir, 5 glue, 4 kern, 1 glyph, 90 attribute, 82 glue_spec, 47 attribute_list, 1 write, 1 pdf_action nodes
+   avail lists: 1:7,2:6171,3:876,4:48,5:2181,6:78,7:8101,8:64,9:2669,10:15,11:642
+ 54188 multiletter control sequences out of 65536+600000
+ 252 fonts using 93687619 bytes
+ 110i,15n,114p,10617b,2933s stack positions out of 5000i,500n,10000p,200000b,200000s
+</home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman5-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
+Output written on main.pdf (16 pages, 260418 bytes).
 
-PDF statistics: 127 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 131072)
- 49 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 448 PDF objects out of 1000 (max. 8388607)
+ 355 compressed objects within 4 object streams
+ 83 named destinations out of 1000 (max. 131072)
+ 193 words of extra memory for PDF output out of 10000 (max. 100000000)
 

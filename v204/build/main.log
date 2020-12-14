@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.31)  10 NOV 2020 17:59
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.31)  20 NOV 2020 13:10
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1296,7 +1296,11 @@ Package: extdash 2018/06/24 v1.3 Extended Dash Package (NCC)
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
- (./build/main.aux)
+ (./build/main.aux
+
+LaTeX Warning: Label `tab:AmplitudeAluminium' multiply defined.
+
+)
 \openout1 = main.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1464,36 +1468,115 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
 \openout4 = main.toc
  [2
 
-] (./content/theorie.tex) (./content/durchfuehrung.tex) (./content/auswertung.tex
-<build/dynamisch200.pdf, id=32, 417.7206pt x 258.0049pt>
-File: build/dynamisch200.pdf Graphic file (type pdf)
-<use build/dynamisch200.pdf>
-Package luatex.def Info: build/dynamisch200.pdf  used on input line 6.
-(luatex.def)             Requested size: 417.71957pt x 258.00426pt.
-) (./content/diskussion.tex) [3<./build/dynamisch200.pdf>] (./build/main.aux)
+] (./content/ziel.tex) (./content/theorie.tex
+LaTeX Font Info:    Calculating math sizes for size <7.63434> on input line 28.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 7.63515pt on input line 28.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 5.34457pt on input line 28.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 3.81757pt on input line 28.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 7.63351pt on input line 28.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 5.34343pt on input line 28.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 3.81676pt on input line 28.
+ [3]
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 9.00096pt on input line 48.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 6.00064pt on input line 48.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 48.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 8.99904pt on input line 48.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 5.99936pt on input line 48.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 48.
+) (./content/durchfuehrung.tex
+Overfull \hbox (0.8731pt too wide) in paragraph at lines 11--22
+ [][] 
+ []
+
+<Aufbau.pdf, id=85, 493.0922pt x 287.57437pt>
+File: Aufbau.pdf Graphic file (type pdf)
+<use Aufbau.pdf>
+Package luatex.def Info: Aufbau.pdf  used on input line 32.
+(luatex.def)             Requested size: 345.16219pt x 201.30069pt.
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 38--43
+
+ []
+
+[5<build/Aufbau.pdf>]) (./content/auswertung.tex
+<build/stat14.pdf, id=110, 417.7206pt x 258.0049pt>
+File: build/stat14.pdf Graphic file (type pdf)
+<use build/stat14.pdf>
+Package luatex.def Info: build/stat14.pdf  used on input line 16.
+(luatex.def)             Requested size: 200.76086pt x 123.99841pt.
+<build/stat58.pdf, id=111, 417.7206pt x 258.0049pt>
+File: build/stat58.pdf Graphic file (type pdf)
+<use build/stat58.pdf>
+Package luatex.def Info: build/stat58.pdf  used on input line 22.
+(luatex.def)             Requested size: 200.76086pt x 123.99841pt.
+ [6]
+<build/statDifSt.pdf, id=125, 417.7206pt x 258.0049pt>
+File: build/statDifSt.pdf Graphic file (type pdf)
+<use build/statDifSt.pdf>
+Package luatex.def Info: build/statDifSt.pdf  used on input line 90.
+(luatex.def)             Requested size: 200.76086pt x 123.99841pt.
+<build/statDifMek.pdf, id=126, 417.7206pt x 258.0049pt>
+File: build/statDifMek.pdf Graphic file (type pdf)
+<use build/statDifMek.pdf>
+Package luatex.def Info: build/statDifMek.pdf  used on input line 96.
+(luatex.def)             Requested size: 200.76086pt x 123.99841pt.
+ [7<./build/stat14.pdf><./build/stat58.pdf>]
+<build/Me.pdf, id=175, 417.7206pt x 258.0049pt>
+File: build/Me.pdf Graphic file (type pdf)
+<use build/Me.pdf>
+Package luatex.def Info: build/Me.pdf  used on input line 114.
+(luatex.def)             Requested size: 418.25555pt x 258.33495pt.
+ [8<./build/statDifSt.pdf><./build/statDifMek.pdf>] [9<./build/Me.pdf>]
+<build/Al.pdf, id=263, 417.7206pt x 258.0049pt>
+File: build/Al.pdf Graphic file (type pdf)
+<use build/Al.pdf>
+Package luatex.def Info: build/Al.pdf  used on input line 167.
+(luatex.def)             Requested size: 418.25555pt x 258.33495pt.
+<build/St.pdf, id=265, 417.7206pt x 258.0049pt>
+File: build/St.pdf Graphic file (type pdf)
+<use build/St.pdf>
+Package luatex.def Info: build/St.pdf  used on input line 212.
+(luatex.def)             Requested size: 418.25555pt x 258.33495pt.
+ [10<./build/Al.pdf>] [11<./build/St.pdf>]) (./content/diskussion.tex [12]) [13] [14] (./build/main.aux)
 Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: 65E9700A45CE49517E0AAE0B7254FB7E;3717.
+(rerunfilecheck)             Checksum: B1BA2A4F0FB43392B238816249533CCF;17856.
 Package rerunfilecheck Info: File `main.toc' has not changed.
-(rerunfilecheck)             Checksum: 20CFC8123E7713F9826BB51D772D918D;521.
+(rerunfilecheck)             Checksum: FA3845055F5DE976BA56DC35B0502815;2210.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 35411 strings out of 479017
- 100000,1977958 words of node,token memory allocated
- 670 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 dir, 5 glue, 4 kern, 1 glyph, 12 attribute, 79 glue_spec, 8 attribute_list, 1 write nodes
-   avail lists: 1:3,2:356,3:145,4:10,5:54,6:24,7:587,8:23,9:103,10:4,11:54
- 53737 multiletter control sequences out of 65536+600000
- 104 fonts using 36557147 bytes
- 110i,6n,114p,10617b,2933s stack positions out of 5000i,500n,10000p,200000b,200000s
-</home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (3 pages, 34374 bytes).
+ 36278 strings out of 479017
+ 125009,1977958 words of node,token memory allocated
+ 978 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 dir, 6 glue, 4 kern, 1 glyph, 99 attribute, 82 glue_spec, 51 attribute_list, 1 write, 1 pdf_action nodes
+   avail lists: 1:6,2:7259,3:681,4:93,5:2435,6:72,7:7195,8:115,9:2966,10:13,11:722
+ 54487 multiletter control sequences out of 65536+600000
+ 407 fonts using 154635155 bytes
+ 110i,21n,114p,10617b,2933s stack positions out of 5000i,500n,10000p,200000b,200000s
+</home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman5-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman9-bold.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
+Output written on main.pdf (14 pages, 377572 bytes).
 
-PDF statistics: 118 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 131072)
- 41 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 543 PDF objects out of 1000 (max. 8388607)
+ 408 compressed objects within 5 object streams
+ 81 named destinations out of 1000 (max. 131072)
+ 185 words of extra memory for PDF output out of 10000 (max. 100000000)
 
