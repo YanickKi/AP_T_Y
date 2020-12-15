@@ -35,7 +35,7 @@ an. Mit dem Zusammenhang
 ergibt sich für die Ladung $Q$, beim Entladevorgang, die Zeitliche Differentialgleichung
 \begin{equation}
     \label{eqn:Q-DGL}
-    \frac{\text{d}Q}{\text{d}t}=-\frac{1}{RC}Q(t)\, .
+    \frac{\text{d}Q}{\text{d}t}=-\frac{1}{RC}\,Q(t)\, .
 \end{equation}
 Bei der Entladung wird der Kondensator nach unendlich langer Zeit entladen sein. Es gilt
 \begin{equation*}
@@ -65,7 +65,7 @@ darstellen. Dabei ist $A(\omega)$ die Kondensatorspannungsamplitude.
 Es gilt 
 \begin{equation}
     \label{eqn:strom}
-    I(t)= \frac{\text{d}Q}{\text{d}t}=C \frac{\text{d}U_\text{C}}{\text{d}t}\, .
+    I(t)= \frac{\text{d}Q}{\text{d}t}=C\, \frac{\text{d}U_\text{C}}{\text{d}t}\, .
 \end{equation}
 Aus \eqref{eqn:Q-DGL} und \eqref{eqn:strom} lässt sich, mit Hilfe der Kirchhoff'schen Gesetze 
 und weiteren vereinfachungen die Amplitude $A(\omega)$ darstellen als
@@ -77,3 +77,23 @@ Es sind mehrere Eigenschaften für $A(\omega)$ ersichtlich. Bei $\omega \rightar
 $\omega \rightarrow \infty$ verschwindet. Dies sind Eigenschaften eines Tiefpasses. Es ist auch zu erkennen, dass $A(\omega)$ nach \eqref{eqn:ampli}
 nur mit $1/\omega$ gegen $0$ geht.
 \subsection{Der RC-Kreis als Integrator}
+Ein RC-Kreis, welcher wie in Abbildung \ref{fig:Wechs} angeschlossen ist, ist in der Lage eine zeitlich veränderliche Spannung $U(t)$ zu integrieren.
+Es lässt sich zeigen, dass die Spannung $U_\text{C}$, bei Frequenzen $\omega >> \frac{1}{RC}$, proportional zu $\int U(t) \symup{dt}$ ist.
+Dazu nimmt man die Maschenregel
+\begin{equation}
+    U(t)=U_\text{R}(t)+U_\text{C}(t) =I(t)R +U_\text{C}(t)
+\end{equation}
+und ersetzt $I(t)$ durch \eqref{eqn:strom} und bekommt
+\begin{equation*}
+    U(t)=RC\, \frac{\text{d}U_\text{C}}{\text{d}t} + U_\text{C}(t) \, .
+\end{equation*}
+Unter der Bedingung $\omega >> \frac{1}{RC}$ ist $|U_\text{C}| << |U_\text{R}|$ und $|U_\text{C}| << |U|$. 
+Damit lässt sich näherungsweise 
+\begin{equation*}
+    U(t)=RC \, \frac{\text{d}U_\text{C}}{\text{d}t}
+\end{equation*}
+schreiben, welches durch Umformen und Integrieren zu
+\begin{equation}
+    U_\text{C}(t)=\frac{1}{RC} \int_0^t U(t') dt'
+\end{equation}
+wird.
