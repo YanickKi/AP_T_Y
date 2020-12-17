@@ -8,7 +8,7 @@ Wird ein System aus seinem Ausgangszustand entfernt und es nicht in diesen zurü
 In diesem Versuch wird die Entladung eines Kondensators über einen Widerstand als Beispiel für ein Relaxationsphänomen gewählt.
 Zunächst wird allgemein die Änderungsgeschwindigkeit einer Größe $A$ betrachtet. Diese ist meist proportional zur Abweichung der Größe $A$ vom Endzustand $A(\infty)$
 \begin{equation*}
-    \frac{\text{d}A}{\text{d}t}=c[A(t)-A(\infty)] \, .
+    \frac{\text{d}A}{\text{d}t}=c[A(t)-A(\infty)] \; \text{.}
 \end{equation*}
 Durch Integrieren und Umformen der Gleichung erhält man für $A(t)$
 \begin{equation}
@@ -35,15 +35,15 @@ an. Mit dem Zusammenhang
 ergibt sich für die Ladung $Q$, beim Entladevorgang, die Zeitliche Differentialgleichung
 \begin{equation}
     \label{eqn:Q-DGL}
-    \frac{\text{d}Q}{\text{d}t}=-\frac{1}{RC}\,Q(t)\, .
+    \frac{\text{d}Q}{\text{d}t}=-\frac{1}{RC}\,Q(t)\; \text{.}
 \end{equation}
 Bei der Entladung wird der Kondensator nach unendlich langer Zeit entladen sein. Es gilt
 \begin{equation*}
-    Q(\infty)=0\, .
+    Q(\infty)=0\; \text{.}
 \end{equation*}
 Mit Hilfe von Integration folgt für $Q$
 \begin{equation}
-    Q(t)=Q(0)\exp(-t/RC)\, .
+    Q(t)=Q(0)\exp(-t/RC)\; \text{.} \label{eqn:Charge}
 \end{equation}
 \subsection{Relaxationsphänomene bei angelegter Wechselspannung}
 \begin{figure}
@@ -65,13 +65,13 @@ darstellen. Dabei ist $A(\omega)$ die Kondensatorspannungsamplitude.
 Es gilt 
 \begin{equation}
     \label{eqn:strom}
-    I(t)= \frac{\text{d}Q}{\text{d}t}=C\, \frac{\text{d}U_\text{C}}{\text{d}t}\, .
+    I(t)= \frac{\text{d}Q}{\text{d}t}=C\, \frac{\text{d}U_\text{C}}{\text{d}t}\; \text{.}
 \end{equation}
 Aus \eqref{eqn:Q-DGL} und \eqref{eqn:strom} lässt sich, mit Hilfe der Kirchhoff'schen Gesetze 
 und weiteren vereinfachungen die Amplitude $A(\omega)$ darstellen als
 \begin{equation}
     \label{eqn:ampli}
-    A(\omega)=\frac{U_0}{\sqrt{1+\omega^2 R^2 C^2}} \, .
+    A(\omega)=\frac{U_0}{\sqrt{1+\omega^2 R^2 C^2}} \; \text{.}
 \end{equation}
 Es sind mehrere Eigenschaften für $A(\omega)$ ersichtlich. Bei $\omega \rightarrow 0$ geht die Amplitude gegen $U_0$, während sie bei 
 $\omega \rightarrow \infty$ verschwindet. Dies sind Eigenschaften eines Tiefpasses. Es ist auch zu erkennen, dass $A(\omega)$ nach \eqref{eqn:ampli}
@@ -85,7 +85,7 @@ Dazu nimmt man die Maschenregel
 \end{equation}
 und ersetzt $I(t)$ durch \eqref{eqn:strom} und bekommt
 \begin{equation*}
-    U(t)=RC\, \frac{\text{d}U_\text{C}}{\text{d}t} + U_\text{C}(t) \, .
+    U(t)=RC\, \frac{\text{d}U_\text{C}}{\text{d}t} + U_\text{C}(t) \; \text{.}
 \end{equation*}
 Unter der Bedingung $\omega >> \frac{1}{RC}$ ist $|U_\text{C}| << |U_\text{R}|$ und $|U_\text{C}| << |U|$. 
 Damit lässt sich näherungsweise 

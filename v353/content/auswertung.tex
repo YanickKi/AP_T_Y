@@ -1,5 +1,26 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Jegliche Fehlerrechnung wurde mit der Python-Bib>uncertainties \cite{uncertainties} absolviert.
+Jegliche Fehlerrechnung wurde mit der Python-Bibliothek uncertainties \cite{uncertainties} absolviert.
 Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnitten angegeben.
-Allgemeine Rechnungen wurden mit der Python-Bilbiothek numpy \cite{numpy} automatisiert.
+Allgemeine Rechnungen wurden mit der Python-Bibliothek numpy \cite{numpy} automatisiert.
+\begin{figure}
+        \centering
+        \caption{Verlauf der Spannung bei einem Entladevorgang}
+        \label{fig:discharge}
+        \includegraphics{build/uct.pdf}
+\end{figure}
+Bei dem Spannungsverlauf ist zunächst anzumerken, dass dort zwei Ausgleichsgeraden angelegt wurden. 
+Dies liegt der Ursache zu Grunde, dass der letzte Punkt der Messreihe einen sehr starke Abweichung zeigt.
+Die gesamte Ausgleichsgerade beschreibt die komplette Messreihe, wobei der letzte Messwert bei der kritischen Ausgleichsgerade ausgelassen wurde.
+Im Folgenden werden die Rechungen mit den Parametern der kritischen Ausgleichsgeraden durchgeführt.
+Für die Bestimmung der Zeitkonstante $RC$ wird Geleichung \eqref{eqn:Charge} verwendet.
+Jedoch wird die Ladung $Q$ durch die Spannung $U$ ersetzt.
+Umgestellt und logarithmiert ergibt sich 
+\begin{equation}
+    \ln \left( \frac{U}{U_0} \right ) =  - \frac{t}{RC} \; \text{.} 
+\end{equation} 
+Die Ausgleichsgerade hat die Form $ \ln \left( \sfrac{U}{U_0} \right ) = at + b$, wobei $a = \sfrac{1}{RC}$ gilt.
+Die Steigung der Ausgleichsgerade und somit der Betrag der Zeitkonstanten ergibt sich mittels linearer Regression zu 
+\begin{equation}
+    \tau = \abs*{RC} = \SI{2.2058(1465)}{\milli\second} \; \text{.}
+\end{equation}
