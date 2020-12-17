@@ -14,13 +14,18 @@ Dies liegt der Ursache zu Grunde, dass der letzte Punkt der Messreihe einen sehr
 Die gesamte Ausgleichsgerade beschreibt die komplette Messreihe, wobei der letzte Messwert bei der kritischen Ausgleichsgerade ausgelassen wurde.
 Im Folgenden werden die Rechungen mit den Parametern der kritischen Ausgleichsgeraden durchgeführt.
 Für die Bestimmung der Zeitkonstante $RC$ wird Geleichung \eqref{eqn:Charge} verwendet.
-Jedoch wird die Ladung $Q$ durch die Spannung $U$ ersetzt.
+Jedoch wird die Ladung $Q$ durch die Spannung $U_C$ ersetzt.
 Umgestellt und logarithmiert ergibt sich 
 \begin{equation}
-    \ln \left( \frac{U}{U_0} \right ) =  - \frac{t}{RC} \; \text{.} 
+    \ln \left( \frac{U_C}{U_0} \right ) =  - \frac{t}{RC} \; \text{.} 
 \end{equation} 
-Die Ausgleichsgerade hat die Form $ \ln \left( \sfrac{U}{U_0} \right ) = at + b$, wobei $a = \sfrac{1}{RC}$ gilt.
-Die Steigung der Ausgleichsgerade und somit der Betrag der Zeitkonstanten ergibt sich mittels linearer Regression zu 
-\begin{equation}
-    \tau = \abs*{RC} = \SI{2.2058(1465)}{\milli\second} \; \text{.}
-\end{equation}
+Die Ausgleichsgerade hat die Form $ \ln \left( \sfrac{U_C}{U_0} \right ) = at + b$, wobei $a = - \sfrac{1}{RC}$ gilt.
+Die Parameter haben die Werte 
+\begin{align*}
+    a &= \SI{-0.7116(473)}{\per\milli\second} \\
+    b &= \num{0.6542(307)}
+\end{align*}
+Der Wert für $a$ in $RC = - \sfrac{1}{a}$ eingesetzt ergibt
+\begin{equation*}
+    \tau = RC = \SI{1.41(9)}{\milli\second}
+\end{equation*}
