@@ -10,9 +10,12 @@ build/volfreq.pdf: datascripts/volfreq.py matplotlibrc header-matplotlib.tex | b
 build/phasefreq.pdf: datascripts/phasfreq.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python datascripts/phasfreq.py
 
+build/polar.pdf: datascripts/polar.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python datascripts/polar.py
+
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/uct.pdf build/volfreq.pdf build/phasefreq.pdf
+build/main.pdf: build/uct.pdf build/volfreq.pdf build/phasefreq.pdf build/polar.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

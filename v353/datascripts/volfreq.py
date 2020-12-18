@@ -24,4 +24,4 @@ plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.legend()
 plt.savefig('build/ucw.pdf')
 
-print(f' T = {params[0]} pm {np.sqrt(np.diag(covariance_matrix))}')
+print(f' Tau = {params[0]} pm {np.sqrt(np.diag(covariance_matrix))}')
