@@ -6,7 +6,7 @@ t, U = np.genfromtxt('datascripts/uct.txt', unpack = True)
 U       += 3.1
 t       *= 0.2
 tf      = np.delete(t, -1) 
-lnu     = np.log(U)/3.1
+lnu     = np.log(U)/6.4
 lnuf    = np.delete(lnu, -1)
 
 params1, covariance_matrix1 = np.polyfit(t, lnu, deg=1, cov=True)
