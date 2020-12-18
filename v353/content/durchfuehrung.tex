@@ -17,13 +17,19 @@ bei der sich die Frequenz anpassen lässt. In der Durchführung wird nun die Fre
 Amplitude $A(\omega)$ gemessen. Dies wird 15 bis 20 mal wiederholt.
 \subsection{Messreihe zur Bestimmung der Phasenverschiebung}
 \label{subsec:Phase}
-In der dritten Messreihe soll die Phasenverschiebung ermittelt werden. Dazu wird der Aufbau wie Abbildung \ref{fig:aufbauphi} modifiziert.
+In der dritten Messreihe soll die Phasenverschiebung ermittelt werden. Dazu wird der Versuch wie in Abbildung \ref{fig:aufbauphi} aufgebaut.
 Es wird wieder eine Sinusspannung angelegt und die Frequenzen werden logarithmisch erhöht.
 Dadurch lassen sich die Phasenverschiebungen in Abhängigkeit von $\omega$ mit
 \begin{equation}
     \varphi=\frac{a}{b} \, 2 \pi \label{eqn:phiab}
 \end{equation}
 berechnen, dabei werden die Werte a und b wie in \ref{fig:wertphi} abgelesen.
+Mit der Phasenverschiebung $\varphi$, lässt sich die Zeitkonstante bestimmen. Dazu kann die Gleichung
+\begin{equation}
+    \label{eqn:ficken}
+    \varphi (\omega)=\arctan (-\omega RC)
+\end{equation}
+verwendet werden.
 \begin{figure}
     \centering
     \caption{Aufbau zur Bestimmung der Phasenverschiebung} 
@@ -36,12 +42,6 @@ berechnen, dabei werden die Werte a und b wie in \ref{fig:wertphi} abgelesen.
     \label{fig:wertphi}
     \includegraphics[width = 0.5\textwidth]{pics/werteabl.png}
 \end{figure}
-Mit der Phasenverschiebung $\varphi$, lässt sich die Zeitkonstante bestimmen. Dazu kann die Gleichung
-\begin{equation}
-    \label{eqn:ficken}
-    \varphi (\omega)=\arctan (-\omega RC)
-\end{equation}
-verwendet werden.
 \subsection{Messreihe zur Integratorfähigkeit des RC-Kreises}
 Für diese Messreihe kann der Versuchsaufbau aus \ref{subsec:Phase} übernommen werden.
 Auf dem Oszilloskop sind die Spannungsverläufe $U(t)$ des Generators und die integrierte Spannung $U_\text{C}(t)$ zu erkennen.

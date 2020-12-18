@@ -1,8 +1,8 @@
 \section{Theorie}
 \label{sec:Theorie}
-Die Inhalte des Theorietels sind auf Grundlage von dem Dokument \cite{V353} formuliert.
+Die Inhalte des Theorieteils sind auf Grundlage von Dokument \cite{V353} formuliert.
 In der elektrischen Schaltungstechnik werden RC-Kreise häufig als Tiefpässe genutzt. 
-Zur beschreibung des Verhaltens eines RC-Kreises wird die Zeitkonstante $RC$ genutzt.
+Zur Beschreibung des Verhaltens eines RC-Kreises wird die Zeitkonstante $RC$ genutzt.
 \subsection{Allgemeine Relaxationsgleichung}
 Wird ein System aus seinem Ausgangszustand entfernt und es nicht in diesen zurück oszilliert, nennt man dies eine Relaxationserscheinung.
 In diesem Versuch wird die Entladung eines Kondensators über einen Widerstand als Beispiel für ein Relaxationsphänomen gewählt.
@@ -17,12 +17,12 @@ Durch Integrieren und Umformen der Gleichung erhält man für $A(t)$
 mit einem $c<0$, da $A(t)$ beschränkt sein muss.
 \begin{figure}
     \centering
-    \caption{Entladung (Stellung 1) und Aufladung (Stellung 2) eines Kondensators über einen Widerstand} 
+    \caption{Schaltbild der Entladung (Stellung 1) und Aufladung (Stellung 2) eines Kondensators über einen Widerstand} 
     \label{fig:auf-ent}
     \includegraphics[width = 0.5\textwidth]{pics/auf-ent.png}
 \end{figure}
 \subsection{Entladevorgang eines Kondensators}
-In Abbildung \ref{fig:auf-ent} sieht man den Aufbau für den Auf- und Entladezustand.
+In Abbildung \ref{fig:auf-ent} sieht man den Aufbau für den Auf- und Entladezustand eines Kondensators.
 Für den Versuch wurde nur der Entladevorgang genutzt, weshalb dieser auch nur in dem Theorieteil auftaucht.
 Besitzt ein Kondensator mit der Kapazität $C$ eine Ladung $Q$, so liegt dort die Spannung 
 \begin{equation*}
@@ -32,7 +32,7 @@ an. Mit dem Zusammenhang
 \begin{equation*}
     I=\frac{U_\text{C}}{R}=- \frac{\text{d}Q}{\text{d}t}
 \end{equation*}
-ergibt sich für die Ladung $Q$, beim Entladevorgang, die Zeitliche Differentialgleichung
+ergibt sich für die Ladung $Q$ beim Entladevorgang, die zeitliche Differentialgleichung
 \begin{equation}
     \label{eqn:Q-DGL}
     \frac{\text{d}Q}{\text{d}t}=-\frac{1}{RC}\,Q(t)\; \text{.}
@@ -56,10 +56,10 @@ Eine angelegte Wechselspannung kann wie in \ref{fig:Wechs}, als
 \begin{equation*}
     U(t)=U_0 \cos(\omega t)
 \end{equation*}
-dargestellt werden. Beim Vergleich der Spannungen $U(t)$ und $U_c(t)$ in Abhängigkeit von der Frequenz, bildet sich eine Phasenverschiebung $\phi$ aus.
+dargestellt werden. Beim Vergleich der Spannungen $U(t)$ und $U_c(t)$ in Abhängigkeit von der Frequenz, bildet sich eine Phasenverschiebung $\varphi$ aus.
 Somit lässt sich die ausgehende Wechselspannung als
 \begin{equation}
-    U_\text{C}(t)= A(\omega) \cos (\omega t + \phi (\omega))
+    U_\text{C}(t)= A(\omega) \cos (\omega t + \varphi (\omega))
 \end{equation}
 darstellen. Dabei ist $A(\omega)$ die Kondensatorspannungsamplitude.
 Es gilt 
@@ -67,8 +67,13 @@ Es gilt
     \label{eqn:strom}
     I(t)= \frac{\text{d}Q}{\text{d}t}=C\, \frac{\text{d}U_\text{C}}{\text{d}t}\; \text{.}
 \end{equation}
+Die Kondensatorspannungsamplitude lässt sich in Abhängigkeit von $\varphi$ darstellen mit 
+\begin{equation}
+    \label{eqn:aphi}
+    A(\varphi)=-\frac{\sin (\varphi)}{\omega RC}\, U_0 \, .
+\end{equation}
 Aus \eqref{eqn:Q-DGL} und \eqref{eqn:strom} lässt sich, mit Hilfe der Kirchhoff'schen Gesetze 
-und weiteren vereinfachungen die Amplitude $A(\omega)$ darstellen als
+und weiteren vereinfachungen die Amplitude $A(\omega)$ ohne $\varphi$-Abhängigkeit darstellen als
 \begin{equation}
     \label{eqn:ampli}
     A(\omega)=\frac{U_0}{\sqrt{1+\omega^2 R^2 C^2}} \; \text{.}
