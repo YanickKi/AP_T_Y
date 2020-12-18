@@ -57,9 +57,96 @@ Der Wert für $a$ in $RC = - \sfrac{1}{a}$ eingesetzt ergibt
     \tau = RC = \SI{2.90(19)}{\milli\second} \; \text{.}
 \end{equation*}
 \subsection{Frquenzabhängige Spannunsgmessung}
+Die Messwerte für die Kondensatorspannung $U_\text{C}$ in Abhängigkeit von der Frequenz $\omega$ sind in Tabelle \ref{tab:ucw} aufgelistet.
+\begin{table}
+    \centering
+    \caption{Gemessene Kondensatorspannung $U_\text{C} \left( \omega \right)$}
+    \label{tab:ucw}
+    \begin{tabular} {S[table-format = 4.0] S[table-format = 1.4]}
+        \toprule
+        {$\omega \mathbin{/} \si{\hertz}$} & {$U_\text{C} \mathbin{/} \si{\volt}$}\\
+        \midrule
+        10    & 6.4    \\
+        20    & 6.4    \\
+        40    & 6.2    \\
+        60    & 6.0    \\
+        80    & 5.6    \\
+        100   & 5.4    \\
+        200   & 3.6    \\
+        400   & 2.0    \\
+        600   & 1.4    \\
+        800   & 1.05   \\
+        1000  & 0.85   \\
+        2000  & 0.44   \\
+        4000  & 0.2    \\
+        6000  & 0.014  \\
+        8000  & 0.0105 \\
+        10000 & 0.0085 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+Um die nichtlineare Ausgleichkurve anlegen zu können wird zunächst die Funktion der Amiplitude benötigt, welche in Gleichung \eqref{eqn:ampli} aufgführt ist. 
+Fortlaufend wird zur Vereinfachung $R^2C^2$ zu $\tau^2$ umdefiniert.
+Die Frequenz $\omega$ wird zur Klarifizierung in $x$ umbennant.
+Somit nimmt die Funktion der Ausgleichskurve die Gestalt
+\begin{equation}
+    f(x) = \frac{U_\text{C}}{U_0} \left( x \right) = \frac{1}{\sqrt{1 + x^2 \tau^2}}
+\end{equation}
+an.
+Mittels der Ausgleichsrechnung in Python ergibt sich $\tau$ zu 
+\begin{equation*}
+    \tau = \SI{-7.2(1)}{\milli\second}
+\end{equation*}
+Somit ergibt sich die Zeitkonstante $RC$ zu   
+\begin{equation}
+    RC =  \SI{7.2(1)}{\milli\second} \; \text{.}
+\end{equation}
+Die Messdaten samt Fit sind in Abblidung \ref{fig:ucw} visualisiert
 \begin{figure}
     \centering
     \caption{Kondensatorspannung $U_\text{C} \left( \omega \right)$}
     \label{fig:ucw}
     \includegraphics{build/ucw.pdf}
+\end{figure}
+\subsection{Bestimmung der Zeitkonstante mittels frequenzabhängigen Phasenverschiebung}
+Die Messwerte für die Frequenz $\omega$, der Zeitabstände der Nulldurchgänge $a$ und der Schwingundsdauern $b$ sind in Tabelle \ref{tab:ab} aufgetragen.
+Zusätzlich beinhaltet diese Tabelle die aus den Messdaten berechneten Phasenverschiebungen, welche sich mittels  Gleichung \eqref{eqn:phiab} berechnen lassen.
+\begin{table}
+    \centering
+    \caption{Gemessene Frequenz, Zeitabstände der Nulldurchgänge $a \left ( \omega \right )$ und Schwingundsdauern $b \left ( \omega \right )$}
+    \label{tab:ab}
+    \begin{tabular}{S[table-format = 4.0] S[table-format = 1.3] S[table-format = 3.3]}
+        \toprule
+        {$\omega \mathbin{/} \si{\hertz}$} & {$a \mathbin{/} \si{\milli\second}$} & {$b \mathbin{/} \si{\milli\second}$} \\
+        \midrule
+        10    & 1.2   & 110 \\
+        20    & 1.5   & 55  \\
+        40    & 1.7   & 25  \\
+        60    & 1.15  & 16.6\\
+        80    & 1.1   & 12.6\\
+        100   & 1.08  & 10\\
+        200   & 0.8   & 5\\
+        400   & 0.52  & 2.5\\
+        600   & 0.36  & 1.7\\
+        800   & 0.28  & 1.24\\
+        1000  & 0.23  & 1\\
+        2000  & 0.12  & 0.49\\
+        4000  & 0.06  & 0.25\\
+        6000  & 0.04  & 0.168\\
+        8000  & 0.031 & 0.128\\
+        10000 & 0.024 & 0.1 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+Um die Zeitkonstante mit Hilfe der Phasenverschiebung graphisch zu bestimmen, wird die Gleichung \eqref{eqn:ficken} benötigt.
+Erneut wird die Zeitkonstante $RC$ zu $\tau$ umdefiniert und die Frequenz $\omega$ in x unbenannt.
+Somit erhält die Ausgleichkurve die Darstellung 
+\begin{equation}
+    f \left( \omega \right) = phi \left ( \omega \right ) = \arctan 
+\end{equation}
+\begin{figure}
+    \centering
+    \caption{Phasenverschiebung $\varphi \left ( \omega \right )$}
+    \label{fig:phiw}
+    \includegraphics{build/phasefreq.pdf}
 \end{figure}

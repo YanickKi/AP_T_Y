@@ -4,8 +4,15 @@ all: build/main.pdf
 build/uct.pdf: datascripts/uct.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python datascripts/uct.py
 
+build/volfreq.pdf: datascripts/volfreq.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python datascripts/volfreq.py
+
+build/phasefreq.pdf: datascripts/phasfreq.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python datascripts/phasfreq.py
+
+
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/uct.pdf
+build/main.pdf: build/uct.pdf build/volfreq.pdf build/phasefreq.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
