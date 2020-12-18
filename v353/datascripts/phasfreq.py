@@ -19,7 +19,7 @@ plt.plot(z, f(z, *params), label = 'Fit')
 
 plt.xscale('log')
 plt.xlabel(r'$\omega \mathbin{/} \si{\hertz}$')
-plt.ylabel(r'$\phi \mathbin{/} \si{\radian} $')
+plt.ylabel(r'$\varphi \mathbin{/} \si{\radian} $')
 
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.legend()
