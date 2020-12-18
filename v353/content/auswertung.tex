@@ -1,8 +1,9 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Jegliche Fehlerrechnung wurde mit der Python-Bibliothek uncertainties \cite{uncertainties} absolviert.
+Jegliche Fehlerrechnung wurde mit der python-Bibliothek uncertainties \cite{uncertainties} absolviert.
 Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnitten angegeben.
-Allgemeine Rechnungen wurden mit der Python-Bibliothek numpy \cite{numpy} automatisiert. \\
+Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert. 
+Die Messdaten und Ausgleichskurven wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib} erstellt.\\
 Die Spannung $U_0$ beträgt bei allen Durchführungen $\SI{6.4}{\volt}$
 \subsection{Bestimmung der Zeitkonstante mit dem Entladevorgang}
 Die während der Durchführung gemessenen Werte für $U_\text{C}$ in Abhängigkeit von der Zeit sind in Tabelle \ref{tab:UCt} aufgeführt.
@@ -176,4 +177,31 @@ Das Verhältnis $\sfrac{A \left ( \omega \right )}{U_0}$ in Abhängigkeit von de
     \caption{Polarplot von der Amiplitude $A \left( \varphi \right)$}
     \label{fig:polar}
     \includegraphics{build/polar.pdf}
+\end{figure}
+\newpage
+\subsection{Der RC-Kreis als Integrator}
+Der RC-Kreis kann unter der Voraussetzung 
+\begin{equation}
+     \omega >> \frac{1}{RC} 
+\end{equation}
+als Integrator angesehen  werden.
+Bei der Aufnahme der folgenden Bildern wurde die Bedingung mit einer hohen Frequenz erfüllt.
+Somit enstanden die Imperssionen der Rechteck-, Sinus- und Dreiecksspannung.
+Beispielsweise wird an der Abbildung \ref{fig:sin} sehr schön deutlich, dass der RC-Kreis als Integrator dienen kann, da dort ebenfalls eine Cosinus-Kurve 
+zu sehen ist. Da der Sinus die Stammfunktion von dem Cosinus ist, ist dieses Bild beispielhaft für die Integratorfunktion.
+\begin{figure}
+        \centering
+        \caption{Rechteckspannung}
+        \includegraphics[width = 0.48 \textwidth]{pics/rechteck1.jpg}
+\end{figure}
+\begin{figure}
+    \centering
+    \caption{Sinusspannung}
+    \label{fig:sin}
+    \includegraphics[width = 0.48 \textwidth]{pics/sin2.jpg}
+\end{figure}
+\begin{figure}
+    \centering
+    \caption{Dreiecksspannung}
+    \includegraphics[width = 0.48 \textwidth]{pics/dreieck1.jpg}
 \end{figure}
