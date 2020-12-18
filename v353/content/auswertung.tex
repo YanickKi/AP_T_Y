@@ -56,6 +56,13 @@ Der Wert für $a$ in $RC = - \sfrac{1}{a}$ eingesetzt ergibt
 \begin{equation*}
    RC = \SI{2.90(19)}{\milli\second} \; \text{.}
 \end{equation*}
+Nach jeder Ausgleichsrechnung erhält man die Zeitkonstante direkt durch einen Paremeter der Ausgleichsfunktion.
+Jedoch bildet dieser Teil der Auswertung eine Ausnahme, denn hier wird die Zeitkonstante mit $RC = - \sfrac{1}{a}$ errechnet, so dass hier die Formel der Gaußschen
+Fehlerfortpflanzung angewendet werden muss.
+Somit ergibt sich der Fehler der Zeitkonstante zu 
+\begin{equation}
+    \symup{\Delta} RC = \abs*{\frac{1}{a}} \, \symup{\Delta} a \; \text{.}
+\end{equation}
 \subsection{Frquenzabhängige Spannunsgmessung}
 Die Messwerte für die Kondensatorspannung $U_\text{C}$ in Abhängigkeit von der Frequenz $\omega$ sind in Tabelle \ref{tab:ucw} aufgelistet.
 \begin{table}
@@ -108,7 +115,7 @@ Die Messdaten samt Fit sind in Abblidung \ref{fig:ucw} visualisiert.
     \label{fig:ucw}
     \includegraphics{build/ucw.pdf}
 \end{figure}
-\subsection{Bestimmung der Zeitkonstante mittels frequenzabhängigen Phasenverschiebung}
+\subsection{Bestimmung der Zeitkonstante mittels frequenzabhängiger Phasenverschiebung}
 Die Messwerte für die Frequenz $\omega$, der Zeitabstände der Nulldurchgänge $a$ und der Schwingundsdauern $b$ sind in Tabelle \ref{tab:ab} aufgetragen.
 Zusätzlich beinhaltet diese Tabelle die aus den Messdaten berechneten Phasenverschiebungen, welche sich mittels  Gleichung \eqref{eqn:phiab} berechnen lassen.
 \begin{table}
@@ -162,10 +169,11 @@ Durch Ausgleichsrechnung in python ergibt sich der Parameter $\tau$ zu
 Somit wird der Wert der Zeitkonstanten $RC$ mit der Methode der Phasenverschiebung zu
 \begin{equation*}
     RC =     \tau = \SI{8.2744(3239)}{\milli\second}
-\end{equation*} 
+\end{equation*}
+Das Verhältnis $\sfrac{A \left ( \omega \right )}{U_0}$ in Abhängigkeit von der Phase $\varphi$ ist in einem Polarplot in Abblidung \ref{fig:polar} dargestellt.
 \begin{figure}
     \centering
-    \caption{Polarplot}
+    \caption{Polarplot von der Amiplitude $A \left( \varphi \right)$}
     \label{fig:polar}
     \includegraphics{build/polar.pdf}
 \end{figure}
