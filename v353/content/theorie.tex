@@ -62,18 +62,17 @@ Somit lässt sich die ausgehende Wechselspannung als
     U_\text{C}(t)= A(\omega) \cos (\omega t + \varphi (\omega))
 \end{equation}
 darstellen. Dabei ist $A(\omega)$ die Kondensatorspannungsamplitude.
-Aus \eqref{eqn:Q-DGL} und \eqref{eqn:strom} lässt sich
+Mit \eqref{eqn:Q-DGL} und \eqref{eqn:strom} lässt sich $I(t)$ darstellen als
 \begin{equation}
     \label{eqn:strom}
     I(t)= \frac{\text{d}Q}{\text{d}t}=C\, \frac{\text{d}U_\text{C}}{\text{d}t}\; \text{.}
 \end{equation}
-erschließen. 
-Durch weitere Umformungen kann die Kondensatorspannungsamplitude in Abhängigkeit von $\varphi$ dargestellt werden als 
+Durch weitere Umformungen kann die Kondensatorspannungsamplitude in Abhängigkeit dargestellt werden als 
 \begin{equation}
     \label{eqn:aphi}
-    A(\varphi)=-\frac{\sin (\varphi)}{\omega RC}\, U_0 \, .
+    A(\omega)=-\frac{\sin (\varphi)}{\omega RC}\, U_0 \, .
 \end{equation}
-Aus \eqref{eqn:aphi} lässt sich $A(\omega)$ ohne $\varphi$-Abhängigkeit herleiten. Es ergibt sich
+In Gleichung \eqref{eqn:aphi} lässt sich $\varphi$ ersetzen somit ergibt sich für $A(\omega)$
 \begin{equation}
     \label{eqn:ampli}
     A(\omega)=\frac{U_0}{\sqrt{1+\omega^2 R^2 C^2}} \; \text{.}
