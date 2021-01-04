@@ -8,7 +8,7 @@ print(w)
 print(UB/US)
 om=w/w0
 
-plt.plot(om,UB/US,'r--', label='Messdaten')
+plt.plot(om,UB/US,'.', label='Messdaten')
 f=np.sqrt(1/9*(om**2-1)**2/((1-om**2)**2+9*om**2))
 
 plt.plot(om,f, label='Theoriekurve')
