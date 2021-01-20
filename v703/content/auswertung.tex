@@ -1,2 +1,21 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+Zur Bestimmung der Charakteristik des Zählors wurde ein Spannung mit Schritten von $\symup{\Delta} U = \SI{10}{\volt}$ angelegt.
+Dazu wurde die Teilchenanzahl pro Zeitintervall $N$ gemessen. 
+Das Zeitintervall beträgt hierbei $\symup{\Delta} t = \SI{60}{\second}$.
+Zur Ausgleichsrechung des Plateaus wird das Intervall von $\SI{370}{\volt}$ bis $\SI{630}{\volt}$ gewählt.
+Mittels Rechnungen in python lassen sich die Parameter der Ausgleichsgerade 
+\begin{equation}
+  N = aU + b
+\end{equation}
+zu 
+\begin{align}
+  a &= \SI{1.1378(2407)}{\per\minute\per\volt} \\
+  b &= \SI{9590.7346(1218237)}{\per\minute}
+\end{align}
+bestimmen.
+\begin{figure}
+  \centering
+  \caption{Charakteristik des Halogenzählrohrs}
+  \includegraphics{build/char.pdf}
+\end{figure}
