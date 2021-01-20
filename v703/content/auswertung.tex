@@ -1,5 +1,6 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Geiger-Müller Charakteristik}
 Zur Bestimmung der Charakteristik des Zählors wurde ein Spannung mit Schritten von $\symup{\Delta} U = \SI{10}{\volt}$ angelegt.
 Dazu wurde die Teilchenanzahl pro Zeitintervall $N$ gemessen. 
 Das Zeitintervall beträgt hierbei $\symup{\Delta} t = \SI{60}{\second}$.
@@ -9,13 +10,40 @@ Mittels Rechnungen in python lassen sich die Parameter der Ausgleichsgerade
   N = aU + b
 \end{equation}
 zu 
-\begin{align}
-  a &= \SI{1.1378(2407)}{\per\minute\per\volt} \\
+\begin{align*}
+  a &= \SI{1.1378(2407)}{\per\minute\per\volt} = ( \num{13.78(2407)} )  \,\frac{\si{\percent}}{100 \si{\volt}} \\
   b &= \SI{9590.7346(1218237)}{\per\minute}
-\end{align}
+\end{align*}
 bestimmen.
 \begin{figure}
   \centering
   \caption{Charakteristik des Halogenzählrohrs}
   \includegraphics{build/char.pdf}
 \end{figure}
+Da Die Zählrate Poisson verteilt sind, lässt sich die Unsicherheit mit 
+\begin{equation}
+  \symup{\Delta} N = \sqrt{N}
+\end{equation}
+ermitteln.
+\subsection{Bestimmung der Totzeit}
+In der Tabelle \ref{tab:Zaehlrate} sind die gemessen Impulse pro $120$ Sekunden $N$ aufgetragen.    
+\begin{table}
+  \centering
+  \caption{Zählraten der beiden Quellen}
+  \label{tab:Zaehlrate}
+  \begin{tabular}{S[table-format = 5] S[table-format = 5] S[table-format = 6]}
+    \toprule
+    {$N_1 \mathbin{/} (120 \si{\second})^{-1}$} & {$N_2 \mathbin{/} (120 \si{\second})^{-1} $} & {$N_\text{1+2} \mathbin{/} (120 \si{\second})^{-1}$} \\
+    \midrule
+    96041   & 76518   & 158479 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+Mittels Gleichung $REFERENZ$ lässt sich die Totzeit zu 
+\begin{equation*}
+  T = \SI{110(50)}{\micro\second}     
+\end{equation*}
+Die Unsicherheit der Totzeit wird mit Hilfe der Gaußschen Fehlerfortpflanzung berechnet 
+\begin{equation}
+  \text{FEHLERFORMEL}
+\end{equation}
