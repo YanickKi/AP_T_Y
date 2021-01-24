@@ -1,2 +1,31 @@
 \section{Durchführung}
 \label{sec:Durchführung}
+Die Messapparatur wird wie in Abbildung \ref{fig:Schalt} aufgebaut.
+Die durch ein einfallendes Teilchen verursachte Ladung $Q$ fließt über den Widerstand $R$ ab und erzeugt einen Spannungsimpuls.
+Der Impuls wird über den Kondensator $C$ ausgekoppelt, verstärkt und im Zählgerät registriert oder mit Hilfe eines Oszilloskop sichtbar gemacht.
+Für den Versuch wurde als Strahlungsquelle ein $\ce{^{204}Tl}$-Quelle genutzt.
+Eine Zählrate von $100 \frac{\text{Imp}}{\text{s}}$ wurde nicht überschritten, da dies zur Vermeidung von Totzeit-Korrekturen führt.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.6]{pics/Schalt.png}
+    \caption{Skizze der Messapparatur}
+    \label{fig:Schalt}
+  \end{figure}
+\subsection{Aufnahme der Geiger-Müller Charakteristik}
+Für die Analyse der Charakteristik wurde, in $\symup{\Delta}U=\SI{10}{\volt}$ Schritten, die Anzahl der Zerfälle pro Zeitintervall gemessen.
+Die Integrationszeit pro Zählrohrspannung betrug $t=\SI{60}{\second}$, damit die Zählrate im Geiger-Plateau in der Größenordnung von $N=10000\,  \text{Imp}$ liegt.
+Da der Fehler mit $\symup{\Delta}N=\sqrt{N}$ gegeben ist und somit für $N=10000$ der Fehler jedes Messpunktes unter $1\% $ ist.
+\subsection{Totzeitbestimmung}
+Zur Bestimmung der Totzeit mit der Zwei-Quellen-Methode wurde die $\ce{^{204}Tl}$-Quelle näher an das Zählrohr, um eine Totzeitkorrektur zu erhalten.
+Die Messzeit wurde auf $t=\SI{120}{\second}$ erhöht, um die Genauigkeit zu verbessern.
+Die zwei Quellen wurden wie in Abbildung \ref{fig:zqm} nacheinander positioniert. Dann wurden die Zählraten gemessen.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.6]{pics/zqmethode.png}
+  \caption{Schritte des Zwei-Quellen-Verfahrens}
+  \label{fig:zqm}
+\end{figure}
+Eine weitere Messung wurde mit angeschlossenem Oszilloskop gemacht. Die Zeitachse wurde auf $100 \frac{\si{\micro \second}}{\text{DIV}}$.
+\subsection{Bestimmung des Zählrohrstroms}
+Der Zählrohrstrom wurde während der Wartezeit zum Versuch der Geiger-Müller Charakteristik gemessen.
+Dazu wurde am Amperemeter der Zählrohrstrom bei allen $\SI{50}{\volt}$ abgelesen.
