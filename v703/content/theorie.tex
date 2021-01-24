@@ -8,7 +8,7 @@ Der schematische Aufbau eines Zählrohrs ist in Abbildung \ref{fig:aufbau} zu er
 \begin{figure}
     \centering
     \includegraphics[scale=0.4]{pics/Aufbau.png}
-    \caption{Querschnitt eines Endfenster-Zählrohrs [1]}
+    \caption{Querschnitt eines Endfenster-Zählrohrs}
     \label{fig:aufbau}
   \end{figure}
 Es besteht aus einem Kathodenzylinder und einem darin axial verlaufenden Anodendraht. Im inneren befindet sich ein Gasgemisch.
@@ -18,7 +18,7 @@ Es werden freie Elektronen und Ionen erzeugt. Die Anzahl der entstehenden Elektr
 \begin{figure}
     \centering
     \includegraphics[scale=0.6]{pics/Elektronen.png}
-    \caption{Detektierte Elektronen in Abhängigkeit von der Zählrohrspannung [1]}
+    \caption{Detektierte Elektronen in Abhängigkeit von der Zählrohrspannung}
     \label{fig:Elektronen}
   \end{figure}
 In Abbildung \ref{fig:Elektronen} ist erkennbar, dass die Anzahl der erzeugten Elektronen von der Zählrohrspannung $U$ abhängt.
@@ -38,3 +38,28 @@ ausbreiten können, wodurch weitere Lawinen im gesamten Zählrohrvolumen ausgel�
 Das Geiger-Müller-Zählrohr kann nur noch zur Intensitätsmessung benutzt werden.
 Der lineare Anteil in diesem bereich wird als Plateau bezeichnet. Dabei weisen hochwertigere Geiger-Müller-Zählrohre ein längeres und flacheres Plateau auf.
 Wird die Spannung weiter erhöht, wird durch ein einzelnes Teilchen die Dauerentladung gezündet. Dies zerstört schnell das Zählrohr.
+\subsection{Totzeit und Nachentladung}
+Nach einer Entladung halten sich die positiven Ionen wegen ihrer größeren Masse länger als die Elektronen im Gasraum
+und bilden eine vorübergehend radialsymmetrische, positive Raumladung.
+Diese reduziert die effektive Feldstärke in Drahtnähe und verhindert somit die Stoßionisation für eine Zeit $\text{T}$.
+Da in diesem Zeitraum keine weiteren Teilchen detektiert werden können, wird $\text{T}$ als Totzeit des Zählrohrs bezeichnet.
+Nach der Totzeit wird ein weiterer Zeitraum $\text{T}_\text{E}$ zur vollständigen Neutralisation der Ionen benötigt.
+Dieser Zeitraum wird Erholungszeit genannt, da der Entladungsimpuls erst nach dieser seine ursprüngliche Höhe erreicht.
+Wie in Abbildung \ref{fig:tot} zu sehen, folgt die Erholungszeit auf die Totzeit.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.6]{pics/totzeit.png}
+  \caption{Qualitative Darstellung der Tot- und Erholungszeit eines Zählrohrs}
+  \label{fig:tot}
+\end{figure}
+Es ist möglich mit einem Oszilloskop die Kurve sichtbar zu machen, wodurch man die Totzeit $\text{T}$ direkt ablesen kann.
+Außerdem kann man mit der Zwei-Quellen-Methode die Totzeit $\text{T}$ bestimmen. 
+Dabei werden zwei Präparate mit den Zählraten $N_1$ und $N_2$. Es werden die Präparate einzeln und gemeinsam gemessen.
+Die Totzeit berechnet sich dabei nach
+\begin{equation}
+  T_\text{T} \approx \frac{n_1 +n_2 -n_\text{1+2}}{2n_1 n_2} \, .
+  \label{eqn:totzeit}
+\end{equation}
+Es kann zu sogenannten Nachentladungen während der Erholungszeit kommen. Diese entstehen dadurch, dass Ionen beim Neutralisieren am Zählrohrmantel
+Elektronen herauslösen und somit neue Elektronenlawinen auslösen. Zur Reduzierung dieses Problems, kann dem Gas ein Alkoholzusatz beigemischt werden, welcher die 
+Ionen im Gasraum neutralisiert. Die positiv geladenen Alkoholmoleküle bewegen sich anstelle der Ionen zum Zählrohrmantel. Diese können jedoch keine Elektronenlawinen mehr auslösen und werden am Zählrohrmantel neutralisiert.
