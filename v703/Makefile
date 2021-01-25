@@ -3,7 +3,10 @@ all: build/main.pdf
 build/char.pdf: data_scripts/char.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/char.py
 
-build/main.pdf: build/char.pdf
+build/cur.pdf: data_scripts/cur.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/cur.py
+
+build/main.pdf: build/char.pdf build/cur.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

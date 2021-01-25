@@ -11,7 +11,7 @@ Mittels Rechnungen in python lassen sich die Parameter der Ausgleichsgerade
 \end{equation}
 zu 
 \begin{align*}
-  a &= \SI{1.1378(2407)}{\per\minute\per\volt} = ( \num{13.78(2407)} )  \,\frac{\si{\percent}}{100 \si{\volt}} \\
+  a &= \SI{1.1378(2407)}{\per\minute\per\volt} = ( \num{13.78(2407)} )  \,\frac{\si{\percent}}{100 \, \si{\minute\volt}} \\
   b &= \SI{9590.7346(1218237)}{\per\minute}
 \end{align*}
 bestimmen.
@@ -26,7 +26,8 @@ Da Die Zählrate Poisson verteilt sind, lässt sich die Unsicherheit mit
 \end{equation}
 ermitteln.
 \subsection{Bestimmung der Totzeit}
-In der Tabelle \ref{tab:Zaehlrate} sind die gemessen Impulse pro $120$ Sekunden $N$ aufgetragen.    
+In der Tabelle \ref{tab:Zaehlrate} sind die gemessen Impulse pro $120$ Sekunden $N$ aufgetragen, wobei sich $N_1$ auf die gemessenen Impulse der ersten Quelle und $N_2$
+auf die gemessenen Impulse der zweiten Quelle bezieht. $N_\text{1+2}$ beschreibt die Impulse, welche von beiden Quellen gleichzeitig ausgestrahlt werden.
 \begin{table}
   \centering
   \caption{Zählraten der beiden Quellen}
@@ -41,9 +42,21 @@ In der Tabelle \ref{tab:Zaehlrate} sind die gemessen Impulse pro $120$ Sekunden 
 \end{table}
 Mittels Gleichung $REFERENZ$ lässt sich die Totzeit zu 
 \begin{equation*}
-  T = \SI{110(50)}{\micro\second}     
+  T \approx \SI{110(50)}{\micro\second}     
 \end{equation*}
+bestimmen.
 Die Unsicherheit der Totzeit wird mit Hilfe der Gaußschen Fehlerfortpflanzung berechnet 
 \begin{equation}
   \text{FEHLERFORMEL}
 \end{equation}
+An dem Oszilloskop kann eine Totzeit von 
+\begin{equation*}
+  T \approx \SI{160}{\micro\second}
+\end{equation*}
+abgelesen werden.
+\begin{figure}
+  \centering
+  \caption{Freigesetze Teilchen pro eingefallende Teilchen}
+  \label{Z}
+  \includegraphics{build/cur.pdf}
+\end{figure}
