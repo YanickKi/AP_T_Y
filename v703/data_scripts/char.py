@@ -16,10 +16,11 @@ plt.xlabel(r'$U \mathbin{/} \si{\volt}$')
 plt.ylabel(r'$N \mathbin{/} \si{\per\minute}$')
 plt.legend()
 
-print(f'a = {params[0]} pm {errors[0]}')
-print(f'b = {params[1]} pm {errors[1]} 1')
+# print(f'a = {params[0]} pm {errors[0]}')
+# print(f'b = {params[1]} pm {errors[1]} 1')
 
-print(f'Steigung in Prozent pro 100V: {((params[0] * 500 + params[1]) - (params[0] * 400 + params[1])) / 100}')
-
+print(f'Zwei Werte:{params[0] * 300 + params[1]}, {params[0] * 400 + params[1]} ')
+print(f'und dessen Verhältnis: {(params[0] * 500 + params[1]) / (params[0] * 600 + params[1])}')
+print(f'von Mampfzwerg: {(3.0 * 300 + 88.67) / (3.0 * 400 + 88.67)}')
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/char.pdf')

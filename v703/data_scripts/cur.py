@@ -6,19 +6,24 @@ from uncertainties.unumpy import (nominal_values as noms,
 import matplotlib.pyplot as plt
 
 
-U, N, I = np.genfromtxt('data_scripts/Zaehlrohrstrom.dat', unpack = True)
-Ierr = unp.uarray(I, 0.05) ## Strom in µ
-Z = Ierr / (const.epsilon_0 * N)
+U, N, I = np.genfromtxt('data_scripts/Zaehlrohrstrom.dat', unpack = True) # I in µA
+I *= 10**(-6) # I in A 
+N /= 60
+Ierr = unp.uarray(I, 0.05 * 10**(-6))
+Z = Ierr / (const.elementary_charge * N)
 
-#print(Z)
+I *= 10**6 # I in µA
 
-Zoerr = np.array([3444370.4402958797, 4519896.217600876, 7702517.022224408, 8900869.410879867, 11090034.047260595, 14320021.33604725, 15068833.453942882,  17605753.193655793])
-Zerr  = np.array([574061.7400493133, 564987.0272001096, 550179.7873017435, 556304.3381799916, 554501.7023630298, 550770.0513864327, 538172.623355103, 489048.699823772])
+Zoerr = np.array([11420876622.984013, 14987115336.374016, 25540080000.716293, 29513588372.979668, 36772441522.746056, 47482464430.69732, 49965382850.9200,  58377325715.92296])
+Zerr  = np.array([1903479437.1640024, 1873389417.046752, 1824291428.6225922, 1844599273.3112292, 1838622076.13730264, 1826248631.9498968, 1784477958.9614303, 1621592380.99786])
 
+print(Z * 10**(-9))
+
+Zoerr *= 10**(-9)
+Zerr  *= 10**(-9)
 plt.errorbar(I, Zoerr, yerr = Zerr, fmt = '.')
 
 plt.xlabel(r'$I \mathbin{/} \si{\micro\ampere}$')
-plt.xlabel(r'$I \mathbin{/} \si{\micro\ampere}$')
-plt.ylabel(r'$Z$')
+plt.ylabel(r'$Z$ in Mrd.')
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/cur.pdf')

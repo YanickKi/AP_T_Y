@@ -1,26 +1,35 @@
 \section{Auswertung}
+Jegliche Fehlerrechnung wurde mit der python-Bibliothek uncertainties \cite{uncertainties} absolviert.
+Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnitten angegeben.
+Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert. 
+Die graphischen Untersützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib} erstellt.
 \label{sec:Auswertung}
 \subsection{Geiger-Müller Charakteristik}
-Zur Bestimmung der Charakteristik des Zählors wurde ein Spannung mit Schritten von $\symup{\Delta} U = \SI{10}{\volt}$ angelegt.
+Zur Bestimmung des Plateau-Bereichs des Zählrohrs wurde ein Spannung mit Schritten von $\symup{\Delta} U = \SI{10}{\volt}$ angelegt.
 Dazu wurde die Teilchenanzahl pro Zeitintervall $N$ gemessen. 
 Das Zeitintervall beträgt hierbei $\symup{\Delta} t = \SI{60}{\second}$.
-Zur Ausgleichsrechung des Plateaus wird das Intervall von $\SI{370}{\volt}$ bis $\SI{630}{\volt}$ gewählt.
+Zur Berechnnung der Plateau-Ausgleichsgerade wurde das Intervall $\SI{370}{\volt}$ bis $\SI{630}{\volt}$ gewählt.
+Somit besitzt die Charakteristik eine Plateau-Länge von 
+\begin{equation*}
+  U_\text{Plateau} = 260 V \;\text{.}
+\end{equation*}
 Mittels Rechnungen in python lassen sich die Parameter der Ausgleichsgerade 
 \begin{equation}
   N = aU + b
 \end{equation}
 zu 
 \begin{align*}
-  a &= \SI{1.1378(2407)}{\per\minute\per\volt} = ( \num{13.78(2407)} )  \,\frac{\si{\percent}}{100 \, \si{\minute\volt}} \\
+  a &= \SI{1.1378(2407)}{\per\minute\per\volt} = ( \num{1.1378(2407)}) * 10^4  \,\frac{\si{\percent}}{100 \, \si{\minute\volt}} \\
   b &= \SI{9590.7346(1218237)}{\per\minute}
 \end{align*}
 bestimmen.
 \begin{figure}
   \centering
   \caption{Charakteristik des Halogenzählrohrs}
+  \label{fig:char}
   \includegraphics{build/char.pdf}
 \end{figure}
-Da Die Zählrate Poisson verteilt sind, lässt sich die Unsicherheit mit 
+Die Unsicherheit lässt sich mit Hilfe der Beziehung 
 \begin{equation}
   \symup{\Delta} N = \sqrt{N}
 \end{equation}
@@ -30,7 +39,7 @@ In der Tabelle \ref{tab:Zaehlrate} sind die gemessen Impulse pro $120$ Sekunden 
 auf die gemessenen Impulse der zweiten Quelle bezieht. $N_\text{1+2}$ beschreibt die Impulse, welche von beiden Quellen gleichzeitig ausgestrahlt werden.
 \begin{table}
   \centering
-  \caption{Zählraten der beiden Quellen}
+  \caption{Gemessene Impulse der Konfigurationen}
   \label{tab:Zaehlrate}
   \begin{tabular}{S[table-format = 5] S[table-format = 5] S[table-format = 6]}
     \toprule
@@ -40,23 +49,51 @@ auf die gemessenen Impulse der zweiten Quelle bezieht. $N_\text{1+2}$ beschreibt
     \bottomrule
   \end{tabular}
 \end{table}
-Mittels Gleichung $REFERENZ$ lässt sich die Totzeit zu 
+Mittels Gleichung \eqref{eqn:totzeit} lässt sich die Totzeit $T$ zu 
 \begin{equation*}
   T \approx \SI{110(50)}{\micro\second}     
 \end{equation*}
 bestimmen.
 Die Unsicherheit der Totzeit wird mit Hilfe der Gaußschen Fehlerfortpflanzung berechnet 
 \begin{equation}
-  \text{FEHLERFORMEL}
+  \symup{\Delta} T = \sqrt{\left(1+ \frac{2n_2-2n_\text{1+2}}{4n_1^2 n_2}\right)^2 n_1 + 
+  \left(1+ \frac{2n_1-2n_\text{1+2}}{4n_1 n_2^2}\right)^2 n_2 + 
+  \frac{n_\text{1+2}}{n_1^2 n_2^2}  }
 \end{equation}
 An dem Oszilloskop kann eine Totzeit von 
 \begin{equation*}
   T \approx \SI{160}{\micro\second}
 \end{equation*}
 abgelesen werden.
+\subsection{Bestimmung des Zählerrohrstroms}
+Für die freigesetzten Ladungen pro einfallendes Teilchen $Z$ in Abhängigkeit des Zählrohrstroms $I$ ergibt sich die Tabelle \ref{tab:eifausf}.
+Ebenfalls sind die freigesetzten Ladungen pro einfallendes Teilchen in Abbildung \ref{fig:free} gegen den Zählerrohrstrom aufgetragen.
+ \begin{table}
+  \centering
+  \caption{freigesetzte Ladungen pro einfallendes Teilchen}
+  \label{tab:eifausf}
+  \begin{tabular}
+    {S[table-format = 1.1] @{${}\pm{}$} S[table-format = 1.2]
+     S[table-format = 2.4] @{${}\pm{}$} S[table-format = 1.4]
+    }
+    \toprule
+    \multicolumn{2}{c}{$I \mathbin{/} \si{\micro\ampere}$}       &
+    \multicolumn{2}{c}{$Z$ in Mrd.}                              \\
+    \midrule
+    0.3 & 0.05 & 11.4209 & 1.9035  \\
+    0.4 & 0.05 & 14.9871 & 1.8734  \\
+    0.7 & 0.05 & 25.5401 & 1.8243  \\
+    0.8 & 0.05 & 29.5136 & 1.8456  \\
+    1.0 & 0.05 & 36.7724 & 1.8386  \\
+    1.3 & 0.05 & 47.4824 & 1.8262  \\
+    1.4 & 0.05 & 49.9654 & 1.7845  \\
+    1.8 & 0.05 & 58.3773 & 1.6216  \\
+    \bottomrule
+    \end{tabular}
+\end{table} 
 \begin{figure}
   \centering
   \caption{Freigesetze Teilchen pro eingefallende Teilchen}
-  \label{Z}
+  \label{fig:free}
   \includegraphics{build/cur.pdf}
 \end{figure}
