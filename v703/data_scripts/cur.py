@@ -9,8 +9,11 @@ import matplotlib.pyplot as plt
 U, N, I = np.genfromtxt('data_scripts/Zaehlrohrstrom.dat', unpack = True) # I in µA
 I *= 10**(-6) # I in A 
 N /= 60
+
+Nerr = unp.uarray(N, np.sqrt(N))
+
 Ierr = unp.uarray(I, 0.05 * 10**(-6))
-Z = Ierr / (const.elementary_charge * N)
+Z = Ierr / (const.elementary_charge * Nerr)
 
 I *= 10**6 # I in µA
 
