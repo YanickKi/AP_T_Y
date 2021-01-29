@@ -1,13 +1,11 @@
 all: build/main.pdf
 
+# hier Python-Skripte:
+#build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
+#	TEXINPUTS=$$(pwd): python plot.py
 
-build/vana.pdf: data_scripts/vana.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python data_scripts/vana.py
-
-build/rho.pdf: data_scripts/rho.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python data_scripts/rho.py
-
-build/main.pdf: build/rho.pdf build/vana.pdf
+# hier weitere Abhängigkeiten für build/main.pdf deklarieren:
+#build/main.pdf: build/plot.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
