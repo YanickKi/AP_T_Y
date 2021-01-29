@@ -34,4 +34,24 @@ Aus dem Zerfall von $\ce{^226 Ra}$-Kernen kommen die $\alpha$-Teilchen für die 
 Um die gewonnenen Neutronen zu bremsen werden sie durch dicke Materieschichten, aus Atomen mit leichten Kernen, geschickt.
 Dabei geben die Neutronen ihre Energie durch elastische Stöße an die leichten Kerne ab, wobei die Energieabgabe mit der Differenz der stoßenden Massen abnimmt.
 Damit eignen sich leichte Materie-Kerne am besten, da bei ähnlichen Massen die Energieabgabe am größten ist.
+Proben die mit diesen Neutronen beschossen werden, wandeln sich unter $\beta$-Strahlung wieder in stabile Isotope um
 \subsection{Der Zerfall instabiler Isotope}
+Der Zerfall instabiler Isotope verläuft exponentiell. Die Anzahl der noch nicht zerfallenen Kerne kann mit 
+\begin{equation}
+    \symup{N(t)=N_0 e^{- \lambda t}}
+    \label{eqn:isotope}
+\end{equation}
+berechnet werden. Das $\symup{N_0}$ ist hierbei die zum Zeitpunkt $t=0$ vorhandenen instabilen Kerne und $\symup{\lambda}$ die Zerfallskonstante, welche eine Aussage über die Wahrscheinlichkeit des Zerfalls macht.
+Um die Halbwertszeit zu bekommen, wird für $\symup{N(t)}$ einfach $\frac{N_0}{2}$ eingesetzt. Durch Umformungen folgt
+\begin{equation}
+    \symup{T}=\ln{\frac{2}{\lambda}} \, .
+    \label{eqn:halbw}
+\end{equation}
+Da die Bestimmung der zerfallenen Kerne einfacher ist, als die Bestimmung der übrigen Kerne, wird in einem Zeitintervall $\symup{\Delta}t$
+die Anzahl der zerfallenen Kerne gemessen. Für die Anzahl der zerfallenen Kerne im Zeitraum $\symup{\Delta}t$ gilt
+\begin{equation}
+    \symup{N_{\Delta t}=N_0(1-e^{-\lambda \Delta t})e^{-\lambda t}} \, .
+\end{equation}
+Eine Schwierigkeit ist jedoch das Zeitintervall $\symup{\Delta t}$ richtig zu wählen, da
+bei zu kleinem $\symup{\Delta t}$ große statistische Fehler für $\symup{N_{\Delta t}}(t)$ entstehen 
+und bei zu großen $\symup{\Delta t}$ erhält man einen systematischen Fehler bei $\lambda$.
