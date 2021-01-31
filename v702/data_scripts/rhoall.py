@@ -14,11 +14,8 @@ x0 = np.linspace(t[0], t[-1], 1000)
 
 plt.plot(x0,  N[0] *  np.exp( params0[0] * x0 + params0[1] ), label = 'Ausgleichsgerade Gesamt')
 
-plt.errorbar(t, N, yerr = np.sqrt(N), fmt = '.', label = 'Messdaten')
-
 print(f'Zerfallskonstante von Rhodium Gesamt: {params0[0]} pm {errors0[0]}')
 print(f'Achsenabschnitt von Rhodium Gesamt: {params0[1]} pm {errors0[1]}')
-
 
 ####################LANGLEBIG#########################
 
@@ -33,7 +30,7 @@ print(f'Achsenabschnitt von Rhodium langlebig: {params1[1]} pm {errors1[1]}')
 
 x1 = np.linspace(tl[0], tl[-1], 1000)
 
-plt.plot(x1,  Nl[0] *  np.exp( params1[0] * x1 + params1[1] ), label = 'Ausgleichsgerade Langlebig')
+plt.plot(x0,  N[0] *  np.exp( params1[0] * x0 + params1[1] ), label = 'Ausgleichsgerade Langlebig')
 
 ####################LANGLEBIG#########################
 
@@ -43,28 +40,26 @@ tk = np.genfromtxt('data_scripts/rhok.dat')
 
 xk = np.linspace(tk[0], tk[-1],1000)
 
-Nk = N[0] *  np.exp( params0[0] * tk + params0[1]) - Nl[0] *  np.exp( params1[0] * tk + params1[1])
+Nk = N[0] *  np.exp( params0[0] * tk + params0[1]) - N[0] *  np.exp( params1[0] * tk + params1[1])
 
 params2, covariance_matrix2 = np.polyfit(tk, np.log(Nk/Nk[0]), deg=1, cov=True)
 errors2 = np.sqrt(np.diag(covariance_matrix2))
 
-print(f'Zerfallskonstante von Rhodium kurzlebig: {params2[0]} pm {errors2[0]}')
-print(f'Achsenabschnitt von Rhodium kurzlebig: {params2[1]} pm {errors2[1]}')
+xk = np.linspace(tk[0], tk[-1], 1000)
 
-xk = np.linspace(tk[0], tk[-1], 1001)
-
-plt.plot(xk,  Nk[0] *  np.exp( params2[0] * xk + params2[1] ), label = 'Ausgleichsgerade Kurzlebig')
+plt.plot(x0,  N[0] *  np.exp( params2[0] * x0 + params2[1] ), label = 'Ausgleichsgerade Kurzlebig')
 
 ####################KURZLEBIG#########################
 
 plt.xlabel(r'$t \mathbin{/} \si{\second}$')
 plt.ylabel(r'$N$')
 
-plt.yscale('log')
-
 plt.legend()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('build/rho.pdf')
+plt.savefig('build/rhoall.pdf')
 
-lambdaa = ufloat(params2[0], errors2[0]) 
-print('Halbwertszeit kurzlebig', np.log(2) / lambdaa)
+#lambdaa = ufloat(params[0], errors[0]) 
+#
+#print(np.log(2) / lambdaa)
+
+np.savetxt('rhofuck.txt', [N[0] *  np.exp( params1[0] * t + params1[1]) + N[0] *  np.exp( params2[0] * t + params2[1])], fmt='%3.0f')
