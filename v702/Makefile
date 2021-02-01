@@ -10,7 +10,10 @@ build/rho.pdf: data_scripts/rho.py matplotlibrc header-matplotlib.tex | build
 build/rhoall.pdf: data_scripts/rhoall.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/rhoall.py
 
-build/main.pdf: build/rho.pdf build/vana.pdf build/rhoall.pdf
+build/rho2.pdf: data_scripts/rho2.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/rho2.py	
+
+build/main.pdf: build/vana.pdf build/rhoall.pdf build/rho.pdf build/rho2.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
