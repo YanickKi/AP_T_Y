@@ -84,15 +84,6 @@ Mit Hilfe der Gleichung $REFERENZ$ lässt sich die Halbwertszeit zu
 \tau = \SI{219(11)}{\second}
 \end{equation*}
 bestimmen.
-Der Fehler der übrigen Kerne lässt sich mittels
-\begin{equation}
-    \symup{\Delta} N = \sqrt{N} 
-\end{equation}
-errechnen.
-Nach der Gaußschen Fehlerfortpflanzung wird die Unsicherheit der Halbwertszeit durch
-\begin{equation}
-    \symup{\Delta} \tau = \frac{\ln \left (2 \right )}{\lambda^2} \symup{\Delta} \lambda
-\end{equation}
 \subsection{Bestimmung der Halbwertszeit von Rhodium}
 Wie bereits in Abschnitt \ref{sub:Vana} muss der Mittelwert der Hintergrundrate abgezogen werden.
 Da die übrigen Rhodium-Kerne mit einem Intervall von $\symup{\Delta} t = \SI{15}{\second}$ gemessen wurden, muss der Mittelwert der Untergrundrate
@@ -226,3 +217,12 @@ bestimmen.
         \bottomrule     
     \end{tabular}
 \end{table}
+Der Fehler der Zerfälle lässt sich mittels
+\begin{equation}
+    \symup{\Delta} N = \sqrt{\tilde{N} - N_U} 
+\end{equation}
+errechnen.
+Nach der Gaußschen Fehlerfortpflanzung wird die Unsicherheit der Halbwertszeit durch
+\begin{equation}
+    \symup{\Delta} \tau = \frac{\ln \left (2 \right )}{\lambda^2} \symup{\Delta} \lambda
+\end{equation}
