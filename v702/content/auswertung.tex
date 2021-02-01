@@ -61,7 +61,7 @@ der Untergrundrate aufgetragen.
 \end{table}
 Zu der Bestimmung der Halbwertszeit wird das Zerfallsgesetz $REFERENZ$ logarithmiert, so dass sich die Umformung
 \begin{equation}
-\ln \left (\frac{N}{N_0} \right ) = - \lambda t 
+\ln \left (N \right ) = \ln \left (N_0 \left (1-\symup{e}^{\SI{-30}{\second} \lambda} \right ) \right )   - \lambda t 
 \end{equation}
 Somit lässt sich eine lineare Ausgleichrechung mit der Geradengleichung
 \begin{equation}
@@ -71,7 +71,7 @@ durchführen.
 Für Regressionsparameter $a$ n und $b$ ergibt sich
 \begin{align*}
     a &= \SI{-0.0032(2)}{\per\second} = - \lambda\\
-    b &= \num{0.0213(1275)}
+    b &= \num{5.1865(1275)}
 \end{align*}
 \begin{figure}
     \centering
@@ -105,7 +105,7 @@ In der Tabelle \ref{tab:vana} sind die instabilen Rhodium-Kerne ohne Abzug der U
 der Untergrundrate aufgetragen.
 \begin{table}
     \centering
-    \caption{Instabile Rhodium-Kerne}
+    \caption{Gemessene Rhodium-Zerfälle}
     \label{tab:rho}
     \begin{tabular}{S[table-format=3.0] S[table-format=3.0] S[table-format = 3.0] @{${}\pm{}$} S[table-format = 2.2]
                     S[table-format=3.0] S[table-format=2.0] S[table-format = 2.0] @{${}\pm{}$} S[table-format = 1.2]}
@@ -143,28 +143,86 @@ der Untergrundrate aufgetragen.
     \label{fig:rho}
     \includegraphics{build/rho.pdf}
 \end{figure}
-In der Abbildung \ref{fig:rho} ist die Zerfallskurve und dessen Ausgleichsgeraden aufgetragen. 
-Einerseits ist die Ausgleichsgerade für beide Zerfallskanäle. 
-Anderseits sind Ausgleichsgeraden für die einzelnen Zerfallskanäle aufgetragen.
-Um die einzelnen Geraden zu ermitteln, ist es von Nöten den Zeitpunkt zu bestimmen, ab wann der langlebige Zerfallsprozess einsetzt.
+In der Abbildung \ref{fig:rho} sind die Ausgleichsgeraden für den kurzlebigen Zerfall und für den gesamten Zerfall für die Zeiten $t < t^*$ eingzeichnet.
+Um die einzelnen Geraden zu ermitteln, ist es von Nöten den Zeitpunkt $t^*$
 Dieser kann der Abbildung \ref{fig:rho} grapisch entnehmen.
-Dort ist zu erkennen, dass der langlebige Prozess ab $_lang = \SI{315}{\second}$ einsetzt.
-Für die Gerade aller Messdaten 
+Dort ist zu erkennen, dass der langlebige Prozess ab $t^* = \SI{300}{\second}$ einsetzt.
+Für die Gerade aller Messdaten für $t < t^*$
 \begin{equation}
     y_g = a_g t_g + b_g
 \end{equation}
 ergeben sich die Parameter zu 
 \begin{align*}
-    a &= \SI{-0.0057}{\second} \\
-    b &= \SI{}{}
+    a_g &= \SI{-0.0123(2)}{\second} \\
+    b_g &= \num{6.6881(2698)}
 \end{align*}
-Die Parameter der Ausgleichgerade ab $t_lang$
+Die Parameter der Ausgleichgerade ab $t^*$
 \begin{equation}
-    y_l = c t_l + b_l
+    y_l = a_l t + b_l
 \end{equation}
+ergeben sich zu
+\begin{align*}
+    a_l &= \SI{-0.0030(5)}{\per\second} = - \lambda_l \\
+    b_l &= \num{4.4212(2608)}
+\end{align*}
+Daraus kann man die Halbwertszeit von \ce{ ^{104\text{i}}_45 Rh} zu 
+\begin{equation*}
+    \tau_l = \SI{230(40)}{\second}
+\end{equation*}
+bestimmen.
+Um die Werte des kurzlebigen Zerfalls zu errechnen, werden von den den gesamten Werten für $t < t^*$ die errechneten Werte des langlebigen Zerfalls abgezogen,
+so dass eine erneute Ausgleichsrechung durchgeführt werden kann.
+Die Parameter der Ausgleichgerade ab des kurzlebigen Zerfalls
+\begin{equation}
+    y_k = a_k t + b_k
+\end{equation}
+ergeben sich zu
+\begin{align*}
+    a_k &= \SI{-0.0169(4)}{\per\second} = - \lambda_k \\
+    b_k &= \num{6.7234(481)}
+\end{align*}
+Daraus kann man die Halbwertszeit von \ce{ ^104_45 Rh} zu 
+\begin{equation*}
+    \tau_l = \SI{41.0(11)}{\second}
+\end{equation*}
+bestimmen.
 \begin{figure}
     \centering
-    \caption{Zerfallskurve von Rhodium}
-    \label{fig:rhoall}
-    \includegraphics{build/rhoall.pdf}
+    \caption{Kurz- und langlebige Ausgleichgerade des Rhodium-Zerfalls}
+    \label{fig:rhoaang}
+    \includegraphics{build/rho2.pdf}
 \end{figure}
+\begin{table}
+    \centering
+    \caption{Errechnete Kurz- und langlebige Rhodium-Zerfälle}
+    \label{tab:rhoabzug}
+    \begin{tabular}{S[table-format=3.0]  S[table-format = 3.2] @{${}\pm{}$} S[table-format = 2.2]
+                    S[table-format=3.0]  S[table-format = 2.2] @{${}\pm{}$} S[table-format = 1.2]}
+        \toprule
+        {$t \mathbin{/} \si{\second}$} & \multicolumn{2}{c} {$N$} & {$t \mathbin{/} \si{\second}$} & \multicolumn{2}{c} {$N$} \\
+        \midrule
+         15 & 645.30 & 25.40 & 345 & 29.19 & 5.40 \\
+         30 & 500.72 & 22.38 & 360 & 27.89 & 5.28 \\
+         45 & 388.54 & 19.71 & 375 & 26.65 & 5.16 \\ 
+         60 & 301.49 & 17.36 & 390 & 25.46 & 5.05 \\ 
+         75 & 233.94 & 15.30 & 405 & 24.33 & 4.93 \\ 
+         90 & 181.53 & 13.47 & 420 & 23.24 & 4.82 \\ 
+        105 & 140.86 & 11.87 & 435 & 22.21 & 4.71 \\ 
+        120 & 109.30 & 10.45 & 450 & 21.22 & 4.61 \\ 
+        135 &  84.81 & 9.21  & 465 & 20.27 & 4.50 \\
+        150 &  65.81 & 8.11  & 480 & 19.37 & 4.40 \\ 
+        165 &  51.06 & 7.15  & 495 & 18.51 & 4.30 \\ 
+        180 &  39.62 & 6.29  & 510 & 17.69 & 4.21 \\ 
+        195 &  30.75 & 5.54  & 525 & 16.90 & 4.11 \\
+        210 &  23.86 & 4.88  & 540 & 16.15 & 4.02 \\
+        225 &  18.51 & 4.30  & 555 & 15.43 & 3.93 \\
+        240 &  14.36 & 3.79  & 570 & 14.74 & 3.84 \\
+        255 &  11.15 & 3.34  & 585 & 14.08 & 3.75 \\
+        270 &   8.65 & 2.94  & 600 & 13.46 & 3.67 \\
+        285 &   6.71 & 2.59  & 615 & 12.86 & 3.59 \\
+        300 &  33.46 & 5.78  & 630 & 12.28 & 3.50 \\
+        315 &  31.97 & 5.65  & 645 & 11.74 & 3.43 \\
+        330 &  30.55 & 5.53  & 660 & 11.22 & 3.35 \\
+        \bottomrule     
+    \end{tabular}
+\end{table}
