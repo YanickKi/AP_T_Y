@@ -73,10 +73,32 @@ und somit auch das Raumladungsgebiet wiederzufinden ist.
     \label{fig:startcurr}
     \includegraphics[width = \textwidth]{build/startcurr.pdf}
 \end{figure}
+\begin{table}
+    \centering
+    \caption{Gemessene Anlaufströme bei variierten Gegenspnnungen}
+    \label{tab:anlauf}
+    \begin{tabular}{S[table-format = 1.1] S[table-format = 3.1]}
+        \toprule
+        {$U_G \mathbin{/} \si{\volt}$} & {$I_A \mathbin{/} \si{\nano\ampere}$} \\
+        \midrule
+        0   & 700   \\
+        0.1 & 380   \\
+        0.2 & 78    \\
+        0.3 & 48    \\
+        0.4 & 27    \\
+        0.5 & 13.5  \\
+        0.6 & 6     \\
+        0.7 & 4     \\
+        0.8 & 1     \\
+        0.9 & 0     \\
+        1   & 0     \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 Zunnächst muss die Spannunng wegen des Spannungsabfalls an dem Nanoamperemeter korrigiert werden.
 Dafür wird das Produkt aus der Anlaufspannung und dem Innenwiderstand von $R_j = \SI{1}{\mega\ohm}$ hinzuaddiert.
 \begin{equation}
-    U = U_H + I R_j \; \text{.}
+    U = U_H + I R_j \; \text{.} \label{eqn:Korrektur}
 \end{equation}
 Zur Bestimmung der Temperatur wird mit Hilfe des Anlaufstroms eine lineare Regression durchgeführt. 
 Die Gesetzmäßigkeit \ref{eqn:anlauf} wird hierfür logarithmiert.
@@ -103,6 +125,9 @@ kann die Temperatur zu
 \end{equation*}
 bestimmt werden.
 Die beiden Ausreißer bei $U_H = \SI{0}{\volt}$ und $U_H = \SI{0.1}{\volt}$ wurden nicht in der Regressionrechnung beachtet, da die Abweichungen zu stark sind.
+\subsection{Bestimmung der Austrittsarbeit mit der Leistungbilanz}
+Die hierführ berechnete Temperatur wird mit Hilfe einer Leistungsbilanz \eqref{eqn:ein viertel}
+Daraus kann mit Hilfe der Gleichung \eqref{eqn:richard} die Austrittsarbeit ermittelt werden. 
 Die errechneten Austrttsarbeiten sind in der Tabelle \ref{tab:tempwork} aufgetragen. Die vier $0.0$ Einträge deuten auf fehlende Sättigungsströme hin.
 \begin{table}
     \centering
