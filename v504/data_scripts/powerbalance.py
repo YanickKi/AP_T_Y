@@ -12,15 +12,15 @@ Is = np.array([2.2, 5.4, 12.6, 25.8, 0.00001, 0.000001])
 Is /= 1e-3
 
 
-W = - 1.380649e-23 * T * np.log(Is * (6.62607015e-34)**3 / ( 4 * np.pi * 1.602e-19 * 9.109e-31 * (1.380649e-23)**2 * T**2 * 0.32e-4)) / (1.602e-19)
+W = - 1.380649 * 10**(-23) * T * np.log(Is * (6.62607015e-34)**3 / ( 4 * np.pi * 1.602e-19 * 9.109e-31 * (1.380649e-23)**2 * T**2 * 0.32e-4)) / (1.602e-19)
 
 Is *= 1e-3
 
 
-index = [-1, -2]
-W = np.delete(W, index)
-print(np.mean(W))
-print(np.std(W, ddof=1) / np.sqrt(len(W)))
+#index = [-1, -2]
+#W = np.delete(W, index)
+#print(np.mean(W))
+#print(np.std(W, ddof=1) / np.sqrt(len(W)))
 
 
 
