@@ -12,12 +12,12 @@ U25, I25 = np.genfromtxt('data_scripts/suctionflow25.txt', unpack=True)
 
 #alle Ixy in mA
 
-I20 /=20
-I21 /=20
-I22 /=20
-I23 /=20
-I24 /=20
-I25 /=20
+I20 *=20
+I21 *=20
+I22 *=20
+I23 *=20
+I24 *=20
+I25 *=20
 
 
 plt.plot(U22, I22,'.', label = r'$I_{\text{A}1}  \; ( I_\text{H} = \SI{2.0}{\ampere} \text{,} \; U_\text{H} = \SI{4.0}  {\volt})   $')

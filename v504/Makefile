@@ -7,8 +7,12 @@ build/charcurve.pdf: data_scripts/charcurve.py matplotlibrc header-matplotlib.te
 build/exponent.pdf: data_scripts/exponent.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/exponent.py
 
+build/startcurr.pdf: data_scripts/startcurr.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/startcurr.py
+
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/charcurve.pdf build/exponent.pdf
+build/main.pdf: build/charcurve.pdf build/exponent.pdf build/startcurr.pdf
+
 
 
 build/main.pdf: FORCE | build
