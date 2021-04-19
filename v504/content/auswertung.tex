@@ -1,9 +1,10 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 Jegliche Fehlerrechnung wurde mit der Python-Bibliothek uncertainties \cite{uncertainties} absolviert. Trotz dessen sind die Formeln für
-die Unsicherheiten in den jeweiligen Abschnitten angegeben. Allgemeine Rechnungen wurden mit der Python-Bilbiothek numpy \cite{numpy} automatisiert.
-\subsection{Kennlinenschar einer Hochvakuumdiode}
-In der Tabelle \ref{tab:charcurve} sind die gemessenen Absaugströme aufgetragen. Der letzte Eintrag von $I_{\text{A}1}$ ()
+die Unsicherheiten in den jeweiligen Abschnitten angegeben. Allgemeine Rechnungen wurden mit der Python-Bibliothek numpy \cite{numpy} automatisiert.
+\subsection{Kennlinienschar einer Hochvakuumdiode}
+In der Tabelle \ref{tab:charcurve} sind die gemessenen Absaugströme aufgetragen.
+Der $0.0$-er Eintrag in der Spalte des Absaugstroms $I_{\text{A}1}$ deutet daraufhin, dass bei dieser Spannung kein Messwert aufgenommen wurde. 
 \begin{figure}
     \centering
     \caption{Kennlinienschar bei verschiedenen Heizleistungen}
@@ -12,7 +13,7 @@ In der Tabelle \ref{tab:charcurve} sind die gemessenen Absaugströme aufgetragen
 \end{figure}
 \begin{table}
     \centering
-    \caption{Berechnete Temperaturen und Austrittsarbeit}
+    \caption{Gemessene Absaugströme}
     \label{tab:charcurve}
     \begin{tabular}{S[table-format = 3.0] S[table-format = 1.2] S[table-format = 1.2] S[table-format = 1.2] S[table-format = 1.2]
         S[table-format = 1.2] S[table-format = 1.2]}
@@ -38,13 +39,13 @@ In der Tabelle \ref{tab:charcurve} sind die gemessenen Absaugströme aufgetragen
 \end{table}
 In der Abbildung \ref{fig:charcurve} sind die Messwerte  der Absaugströme $I_{\text{A}1}$ bis $I_{\text{A}6}$ bei  6 verschiedenen Heizströmen ($I_\text{H}$)
 bzw. -spannungen aufgetragen ($U_\text{H}$). 
-Anhand der Graphik können die Sättigungsströme $I_\text{S}$für die Kennlinien von $I_{\text{A}1}$ bis $I_{\text{A}4}$ abgelesen werden.
+Anhand der Graphik können die Sättigungsströme $I_\text{S}$ für die Kennlinien von $I_{\text{A}1}$ bis $I_{\text{A}4}$ abgelesen werden.
 Diese betragen in etwa
 \begin{align*}
 I_{\text{S}1} & = \SI{2.2}{\milli\ampere}   \\
 I_{\text{S}2} & = \SI{5.4}{\milli\ampere}   \\
 I_{\text{S}3} & = \SI{12.6}{\milli\ampere}  \\
-I_{\text{S}4} & = \SI{25.8}{\milli\ampere}
+I_{\text{S}4} & = \SI{25.8}{\milli\ampere} \; \text{.}
 \end{align*}
 \subsection{Bestimmung des Raumladungsgebietes}
 \begin{figure}
@@ -53,7 +54,7 @@ I_{\text{S}4} & = \SI{25.8}{\milli\ampere}
     \label{fig:exponent}
     \includegraphics[width = \textwidth]{build/exponent.pdf}
 \end{figure}
-Zur Bestimmung des Raumladungsgebietes wird die Gültigkeit des Exponenten der Gleichung \eqref{eqn:drei halbe} an den Messwerten mittels Regression untersucht.
+\noindent Zur Bestimmung des Raumladungsgebietes wird die Gültigkeit des Exponenten der Gleichung \eqref{eqn:drei halbe} an den Messwerten mittels Regression untersucht.
 Dazu lässt sich die Regressionvorschrift als
 \begin{equation}
     y = cV^d
@@ -75,7 +76,7 @@ und somit auch das Raumladungsgebiet wiederzufinden ist.
 \end{figure}
 \begin{table}
     \centering
-    \caption{Gemessene Anlaufströme bei variierten Gegenspnnungen}
+    \caption{Gemessene Anlaufströme bei variierten Gegenspannungen}
     \label{tab:anlauf}
     \begin{tabular}{S[table-format = 1.1] S[table-format = 3.1]}
         \toprule
@@ -101,7 +102,7 @@ Dafür wird das Produkt aus der Anlaufspannung und dem Innenwiderstand von $R_j 
     U = U_H + I R_j \; \text{.} \label{eqn:Korrektur}
 \end{equation}
 Zur Bestimmung der Temperatur wird mit Hilfe des Anlaufstroms eine lineare Regression durchgeführt. 
-Die Gesetzmäßigkeit \ref{eqn:anlauf} wird hierfür logarithmiert.
+Die Gesetzmäßigkeit \eqref{eqn:anlauf} wird hierfür logarithmiert.
 \begin{equation}
     \ln \left ( I \right ) = \frac{-e_0}{kT} V + \ln \left (c \right )
 \end{equation}
@@ -126,9 +127,9 @@ kann die Temperatur zu
 bestimmt werden.
 Die beiden Ausreißer bei $U_H = \SI{0}{\volt}$ und $U_H = \SI{0.1}{\volt}$ wurden nicht in der Regressionrechnung beachtet, da die Abweichungen zu stark sind.
 \subsection{Bestimmung der Austrittsarbeit mit der Leistungbilanz}
-Die hierführ berechnete Temperatur wird mit Hilfe einer Leistungsbilanz \eqref{eqn:ein viertel}
+Die hierfür berechnete Temperatur wird mit Hilfe einer Leistungsbilanz \eqref{eqn:ein viertel} bestimmt.
 Daraus kann mit Hilfe der Gleichung \eqref{eqn:richard} die Austrittsarbeit ermittelt werden. 
-Die errechneten Austrttsarbeiten sind in der Tabelle \ref{tab:tempwork} aufgetragen. Die vier $0.0$ Einträge deuten auf fehlende Sättigungsströme hin.
+Die errechneten Austrittsarbeiten sind in der Tabelle \ref{tab:tempwork} aufgetragen. Die vier $0.0$ Einträge deuten auf fehlende Sättigungsströme hin.
 \begin{table}
     \centering
     \caption{Berechnete Temperaturen und Austrittsarbeit}
@@ -147,7 +148,7 @@ Die errechneten Austrttsarbeiten sind in der Tabelle \ref{tab:tempwork} aufgetra
         \bottomrule
     \end{tabular}
 \end{table}
-Der Mittelwert der Austrttsarbeit ergibt sich zu 
+Der Mittelwert der Austrittsarbeit ergibt sich zu 
 \begin{equation*}
-    \bar{e_0\phi} = \SI{1.6947(565)}{\electronvolt}
+    \bar{e_0\phi} = \SI{1.6947(565)}{\electronvolt} \; \text{.}
 \end{equation*}
