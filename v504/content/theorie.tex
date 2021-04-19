@@ -1,8 +1,7 @@
 \section{Theorie}
 \label{sec:Theorie}
-Im vorliegenden Experiment wird die Thermische Elektronenemission untersucht. Dabei werden mit Hilfe des glühelektrischen Effekts freie Elektronen aus einer Metalloberfläche gelöst.
-Ziel des Versuches ist es die Temperaturabhängigkeit und die Austrittsarbeit des verwendeten Wolframs zu bestimmen.
-
+Im vorliegenden Experiment wird die thermische Elektronenemission untersucht. Dabei werden mit Hilfe des glühelektrischen Effekts freie Elektronen aus einer Metalloberfläche gelöst.
+Ziel des Versuches ist es die Temperaturabhängigkeit und die Austrittsarbeit von Wolfram zu bestimmen.
 Eine Durchführung des Versuches ist nur im Hochvakuum möglich, da die freien Elektronen nicht mit den Gasmolekülen wechselwirken sollen.
 Es bietet sich eine Hochvakuumdiode an, welche wie in Abbildung \ref{fig:diode} beschaltet wird.
 \begin{figure}
@@ -13,8 +12,7 @@ Es bietet sich eine Hochvakuumdiode an, welche wie in Abbildung \ref{fig:diode} 
 \end{figure}
 Das Erhitzen der Kathode erfolgt durch einen starken Heizstrom (ca. $\SI{2.6}{\ampere}$). Durch diesen Heizstrom wird die Kathode auf etwa $\SI{3000}{\kelvin}$ erhitzt, wodurch Elektronen emittiert werden.
 Durch eine angelegte Saugspannung werden die Elektronen in Richtung der Anode beschleunigt.
-
-Beim auftragen der Spannung zwischen Kathode und Anode gegen den fließenden Strom, wird eine Kennlinie sichtbar.
+Bei dem Auftragen der Spannung zwischen Kathode und Anode gegen den fließenden Strom wird eine Kennlinie sichtbar.
 Eine typische Kennlinie ist in Abbildung \ref{fig:kennlinie} zu sehen.
 \begin{figure}
     \centering
@@ -25,35 +23,32 @@ Eine typische Kennlinie ist in Abbildung \ref{fig:kennlinie} zu sehen.
 Die Kennlinie wird in drei Teile unterteilt. 
 Der erste Teil ist das Anlaufstromgebiet. In diesem Gebiet ist die Spannung umgepolt, so dass eine Gegenspannung vorliegt.
 Es fällt auf, dass für kleine Gegenspannungen auch Elektronen ankommen, da einige dieser Elektronen genug kinetische Energie haben um den Potentialunterschied zu überwinden.
-Dies ist möglich da die ausgelösten Elektronen eine statistisch verteilte Bewegungsenergie aufweisen. Eine Abhängigkeit der Stromdichte von der gegenspannung ist gegeben durch
+Dies ist möglich da die ausgelösten Elektronen eine statistisch verteilte Bewegungsenergie aufweisen. Eine Abhängigkeit der Stromdichte von der Gegenspannung ist gegeben durch
 \begin{equation}
     j(V)=const \exp\left(-\frac{e_0 V}{k_\text{B} T}\right) \, .
     \label{eqn:anlauf}
 \end{equation}
-
-Das zweite Gebiet wird Raumladungsgebiet genannt. In diesem Gebiet erreichen nicht alle Elektronen die Anode aufgrund der nicht gleichmäßigen Raumladungsdichte.
-Diese entsteht durch die beschleunigte Bewegung der Elektronen im Elektrischen Feld. Einige Elektronen werden somit nicht von dem Anodenfeld erfasst, so dass einige Feldlinien an den Raumladungselektronen vor der Kathode enden.
-Die Raumladungsdichte nimmt in Richtung der Anode ab, dies lässt sich anhand der Gleichung \eqref{eqn:dichte} erkennen.
+Das zweite Gebiet wird Raumladungsgebiet genannt. In diesem Gebiet erreichen aufgrund der nicht gleichmäßigen Raumladungsdichte nicht alle Elektronen die Anode .
+Diese entsteht durch die beschleunigte Bewegung der Elektronen in dem elektrischen Feld. Einige Elektronen werden somit nicht von dem Anodenfeld erfasst, so dass einige Feldlinien an den Raumladungselektronen vor der Kathode enden.
+Die Raumladungsdichte nimmt in Richtung der Anode ab. Dies lässt sich anhand der Gleichung \eqref{eqn:dichte} erkennen.
 \begin{equation}
     j=- \rho V
     \label{eqn:dichte}
 \end{equation}
-Anstelle des Ohmschen Gesetzes gilt in diesem Bereich das Langmuir-Schottkysche Raumladungsgesetz:
+Anstelle des Ohmschen Gesetzes gilt in diesem Bereich das Langmuir-Schottkysche Raumladungsgesetz
 \begin{equation}
-    j=4/9 \, \epsilon_0\, \sqrt{2 \frac{e_0}{m_0}} \, \frac{V^{\frac{3}{2}}}{a^2}
+    j=4/9 \, \epsilon_0\, \sqrt{2 \frac{e_0}{m_0}} \, \frac{V^{\frac{3}{2}}}{a^2} \, .
     \label{eqn:drei halbe}
 \end{equation}
-Die Propornalität $j \sim V^{\frac{3}{2}}$ ist nur eine Näherung aufgrund der Herleitung.
-
-Der dritte Bereich ist das Sättigungsstromgebiet. Der Sättigungsstrom ist erreicht wenn alle Elektronen die Anode erreichen. Gegeben ist der Grenzstrom durch die Richardson Gleichung
+Die Propornalität $j \sim V^{\frac{3}{2}}$ ist aufgrund der Herleitung nur eine Näherung.
+Der dritte Bereich ist das Sättigungsstromgebiet. Der Sättigungsstrom ist erreicht, wenn alle Elektronen die Anode erreichen. Gegeben ist der Grenzstrom durch die Richardson Gleichung
 \begin{equation}
     I_{\text{s}}(T)=4 f \pi\, \frac{e_0 m_0 k_\text{b}^2}{h^3}\, T^2 \exp \left(\frac{-e_0 \phi}{k_\text{b} T}\right) \, .
     \label{eqn:richard}
 \end{equation}
 Wobei f die Kathodenfläche ist.
 Der Sättigungsstrom ist nur noch von der Temperatur und der Austrittsarbeit $W_\text{A}=e_0 \phi$ abhängig.
-
-Aus der Leistungsbilanz und der Energieerhaltung folgt die Gleichung:
+Aus der Leistungsbilanz und der Energieerhaltung folgt die Gleichung
 \begin{equation}
     T=\sqrt[4]{\frac{I_\text{f} U_\text{f}- N_\text{WL}}{f \eta \sigma}} \, .
     \label{eqn:ein viertel}
