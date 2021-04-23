@@ -2,3 +2,66 @@
 \label{sec:Auswertung}
 Jegliche Fehlerrechnung wurde mit der Python-Bibliothek uncertainties \cite{uncertainties} absolviert. Trotz dessen sind die Formeln für
 die Unsicherheiten in den jeweiligen Abschnitten angegeben. Allgemeine Rechnungen wurden mit der Python-Bibliothek numpy \cite{numpy} automatisiert.
+\subsection{Bestimmung der Wellenlänge mittels Verschiebung eines Spiegels}
+Die Wellenlänge der Quelle lässt sich mittels der Gleichung \ref{eqn:well} ermitteln.
+Um die tatsächliche Weglänge $\symup{\Delta} d_\text{Ü}$ zu berechnen, muss die an der Mikrometerschraube gemessene Weglänge zu nächst
+$\symup{\Delta}d$ durch den Übersetzungsfaktor $Ü = \num{5.046}$ geteilt werden.
+In der Tabelle \ref{tab:wavelengths} sind die gemessen Weglängen $\symup{\Delta} d$ bzw. $\symup{\Delta} d_\text{Ü}$ und Impulse $z$ mit den daraus errechneten Wellenlängen
+$\lambda$ sowie dessen Unsicherheit $\symup{\Delta}\lambda$ aufgetragen.
+\begin{table}
+    \centering
+    \caption{Gemessene Weglängen und Impulse mit den berechneten Wellenlängen}
+    \label{tab:wavelengths}
+    \begin{tabular}{S[table-format = 1.2] S[table-format = 1.2] S[table-format = 4] S[table-format = 4.2] S[table-format = 3.2]}
+        \toprule
+        {$\symup{\Delta} d \mathbin{/} \si{\milli\metre}$} & {$\symup{\Delta} d_\text{Ü} \mathbin{/} \si{\milli\metre}$} & {$z$} 
+        & {$\lambda \mathbin{/} \si{\nano\metre}$} & {$\symup{\Delta}\lambda \mathbin{/} \si{\nano\metre}$}   \\
+        \midrule
+        6.39 & 1.27 & 3779 & 670.20 & 70.22\\
+        6.39 & 1.27 & 3927 & 644.95 & 70.22\\
+        5.13 & 1.02 & 4721 & 430.69 & 70.22\\
+        5    & 0.99 & 3019 & 656.43 & 70.22\\
+        5.45 & 1.08 & 3723 & 580.21 & 70.22\\
+        5.45 & 1.08 & 3267 & 661.20 & 70.22\\
+        5    & 0.99 & 2943 & 673.38 & 70.22\\
+        5    & 0.99 & 3023 & 655.56 & 70.22\\
+        5    & 0.99 & 2997 & 661.25 & 70.22\\
+        5    & 0.99 & 3086 & 642.18 & 70.22\\    
+        \bottomrule
+    \end{tabular}
+\end{table}
+Aus den errechneten Wellenlängen ergibt sich ein Mittelwert von 
+\begin{equation*}
+    \bar{\lambda} = \SI{658.14(386)}{\nano\metre} \; \text{.}
+\end{equation*}
+In der Berechnung des Mittelwerts wurden der dritte und fünfte Wert ausgelassen, da diese eine zu starke Abweichung mit sich bringen.
+\subsection{Berechnung des Brechungsindex von Luft}
+Für jeden Messdurchgang wurde eine Druckdifferenz von $\symup{\Delta}p = \SI{0.7999}{\bar}$ verwendet.
+Für die Berechnung wurden die Normalbedingungen $T_0 = \SI{273.15}{\kelvin}$ und $p_0 = \SI{1.0132}{\bar{}}$ angenommen.
+Die Messungen wurden bei Raumtemperatur $T = \SI{293.15}{\kelvin}$ durchgeführt.
+In der Tabelle \ref{tab:fractionindex} sind die gemessenen Impulse $z$ für jeden Messdurchgang und die daraus nach
+Gleichung $REFERENZ$ errechneten Brechungsindizes $n$ aufgetragen.
+\begin{table}
+    \centering
+    \caption{Gemessene Impulse je Druckänderungsvorgang}
+    \label{tab:fractionindex}
+    \begin{tabular}{S[table-format = 2.0] S[table-format = 1.6] S[table-format = 1.6]}
+        \toprule
+        {$z$} & {$n$} & {$\symup{\Delta} n $}\\
+        \midrule
+        42 & 1.000362 & 0.000186 \\
+        67 & 1.000578 & 0.000186 \\
+        18 & 1.000155 & 0.000186 \\
+        52 & 1.000448 & 0.000186 \\
+        17 & 1.000146 & 0.000186 \\
+        66 & 1.000569 & 0.000186 \\
+        16 & 1.000138 & 0.000186 \\
+        62 & 1.000535 & 0.000186 \\       
+        \bottomrule
+    \end{tabular}
+\end{table}
+Daraus lässt sich der Mittelwert des Brechungsindex von Luft zu 
+\begin{equation*}
+    \bar{n} = \num{1.000367(69)}
+\end{equation*}
+errechnen.
