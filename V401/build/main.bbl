@@ -1,0 +1,109 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{sample}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=2821a70f99517ac7757c95300d43e95c}{%
+           family={Dortmund},
+           familyi={D\bibinitperiod},
+           given={TU},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{2821a70f99517ac7757c95300d43e95c}
+      \strng{fullhash}{2821a70f99517ac7757c95300d43e95c}
+      \strng{bibnamehash}{2821a70f99517ac7757c95300d43e95c}
+      \strng{authorbibnamehash}{2821a70f99517ac7757c95300d43e95c}
+      \strng{authornamehash}{2821a70f99517ac7757c95300d43e95c}
+      \strng{authorfullhash}{2821a70f99517ac7757c95300d43e95c}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Versuch zum Literaturverzeichnis}
+      \field{year}{2014}
+    \endentry
+    \entry{uncertainties}{software}{}
+      \name{author}{1}{}{%
+        {{hash=66ea1cb529a094a7f1c905805191cc4a}{%
+           family={Lebigot},
+           familyi={L\bibinitperiod},
+           given={Eric\bibnamedelima O.},
+           giveni={E\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{66ea1cb529a094a7f1c905805191cc4a}
+      \strng{fullhash}{66ea1cb529a094a7f1c905805191cc4a}
+      \strng{bibnamehash}{66ea1cb529a094a7f1c905805191cc4a}
+      \strng{authorbibnamehash}{66ea1cb529a094a7f1c905805191cc4a}
+      \strng{authornamehash}{66ea1cb529a094a7f1c905805191cc4a}
+      \strng{authorfullhash}{66ea1cb529a094a7f1c905805191cc4a}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Uncertainties: a Python package for calculations with uncertainties}
+      \field{version}{2.4.6.1}
+      \verb{urlraw}
+      \verb http://pythonhosted.org/uncertainties/
+      \endverb
+      \verb{url}
+      \verb http://pythonhosted.org/uncertainties/
+      \endverb
+    \endentry
+    \entry{numpy}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d500f4849030f34359cdb3e1513acf83}{%
+           family={Oliphant},
+           familyi={O\bibinitperiod},
+           given={Travis\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{d500f4849030f34359cdb3e1513acf83}
+      \strng{fullhash}{d500f4849030f34359cdb3e1513acf83}
+      \strng{bibnamehash}{d500f4849030f34359cdb3e1513acf83}
+      \strng{authorbibnamehash}{d500f4849030f34359cdb3e1513acf83}
+      \strng{authornamehash}{d500f4849030f34359cdb3e1513acf83}
+      \strng{authorfullhash}{d500f4849030f34359cdb3e1513acf83}
+      \field{sortinit}{O}
+      \field{sortinithash}{ff8d4eeb5101e3cf3809959b3592d942}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computing in Science \& Engineering}
+      \field{number}{3}
+      \field{title}{{NumPy}: {Python} for Scientific Computing}
+      \field{version}{1.9.2}
+      \field{volume}{9}
+      \field{year}{2007}
+      \field{pages}{10\bibrangedash 20}
+      \range{pages}{11}
+      \verb{urlraw}
+      \verb http://www.numpy.org/
+      \endverb
+      \verb{url}
+      \verb http://www.numpy.org/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
