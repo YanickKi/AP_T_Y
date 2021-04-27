@@ -4,7 +4,6 @@ Jegliche Fehlerrechnung wurde mit der Python-Bibliothek uncertainties \cite{unce
 die Unsicherheiten in den jeweiligen Abschnitten angegeben. Allgemeine Rechnungen wurden mit der Python-Bibliothek numpy \cite{numpy} automatisiert.
 \subsection{Kennlinienschar einer Hochvakuumdiode}
 In der Tabelle \ref{tab:charcurve} sind die gemessenen Absaugströme aufgetragen.
-Der $0.0$-er Eintrag in der Spalte des Absaugstroms $I_{\text{A}1}$ deutet daraufhin, dass bei dieser Spannung kein Messwert aufgenommen wurde. 
 \begin{figure}
     \centering
     \caption{Kennlinienschar bei verschiedenen Heizleistungen}
@@ -33,19 +32,21 @@ Der $0.0$-er Eintrag in der Spalte des Absaugstroms $I_{\text{A}1}$ deutet darau
         100 & 0.1  & 0.24 & 0.24 & 0.69 & 0.8  & 0.86   \\
         150 & 0.11 & 0.26 & 0.5  & 1.03 & 1.33 & 1.56   \\
         200 & 0.11 & 0.26 & 0.62 & 1.22 & 1.79 & 2.24   \\
-        250 & 0.0 & 0.27 & 0.63 & 1.29 & 2.16 & 2.92   \\
+        250 & {-} & 0.27 & 0.63 & 1.29 & 2.16 & 2.92   \\
         \bottomrule
     \end{tabular}
 \end{table}
 In der Abbildung \ref{fig:charcurve} sind die Messwerte  der Absaugströme $I_{\text{A}1}$ bis $I_{\text{A}6}$ bei  6 verschiedenen Heizströmen ($I_\text{H}$)
 bzw. -spannungen aufgetragen ($U_\text{H}$). 
-Anhand der Graphik können die Sättigungsströme $I_\text{S}$ für die Kennlinien von $I_{\text{A}1}$ bis $I_{\text{A}4}$ abgelesen werden.
+Anhand der Graphik können die Sättigungsströme $I_\text{S}$ für die Kennlinien von $I_{\text{A}1}$ bis $I_{\text{A}6}$ abgelesen werden.
 Diese betragen in etwa
 \begin{align*}
 I_{\text{S}1} & = \SI{2.2}{\milli\ampere}   \\
 I_{\text{S}2} & = \SI{5.4}{\milli\ampere}   \\
 I_{\text{S}3} & = \SI{12.6}{\milli\ampere}  \\
-I_{\text{S}4} & = \SI{25.8}{\milli\ampere} \; \text{.}
+I_{\text{S}4} & = \SI{25.8}{\milli\ampere}  \\
+I_{\text{S}5} & = \SI{50}{\milli\ampere}  \\
+I_{\text{S}6} & = \SI{80}{\milli\ampere} \; \text{.}
 \end{align*}
 \subsection{Bestimmung des Raumladungsgebietes}
 \begin{figure}
@@ -62,8 +63,8 @@ Dazu lässt sich die Regressionvorschrift als
 schreiben.
 Nach Durchführung der Regression und Anpassung der Spannungsintervalle ergeben sich die Regressionsparameter zu
 \begin{align*}
-    c & = \num{0.0150(9)} \\ 
-    d & = \num{1.5001(114)} \; \text{.}
+    c & = \num{0.0150(1)} \\ 
+    d & = \num{1.50(1)} \; \text{.}
 \end{align*}
 Aufgrund der Anpassung des Intervalls lässt sich sagen, dass die $V^\frac{3}{2}$-Proportionalität zwischen $\SI{0}{\volt}$ und $\SI{150}{\volt}$ 
 und somit auch das Raumladungsgebiet wiederzufinden ist.
