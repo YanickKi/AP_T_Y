@@ -60,7 +60,7 @@ plt.errorbar(t, np.log(N), yerr = 0.1 * np.log(Nerr), fmt = '.', label = 'Messda
 plt.plot(x, params[0] * x + params[1] , label = 'Ausgleichsgerade')
 
 plt.xlabel(r'$t \mathbin{/} \si{\second}$')
-plt.ylabel(r'$N$')
+plt.ylabel(r'$\ln \left ( N \right ) $')
 
 plt.legend()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)

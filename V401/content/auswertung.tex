@@ -3,10 +3,10 @@
 Jegliche Fehlerrechnung wurde mit der Python-Bibliothek uncertainties \cite{uncertainties} absolviert. Trotz dessen sind die Formeln für
 die Unsicherheiten in den jeweiligen Abschnitten angegeben. Allgemeine Rechnungen wurden mit der Python-Bibliothek numpy \cite{numpy} automatisiert.
 \subsection{Bestimmung der Wellenlänge mittels Verschiebung eines Spiegels}
-Die Wellenlänge der Quelle lässt sich mittels der Gleichung \ref{eqn:well} ermitteln.
-Um die tatsächliche Weglänge $\symup{\Delta} d_\text{Ü}$ zu berechnen, muss die an der Mikrometerschraube gemessene Weglänge zu nächst
-$\symup{\Delta}d$ durch den Übersetzungsfaktor $Ü = \num{5.046}$ geteilt werden.
-In der Tabelle \ref{tab:wavelengths} sind die gemessen Weglängen $\symup{\Delta} d$ bzw. $\symup{\Delta} d_\text{Ü}$ und Impulse $z$ mit den daraus errechneten Wellenlängen
+Die Wellenlänge der Quelle lässt sich mittels der Gleichung \eqref{eqn:wel} ermitteln.
+Um die tatsächliche Weglänge $\symup{\Delta} d_\text{Ü}$ zu berechnen, muss die an der Mikrometerschraube gemessene Weglänge $\symup{\Delta}d$ 
+zuächst durch den Übersetzungsfaktor $\text{Ü} = \num{5.046}$ geteilt werden.
+In der Tabelle \ref{tab:wavelengths} sind die gemessenen Weglängen $\symup{\Delta} d$ bzw. $\symup{\Delta} d_\text{Ü}$ und Impulse $z$ mit den daraus errechneten Wellenlängen
 $\lambda$ sowie dessen Unsicherheit $\symup{\Delta}\lambda$ aufgetragen.
 \begin{table}
     \centering
@@ -40,7 +40,7 @@ Für jeden Messdurchgang wurde eine Druckdifferenz von $\symup{\Delta}p = \SI{0.
 Für die Berechnung wurden die Normalbedingungen $T_0 = \SI{273.15}{\kelvin}$ und $p_0 = \SI{1.0132}{\bar{}}$ angenommen.
 Die Messungen wurden bei Raumtemperatur $T = \SI{293.15}{\kelvin}$ durchgeführt.
 In der Tabelle \ref{tab:fractionindex} sind die gemessenen Impulse $z$ für jeden Messdurchgang und die daraus nach
-Gleichung $REFERENZ$ errechneten Brechungsindizes $n$ aufgetragen.
+Gleichung \eqref{eqn:brechen} errechneten Brechungsindizes $n$ aufgetragen.
 \begin{table}
     \centering
     \caption{Gemessene Impulse je Druckänderungsvorgang}
@@ -64,4 +64,13 @@ Daraus lässt sich der Mittelwert des Brechungsindex von Luft zu
 \begin{equation*}
     \bar{n} = \num{1.000367(69)}
 \end{equation*}
-errechnen.
+errechnen. \\
+Die Standardabweichung eines Messwertes $x$ wird bei $N$ Messwerten gemäß 
+\begin{equation}
+    \symup{\Delta} x = \sqrt{\frac{1}{(N-1)} \sum_{i=1}^N (x_i - \bar{x})^2}
+\end{equation}
+berechnet. Zur Berechnung der Standardabweichung des Mittelwerts $\bar{x}$ wird die Gleichung
+\begin{equation}
+    \symup{\Delta} \bar{x} = \sqrt{\frac{1}{N(N-1)} \sum_{i=1}^N (x_i - \bar{x})^2}
+\end{equation} 
+benötigt.

@@ -8,24 +8,23 @@ from uncertainties import ufloat
 U, I = np.genfromtxt('data_scripts/reversevoltage.txt', unpack=True)
 
 index = [-1,-2]
-
 new_I = np.delete(I, index)
 new_U = np.delete(U, index)
 
 new_I /= 10**(9)
 
 new_U = new_U + 1000000 * new_I
-
+##
 plt.plot(new_U, np.log(new_I), '.', label =  'Messdaten')
 
-new_I = np.delete(new_I, [0,1])
-new_U = np.delete(new_U, [0,1])
+#new_I = np.delete(new_I, [0,1])
+#new_U = np.delete(new_U, [0,1])
 
 params, covariance_matrix = np.polyfit(new_U, np.log(new_I), deg=1, cov=True)
 
 errors = np.sqrt(np.diag(covariance_matrix))
 
-x = np.linspace(new_U[0], new_U[-1])
+x = np.linspace(new_U[2],new_U[-1])
 
 plt.plot(x, params[0]*x + params[1], label =  'Regressionsgerade')
 

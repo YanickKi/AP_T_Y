@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt    
 
-#alle Ixy in 20mA
+
 
 U20, I20 = np.genfromtxt('data_scripts/suctionflow20.txt', unpack=True)
 U21, I21 = np.genfromtxt('data_scripts/suctionflow21.txt', unpack=True)
@@ -9,17 +9,6 @@ U22, I22 = np.genfromtxt('data_scripts/suctionflow22.txt', unpack=True)
 U23, I23 = np.genfromtxt('data_scripts/suctionflow23.txt', unpack=True)
 U24, I24 = np.genfromtxt('data_scripts/suctionflow24.txt', unpack=True)
 U25, I25 = np.genfromtxt('data_scripts/suctionflow25.txt', unpack=True)
-
-#alle Ixy in mA
-
-I20 *=20
-I21 *=20
-I22 *=20
-I23 *=20
-I24 *=20
-I25 *=20
-
-i = 1
 
 
 plt.plot(U20, I20,'.', label = r'$I_{\text{A}1}  \; ( I_\text{H} = \SI{2.0}{\ampere} \text{,} \; U_\text{H} = \SI{4.0}  {\volt})   $')

@@ -29,7 +29,7 @@ x1 = np.linspace(tl[0], tl[-1], 1001)
 
 #print(Nl[0] *  np.exp( params1[0] * (-300) + params1[1]))
 
-plt.plot(x0,  params1[0] * x0 + params1[1], label = 'Ausgleichsgerade Langlebig')
+plt.plot(x0,  params1[0] * x0 + params1[1], label = 'Ausgleichsgerade Langlebig', color = 'firebrick')
 
 lambdalang = ufloat(params1[0], errors1[0]) 
 print('Halbwertszeit langlebig', np.log(2) / lambdalang)
@@ -53,7 +53,7 @@ print('Halbwertszeit gesamt t < t*', np.log(2) / lambdages)
 # ####################KURZLEBIG#########################
 
 plt.xlabel(r'$t \mathbin{/} \si{\second}$')
-plt.ylabel(r'$N$')
+plt.ylabel(r'$\ln \left ( N \right ) $')
 
 plt.legend()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)

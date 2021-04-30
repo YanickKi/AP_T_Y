@@ -1,8 +1,8 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Jegliche Fehlerrechnung wurde mit der Python-Bibliothek uncertainties \cite{uncertainties} absolviert. Trotz dessen sind die Formeln für
-die Unsicherheiten in den jeweiligen Abschnitten angegeben. Allgemeine Rechnungen wurden mit der Python-Bibliothek numpy \cite{numpy} automatisiert.
-\subsection{Kennlinienschar einer Hochvakuumdiode}
+Jegliche Fehlerrechnung wurde mit der Python-Bibliothek uncertainties \cite{uncertainties} absolviert.
+Allgemeine Rechnungen wurden mit der Python-Bibliothek numpy \cite{numpy} automatisiert.
+\subsection{Kennlinienschar einer Hochvakuumdiode} \label{sub:kenn}
 In der Tabelle \ref{tab:charcurve} sind die gemessenen Absaugströme aufgetragen.
 \begin{figure}
     \centering
@@ -17,9 +17,9 @@ In der Tabelle \ref{tab:charcurve} sind die gemessenen Absaugströme aufgetragen
     \begin{tabular}{S[table-format = 3.0] S[table-format = 1.2] S[table-format = 1.2] S[table-format = 1.2] S[table-format = 1.2]
         S[table-format = 1.2] S[table-format = 1.2]}
         \toprule
-        {$U_A \mathbin{/} \si{\volt}$} & {$I_{\text{A}1} \mathbin{/} \SI{20}{\milli\ampere}$} & {$I_{\text{A}2} \mathbin{/} \SI{20}{\milli\ampere}$} &
-        {$I_{\text{A}3} \mathbin{/} \SI{20}{\milli\ampere}$} & {$I_{\text{A}4} \mathbin{/} \SI{20}{\milli\ampere}$} & 
-        {$I_{\text{A}5} \mathbin{/} \SI{20}{\milli\ampere}$} & {$I_{\text{A}6} \mathbin{/} \SI{20}{\milli\ampere}$}
+        {$U_A \mathbin{/} \si{\volt}$} & {$I_{\text{A}1} \mathbin{/} \si{\milli\ampere}$} & {$I_{\text{A}2} \mathbin{/} \si{\milli\ampere}$} &
+        {$I_{\text{A}3} \mathbin{/} \si{\milli\ampere}$} & {$I_{\text{A}4} \mathbin{/} \si{\milli\ampere}$} & 
+        {$I_{\text{A}5} \mathbin{/} \si{\milli\ampere}$} & {$I_{\text{A}6} \mathbin{/} \si{\milli\ampere}$}
         \\
         \midrule
         10  & 0.01 & 0.02 & 0.02 & 0.03 & 0.03 & 0.03   \\
@@ -32,21 +32,21 @@ In der Tabelle \ref{tab:charcurve} sind die gemessenen Absaugströme aufgetragen
         100 & 0.1  & 0.24 & 0.24 & 0.69 & 0.8  & 0.86   \\
         150 & 0.11 & 0.26 & 0.5  & 1.03 & 1.33 & 1.56   \\
         200 & 0.11 & 0.26 & 0.62 & 1.22 & 1.79 & 2.24   \\
-        250 & {-} & 0.27 & 0.63 & 1.29 & 2.16 & 2.92   \\
+        250 & {-}  & 0.27 & 0.63 & 1.29 & 2.16 & 2.92   \\
         \bottomrule
     \end{tabular}
 \end{table}
 In der Abbildung \ref{fig:charcurve} sind die Messwerte  der Absaugströme $I_{\text{A}1}$ bis $I_{\text{A}6}$ bei  6 verschiedenen Heizströmen ($I_\text{H}$)
-bzw. -spannungen aufgetragen ($U_\text{H}$). 
+bzw. -spannungen ($U_\text{H}$) aufgetragen. 
 Anhand der Graphik können die Sättigungsströme $I_\text{S}$ für die Kennlinien von $I_{\text{A}1}$ bis $I_{\text{A}6}$ abgelesen werden.
 Diese betragen in etwa
 \begin{align*}
-I_{\text{S}1} & = \SI{2.2}{\milli\ampere}   \\
-I_{\text{S}2} & = \SI{5.4}{\milli\ampere}   \\
-I_{\text{S}3} & = \SI{12.6}{\milli\ampere}  \\
-I_{\text{S}4} & = \SI{25.8}{\milli\ampere}  \\
-I_{\text{S}5} & = \SI{50}{\milli\ampere}  \\
-I_{\text{S}6} & = \SI{80}{\milli\ampere} \; \text{.}
+I_{\text{S}1} & = \SI{0.11}{\milli\ampere}   \\
+I_{\text{S}2} & = \SI{0.27}{\milli\ampere}   \\
+I_{\text{S}3} & = \SI{0.63}{\milli\ampere}  \\
+I_{\text{S}4} & = \SI{1.29}{\milli\ampere}  \\
+I_{\text{S}5} & = \SI{2.5}{\milli\ampere}  \\
+I_{\text{S}6} & = \SI{4}{\milli\ampere} \; \text{.}
 \end{align*}
 \subsection{Bestimmung des Raumladungsgebietes}
 \begin{figure}
@@ -63,7 +63,7 @@ Dazu lässt sich die Regressionvorschrift als
 schreiben.
 Nach Durchführung der Regression und Anpassung der Spannungsintervalle ergeben sich die Regressionsparameter zu
 \begin{align*}
-    c & = \num{0.0150(1)} \\ 
+    c & = \num{0.001(1)} \\ 
     d & = \num{1.50(1)} \; \text{.}
 \end{align*}
 Aufgrund der Anpassung des Intervalls lässt sich sagen, dass die $V^\frac{3}{2}$-Proportionalität zwischen $\SI{0}{\volt}$ und $\SI{150}{\volt}$ 
@@ -97,7 +97,7 @@ und somit auch das Raumladungsgebiet wiederzufinden ist.
         \bottomrule
     \end{tabular}
 \end{table}
-Zunnächst muss die Spannunng wegen des Spannungsabfalls an dem Nanoamperemeter korrigiert werden.
+\noindent Zunächst muss die Spannunng wegen des Spannungsabfalls an dem Nanoamperemeter korrigiert werden.
 Dafür wird das Produkt aus der Anlaufspannung und dem Innenwiderstand von $R_j = \SI{1}{\mega\ohm}$ hinzuaddiert.
 \begin{equation}
     U = U_H + I R_j \; \text{.} \label{eqn:Korrektur}
@@ -113,8 +113,8 @@ Diese Gleichung in Regressionsparameter überführt ergibt
 \end{equation}
 Mittels Rechnung mit python lassen sich die Parameter zu 
 \begin{align*}
-    m &= \num{-7.9646(4316)} \\
-    a &= \num{-14.0669(2392)}
+    m &= \num{-5.17(413)} \\
+    a &= \num{-14.62(233)}
 \end{align*}
 berechnen.
 Mit Hilfe der Beziehung 
@@ -123,14 +123,21 @@ Mit Hilfe der Beziehung
 \end{equation}
 kann die Temperatur zu 
 \begin{equation*}
-    T = \SI{1460(80)}{\kelvin} 
+    T = \SI{2200(1800)}{\kelvin} 
 \end{equation*}
 bestimmt werden.
-Die beiden Ausreißer bei $U_H = \SI{0}{\volt}$ und $U_H = \SI{0.1}{\volt}$ wurden nicht in der Regressionrechnung beachtet, da die Abweichungen zu stark sind.
 \subsection{Bestimmung der Austrittsarbeit mit der Leistungbilanz}
 Die hierfür berechnete Temperatur wird mit Hilfe einer Leistungsbilanz \eqref{eqn:ein viertel} bestimmt.
-Daraus kann mit Hilfe der Gleichung \eqref{eqn:richard} die Austrittsarbeit ermittelt werden. 
-Die errechneten Austrittsarbeiten sind in der Tabelle \ref{tab:tempwork} aufgetragen. Die vier $0.0$ Einträge deuten auf fehlende Sättigungsströme hin.
+Daraus kann mit Hilfe der umgestellten Richardson Gleichung \eqref{eqn:richard} 
+\begin{equation*}
+    e_0\phi = kT \; \ln\left( \frac{4\pi f e_0 m_0 k^2 T^2}{I_S h^3}\right)
+\end{equation*}
+die Austrittsarbeit ermittelt werden.
+Dabei gilt $e_0 = \SI{1.602e-19}{\electronvolt}$, $m_0 = \SI{9.109e-31}{\kilogram}$, $h = \SI{6.626e-34}{\joule\second}$ und
+$k = \SI{1.381e-23}{\joule\per\kelvin}$. 
+In diesem Versuch wurde die Diode 1 verwendet, so dass die emittierende Kathodenfläche $f = \SI{0.32}{\square\centi\metre}$ beträgt.
+In Abschnitt \ref{sub:kenn} sind die verwendeten Sättigungsströme $I_S$ aufgetragen.
+Die errechneten Austrittsarbeiten sind in der Tabelle \ref{tab:tempwork} aufgetragen.
 \begin{table}
     \centering
     \caption{Berechnete Temperaturen und Austrittsarbeit}
@@ -140,16 +147,16 @@ Die errechneten Austrittsarbeiten sind in der Tabelle \ref{tab:tempwork} aufgetr
         {$U_H \mathbin{/} \si{\volt}$} & {$I_H \mathbin{/} \si{\ampere}$} & {$T \mathbin{/} \si{\kelvin}$} & {$I_S \mathbin{/} \si{\milli\ampere}$}
         & {$e_0\phi \mathbin{/} \si{\electronvolt}$}\\
         \midrule
-        4.00 & 2.00 & 1924.11 & 2.20 & 1.84      \\
-        4.10 & 2.10 & 1964.72 & 5.40 & 1.73      \\
-        4.20 & 2.20 & 2004.18 & 12.6 & 1.63    \\
-        4.70 & 2.30 & 2093.49 & 25.8 & 1.58    \\
-        5.00 & 2.40 & 2154.28 & 0.0  & 0.0     \\
-        5.30 & 2.50 & 2213.04 & 0.0  & 0.0     \\
+        4.00 & 2.00 & 1924.11 & 0.11 & 4.62 \\
+        4.10 & 2.10 & 1964.72 & 0.27 & 4.58 \\
+        4.20 & 2.20 & 2004.18 & 0.63 & 4.53 \\
+        4.70 & 2.30 & 2093.49 & 1.29 & 4.62 \\
+        5.00 & 2.40 & 2154.28 & 2.5  & 4.64 \\
+        5.30 & 2.50 & 2213.04 & 4    & 4.69 \\
         \bottomrule
     \end{tabular}
 \end{table}
 Der Mittelwert der Austrittsarbeit ergibt sich zu 
 \begin{equation*}
-    \bar{e_0\phi} = \SI{1.6947(565)}{\electronvolt} \; \text{.}
+    \bar{e_0\phi} = \SI{4.612(22)}{\electronvolt} \; \text{.}
 \end{equation*}

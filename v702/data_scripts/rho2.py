@@ -60,7 +60,7 @@ print('Halbwertszeit kurzlebig', np.log(2) / lambdakurz)
 # ####################KURZLEBIG#########################
 
 plt.xlabel(r'$t \mathbin{/} \si{\second}$')
-plt.ylabel(r'$N$')
+plt.ylabel(r'$\ln \left ( N \right ) $')
 
 plt.legend()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)

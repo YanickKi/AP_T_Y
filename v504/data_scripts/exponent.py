@@ -3,14 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from uncertainties import ufloat
 
-#I in 20mA
-
 U, I = np.genfromtxt('data_scripts/suctionflow25.txt', unpack=True)
-
-#I in mA
-
-I *= 20
-
 def f (V, c, d):
     return c * V**d
 
@@ -19,9 +12,7 @@ index = [-1, -2]
 new_U = np.delete(U, index)
 new_I = np.delete(I, index)
 
-
 params, covariance_matrix = curve_fit(f, new_U, new_I)
-
 
 uncertainties = np.sqrt(np.diag(covariance_matrix))
 
