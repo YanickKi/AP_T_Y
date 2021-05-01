@@ -1,2 +1,49 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+Jegliche Fehlerrechnung wurde mit der python-Bibliothek uncertainties \cite{uncertainties} absolviert.
+Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnitten angegeben.
+Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert. 
+Die graphischen Untersützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib} erstellt.
+\subsection{Überprüfung der Bragg-Bedingung}
+Zunächst muss die Bragg-Bedingung überprüft werden. 
+Die dazu gemessenen Daten sind in der Tabelle \ref{tab:Bragg} aufgetragen. 
+Außerdem sind die Werte in der Abbildung \ref{fig:Bragg} graphisch dargestellt.
+\begin{table}
+    \centering
+    \caption{Gemessene Winkel und Impulse}
+    \label{tab:Bragg}
+    \begin{tabular} {S[table-format=2.1]  S[table-format=2.0] S[table-format=2.1] S[table-format=3.0]  S[table-format=2.1]  
+                     S[table-format=3.1]  S[table-format=2.1] S[table-format=3.0]}
+        \toprule
+        {$\theta \mathbin{/} \si{\degree}$} & {$N$} & {$\theta \mathbin{/} \si{\degree}$} & {$N$} 
+    &   {$\theta \mathbin{/} \si{\degree}$} & {$N$} & {$\theta \mathbin{/} \si{\degree}$} & {$N$}\\
+    \midrule
+    26.0 & 56 & 27.0 & 105 & 28.0 & 212 & 29.0 & 138 \\
+    26.1 & 58 & 27.1 & 119 & 28.1 & 215 & 29.1 & 125 \\
+    26.2 & 54 & 27.2 & 125 & 28.2 & 218 & 29.2 & 111 \\
+    26.3 & 62 & 27.3 & 141 & 28.3 & 215 & 29.3 & 107 \\
+    26.4 & 58 & 27.4 & 154 & 28.4 & 208 & 29.4 & 95  \\
+    26.5 & 68 & 27.5 & 157 & 28.5 & 189 & 29.5 & 77  \\
+    26.6 & 72 & 27.6 & 166 & 28.6 & 189 & 29.6 & 73  \\
+    26.7 & 83 & 27.7 & 180 & 28.7 & 176 & 29.7 & 58  \\
+    26.8 & 89 & 27.8 & 188 & 28.8 & 164 & 29.8 & 56  \\
+    26.9 & 95 & 27.9 & 211 & 28.9 & 149 & 29.9 & 53  \\
+    {-}  & {-}& {-}  & {-} & {-}  & {-} & 30.0 & 53  \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+\begin{figure}
+    \centering
+    \caption{Bragg-Bedingung}
+    \label{fig:Bragg}
+    \includegraphics{build/Bragg.pdf}
+\end{figure}
+Das Maximum der Impulse $N_\text{max} = \num{218}$ ist bei einem Winkel von $\theta_\text{max} = \ang{28.2;;}$ gemessen worden.
+Dieser Winkel weicht vom Sollwinkel $\theta_\text{soll} = \ang{28;;}$ nur um $\ang{0.2;;}$ ab, so dass die Bragg-Bedingung erfüllt ist.
+\subsection{Analyse eines Emissionsspektrums der Kupfer-Röntgenröhre}
+\begin{figure}
+    \centering
+    \caption{Das Emissionsspektrum der Kupfer-Röntgenröhre}
+    \label{fig:Kupfer}
+    \includegraphics{build/Kupfer.pdf}
+\end{figure}
