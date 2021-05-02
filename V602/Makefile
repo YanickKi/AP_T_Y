@@ -11,7 +11,7 @@ build/Kupfer.pdf: data_scripts/Kupfer.py matplotlibrc header-matplotlib.tex | bu
 	TEXINPUTS=$$(pwd): python data_scripts/Kupfer.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/Kupfer.pdf
+build/main.pdf: build/Kupfer.pdf build/Bragg.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
