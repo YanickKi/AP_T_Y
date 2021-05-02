@@ -50,6 +50,104 @@ Dieser Winkel weicht vom Sollwinkel $\theta_\text{soll} = \ang{28;;}$ nur um $\a
 Die $K_\alpha$ Linie befindet sich bei  $\theta = \ang{22.5;;}$m, während die $K_\beta$ bei  $\theta = \ang{20.2;;}$ wiederzufinden ist.
 Die Halbwertsbreiten betragen
 \begin{align*}
-    \symup{\Delta}K_\alpha &= \ang{0.6;;} 
-    \symup{\Delta}K_\beta &= \ang{0.6;;} 
+    \symup{\Delta}K_\alpha  &= \ang{0.6;;} \\
+    \symup{\Delta}K_\beta   &= \ang{0.6;;}
+\end{align*}
+Mit Hilfe der Bragg Bedingung $REFERENZ$ lässt sich die Wellenlänge bestimmt, wonach die Energie bestimmt werden kann.
+Die Energien ergeben sich zu 
+\begin{align*}
+    E_{K_\alpha} & =  \SI{8.04}{\kilo\electronvolt} \\
+    E_{K_\beta}  & =  \SI{8.92}{\kilo\electronvolt} \\
+    \symup{\Delta}E_{K_\alpha} &= \SI{203.41}{\electronvolt} \\
+    \symup{\Delta}E_{K_\beta}  &= \SI{253.80}{\electronvolt}
+\end{align*}
+Das Auflösungsvermögen 
+\begin{equation}
+    A_K = \frac{E_K}{\symup{\Delta}E_K}
+\end{equation}
+kann daraus zu 
+\begin{align*}
+    A_{K_\alpha}&= \num{39.55} \\
+    A_{K_\beta} &= \num{35.13}
+\end{align*}
+bestimmt werden.
+Mit Hilfe der Formeln $REFERENZ$ lassen sich die Abschirmkonstanten $\sigma_1$, $\sigma_2$ und $\sigma_3$ bestimmen.
+Mit $E_\text{abs} = \SI{8987.96(15)}{\electronvolt}$, der Rydberg Energie $R_\infty$ und der Kernladungszahl
+$z_\text{Kupfer} = 29 $ lässt sich
+\begin{align*}
+    \sigma_1 &= \num{3.292(21)}    \\
+    \sigma_2 &= \num{12.30(13)}  \\
+    \sigma_3 &= \num{22.29(74)}
+\end{align*}
+errechnen.
+\subsection{Bestimmung der Absorptionsenergien und -konstanten von verschiedenen Materialien}
+Bei der Aufnahme der Absorptionsspektren wurde ein LiF-Kristall, eine Beschleunigungsspannung von $\SI{35}{\kilo\volt}$ und ein Strom von $\SI{1}{\milli\ampere}$
+verwendet. 
+In den jeweiligen sind Unterabschnitten sind die Intensitäten $\sfrac{\text{Imp}}{\si{\second}}$ gegen den Winkel $\theta$ aufgetragen.
+
+\subsubsection{Zink}
+\begin{figure}
+    \centering
+    \caption{Absorptionsspektrum von Zink}
+    \label{fig:zink}
+    \includegraphics{build/zink.pdf}
+\end{figure}
+\begin{align*}
+    E_{K, \text{abs}_\text{ Zn}}  &= \SI{9.58}{\kilo\electronvolt} \\
+    \sigma_{K_\text{Zn}}         &= \num{2.64}
+\end{align*}
+\subsubsection{Gallium}
+\begin{figure}
+    \centering
+    \caption{Absorptionsspektrum von Gallium}
+    \label{fig:Gallium}
+    \includegraphics{build/gallium.pdf}
+\end{figure}
+\begin{align*}
+    E_{K, \text{abs}_\text{ Ga}}  &= \SI{10.32}{\kilo\electronvolt} \\
+    \sigma_{K_Ga}                &= \num{1.62}
+\end{align*}
+\subsubsection{Brom}
+\begin{figure}
+    \centering
+    \caption{Absorptionsspektrum von Brom}
+    \label{fig:Brom}
+    \includegraphics{build/brom.pdf}
+\end{figure}
+\begin{align*}
+    E_{K, \text{abs}_\text{ Br}}  &= \SI{13.43}{\kilo\electronvolt} \\
+    \sigma_{K_Br}                &= \num{2.28}
+\end{align*}
+\subsubsection{Rubidium}
+\begin{figure}
+    \centering
+    \caption{Absorptionsspektrum von Rubidium}
+    \label{fig:Rubidium}
+    \includegraphics{build/rubidium.pdf}
+\end{figure}
+\begin{align*}
+    E_{K, \text{abs}_\text{ Rb}}  &= \SI{15.11}{\kilo\electronvolt} \\
+    \sigma_{K_\text{Rb}}         &= \num{4.2}
+\end{align*}
+\subsubsection{Strontium}
+\begin{figure}
+    \centering
+    \caption{Absorptionsspektrum von Strontium}
+    \label{fig:Strontium}
+    \includegraphics{build/strontium.pdf}
+\end{figure}
+\begin{align*}
+    E_{K, \text{abs}_\text{ Sr}}  &= \SI{16.06}{\kilo\electronvolt} \\
+    \sigma_{K_\text{Sr}}         &= \num{5.23}
+\end{align*}
+\subsubsection{Zirkonium}
+\begin{figure}
+    \centering
+    \caption{Absorptionsspektrum von Zirkonium}
+    \label{fig:Zirkonium}
+    \includegraphics{build/zirkonium.pdf}
+\end{figure}
+\begin{align*}
+    E_{K, \text{abs}_\text{ Zr}}  &= \SI{17.82}{\kilo\electronvolt} \\
+    \sigma_{K_\text{Zr}}         &= \num{7.06}
 \end{align*}
