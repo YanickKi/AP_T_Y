@@ -3,9 +3,9 @@
 In dem Versuch sollen das Emissionsspektrum einer Cu-Röntgenröhre und verschiedene Absorptionsspektren aufgenommen und analysiert werden.
 \\
 Um Röntgenstrahlung zu erzeugen werden in einer evakuierten Röhre aus einer Glühkathode Elektronen emittiert und auf eine Anode hin beschleunigt. 
-Die Röntgenstrahlung entsteht wenn die Elektronen auf die Anode treffen. Dabei besteht die entstandene Röntgenstrahlung aus dem kontinuierlichen
+Die Röntgenstrahlung entsteht wenn die Elektronen auf die Anode treffen. Dabei besteht die entstandene Röntgenstrahlung sowohl aus dem kontinuierlichen
  Bremsspektrum, als auch aus der charakteristischen Röntgenstrahlung des Anodenmaterials. 
- Bei der Abbremsung eines Elektrons im Coulombfeld des Atomkerns wird ein Photon emittiert, dessen Energie dem Energieverlust des abgebremsten Elektrons entspricht.
+ Bei der Abbremsung eines Elektrons im Coulombfeld des Atomkerns wird ein Photon emittiert dessen Energie dem Energieverlust des abgebremsten Elektrons entspricht.
  Da das Elektron sowohl eine Teilenergie als auch seine Gesamtenergie abgeben kann, handelt es sich beim Bremsspektrum um ein kontinuierliches Spektrum (Abbildung \ref{fig:Brems}).
  \begin{figure}
     \centering
@@ -21,15 +21,15 @@ Die Röntgenstrahlung entsteht wenn die Elektronen auf die Anode treffen. Dabei 
  wird bei der vollständigen Abbremsung des Elektrons erreicht.
  Dabei beschreibt $h$ das Plancksche Wirkungsquant, $c$ die Lichtgeschwindigkeit und $e_0 U$ die gesamte kinetische Energie des Elektrons.
  Die charakteristische Röntgenstrahlung wird durch das Anodenmaterial bestimmt. Diese entsteht bei der Ionisierung des Atoms, wodurch ein Elektron aus einer äußeren Schale in die innere Schale zurückfällt.
- Dabei wird ein Röntgenquant mit der Energie der Energiedifferenz $h \nu = E_\text{m}-E_\text{m}$ der beiden Energieniveaus emittiert. Es entstehen scharfe Linien die mit $K_\alpha, K_\beta, L_\alpha, ...$ 
- bezeichnet werden. Dabei sind die Buchstaben K, L, M, ... die Schalen des Atoms, auf der die Übergänge enden. Der griechische Buchstabe gibt an aus welcher Schale das Elektron stammt welches die Innere Schale auffüllt.
+ Dabei wird ein Röntgenquant mit der Energie der Energiedifferenz $h \nu = E_\text{m}-E_\text{n}$ der beiden Energieniveaus emittiert. Es entstehen scharfe Linien welche mit $K_\alpha, K_\beta, L_\alpha, ...$ 
+ bezeichnet werden. Dabei sind die Buchstaben K, L, M, ... die Schalen des Atoms, auf der die Übergänge enden. Der griechische Buchstabe gibt an aus welcher Schale das Elektron stammt, welches die innere Schale auffüllt.
  Bei einem Mehrelektronenatom wird die Kernladung durch die Hüllenelektronen und die Wechselwirkung der Elektronen abgeschirmt. Durch die Verringerung der Coulomb Anziehung auf das äußere Elektron, ergibt sich 
  \begin{equation}
      E_\text{n}=-R_{\infty} z_\text{eff}^2 \frac{1}{n^2}
      \label{eqn:Bindungse}
  \end{equation}
  für die Bindungsenergie $E_\text{n}$ eines Elektrons auf der n-ten Schale. Hierbei ist $R_{\infty}=\SI{13.6}{\electronvolt}$ die Rydbergenergie und $z_\text{eff}=z - \sigma$ die effektive Kernladung mit $\sigma$ als Abschirmkonstante.
- Die Abschirmkonstante unterscheidet sich für jedes Elektron und ist  empirisch Bestimmbar. Die Elektronen besitzen neben der Hauptquantenzahl noch weitere Quantenzahlen resultierend aus dem Elektronenspin und dem Bahndrehimpuls, so dass eine Feinstruktur ersichtlich wird.
+ Die Abschirmkonstante unterscheidet sich für jedes Elektron und ist  empirisch bestimmbar. Die Elektronen besitzen neben der Hauptquantenzahl noch weitere Quantenzahlen resultierend aus dem Elektronenspin und dem Bahndrehimpuls, so dass eine Feinstruktur ersichtlich wird.
  Die Energien dieser Feinstruktur können mithilfe der Sommerfeldschen Feinstrukturformel 
  \begin{equation}
      E_\text{n,j}=-R_{\infty} \left(z_\text{eff}^2 \frac{1}{n^2} + \alpha^2 z_\text{eff}^4 \frac{1}{n^3} \left(\frac{1}{j+\frac{1}{2}} - \frac{3}{4n}\right) \right)
@@ -38,7 +38,7 @@ Die Röntgenstrahlung entsteht wenn die Elektronen auf die Anode treffen. Dabei 
 ermittelt werden. Wobei $\alpha$ die Sommerfeldsche Feinstrukturkonstante, n die Hauptquantenzahl und j der Gesamtdrehimpuls des betrachteten Elektrons ist.
 \\
 Charakteristische Röntgenstrahlung tritt auch bei Absorption von Röntgenstrahlung durch einen Absorber auf. Bei Energien unter $\SI{1}{\mega \electronvolt}$
-treten der Comptoneffekt so wie der Photoeffekt dominant auf. Wie in Abbildung \ref{fig:abso} zu sehen, nimmt der Absorptionskoeffizient mit zunehmender Energie ab und wenn die Photonenenergie gerade größer ist als die Bindungsenergie eines Elektrons aus der nächsten Schale steigt er Sprunghaft an.
+treten der Comptoneffekt so wie der Photoeffekt dominant auf. Wie in Abbildung \ref{fig:abso} zu sehen, nimmt der Absorptionskoeffizient mit zunehmender Energie ab und wenn die Photonenenergie gerade größer als die Bindungsenergie eines Elektrons aus der nächsten Schale ist, steigt er sprunghaft an.
 \begin{figure}
     \centering
     \caption{Absorptionsspektrum von Röntgenstrahlung \cite{V602}}
@@ -46,7 +46,7 @@ treten der Comptoneffekt so wie der Photoeffekt dominant auf. Wie in Abbildung \
     \includegraphics[width = 0.6 \textwidth]{pics/abso.png}
 \end{figure}
 Die Absorptionskanten haben nahezu die selben Energien wie die Bindungsenergie des Elektrons $h \nu_\text{abs}= E_\text{n} - E_{\infty}$. Die zugehörige Energie wird nach der zugehörigen Schale aus denen das Elektron stammt als K-, L-, M-, ... Absorptionskante bezeichnet. 
-Mit hilfe der Sommerfeldschen Feinstrukturformel kann die Abschirmkonstante mit
+Mit Hilfe der Sommerfeldschen Feinstrukturformel kann die Abschirmkonstante mit
 \begin{equation}
     \sigma_\text{K}=Z-\sqrt{\frac{E_\text{K}}{R_{\infty}}-\frac{\alpha^2 Z^4}{4}}
     \label{eqn:abschirmkonstante}
@@ -67,13 +67,13 @@ Zur Bestimmung der Abschirmkonstanten $\sigma_1$, $\sigma_2$ und $\sigma_3$ für
 \end{equation}
 berechnet werden. Dabei ist $n=1$, $m=2$ und $l=3$.
 \\
-Durch Benutzen der Bragg'schen Reflexion kann die Energie bzw. die Wellenlänge $\lambda$ der Röntgenstrahlung experimentell analysiert werden.
-Hierbei fällt Röntgenlicht auf ein dreidimensionales Gitter, wobei die Photonen an jedem Atom des Gitters gebeugt werden. Die Strahlen interferieren und unter dem Glanzwinkel $\theta$ 
-kommt es zu konstruktiver Interferenz. So kann mit hilfe der Bragg'schen Bedingung
+Durch Benutzung der Bragg'schen Reflexion kann die Energie bzw. die Wellenlänge $\lambda$ der Röntgenstrahlung experimentell analysiert werden.
+Hierbei fällt Röntgenlicht auf ein dreidimensionales Gitter, wobei die Photonen an jedem Atom des Gitters gebeugt werden. Die Strahlen interferieren, während es unter dem Glanzwinkel $\theta$ 
+ zu konstruktiver Interferenz kommt. So kann mit Hilfe der Bragg'schen Bedingung
 \begin{equation}
     2 d \sin \theta = n \lambda
     \label{eqn:bragg}
 \end{equation}
-und einer bekannten Gitterkonstante d ($d_\text{Lif}=\SI{201.4}{\pico \metre}$) die Wellenlänge bestimmt werden. Dabei ist n die Beugungsordnung des Maxima.
+und einer bekannten Gitterkonstante $d$ ($d_\text{LiF}=\SI{201.4}{\pico \metre}$) die Wellenlänge bestimmt werden. Dabei ist n die Beugungsordnung des Maximums.
 
 
