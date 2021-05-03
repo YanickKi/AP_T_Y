@@ -21,6 +21,6 @@ plt.legend()
 
 #print(f'Zwei Werte:{params[0] * 400+ params[1]}, {params[0] * 400 + params[1]} ')
 print(f'und dessen Verhältnis: {((params[0] * 600 + params[1]) - (params[0] * 500 + params[1])) / (600 - 500)}')
-#print(f'von Mampfzwerg: {(3.0 * 300 + 88.67) / (3.0 * 400 + 88.67)}')
+#print(f' {(3.0 * 300 + 88.67) / (3.0 * 400 + 88.67)}')
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/char.pdf')
