@@ -84,8 +84,8 @@ errechnen.
 Bei der Aufnahme der Absorptionsspektren wurde ein LiF-Kristall, eine Beschleunigungsspannung von $\SI{35}{\kilo\volt}$ und ein Strom von $\SI{1}{\milli\ampere}$
 verwendet. 
 In den jeweiligen sind Unterabschnitten sind die Intensitäten $\sfrac{\text{Imp}}{\si{\second}}$ gegen den Winkel $\theta$ aufgetragen.
-
 \subsubsection{Zink}
+Bei der Durchführung mit Zink liegt die Mitte der Absorptionskante liegt ungefähr bei $\theta_\text{Zn} \approx \ang{18.75;;}$. Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
 \begin{figure}
     \centering
     \caption{Absorptionsspektrum von Zink}
@@ -94,9 +94,11 @@ In den jeweiligen sind Unterabschnitten sind die Intensitäten $\sfrac{\text{Imp
 \end{figure}
 \begin{align*}
     E_{K, \text{abs}_\text{ Zn}}  &= \SI{9.58}{\kilo\electronvolt} \\
-    \sigma_{K_\text{Zn}}         &= \num{2.64}
+    \sigma_{K_\text{Zn}}         &= \num{3.668} \; \text{.}
 \end{align*}
+\FloatBarrier
 \subsubsection{Gallium}
+Die Mitte der Absorptionskante liegt ungefähr bei $\theta_\text{Ga} \approx \ang{17.35;;}$. Die daraus errechnete Energie bzw. Abschirmkonstante beträgt
 \begin{figure}
     \centering
     \caption{Absorptionsspektrum von Gallium}
@@ -105,9 +107,11 @@ In den jeweiligen sind Unterabschnitten sind die Intensitäten $\sfrac{\text{Imp
 \end{figure}
 \begin{align*}
     E_{K, \text{abs}_\text{ Ga}}  &= \SI{10.32}{\kilo\electronvolt} \\
-    \sigma_{K_Ga}                &= \num{1.62}
+    \sigma_{K_\text{Ga}}                &= \num{3.673}
 \end{align*}
+\FloatBarrier
 \subsubsection{Brom}
+Bei Brom liegt die Kante ungefähr bei $\theta_\text{Br} \approx \ang{13.25;;}$. Somit lässt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
 \begin{figure}
     \centering
     \caption{Absorptionsspektrum von Brom}
@@ -116,9 +120,12 @@ In den jeweiligen sind Unterabschnitten sind die Intensitäten $\sfrac{\text{Imp
 \end{figure}
 \begin{align*}
     E_{K, \text{abs}_\text{ Br}}  &= \SI{13.43}{\kilo\electronvolt} \\
-    \sigma_{K_Br}                &= \num{2.28}
+    \sigma_{K_\text{Br}}                &= \num{3.894}
 \end{align*}
+errechnen.
+\FloatBarrier
 \subsubsection{Rubidium}
+Die Mitte der Absorptionskante von Rubidium liegt ungefähr bei $\theta_\text{Rb} \approx \ang{11.75;;}$. Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
 \begin{figure}
     \centering
     \caption{Absorptionsspektrum von Rubidium}
@@ -127,9 +134,12 @@ In den jeweiligen sind Unterabschnitten sind die Intensitäten $\sfrac{\text{Imp
 \end{figure}
 \begin{align*}
     E_{K, \text{abs}_\text{ Rb}}  &= \SI{15.11}{\kilo\electronvolt} \\
-    \sigma_{K_\text{Rb}}         &= \num{4.2}
+    \sigma_{K_\text{Rb}}         &= \num{4.037} \; \text{.}
 \end{align*}
+\FloatBarrier
 \subsubsection{Strontium}
+Die in der Abbildung \ref{fig:Strontium} hervorgehende Mitte der Absorptionskante liegt ungefähr bei $\theta_\text{Sr} \approx \ang{11.05;;}$. 
+Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
 \begin{figure}
     \centering
     \caption{Absorptionsspektrum von Strontium}
@@ -138,9 +148,12 @@ In den jeweiligen sind Unterabschnitten sind die Intensitäten $\sfrac{\text{Imp
 \end{figure}
 \begin{align*}
     E_{K, \text{abs}_\text{ Sr}}  &= \SI{16.06}{\kilo\electronvolt} \\
-    \sigma_{K_\text{Sr}}         &= \num{5.23}
+    \sigma_{K_\text{Sr}}         &= \num{4.041} \; \text{.}
 \end{align*}
+\FloatBarrier
 \subsubsection{Zirkonium}
+Bei Zirkonium liegt die Mitte der Absorptionskante liegt ungefähr bei $\theta_\text{Zr} \approx \ang{9.95;;}$. 
+Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
 \begin{figure}
     \centering
     \caption{Absorptionsspektrum von Zirkonium}
@@ -149,5 +162,42 @@ In den jeweiligen sind Unterabschnitten sind die Intensitäten $\sfrac{\text{Imp
 \end{figure}
 \begin{align*}
     E_{K, \text{abs}_\text{ Zr}}  &= \SI{17.82}{\kilo\electronvolt} \\
-    \sigma_{K_\text{Zr}}         &= \num{7.06}
+    \sigma_{K_\text{Zr}}         &= \num{4.28} \; \text{.}
 \end{align*}
+\subsection{Berechnung der Rydbergenergie}
+Um die Rydbergfrequenz zu bestimmen kann das Moysley'sche Gesetz mit n = 1 zu 
+\begin{equation}
+    \sqrt{E_K} = \sqrt{Rh}z - \sqrt{Rh}\sigma_k
+\end{equation}
+umgestellt werden.
+In Regresssionsparameter nimmt die Beziehung die Gestalt
+\begin{equation}
+    y = mz+b
+\end{equation}
+an.
+Durch Durchführung der linearen Regression lassen sich die Regresssionsparameter zu 
+\begin{align*}
+        m & = \left( \num{3.568(18)} \right)   \sqrt{\si{\electronvolt}} \\
+        b & = \left( \num{-9.086(628)} \right) \sqrt{\si{\electronvolt}}
+\end{align*}
+\begin{figure}
+    \centering
+    \caption{Bestimmung der Rydbergfrequenz durch lineare Regression}
+    \label{fig:rydberg}
+    \includegraphics{build/rydberg.pdf}
+\end{figure}
+bestimmen.
+Daraus kann die Rydbergfrequenz zu 
+\begin{equation*}
+    R = \SI{3.079(31)}{\hertz}
+\end{equation*}
+errechnet werden.
+Abschließend lässt sich die Rydbergenergie aus der Formel
+\begin{equation}
+    R_\infty = \symup{h}R
+\end{equation}
+zu
+\begin{equation*}
+    R_\infty = \SI{12.74(13)}{\electronvolt}
+\end{equation*}
+bestimmen.

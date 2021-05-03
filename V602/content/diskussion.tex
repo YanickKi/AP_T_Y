@@ -1,27 +1,30 @@
 \section{Diskussion}
 \label{sec:Diskussion}
-
+In der der Tabelle \ref{tab:vgllit} sind die Literaturwerte für die Abschirmkonstanten $\sigma_{K\text{, Lit}}$ die experimentell 
+bestimmten Abschirmkonstanten $\sigma_K$ und das daraus errechneten Verhältnisse $\eta$ aufgetragen.
 \begin{table}
     \centering
     \caption{Vergleich der berechneten Abschirmkonstanten mit den Literaturwerten}
     \label{tab:vgllit}
-    \begin{tabular} {S[table-format=2.1]  S[table-format=2.0] S[table-format=2.1] S[table-format=3.0]  S[table-format=2.1]  
-                     S[table-format=3.1]  S[table-format=2.1] S[table-format=3.0]}
+    \begin{tabular} {S[table-format=2] S[table-format=1.3]  S[table-format=1.3] S[table-format=3.2]}
         \toprule
-        {$\theta \mathbin{/} \si{\degree}$} & {$N$} & {$\theta \mathbin{/} \si{\degree}$} & {$N$} 
-    &   {$\theta \mathbin{/} \si{\degree}$} & {$N$} & {$\theta \mathbin{/} \si{\degree}$} & {$N$}\\
+        & {$\sigma_{K\text{, Lit}}$} & {$\sigma_K$} & {$\eta \mathbin{/} \si{\percent}$} \\
     \midrule
-    26.0 & 56 & 27.0 & 105 & 28.0 & 212 & 29.0 & 138 \\
-    26.1 & 58 & 27.1 & 119 & 28.1 & 215 & 29.1 & 125 \\
-    26.2 & 54 & 27.2 & 125 & 28.2 & 218 & 29.2 & 111 \\
-    26.3 & 62 & 27.3 & 141 & 28.3 & 215 & 29.3 & 107 \\
-    26.4 & 58 & 27.4 & 154 & 28.4 & 208 & 29.4 & 95  \\
-    26.5 & 68 & 27.5 & 157 & 28.5 & 189 & 29.5 & 77  \\
-    26.6 & 72 & 27.6 & 166 & 28.6 & 189 & 29.6 & 73  \\
-    26.7 & 83 & 27.7 & 180 & 28.7 & 176 & 29.7 & 58  \\
-    26.8 & 89 & 27.8 & 188 & 28.8 & 164 & 29.8 & 56  \\
-    26.9 & 95 & 27.9 & 211 & 28.9 & 149 & 29.9 & 53  \\
-    {-}  & {-}& {-}  & {-} & {-}  & {-} & 30.0 & 53  \\
+    {Zn} & 3.566 & 3.668 & 102.85 \\
+    {Ga} & 3.677 & 3.673 & 99.90 \\
+    {Br} & 3.848 & 3.894 & 101.19 \\
+    {Rb} & 3.944 & 4.037 & 102.36 \\
+    {Sr} & 3.999 & 4.041 & 101.05 \\
+    {Zr} & 4.101 & 4.28  & 104.37 \\
     \bottomrule
     \end{tabular}
 \end{table}
+Nach Betrachtung der Tabelle fällt auf, dass alle berechneten Werte etwas größer als die Literaturwerte sind.
+Somit lässt sich vermuten, dass die Ursache ein systematischer Fehler ist.
+Das Verhältnis der errechneten Rydbergenergie und des Literaturwertes beträgt
+\begin{equation}
+    \mu = \frac{R_\infty}{R_{\infty_\text{Lit}}} = \frac{\SI{12.74}{\electronvolt}}{\SI{13.606}{\electronvolt}} = \SI{93.63}{\percent} \; \text{.}
+\end{equation}
+Dies entspricht einer Abweichung von  etwa $\SI{7}{\percent}$, was im Vergleich zu der oben stehenden Tabelle eine etwas erhöhte Abweichung ist.
+Dies könnte an Rundung von Dezimalstellen liegen. Anderseits könnte die Ursache bei der Abweichung der Absorptionsenergien liegen, da aus diesen die Rydbergfrequenz und somit 
+auch die Rydbergenergie bestimmt  worden ist.
