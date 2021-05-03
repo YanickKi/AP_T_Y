@@ -3,14 +3,34 @@
 Jegliche Fehlerrechnung wurde mit der python-Bibliothek uncertainties \cite{uncertainties} absolviert.
 Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnitten angegeben.
 Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert. 
-Die graphischen Untersützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib} erstellt.
+Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib} erstellt.
+\subsection{Vorbereitungsaufgabe}
+In der Tabelle \ref{tab:hallo} sind die 
+\begin{table}
+    \centering
+    \caption{Vergleich der berechneten Abschirmkonstanten mit den Literaturwerten}
+    \label{tab:hallo}
+    \begin{tabular} {S[table-format=2.0] S[table-format=2.0]  S[table-format=2.2] S[table-format=2.1] S[table-format=1.3]}
+        \toprule
+        & {$Z$} & {$E_K \mathbin{/} \si{\kilo\electronvolt}$} & {$\theta \mathbin{/} \si{\degree}$} & {$\sigma_K \mathbin{/}$} \\
+    \midrule    
+    {Zn} & 30 & 9.65    & 18.6  & 3.566\\
+    {Ga} & 31 & 10.37   & 17.3  & 3.61\\
+    {Br} & 35 & 13.47   & 13.2  & 3.848\\
+    {Rb} & 37 & 15.2    & 11.7  & 3.944\\
+    {Sr} & 38 & 16.1    & 11    & 3.999\\
+    {Zr} & 40 & 17.99   & 9.9   & 4.101\\
+    {Ge} & 32 & 11.1    & 16.1  & 3.677\\
+    \bottomrule
+    \end{tabular}
+\end{table}
 \subsection{Überprüfung der Bragg-Bedingung}
 Zunächst muss die Bragg-Bedingung überprüft werden. 
 Die dazu gemessenen Daten sind in der Tabelle \ref{tab:Bragg} aufgetragen. 
 Außerdem sind die Werte in der Abbildung \ref{fig:Bragg} graphisch dargestellt.
 \begin{table}
     \centering
-    \caption{Gemessene Winkel und Impulse}
+    \caption{Gemessene Winkel und Impulse zur Überprüfung der Bragg-Bedingung}
     \label{tab:Bragg}
     \begin{tabular} {S[table-format=2.1]  S[table-format=2.0] S[table-format=2.1] S[table-format=3.0]  S[table-format=2.1]  
                      S[table-format=3.1]  S[table-format=2.1] S[table-format=3.0]}
@@ -34,12 +54,13 @@ Außerdem sind die Werte in der Abbildung \ref{fig:Bragg} graphisch dargestellt.
 \end{table}
 \begin{figure}
     \centering
-    \caption{Bragg-Bedingung}
+    \caption{Gemessene Winkel und Impulse zur Überprüfung der Bragg-Bedingung}
     \label{fig:Bragg}
     \includegraphics{build/Bragg.pdf}
 \end{figure}
 Das Maximum der Impulse $N_\text{max} = \num{218}$ ist bei einem Winkel von $\theta_\text{max} = \ang{28.2;;}$ gemessen worden.
 Dieser Winkel weicht vom Sollwinkel $\theta_\text{soll} = \ang{28;;}$ nur um $\ang{0.2;;}$ ab, so dass die Bragg-Bedingung erfüllt ist.
+\FloatBarrier
 \subsection{Analyse eines Emissionsspektrums der Kupfer-Röntgenröhre}
 \begin{figure}
     \centering
@@ -47,19 +68,19 @@ Dieser Winkel weicht vom Sollwinkel $\theta_\text{soll} = \ang{28;;}$ nur um $\a
     \label{fig:Kupfer}
     \includegraphics{build/Kupfer.pdf}
 \end{figure}
-Die $K_\alpha$ Linie befindet sich bei  $\theta = \ang{22.5;;}$m, während die $K_\beta$ bei  $\theta = \ang{20.2;;}$ wiederzufinden ist.
+Die $K_\alpha$ Linie befindet sich bei  $\theta = \ang{22.5;;}$, während die $K_\beta$ bei  $\theta = \ang{20.2;;}$ wiederzufinden ist.
 Die Halbwertsbreiten betragen
 \begin{align*}
     \symup{\Delta}K_\alpha  &= \ang{0.6;;} \\
-    \symup{\Delta}K_\beta   &= \ang{0.6;;}
+    \symup{\Delta}K_\beta   &= \ang{0.6;;} \; \text{.}
 \end{align*}
-Mit Hilfe der Bragg Bedingung $REFERENZ$ lässt sich die Wellenlänge bestimmt, wonach die Energie bestimmt werden kann.
+Mit Hilfe der Bragg Bedingung \eqref{eqn:bragg} lässt sich die Wellenlänge bestimmen, wonach die Energie bestimmt werden kann.
 Die Energien ergeben sich zu 
 \begin{align*}
     E_{K_\alpha} & =  \SI{8.04}{\kilo\electronvolt} \\
     E_{K_\beta}  & =  \SI{8.92}{\kilo\electronvolt} \\
     \symup{\Delta}E_{K_\alpha} &= \SI{203.41}{\electronvolt} \\
-    \symup{\Delta}E_{K_\beta}  &= \SI{253.80}{\electronvolt}
+    \symup{\Delta}E_{K_\beta}  &= \SI{253.80}{\electronvolt} \; \text{.}
 \end{align*}
 Das Auflösungsvermögen 
 \begin{equation}
@@ -71,8 +92,8 @@ kann daraus zu
     A_{K_\beta} &= \num{35.13}
 \end{align*}
 bestimmt werden.
-Mit Hilfe der Formeln $REFERENZ$ lassen sich die Abschirmkonstanten $\sigma_1$, $\sigma_2$ und $\sigma_3$ bestimmen.
-Mit $E_\text{abs} = \SI{8987.96(15)}{\electronvolt}$, der Rydberg Energie $R_\infty$ und der Kernladungszahl
+Mit Hilfe der Gleichungen \eqref{eqn:si1},\eqref{eqn:si2} und \eqref{eqn:si3} lassen sich die Abschirmkonstanten $\sigma_1$, $\sigma_2$ und $\sigma_3$ bestimmen.
+Mit $E_\text{abs} = \SI{8987.96(15)}{\electronvolt}$\cite{eabs}, der Rydberg Energie $R_\infty$ und der Kernladungszahl
 $z_\text{Kupfer} = 29 $ lässt sich
 \begin{align*}
     \sigma_1 &= \num{3.292(21)}    \\
@@ -80,12 +101,16 @@ $z_\text{Kupfer} = 29 $ lässt sich
     \sigma_3 &= \num{22.29(74)}
 \end{align*}
 errechnen.
+Der Fehler der n-ten Abschirmkonstante wird Mit Hilfe der Gauß-Fehlerfortpflanzung durch
+\begin{equation}
+    \symup{\Delta} \sigma_n = \left | \frac{\partial \sigma_n}{\partial E_\text{abs} } \symup{\Delta} E_\text{abs} \right | 
+\end{equation} 
 \subsection{Bestimmung der Absorptionsenergien und -konstanten von verschiedenen Materialien}
 Bei der Aufnahme der Absorptionsspektren wurde ein LiF-Kristall, eine Beschleunigungsspannung von $\SI{35}{\kilo\volt}$ und ein Strom von $\SI{1}{\milli\ampere}$
 verwendet. 
-In den jeweiligen sind Unterabschnitten sind die Intensitäten $\sfrac{\text{Imp}}{\si{\second}}$ gegen den Winkel $\theta$ aufgetragen.
+In den jeweiligen Unterabschnitten sind die Intensitäten $\sfrac{\text{Imp}}{\si{\second}}$ gegen den Winkel $\theta$ aufgetragen.
 \subsubsection{Zink}
-Bei der Durchführung mit Zink liegt die Mitte der Absorptionskante liegt ungefähr bei $\theta_\text{Zn} \approx \ang{18.75;;}$. Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
+Bei der Durchführung mit Zink liegt die Mitte der Absorptionskante ungefähr bei $\theta_\text{Zn} \approx \ang{18.75;;}$. Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
 \begin{figure}
     \centering
     \caption{Absorptionsspektrum von Zink}
@@ -107,7 +132,7 @@ Die Mitte der Absorptionskante liegt ungefähr bei $\theta_\text{Ga} \approx \an
 \end{figure}
 \begin{align*}
     E_{K, \text{abs}_\text{ Ga}}  &= \SI{10.32}{\kilo\electronvolt} \\
-    \sigma_{K_\text{Ga}}                &= \num{3.673}
+    \sigma_{K_\text{Ga}}                &= \num{3.673} \; \text{.}
 \end{align*}
 \FloatBarrier
 \subsubsection{Brom}
@@ -164,18 +189,19 @@ Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von
     E_{K, \text{abs}_\text{ Zr}}  &= \SI{17.82}{\kilo\electronvolt} \\
     \sigma_{K_\text{Zr}}         &= \num{4.28} \; \text{.}
 \end{align*}
+\FloatBarrier
 \subsection{Berechnung der Rydbergenergie}
 Um die Rydbergfrequenz zu bestimmen kann das Moysley'sche Gesetz mit n = 1 zu 
 \begin{equation}
     \sqrt{E_K} = \sqrt{Rh}z - \sqrt{Rh}\sigma_k
 \end{equation}
 umgestellt werden.
-In Regresssionsparameter nimmt die Beziehung die Gestalt
+In Regressionsparameter überführt nimmt die Beziehung die Gestalt
 \begin{equation}
     y = mz+b
 \end{equation}
 an.
-Durch Durchführung der linearen Regression lassen sich die Regresssionsparameter zu 
+Mittels Durchführung der linearen Regression lassen sich die Regressionsparameter zu 
 \begin{align*}
         m & = \left( \num{3.568(18)} \right)   \sqrt{\si{\electronvolt}} \\
         b & = \left( \num{-9.086(628)} \right) \sqrt{\si{\electronvolt}}
@@ -201,3 +227,8 @@ zu
     R_\infty = \SI{12.74(13)}{\electronvolt}
 \end{equation*}
 bestimmen.
+Die Unsicherheiten der Rydbergfrequenz und der Rydbergenergie ist
+\begin{align}
+    \symup{\Delta} R        & = \left | \frac{2m}{\symup{h}} \symup{\Delta}m \right | \\
+    \symup{\Delta} R_\infty & = \symup{h} \symup{\Delta} R
+\end{align}

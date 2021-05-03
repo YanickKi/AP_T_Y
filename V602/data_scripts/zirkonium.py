@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 theta, imp = np.genfromtxt('data_scripts/Zirkonium.dat', unpack = True)
 
 plt.plot(theta, imp,'.')
-plt.vlines(x = 9.95, ymin = -1000, ymax = 206.5, linewidth=0.25, color = 'tab:orange', label = r'$\text{Mitte der Absorptionskante}$')
+plt.vlines(x = 9.95, ymin = -1000, ymax = 206.5, color = 'tab:orange', label = r'$\text{Mitte der Absorptionskante}$')
 
 plt.ylim(101, 320)
 plt.xlabel(r'$\theta \mathbin{/} \si{\degree}$')

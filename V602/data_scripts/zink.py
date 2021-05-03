@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 theta, imp = np.genfromtxt('data_scripts/Zink.dat', unpack = True)
 
 plt.plot(theta, imp,'.')
-plt.vlines(x = 18.75, ymin = -1000, ymax = 78.5, linewidth=0.25, color = 'tab:orange', label = r'$\text{Mitte der Absorptionskante}$')
+plt.vlines(x = 18.75, ymin = -1000, ymax = 78.5, color = 'tab:orange', label = r'$\text{Mitte der Absorptionskante}$')
 
 plt.ylim(51, 125)
 plt.xlabel(r'$\theta \mathbin{/} \si{\degree}$')

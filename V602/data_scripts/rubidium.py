@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 theta, imp = np.genfromtxt('data_scripts/Rubidium.dat', unpack = True)
 
 plt.plot(theta, imp,'.')
-plt.vlines(x = 11.75, ymin = -1000, ymax = 37, linewidth=0.25, color = 'tab:orange', label = r'$\text{Mitte der Absorptionskante}$')
+plt.vlines(x = 11.75, ymin = -1000, ymax = 37, color = 'tab:orange', label = r'$\text{Mitte der Absorptionskante}$')
 
 plt.ylim(8, 65)
 plt.xlabel(r'$\theta \mathbin{/} \si{\degree}$')

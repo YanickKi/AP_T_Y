@@ -75,5 +75,3 @@ litconstant = np.array([3.566, 3.677, 3.848, 3.944, 3.999, 4.101])
 eta = Constants / litconstant * 100
 
 print(eta)
-
-np.savetxt('eta.txt', np.column_stack([eta]))
