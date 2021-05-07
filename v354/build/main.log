@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.31)  29 JAN 2021 15:00
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.31)  7 MAY 2021 16:22
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1464,30 +1464,42 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
 \openout4 = main.toc
  [2
 
-] (./content/theorie.tex) (./content/durchfuehrung.tex) (./content/auswertung.tex) (./content/diskussion.tex) [3] (./build/main.aux)
+] (./content/theorie.tex) (./content/durchfuehrung.tex) (./content/auswertung.tex
+<build/voltage.pdf, id=41, 417.7206pt x 258.0049pt>
+File: build/voltage.pdf Graphic file (type pdf)
+<use build/voltage.pdf>
+Package luatex.def Info: build/voltage.pdf  used on input line 66.
+(luatex.def)             Requested size: 417.71957pt x 258.00426pt.
+ [3] [4]
+<build/frequence.pdf, id=62, 417.7206pt x 258.0049pt>
+File: build/frequence.pdf Graphic file (type pdf)
+<use build/frequence.pdf>
+Package luatex.def Info: build/frequence.pdf  used on input line 113.
+(luatex.def)             Requested size: 417.71957pt x 258.00426pt.
+) (./content/diskussion.tex [5<./build/voltage.pdf>]) [6<./build/frequence.pdf>] (./build/main.aux)
 Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: 99C05E4356BDF7E7F7E2FB0278672CCF;3446.
+(rerunfilecheck)             Checksum: 730C6EB9AEB921D8EFC0DA7C0FE7395F;6546.
 Package rerunfilecheck Info: File `main.toc' has not changed.
-(rerunfilecheck)             Checksum: E50F2C579761BB840B01C9DFCAC42AED;521.
+(rerunfilecheck)             Checksum: 6FD8281F6A628FE98714F4744921E97D;759.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 35383 strings out of 479017
+ 35705 strings out of 479017
  100000,1977958 words of node,token memory allocated
- 670 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 dir, 5 glue, 4 kern, 1 glyph, 12 attribute, 79 glue_spec, 8 attribute_list, 1 write nodes
-   avail lists: 1:3,2:260,3:108,4:8,5:60,6:17,7:575,8:19,9:76,10:4,11:47
- 53716 multiletter control sequences out of 65536+600000
- 102 fonts using 36293707 bytes
- 110i,6n,114p,10617b,2933s stack positions out of 5000i,500n,10000p,200000b,200000s
-</home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (3 pages, 21610 bytes).
+ 783 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 dir, 2 glue, 4 kern, 1 glyph, 43 attribute, 81 glue_spec, 23 attribute_list, 1 write, 2 pdf_action nodes
+   avail lists: 1:2,2:4226,3:249,4:31,5:1558,6:38,7:4996,8:70,9:1652,10:7,11:325
+ 54010 multiletter control sequences out of 65536+600000
+ 218 fonts using 80523675 bytes
+ 110i,21n,114p,10617b,2933s stack positions out of 5000i,500n,10000p,200000b,200000s
+</home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/yanick/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
+Output written on main.pdf (6 pages, 65507 bytes).
 
-PDF statistics: 91 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 131072)
- 41 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 213 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 131072)
+ 57 words of extra memory for PDF output out of 10000 (max. 100000000)
 
