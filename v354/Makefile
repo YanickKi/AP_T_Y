@@ -4,8 +4,14 @@ all: build/main.pdf
 #build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
 #	TEXINPUTS=$$(pwd): python plot.py
 
+build/voltage.pdf: data_scripts/voltage.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/voltage.py
+
+build/frequence.pdf: data_scripts/frequence.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/frequence.py
+
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-#build/main.pdf: build/plot.pdf
+build/main.pdf: build/voltage.pdf build/frequence.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
