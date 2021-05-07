@@ -5,10 +5,12 @@ Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnit
 Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert. 
 Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib} erstellt.
 \subsection{Vorbereitungsaufgabe}
-In der Tabelle \ref{tab:hallo} sind die 
+In der Tabelle \ref{tab:hallo} sind die recherchierten Kernladungszahlen $Z$, die Energien der K-Absorptionskanten $E_K$ und die daraus 
+berechneten Winkel $\theta$ und die Abschirmkonstanten 
+$\sigma_K$ für die jeweiligen Materialien gegeben.
 \begin{table}
     \centering
-    \caption{Vergleich der berechneten Abschirmkonstanten mit den Literaturwerten}
+    \caption{Literatur- und berechnete Werte für die Vorbereitungsaufgabe}
     \label{tab:hallo}
     \begin{tabular} {S[table-format=2.0] S[table-format=2.0]  S[table-format=2.2] S[table-format=2.1] S[table-format=1.3]}
         \toprule
@@ -208,7 +210,7 @@ Mittels Durchführung der linearen Regression lassen sich die Regressionsparamet
 \end{align*}
 \begin{figure}
     \centering
-    \caption{Bestimmung der Rydbergfrequenz durch lineare Regression}
+    \caption{Lineare Regresssion zur Bestimmung der Rydbergfrequenz}
     \label{fig:rydberg}
     \includegraphics{build/rydberg.pdf}
 \end{figure}
@@ -230,5 +232,5 @@ bestimmen.
 Die Unsicherheiten der Rydbergfrequenz und der Rydbergenergie ist
 \begin{align}
     \symup{\Delta} R        & = \left | \frac{2m}{\symup{h}} \symup{\Delta}m \right | \\
-    \symup{\Delta} R_\infty & = \symup{h} \symup{\Delta} R
+    \symup{\Delta} R_\infty & = \symup{h} \symup{\Delta} R \; \text{.}
 \end{align}
