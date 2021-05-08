@@ -7,8 +7,8 @@ all: build/main.pdf
 build/Bragg.pdf: data_scripts/Bragg.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/Bragg.py
 
-build/Kupfer.pdf: data_scripts/Kupfer.py matplotlibrc header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd): python data_scripts/Kupfer.py
+build/Kupfer.pdf: data_scripts/kupfer.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/kupfer.py
 
 build/zink.pdf: data_scripts/zink.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/zink.py
