@@ -21,7 +21,7 @@ uncertainties = np.sqrt(np.diag(covariance_matrix))
 x = np.linspace(t[0], t[-1], 1000) # t  und x in µs
 
 t *= 1e6    #t in µs
-
+#
 plt.plot(x * 1e6, f(x, *params), label = 'Rekursionskurve')
 plt.plot(t, U, '.', label = 'Messwerte')
 
