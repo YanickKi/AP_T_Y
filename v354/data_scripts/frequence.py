@@ -32,5 +32,6 @@ wminus = -  R / (4 * np.pi * L) + 1 / (2 * np.pi) * unp.sqrt(1 / ( L * C) + R**2
 print(f'Der theoretische Wert für omega+ ist {wplus:.2f} ')
 print(f'Der theoretische Wert für omega- ist {wminus:.2f} ')
 print(f'Die theoretische Güte beträgt {unp.sqrt(L/C) / R:.2f}')
+print(f'Die theoretische Breit ist : {wplus - wminus}')
 
 ##

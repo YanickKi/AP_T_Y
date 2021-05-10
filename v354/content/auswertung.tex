@@ -4,7 +4,7 @@ Jegliche Fehlerrechnung wurde mit der python-Bibliothek uncertainties \cite{unce
 Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnitten angegeben.
 Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert. 
 Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib} erstellt.\\
-\subsection{Verwender Bauteile} \label{subsec:bauteile}
+\subsection{Verwendete Bauteile} \label{subsec:bauteile}
 Die Bauteile der verwendeten Schaltung haben folgende Werte:
 \begin{align*}
     L   & = \SI{16.78(9)} {\milli\henry}\\
@@ -188,7 +188,11 @@ Die thereotischen Werte für $\nu+ $ und $\nu_-$ lassen sich zu
     \nu_{+\text{, Theo}} & = \SI{27.35(4)}{\kilo\hertz}\\
     \nu_{-\text{, Theo}} & = \SI{26.71(4)}{\kilo\hertz} 
 \end{align*}
-berechnen.\\
+berechnen, was zu einer theoretischen Breite von 
+\begin{equation*}
+    b_\text{Theo} = \SI{637(4)}{\hertz}
+\end{equation*}\\
+führt. 
 Die Fehler für $q_\text{Theo}$ und $\nu_{\pm\text{, Theo}}$ lassen sich mittels Gaußscher Fehlerfortpflanzung zu
 \begin{equation}
     \symup{\Delta} q_\text{Theo} = \frac{1}{\sqrt{RC}} \sqrt{\frac{1}{4LR} \left ( \symup{\Delta} L \right )^2 + \frac{L}{R^3} \left ( \symup{\Delta} R \right )^2 
