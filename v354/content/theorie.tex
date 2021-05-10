@@ -1,16 +1,16 @@
 \section{Theorie}
 \label{sec:Theorie}
-Ziel des vorliegenden Versuches ist die Analyse des gedämpften Schwingkreises.
+Ziel des vorliegenden Versuchs ist die Analyse des gedämpften Schwingkreises.
 Dafür soll die Dämpfung, der aperiodische Grenzfall und die Frequenzabhängigkeit des RCL-Kreises untersucht werden.\\
 \\
-Der grundlegende Aufbau eines Schwingkreises enthält eine Kapazität $C$ und eine Induktivität $L$, wie in Abbildung \ref{fig:unged} zu sehen.
+Der grundlegende Aufbau eines Schwingkreises enthält eine Kapazität $C$ und eine Induktivität $L$, wie in Abbildung \ref{fig:unged} zu sehen ist.
 \begin{figure}
     \centering
-    \caption{Aufbau ungedämpfer Schwingkreis \cite{v354}} 
+    \caption{Aufbau eines ungedämpften Schwingkreises \cite{v354}} 
     \label{fig:unged}
     \includegraphics[width = 0.5\textwidth]{pics/aufbau ungedämfter schwingkreis.png}
 \end{figure}
-Da beide Komponenten Energiespeicher sind, kann durch hineinpumpen eines Energiebetrages eine Schwingung der Energie vollführt werden.
+Da beide Komponenten Energiespeicher sind, kann durch Hineinpumpen eines Energiebetrages eine Schwingung der Energie vollführt werden.
 Wird dem System ein Widerstand hinzugefügt, kommt es zu einer gedämpften Schwingung. Das lösen der Differentialgleichung
 \begin{equation}
     L \frac{\symup{d}^2 I}{\symup{d} t^2} + \frac{R}{L} \frac{\symup{d} I}{\symup{d} t} + \frac{I}{LC}=0
@@ -23,20 +23,26 @@ für den Strom des Systems, liefert für $I(t)$
 Es wird ersichtlich, dass drei Fälle vorliegen. Ist $ \sfrac{1}{LC}> \sfrac{R^2}{4 L^2}$ ergibt sich der Schwingfall
 \begin{equation}
     I(t)=A_0 e^{- 2 \pi \mu t} \cdot \cos(2 \pi \nu t + \eta) \, 
+    \label{eqn:schwing}
 \end{equation}
 dabei ist $\eta$ eine Phasenverschiebung, $\nu=\sfrac{\sqrt{\sfrac{1}{L C}-\sfrac{R^2}{4 L^2}}}{2 \pi}$ die Frequenz der Schwingung und
 \begin{equation}
     \mu=\sfrac{R}{4 \pi L}
     \label{eqn:muuh}
 \end{equation}
-der Dämpfungskoeffizient.
+der Dämpfungskoeffizient. Es lässt sich die Abklingzeit mit 
+\begin{equation}
+    T_\text{ex}=2 \frac{L}{R_\text{eff}}
+    \label{eqn:abklingzeit}
+\end{equation}
+berechnen. \\
 In dem Fall 
 \begin{equation}
     R_\text{ap}=2 \sqrt{\frac{L}{C}}
     \label{eqn:apbed}
 \end{equation}
 wird vom aperiodischen Grenzfall gesprochen. Es ergibt sich, dass $\nu = 0$ ist. Somit kommt es zu keinem Überschwinger und $I(t)$ geht am schnellsten gegen Null.\\
-Eine erzwungene Schwingung entsteht, wie in Abbildung \ref{fig:erzw} zu sehen, wenn an den RLC-Kreis eine Wechselspannung der Frequenz $\nu$ angelegt wird.
+Eine erzwungene Schwingung entsteht, wie in Abbildung \ref{fig:erzw} zu sehen ist, wenn an den RLC-Kreis eine Wechselspannung der Frequenz $\nu$ angelegt wird.
 \begin{figure}
     \centering
     \caption{Erzeugung einer erzwungenen Schwingung \cite{v354}} 
@@ -44,7 +50,7 @@ Eine erzwungene Schwingung entsteht, wie in Abbildung \ref{fig:erzw} zu sehen, w
     \includegraphics[width = 0.5\textwidth]{pics/Erzwungen.png}
 \end{figure}
 Es kommt zu einer Inhomogenität in der 
-Differentialgleichung. Bei der Berechnung der Spannung an dem Kondensator, folgt die Frequenzabhängigkeit
+Differentialgleichung. Bei der Berechnung der Spannung an dem Kondensator folgt die Frequenzabhängigkeit
 \begin{equation}
     U_\text{C}(\nu)= \frac{U_0}{\sqrt{\left(1-LC\nu^2\right)}^2 + \nu^2 R^2 C^2} \, .
     \label{eqn:frqnzabhängi}
@@ -60,9 +66,10 @@ abgefallen ist, lässt sich die Güte
     q=\frac{\nu_\text{res}}{\nu_+ - \nu_-}
     \label{eqn:güte}
 \end{equation}
-berechnen. Dabei können $\nu_+$ und $\nu_-$ berechnet werden mit
+berechnen. Dabei können $\nu_+$ und $\nu_-$ mit
 \begin{equation}
-    \nu_\pm= \pm \frac{R}{4 \pi L} + \frac{1}{2\pi} \sqrt{\frac{1}{L C} + \frac{R^2}{4 L^2}} \, .
+    \nu_\pm= \pm \frac{R}{4 \pi L} + \frac{1}{2\pi} \sqrt{\frac{1}{L C} + \frac{R^2}{4 L^2}}
     \label{eqn:omgapm}
 \end{equation}
-Angenähert ergibt sich $\nu_+ - \nu_- \approx \frac{R}{L}$ für die Differenz.
+berechnet werden.
+Angenähert ergibt sich $\nu_+ - \nu_- \approx \frac{R}{L}$.
