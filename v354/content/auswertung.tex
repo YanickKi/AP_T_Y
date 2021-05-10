@@ -4,12 +4,12 @@ Jegliche Fehlerrechnung wurde mit der python-Bibliothek uncertainties \cite{unce
 Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnitten angegeben.
 Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert. 
 Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib} erstellt.\\
+\subsection{Verwender Bauteile} \label{subsec:bauteile}
 Die Bauteile der verwendeten Schaltung haben folgende Werte:
 \begin{align*}
     L   & = \SI{16.78(9)} {\milli\henry}\\
     C   & = \SI{2.066(6)} {\nano\farad} \\
-    R_1 & = \SI{67.2(2)}  {\ohm}        \\
-    R_2 & = \SI{682(1)}   {\ohm} \; \text{.}
+    R   & = \SI{67.2(2)}  {\ohm}
 \end{align*}
 \subsection{Bestimmung des Dämpfungswiderstandes}
 In der Tabelle \ref{tab:voltage} ist die Spannung mit den dazugehörigen Zeiten aufgetragen.
@@ -151,7 +151,6 @@ sind in der Tabelle \ref{tab:frequence} aufgetragen.
     \end{tabular}
 \end{table}
 In der Abbildung \ref{fig:frequence} sind die ebend genannten Daten logarithmisch aufgetragen.
-
 \begin{figure}
     \centering
     \caption{Logarithmisch dargestellter Quotient aus der gemessenen Konendensator- und Erregerspannung}
@@ -179,4 +178,25 @@ Mit Hilfe der Beziehung $REFERENZ$ lässt sich die Güte zu
     q = 26
 \end{equation*}
 errechnen.
-Die theoretische Güte beträgt 
+Die theoretische Güte, welche sich aus den im Abschnitt \ref{subsec:bauteile} genannten Werten für die Induktivität $L$, 
+die Kapazität $C$ und dem Widerstand $R$ errechnen lässt, beträgt 
+\begin{equation*}
+    q_\text{Theo} = \num{42.41(64)} \; \text{.}
+\end{equation*}
+Die thereotischen Werte für $\nu+ $ und $\nu_-$ lassen sich zu 
+\begin{align*}
+    \nu_{+\text{, Theo}} & = \SI{27.35(4)}{\kilo\hertz}\\
+    \nu_{-\text{, Theo}} & = \SI{26.71(4)}{\kilo\hertz} 
+\end{align*}
+berechnen.\\
+Die Fehler für $q_\text{Theo}$ und $\nu_{\pm\text{, Theo}}$ lassen sich mittels Gaußscher Fehlerfortpflanzung zu
+\begin{equation}
+    \symup{\Delta} q_\text{Theo} = \frac{1}{\sqrt{RC}} \sqrt{\frac{1}{4LR} \left ( \symup{\Delta} L \right )^2 + \frac{L}{R^3} \left ( \symup{\Delta} R \right )^2 
+    + \frac{L}{4C^2R} \left ( \symup{\Delta} C \right )^2} 
+\end{equation}
+\begin{equation}
+    \begin{split}
+    \left ( \symup{\Delta} \nu_{\pm\text{, Theo}} \right )^2= {} & \left ( \symup{\Delta} L \right)^{2} \left(\frac{- \frac{R^{2}}{4 L^{3}} - \frac{1}{2 C L^{2}}}{2 \pi \sqrt{\frac{R^{2}}{4 L^{2}} + \frac{1}{C L}}} - \frac{R}{4 \pi L^{2}}\right)^{2} + \left ( \symup{\Delta} R \right)^{2} \left(\frac{1}{4 \pi L} + \frac{R}{8 \pi L^{2} \sqrt{\frac{R^{2}}{4 L^{2}} + \frac{1}{C L}}}\right)^{2} \\
+    & + \frac{\left ( \symup{\Delta} C \right)^{2}}{16 \pi^{2} C^{4} L^{2} \left(\frac{R^{2}}{4L^{2}} + \frac{1}{C L}\right)}
+    \end{split}
+\end{equation}
