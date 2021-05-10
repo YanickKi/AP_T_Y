@@ -11,7 +11,7 @@ Die Bauteile der verwendeten Schaltung haben folgende Werte:
     C   & = \SI{2.066(6)} {\nano\farad} \\
     R   & = \SI{67.2(2)}  {\ohm}
 \end{align*}
-\subsection{Bestimmung des Dämpfungswiderstandes}
+\subsection{Bestimmung des Dämpfungswiderstands bei der gedämpften Schwingung}
 In der Tabelle \ref{tab:voltage} ist die Spannung mit den dazugehörigen Zeiten aufgetragen.
 \begin{table}
     \centering
@@ -66,7 +66,7 @@ In der Tabelle \ref{tab:voltage} ist die Spannung mit den dazugehörigen Zeiten 
     \includegraphics{build/voltage.pdf}
 \end{figure}
 Um den Dämpfungswiderstand zu bestimmen, ist es von Nöten eine Ausgleichsrechung mit dem $\symup{e}$-Term der Funktion
-$REFERENZ$ durchzuführen.
+\eqref{eqn:schwing} durchzuführen.
 Die Parameter der Regressionsfunktion
 \begin{equation}
     U = U_0 \symup{e}^{-2\pi\mu t}
@@ -81,12 +81,12 @@ Mit der Beziehung
 \begin{equation}
     R_\text{eff} = 4\pi\mu L 
 \end{equation}
-lässt sich der Dämpfungswiderstand R zu
+lässt sich der Dämpfungswiderstand $R_\text{eff}$ zu
 \begin{equation*}
     R_\text{eff} = \SI{131.26(109)}{\ohm}
 \end{equation*}
 bestimmen.
-Aus dem ebend berechneten Dämpfungswiderstand und der Gleichung $REFERENZ$ kann die Abklindauer zu 
+Aus dem eben berechneten Dämpfungswiderstand und der Gleichung \eqref{eqn:abklingzeit} kann die Abklindauer zu 
 \begin{equation*}
     T_\text{ex} = \SI{255.67(161)}{\micro\second}
 \end{equation*}
@@ -100,18 +100,18 @@ Ebenfalls mittels Gaußscher Fehlerfortpflanzung ergibt sich der Fehler der Abkl
     \symup{\Delta} T_\text{ex} = \frac{2}{R_\text{eff}} \sqrt{\left( \symup{\Delta} L \right)^2 + \frac{L}{R_\text{eff}^2} \left( \symup{\Delta} R_\text{eff}  \right)^2 } \; \text{.}
 \end{equation}
 \subsection{Bestimmung des Dämpfungswiderstandes bei dem aperiodischen Grenzfall}
-Während der Messung wurd ein Dämpfungswiderstand, bei dem der aperiodische Grenzfall eintritt, von
+Mit Hilfe deer Messung wurde ein Dämpfungswiderstand, bei dem der aperiodische Grenzfall eintritt, von
 \begin{equation*}
     R_\text{ap} = \SI{4.4}{\kilo\ohm}
 \end{equation*}
-gemessen.
+ermittelt.
 \subsection{Bestimmung der Breite der Resonanzkurve}
 Die gemessenen Werte für die Frequenz $\nu$, die Erregerspannung
 $U_\text{Err}$, die Kondensatorspannung $U_C$ und der daraus berechnete Quotient $U = \sfrac{U_C}{U_\text{Err}}$
 sind in der Tabelle \ref{tab:frequence} aufgetragen.
 \begin{table}
     \centering
-    \caption{Quotient aus der gemessenen Konendensator- und Erregerspannung}
+    \caption{Quotient aus der gemessenen Kondensator- und Erregerspannung}
     \label{tab:frequence}
     \begin{tabular} {S[table-format=2.2] S[table-format=1.2] S[table-format=1.2] S[table-format=1.2]}
         \toprule
@@ -150,7 +150,7 @@ sind in der Tabelle \ref{tab:frequence} aufgetragen.
         \bottomrule
     \end{tabular}
 \end{table}
-In der Abbildung \ref{fig:frequence} sind die ebend genannten Daten logarithmisch aufgetragen.
+In der Abbildung \ref{fig:frequence} sind die eben genannten Daten logarithmisch aufgetragen.
 \begin{figure}
     \centering
     \caption{Logarithmisch dargestellter Quotient aus der gemessenen Konendensator- und Erregerspannung}
@@ -163,7 +163,7 @@ In der Abbildung \ref{fig:frequence} sind die ebend genannten Daten logarithmisc
     \label{fig:resonance}
     \includegraphics{build/resonance.pdf}
 \end{figure}
-\noindent Die Frequenzen $\nu_+ $und $\nu_-$, bei welcher die Spannung auf $\sfrac{U_\text{max}}{\sqrt{2}}$ abgefallen ist, liegen bei
+\noindent Die Frequenzen $\nu_+ $und $\nu_-$, bei denen die Spannung auf $\sfrac{U_\text{max}}{\sqrt{2}}$ abgefallen ist, liegen bei
 \begin{align*}
     \nu_+ &= \SI{26.5}{\kilo\hertz} \\
     \nu_+ &= \SI{25.5}{\kilo\hertz} \; \text{,}
@@ -173,7 +173,7 @@ wodurch sich eine Breite von
     b = \SI{1}{\kilo\hertz}
 \end{equation*}
 ergibt.
-Mit Hilfe der Beziehung $REFERENZ$ lässt sich die Güte zu 
+Mit Hilfe der Beziehung \eqref{eqn:güte} lässt sich die Güte zu 
 \begin{equation*}
     q = 26
 \end{equation*}
@@ -183,7 +183,7 @@ die Kapazität $C$ und dem Widerstand $R$ errechnen lässt, beträgt
 \begin{equation*}
     q_\text{Theo} = \num{42.41(64)} \; \text{.}
 \end{equation*}
-Die thereotischen Werte für $\nu+ $ und $\nu_-$ lassen sich zu 
+Die thereotischen Werte für $\nu_+ $ und $\nu_-$ lassen sich zu 
 \begin{align*}
     \nu_{+\text{, Theo}} & = \SI{27.35(4)}{\kilo\hertz}\\
     \nu_{-\text{, Theo}} & = \SI{26.71(4)}{\kilo\hertz} 
@@ -196,13 +196,13 @@ führt.
 Die Fehler für $q_\text{Theo}$ und $\nu_{\pm\text{, Theo}}$ lassen sich mittels Gaußscher Fehlerfortpflanzung zu
 \begin{equation}
     \symup{\Delta} q_\text{Theo} = \frac{1}{\sqrt{RC}} \sqrt{\frac{1}{4LR} \left ( \symup{\Delta} L \right )^2 + \frac{L}{R^3} \left ( \symup{\Delta} R \right )^2 
-    + \frac{L}{4C^2R} \left ( \symup{\Delta} C \right )^2} \; \text{.}
+    + \frac{L}{4C^2R} \left ( \symup{\Delta} C \right )^2} \; \text{,}
 \end{equation}
 \begin{equation}
     \begin{split}
     \left ( \symup{\Delta} \nu_{+\text{, Theo}} \right )^2= {} & \left ( \symup{\Delta} L \right)^{2} \left(\frac{- \frac{R^{2}}{4 L^{3}} - \frac{1}{2 C L^{2}}}{2 \pi \sqrt{\frac{R^{2}}{4 L^{2}} + \frac{1}{C L}}} - \frac{R}{4 \pi L^{2}}\right)^{2} + \left ( \symup{\Delta} R \right)^{2} \left(\frac{1}{4 \pi L} + \frac{R}{8 \pi L^{2} \sqrt{\frac{R^{2}}{4 L^{2}} + \frac{1}{C L}}}\right)^{2} \\
     & + \frac{\left ( \symup{\Delta} C \right)^{2}}{16 \pi^{2} C^{4} L^{2} \left(\frac{R^{2}}{4L^{2}} + \frac{1}{C L}\right)}
-    \end{split}
+    \end{split} \; \text{,}
 \end{equation}
 und 
 \begin{equation}
@@ -211,3 +211,4 @@ und
     & + \frac{\left ( \symup{\Delta} C \right)^{2}}{16 \pi^{2} C^{4} L^{2} \left(\frac{R^{2}}{4 L^{2}} + \frac{1}{C L}\right)}
     \end{split}
 \end{equation}
+errechnen.
