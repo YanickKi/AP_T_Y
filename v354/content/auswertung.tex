@@ -192,11 +192,18 @@ berechnen.\\
 Die Fehler für $q_\text{Theo}$ und $\nu_{\pm\text{, Theo}}$ lassen sich mittels Gaußscher Fehlerfortpflanzung zu
 \begin{equation}
     \symup{\Delta} q_\text{Theo} = \frac{1}{\sqrt{RC}} \sqrt{\frac{1}{4LR} \left ( \symup{\Delta} L \right )^2 + \frac{L}{R^3} \left ( \symup{\Delta} R \right )^2 
-    + \frac{L}{4C^2R} \left ( \symup{\Delta} C \right )^2} 
+    + \frac{L}{4C^2R} \left ( \symup{\Delta} C \right )^2} \; \text{.}
 \end{equation}
 \begin{equation}
     \begin{split}
-    \left ( \symup{\Delta} \nu_{\pm\text{, Theo}} \right )^2= {} & \left ( \symup{\Delta} L \right)^{2} \left(\frac{- \frac{R^{2}}{4 L^{3}} - \frac{1}{2 C L^{2}}}{2 \pi \sqrt{\frac{R^{2}}{4 L^{2}} + \frac{1}{C L}}} - \frac{R}{4 \pi L^{2}}\right)^{2} + \left ( \symup{\Delta} R \right)^{2} \left(\frac{1}{4 \pi L} + \frac{R}{8 \pi L^{2} \sqrt{\frac{R^{2}}{4 L^{2}} + \frac{1}{C L}}}\right)^{2} \\
+    \left ( \symup{\Delta} \nu_{+\text{, Theo}} \right )^2= {} & \left ( \symup{\Delta} L \right)^{2} \left(\frac{- \frac{R^{2}}{4 L^{3}} - \frac{1}{2 C L^{2}}}{2 \pi \sqrt{\frac{R^{2}}{4 L^{2}} + \frac{1}{C L}}} - \frac{R}{4 \pi L^{2}}\right)^{2} + \left ( \symup{\Delta} R \right)^{2} \left(\frac{1}{4 \pi L} + \frac{R}{8 \pi L^{2} \sqrt{\frac{R^{2}}{4 L^{2}} + \frac{1}{C L}}}\right)^{2} \\
     & + \frac{\left ( \symup{\Delta} C \right)^{2}}{16 \pi^{2} C^{4} L^{2} \left(\frac{R^{2}}{4L^{2}} + \frac{1}{C L}\right)}
+    \end{split}
+\end{equation}
+und 
+\begin{equation}
+    \begin{split}
+    \left ( \symup{\Delta} \nu_{-\text{, Theo}} \right )^2= {} & \left ( \symup{\Delta} L \right)^{2} \left(\frac{- \frac{R^{2}}{4 L^{3}} - \frac{1}{2 C L^{2}}}{2 \pi \sqrt{\frac{R^{2}}{4 L^{2}} + \frac{1}{C L}}} + \frac{R}{4 \pi L^{2}}\right)^{2} + \left ( \symup{\Delta} R \right)^{2} \left(- \frac{1}{4 \pi L} + \frac{R}{8 \pi L^{2} \sqrt{\frac{R^{2}}{4 L^{2}} + \frac{1}{C L}}}\right)^{2} \\
+    & + \frac{\left ( \symup{\Delta} C \right)^{2}}{16 \pi^{2} C^{4} L^{2} \left(\frac{R^{2}}{4 L^{2}} + \frac{1}{C L}\right)}
     \end{split}
 \end{equation}

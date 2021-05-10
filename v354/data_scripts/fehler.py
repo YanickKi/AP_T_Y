@@ -19,7 +19,7 @@ def error(f, err_vars=None):
 
 R, C, L = sympy.var('R C L')
 
-f = R / (4 * sympy.pi * L) + 1 / (2 * sympy.pi) * sympy.sqrt(1 / (L * C) + R**2 / (4 * L**2))
+f = - R / (4 * sympy.pi * L) + 1 / (2 * sympy.pi) * sympy.sqrt(1 / (L * C) + R**2 / (4 * L**2))
 
 print(error(f))
 
