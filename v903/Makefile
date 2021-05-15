@@ -13,8 +13,14 @@ build/middle.pdf: data_scripts/middle.py matplotlibrc header-matplotlib.tex | bu
 
 build/tiny.pdf: data_scripts/tiny.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/tiny.py	
+
+build/velocity.pdf: data_scripts/velocity.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/velocity.py
+
+build/intensitiy.pdf: data_scripts/intensitiy.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/intensitiy.py			
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/big.pdf build/middle.pdf build/tiny.pdf
+build/main.pdf: build/big.pdf build/middle.pdf build/tiny.pdf build/velocity.pdf build/intensitiy.pdf
  
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

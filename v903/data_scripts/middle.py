@@ -12,7 +12,7 @@ def doppler(angle):
     return np.pi/2 - np.arcsin(np.sin(rad(angle)) * 1800/2700) 
 
 def flowvelocity(angle, shift):
-    return shift * 343.2 / (2 * 2e6 * np.cos(rad(angle)))
+    return shift * 343.2 / (2 * 2e6 * np.cos(angle))
 
 doppler1 = doppler(15)
 doppler2 = doppler(30)
@@ -22,9 +22,9 @@ doppler3 = doppler(60)
 flowvelocity15 = flowvelocity(doppler1, fifteen)  * 1e3   #mm/s
 flowvelocity30 = flowvelocity(doppler2, thirty)   * 1e3   #mm/s
 flowvelocity60 = flowvelocity(doppler3, sixty)    * 1e3   #mm/s
-shiftcos15 = fifteen/np.cos(rad(doppler1))
-shiftcos30 = thirty/np.cos(rad(doppler2))
-shiftcos60 = sixty/np.cos(rad(doppler3))
+shiftcos15 = fifteen/np.cos(doppler1)
+shiftcos30 = thirty/np.cos(doppler2)
+shiftcos60 = sixty/np.cos(doppler3)
 
 np.savetxt('data_scripts/middle_velocity.txt', np.column_stack([fifteen, flowvelocity15, thirty, flowvelocity30, sixty ,flowvelocity60]), fmt = '%.3f')
 
