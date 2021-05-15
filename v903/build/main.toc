@@ -1,9 +1,0 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {ngerman}{}
-\contentsline {section}{\numberline {1}Theorie}{3}{section.1}%
-\contentsline {section}{\numberline {2}Durchführung}{3}{section.2}%
-\contentsline {section}{\numberline {3}Auswertung}{3}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Bestimmung der Strömungsgeschwindigkeit der Dopplerflüssgkeit}{3}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Diskussion}{7}{section.4}%
-\contentsline {section}{\nonumberline Literatur}{7}{section*.9}%
-\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -5,16 +5,15 @@ Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnit
 ben. Allgemeine Rechnungen wurden mit der python-Bibliothek numpy [4] automatisiert.
 Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib [2]
 erstellt.
-\subsection{Bestimmung der Strömungsgeschwindigkeit der Dopplerflüssgkeit}
+\subsection{Bestimmung der Strömungsgeschwindigkeit der Dopplerflüssgkeit} \label{sub:velocity}
 Mit Hilfe der Gleichung $REFERENZ$ lässt sich die Strömungsgeschwindigkeit der Dopplerflüssgkeit bestimmen.
-Zu den verschiedenen Rohrdurchmessern ($D_\text{dick} = \SI{16}{\milli\metre}$, $D_\text{mittel} = \SI{10}{\milli\metre}$,
+Zu den verschiedenen Rohrdurchmessern ($D_\text{groß} = \SI{16}{\milli\metre}$, $D_\text{mittel} = \SI{10}{\milli\metre}$,
 $D_\text{klein} = \SI{7}{\milli\metre}$) sind die zu den Umdrehungen gemessenen Frequenzverschiebungen $\symup{\Delta} \nu$,
 und die daraus errechneten Strömungsgeschwindigkeiten  in den Tabellen \ref{tab:big}, \ref{tab:middle} und \ref{tab:tiny} aufgetragen.
-
 \begin{table}
     \centering
     \caption{Gemessene Frequenzverschiebungen
-            und die daraus errechneten Strömungsgeschwindigkeiten ($D_\text{dick} = \SI{16}{\milli\metre}$)}
+            und die daraus errechneten Strömungsgeschwindigkeiten ($D_\text{groß} = \SI{16}{\milli\metre}$)}
     \label{tab:big}
     \begin{tabular}{S[table-format=4.0]
                     S[table-format=2.0] S[table-format=1.3] 
@@ -31,11 +30,11 @@ und die daraus errechneten Strömungsgeschwindigkeiten  in den Tabellen \ref{tab
         {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\milli\meter\second\tothe{-1}}$} &
         {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\milli\meter\second\tothe{-1}}$} \\
         \midrule
-        5400 & 49 & 4.205 & 73  &  6.265 & 110 & 9.439 \\
-        6200 & 61 & 5.235 & 98  &  8.410 & 146 & 12.529\\
-        7000 & 73 & 6.265 & 116 & 9.955  & 183 & 15.704\\
-        7800 & 85 & 7.295 & 122 & 10.470 & 208 & 17.849\\
-        8400 & 98 & 8.411 & 159 & 13.645 & 250 & 21.453\\
+        5400 & 49 & 24.366 & 73  & 18.790 & 110 & 16.347\\
+        6200 & 61 & 30.333 & 98  & 25.225 & 146 & 21.697\\
+        7000 & 73 & 36.300 & 116 & 29.858 & 183 & 27.196\\
+        7800 & 85 & 42.267 & 122 & 31.403 & 208 & 30.911\\
+        8400 & 98 & 48.731 & 159 & 40.927 & 250 & 37.152\\
     \end{tabular}
 \end{table}
 \begin{table}
@@ -58,11 +57,11 @@ und die daraus errechneten Strömungsgeschwindigkeiten  in den Tabellen \ref{tab
         {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\milli\meter\second\tothe{-1}}$} &
         {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\milli\meter\second\tothe{-1}}$} \\
         \midrule
-        5400 & 98  & 8.411 &  159 &  13.645 &  317 &  27.202 \\
-        6200 & 122 & 10.471 &  208 & 17.851 &  354 &  30.377 \\
-        7000 & 140 & 12.016 &  256 & 21.970 &  476 &  40.846 \\
-        7800 & 171 & 14.676 &  330 & 28.321 &  610 &  52.345 \\
-        8400 & 195 & 16.736 &  366 & 31.410 &  700 &  60.068 \\
+        5400 & 98  & 48.731 &  159 & 40.927 &  317 &  47.109 \\
+        6200 & 122 & 60.666 &  208 & 53.539 &  354 &  52.608 \\
+        7000 & 140 & 69.616 &  256 & 65.894 &  476 &  70.738 \\
+        7800 & 171 & 85.031 &  330 & 84.942 &  610 &  90.652 \\
+        8400 & 195 & 96.965 &  366 & 94.208 &  700 &  104.027 \\
     \end{tabular}
 \end{table}
 \begin{table}
@@ -85,16 +84,19 @@ und die daraus errechneten Strömungsgeschwindigkeiten  in den Tabellen \ref{tab
         {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\milli\meter\second\tothe{-1}}$} &
         {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\milli\meter\second\tothe{-1}}$} \\
         \midrule
-        5400 & 171 & 14.676 & 300 & 25.746 & 627 & 53.804  \\
-        6200 & 220 & 18.882 & 427 & 36.645 & 720 & 61.785  \\
-        7000 & 262 & 22.486 & 500 & 42.910 & 848 & 72.769  \\
-        7800 & 317 & 27.207 & 635 & 54.496 & 1100& 94.393  \\
-        8400 & 366 & 31.412 & 745 & 63.936 & 1324& 113.615  \\
+        5400 & 171 & 85.031  & 300 & 77.220  & 627 & 93.178   \\
+        6200 & 220 & 109.397 & 427 & 109.910 & 720 & 106.999  \\
+        7000 & 262 & 130.282 & 500 & 128.700 & 848 & 126.021  \\
+        7800 & 317 & 157.631 & 635 & 163.449 & 1100& 163.471  \\
+        8400 & 366 & 181.997 & 745 & 191.763 & 1324& 196.760  \\
     \end{tabular}
 \end{table}
+In den Abbildungen \ref{fig:big}, \ref{fig:middle} und \ref{fig:tiny} sind für die jeweiligen Prismenwinkel bzw. Dopplerwinkel der Quotient
+$\sfrac{\symup{\Delta} \nu}{\cos ( \alpha)}$ aufgetragen.
+Es ist zu beobachten, dass der Quotient eine konstante Steigung hat und die Geraden der jeweiligen Winkel übereinander liegen.
 \begin{figure}
     \centering
-    \caption(Quotient gegen die Strömungsgeschwindigkeit des dicken Rohrs)
+    \caption(Quotient gegen die Strömungsgeschwindigkeit des großen Rohrs)
     \label{fig:big}
     \includegraphics{build/big.pdf}
 \end{figure}
@@ -110,3 +112,58 @@ und die daraus errechneten Strömungsgeschwindigkeiten  in den Tabellen \ref{tab
     \label{fig:tiny}
     \includegraphics{build/tiny.pdf}
 \end{figure}
+\FloatBarrier
+\subsection{Bestimmung des Strömungsprofils} \label{sec:profile}
+Die Strömungsgeschwindigkeiten lassen sich erneut gemäß der Beziehung $REFERENZ$ ermitteln. 
+In der Tabelle \ref{tab:profile} sind die gemessenen Frequenzverschiebungen und Streuintesitäten mit den errechneten Strömungsgeschwindigkeiten in Abhängigkeit
+der Tiefe aufgezeichnet.
+Die dazu erstellten Abbildungen \ref{fig:velocity} und \ref{fig:intensity} stellen einerseits das Geschwindigkeitsprofil und die Streuintesitäten in Abhängigkeit
+der Messtiefe graphisch dar. Dabei sind die Messdaten bei den beiden Pump-Drehzahlen $6110 \, \text{rpm}$ und $5040 \, \text{rpm}$ aufgetragen. 
+\begin{table}
+    \centering
+    \caption{Gemessene Frequenzverschiebungen und Streuintesität mit den errechneten Strömungsgeschwindigkeiten bei variierter Tiefe}
+    \label{tab:profile}
+    \begin{tabular}{S[table-format=2.1]
+                    S[table-format=3.0] S[table-format=2.0] S[table-format = 2.3]
+                    S[table-format=2.0] S[table-format=2.0] S[table-format = 2.3]}
+        \toprule 
+        &
+        \multicolumn{3}{c}{$\num{6110} \, \text{rpm}$} &
+        \multicolumn{3}{c}{$\num{5040} \, \text{rpm}$} \\
+        \cmidrule(lr){2-4} \cmidrule(lr){5-7}
+        {$d \mathbin{/} \si{\micro\second}$}&
+        {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$I$} & {$v \mathbin{/} \si{\milli\metre\second\tothe{-1}}$} &
+        {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$I$} & {$v \mathbin{/} \si{\milli\metre\second\tothe{-1}}$} \\
+        \midrule
+        13   & 0   & 5  & 0     & 0  & 10 & 0      \\
+        13.5 & 0   & 12 & 0     & 0  & 10 & 0      \\
+        14   & 0   & 22 & 0     & 0  & 10 & 0      \\
+        14.5 & 0   & 27 & 0     & 0  & 20 & 0      \\
+        15   & 0   & 45 & 0     & 0  & 26 & 0      \\
+        15.5 & 146 & 70 & 72.6  & 0  & 25 & 0      \\
+        16   & 153 & 68 & 76.081& 0  & 25 & 0      \\
+        16.5 & 143 & 70 & 71.108& 0  & 20 & 0      \\
+        17   & 143 & 56 & 71.108& 0  & 18 & 0      \\
+        17.5 & 0   & 30 & 0     & 0  & 29 & 0      \\
+        18   & 0   & 5  & 0     & 98 & 60 & 48.731 \\
+        18.5 & 0   & 19 & 0     & 85 & 60 & 42.267 \\
+        19   & 0   & 23 & 0     & 85 & 60 & 42.267 \\
+    \end{tabular}
+\end{table}
+\begin{figure}
+    \centering
+    \caption(Geschwindigkeitsprofil bei 2 verschiedenen Drehzahlen)
+    \label{fig:velocity}
+    \includegraphics{build/velocity.pdf}
+\end{figure}
+\begin{figure}
+    \centering
+    \caption(Streuintesitäten bei 2 verschiedenen Drehzahlen)
+    \label{fig:intensity}
+    \includegraphics{build/intensity.pdf}
+\end{figure}
+Normalerweise würde man ein Strömungprofil erwarten, welches nah an der Rohrwand aufgrund der Viskosität der Flüssigkeit langsamer wäre und zu der Mitte des 
+Rohrs hin höhere Geschwindigkeiten aufweist.
+Jedoch lässt sich dort nicht solch eine Struktur aufweisen, da es trotz den mutmaßlich richtigen Tiefen zu keiner Frequenzverschiebungen kam.
+Somit lässt sich bei diesen Tiefen eine Strömungsgeschwindigkeit von $\SI{0}{\metre\per\second}$ errechnen.
+Die Ursaschen für diese Messwerte werden im weitern Verlauf in Abschnitt \ref{sec:Diskussion} disskutiert.
