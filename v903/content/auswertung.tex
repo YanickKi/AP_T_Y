@@ -1,12 +1,22 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Allgemeine Rechnungen wurden mit der python-Bibliothek numpy [4] automatisiert.
-Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib [2]
+Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert.
+Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib}
 erstellt.
+\subsection{Bestimmung der Dopplerwinkel}
+Bevor die gemessenen Daten ausgewertet werden können, müssen die Dopplerwinkel $\alpha$ mit den 
+Prismawinkeln $\theta$ gemäß \eqref{eqn:wink} berechnet werden.
+Diese lassen sich zu
+\begin{align*}
+    \theta = \ang{15;;} & \to \alpha = \ang{80.06;;} \\
+    \theta = \ang{30;;} & \to \alpha = \ang{70.53;;} \\
+    \theta = \ang{45;;} & \to \alpha = \ang{54.74;;}
+\end{align*}
+errechnen.
 \subsection{Bestimmung der Strömungsgeschwindigkeit der Dopplerflüssgkeit} \label{sub:velocity}
-Mit Hilfe der Gleichung $REFERENZ$ lässt sich die Strömungsgeschwindigkeit der Dopplerflüssgkeit bestimmen.
+Mit Hilfe der Gleichung \eqref{eqn:geschw} lässt sich die Strömungsgeschwindigkeit der Dopplerflüssigkeit bestimmen.
 Zu den verschiedenen Rohrdurchmessern ($D_\text{groß} = \SI{16}{\milli\metre}$, $D_\text{mittel} = \SI{10}{\milli\metre}$,
-$D_\text{klein} = \SI{7}{\milli\metre}$) sind die zu den Umdrehungen gemessenen Frequenzverschiebungen $\symup{\Delta} \nu$,
+$D_\text{klein} = \SI{7}{\milli\metre}$) sind die zu den Umdrehungen gemessenen Frequenzverschiebungen $\symup{\Delta} \nu$
 und die daraus errechneten Strömungsgeschwindigkeiten  in den Tabellen \ref{tab:big}, \ref{tab:middle} und \ref{tab:tiny} aufgetragen.
 \begin{table}
     \centering
@@ -89,33 +99,34 @@ und die daraus errechneten Strömungsgeschwindigkeiten  in den Tabellen \ref{tab
         8400 & 366 & 181.997 & 745 & 191.763 & 1324& 196.760  \\
     \end{tabular}
 \end{table}
-In den Abbildungen \ref{fig:big}, \ref{fig:middle} und \ref{fig:tiny} sind für die jeweiligen Prismenwinkel bzw. Dopplerwinkel der Quotient
+In den Abbildungen \ref{fig:big}, \ref{fig:middle} und \ref{fig:tiny} sind für die jeweiligen Prismawinkel bzw. Dopplerwinkel der Quotient
 $\sfrac{\symup{\Delta} \nu}{\cos ( \alpha)}$ aufgetragen.
 Es ist zu beobachten, dass der Quotient eine konstante Steigung hat und die Geraden der jeweiligen Winkel übereinander liegen.
+Somit lässt sich sagen, dass das Verhältnis für jeden Dopplerwinkel und die damit errechnete Geschwindigkeit konstant bleibt.
 \begin{figure}
     \centering
-    \caption(Quotient gegen die Strömungsgeschwindigkeit des großen Rohrs)
+    \caption{Quotient gegen die Strömungsgeschwindigkeit des großen Rohrs}
     \label{fig:big}
     \includegraphics{build/big.pdf}
 \end{figure}
 \begin{figure}
     \centering
-    \caption(Quotient gegen die Strömungsgeschwindigkeit des mittleren Rohrs)
+    \caption{Quotient gegen die Strömungsgeschwindigkeit des mittleren Rohrs}
     \label{fig:middle}
     \includegraphics{build/middle.pdf}
 \end{figure}
 \begin{figure}
     \centering
-    \caption(Quotient gegen die Strömungsgeschwindigkeit des dünnen Rohrs)
+    \caption{Quotient gegen die Strömungsgeschwindigkeit des dünnen Rohrs}
     \label{fig:tiny}
     \includegraphics{build/tiny.pdf}
 \end{figure}
 \FloatBarrier
 \subsection{Bestimmung des Strömungsprofils} \label{sec:profile}
-Die Strömungsgeschwindigkeiten lassen sich erneut gemäß der Beziehung $REFERENZ$ ermitteln. 
-In der Tabelle \ref{tab:profile} sind die gemessenen Frequenzverschiebungen und Streuintesitäten mit den errechneten Strömungsgeschwindigkeiten in Abhängigkeit
+Die Strömungsgeschwindigkeiten lassen sich erneut gemäß der Beziehung \eqref{eqn:geschw} ermitteln. 
+In der Tabelle \ref{tab:profile} sind die gemessenen Frequenzverschiebungen und Streuintensitäten mit den errechneten Strömungsgeschwindigkeiten in Abhängigkeit
 der Tiefe aufgezeichnet.
-Die dazu erstellten Abbildungen \ref{fig:velocity} und \ref{fig:intensity} stellen einerseits das Geschwindigkeitsprofil und die Streuintesitäten in Abhängigkeit
+Die dazu erstellten Abbildungen \ref{fig:velocity} und \ref{fig:intensity} stellen einerseits das Geschwindigkeitsprofil und die Streuintensitäten in Abhängigkeit
 der Messtiefe graphisch dar. Dabei sind die Messdaten bei den beiden Pump-Drehzahlen $6110 \, \text{rpm}$ und $5040 \, \text{rpm}$ aufgetragen. 
 \begin{table}
     \centering
@@ -150,18 +161,18 @@ der Messtiefe graphisch dar. Dabei sind die Messdaten bei den beiden Pump-Drehza
 \end{table}
 \begin{figure}
     \centering
-    \caption(Geschwindigkeitsprofil bei 2 verschiedenen Drehzahlen)
+    \caption{Geschwindigkeitsprofil bei $5040 \, \text{rpm}$ und $6110 \, \text{rpm}$}
     \label{fig:velocity}
     \includegraphics{build/velocity.pdf}
 \end{figure}
 \begin{figure}
     \centering
-    \caption(Streuintesitäten bei 2 verschiedenen Drehzahlen)
+    \caption{Streuintensitäten bei $5040 \, \text{rpm}$ und $6110 \, \text{rpm}$}
     \label{fig:intensity}
     \includegraphics{build/intensity.pdf}
 \end{figure}
-Normalerweise würde man ein Strömungprofil erwarten, welches nah an der Rohrwand aufgrund der Viskosität der Flüssigkeit langsamer wäre und zu der Mitte des 
+Normalerweise wird ein Strömungprofil erwartet, welches nah an der Rohrwand aufgrund der Viskosität der Flüssigkeit langsamer wäre und zu der Mitte des 
 Rohrs hin höhere Geschwindigkeiten aufweist.
-Jedoch lässt sich dort nicht solch eine Struktur aufweisen, da es trotz den mutmaßlich richtigen Tiefen zu keiner Frequenzverschiebungen kam.
+Jedoch lässt sich hier nicht solch eine Struktur aufweisen, da es trotz den mutmaßlich richtigen Tiefen zu keiner Frequenzverschiebungen kam.
 Somit lässt sich bei diesen Tiefen eine Strömungsgeschwindigkeit von $\SI{0}{\metre\per\second}$ errechnen.
-Die Ursaschen für diese Messwerte werden im weitern Verlauf in Abschnitt \ref{sec:Diskussion} disskutiert.
+Die Ursachen für diese Messwerte werden im weitern Verlauf in Abschnitt \ref{sec:Diskussion} diskutiert.
