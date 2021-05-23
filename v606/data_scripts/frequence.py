@@ -1,11 +1,15 @@
 import numpy as np 
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
+from scipy.optimize import curve_fit
 
 w, UE = np.genfromtxt('data_scripts/frequence.txt', unpack = True)
 
 UE /= 10 #Verstärkung rausnehmen
 
 U =  UE/0.01
+
+np.savetxt('data_scripts/tablefrquence.txt', np.column_stack([w, UE, U]), fmt=['%.2f', '%.4f', '%.2f'])
+
 
 plt.plot(w, U, '.', label = 'Messwerte')
 

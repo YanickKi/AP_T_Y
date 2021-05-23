@@ -7,8 +7,10 @@ all: build/main.pdf
 build/frequence.pdf: data_scripts/frequence.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/frequence.py
 
+build/frequencefine.pdf: data_scripts/frequencefine.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/frequencefine.py
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/frequence.pdf
+build/main.pdf: build/frequence.pdf build/frequencefine.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

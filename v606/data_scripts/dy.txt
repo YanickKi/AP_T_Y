@@ -1,0 +1,4 @@
+#Uohne \ mV     Rohne\5mOhm     Umit\mv     Rohne\5mOhm 
+3.5             440             7.5         113
+3.4             440             7.5         120
+3.5             440             8           90
