@@ -107,9 +107,65 @@ Der Fehler Des Elastizitätsmoduls ergibt sich nach Gauß mit
 \end{equation*}
 \FloatBarrier
 \subsection{Bestimmung des Elastizitätsmodul mit beidseitiger Einspannung}
+In der Tabelle \ref{tab:beidseitigrechts} sind die gemessenen Durchbiegungen $D$ für gemessene Weglängen $x_R$, welche sich auf 
+die Reichte Seite beziehen, aufgeführt.
+In der Tabelle \ref{tab:beidseitiglinks} sind die Messwerte analog zur ebend genannten Tabelle für die linke Seite aufgelistet.
+
+\begin{table}
+  \centering
+  \caption{Messwerte bei beidseitiger Einspannung für {$0 \leq x \leq \sfrac{L}{2}$}}
+  \label{tab:beidseitigrechts}
+  \begin{tabular}{S[table-format=2.1] S[table-format=1.3] S[table-format=1.3] S[table-format=1.2] S[table-format=1.2]}
+  \toprule
+  {$x_\text{R} \mathbin{/} \si{\centi\metre}$} & {$D_1 \mathbin{/} \si{\milli\metre}$} & {$D_2 \mathbin{/} \si{\milli\metre}$}
+  & {$D_3 \mathbin{/} \si{\milli\metre}$} & {$D_4 \mathbin{/} \si{\milli\metre}$} \\
+  \midrule
+  5    & 0.03 & 0.04 & 0.38  & 0.06 \\
+  10   & 0.09 & 0.12 & 0.65  & 0.22 \\
+  15   & 0.17 & 0.17 & 0.93  & 0.41 \\
+  20   & 0.26 & 0.2  & 1.12  & 0.59 \\
+  25   & 0.35 & 0.26 & 1.15  & 0.75 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+\begin{table}
+  \centering
+  \caption{Messwerte bei beidseitiger Einspannung für {$\sfrac{L}{2} \leq x \leq L$}}
+  \label{tab:beidseitiglinks}
+  \begin{tabular}{S[table-format=2.1] S[table-format=1.3] S[table-format=1.3] S[table-format=1.2] S[table-format=1.2]}
+  \toprule
+  {$x_\text{L} \mathbin{/} \si{\centi\metre}$} & {$D_1 \mathbin{/} \si{\milli\metre}$} & {$D_2 \mathbin{/} \si{\milli\metre}$}
+  & {$D_3 \mathbin{/} \si{\milli\metre}$} & {$D_4 \mathbin{/} \si{\milli\metre}$} \\
+  \midrule
+  55   & 0.02 & 0.07 & 0.03  & 0.12 \\
+  50   & 0.14 & 0.14 & 0.39  & 0.25 \\
+  45   & 0.26 & 0.22 & 0.71  & 0.46 \\
+  40   & 0.35 & 0.25 & 0.98  & 0.66 \\
+  35   & 0.36 & 0.27 & 1.1   & 0.81 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
 \begin{figure}
   \centering
   \includegraphics{build/probe1double.pdf}
   \caption{Messwerte und Regressionsgerade der Probe 1}
   \label{fig:probe1double}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics{build/probe2double.pdf}
+  \caption{Messwerte und Regressionsgerade der Probe 2}
+  \label{fig:probe2double}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics{build/probe3double.pdf}
+  \caption{Messwerte und Regressionsgerade der Probe 3}
+  \label{fig:probe3double}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics{build/probe4double.pdf}
+  \caption{Messwerte und Regressionsgerade der Probe 4}
+  \label{fig:probe4double}
 \end{figure}

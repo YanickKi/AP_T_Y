@@ -16,8 +16,16 @@ build/probe4single.pdf: data_scripts/probe4single.py matplotlibrc header-matplot
 build/probe1double.pdf: data_scripts/probe1double.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/probe1double.py	
 		
+build/probe2double.pdf: data_scripts/probe2double.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/probe2double.py
+
+build/probe3double.pdf: data_scripts/probe3double.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/probe3double.py
+
+build/probe4double.pdf: data_scripts/probe4double.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/probe4double.py					
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/probe1single.pdf build/probe2single.pdf build/probe3single.pdf build/probe4single.pdf build/probe1double.pdf
+build/main.pdf: build/probe1single.pdf build/probe2single.pdf build/probe3single.pdf build/probe4single.pdf build/probe1double.pdf build/probe2double.pdf build/probe3double.pdf build/probe4double.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

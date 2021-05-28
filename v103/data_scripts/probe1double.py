@@ -26,7 +26,7 @@ plt.plot(x_plotright, (params1[0] * x_plotright + params1[1]) * 1e3, label = 'Re
 plt.xlabel(r'$3L^2x-4x^3 \mathbin{/} \si{\metre}$')
 plt.ylabel(r'$D \mathbin{/} \si{\milli\metre}$')
 plt.title(r"$0 \leq x \leq \sfrac{L}{2} $")
-plt.ylim(0.005, 0.37)
+plt.ylim(0.005, 0.4)
 plt.legend()
 
 plt.subplot(1, 2, 2)
@@ -34,11 +34,12 @@ plt.plot(linearleft, Dl*1e3, '.', label = 'Messwerte')
 plt.plot(x_plotleft, (params2[0] * x_plotleft + params2[1]) * 1e3, label = 'Regressionsgerade')
 plt.xlabel(r'$4x^3-12Lx^2+9L^2x-L^3  \mathbin{/} \si{\metre}$')
 plt.title(r"$\sfrac{L}{2} \leq x \leq L $")
-plt.ylim(0.005, 0.37)
+plt.ylim(0.005, 0.4)
 plt.legend()
 
-#print(f'der Paremter m von der Probe1 ist = {params[0]} pm {errors[0]}')
-#print(f'der Paremter b von der Probe1 ist = {params[1]} pm {errors[1]}'
-
+print(f'der Paremter m von der Probe1 rechts ist = {params1[0]} pm {errors1[0]}')
+print(f'der Paremter b von der Probe1 rechts ist = {params1[1]} pm {errors1[1]}')
+print(f'der Paremter m von der Probe1 links  ist = {params2[0]} pm {errors2[0]}')
+print(f'der Paremter b von der Probe1 links  ist = {params2[1]} pm {errors2[1]}')
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/probe1double.pdf')
