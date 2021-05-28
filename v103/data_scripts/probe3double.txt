@@ -1,0 +1,8 @@
+# silber viereckig, 166.8g, 1*1*60.1cm  , Gewichtslast von: 2355.3g
+
+#cr/cm   xl/cm   Dr/mm Dl/mm
+5       55      0.38    0.03
+10      50      0.65    0.39
+15      45      0.93    0.71
+20      40      1.12    0.98
+25      35      1.15    1.1

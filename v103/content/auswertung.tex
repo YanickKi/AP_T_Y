@@ -1,12 +1,115 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-
+Jegliche Fehlerrechnung wurde mit der python-Bibliothek uncertainties \cite{uncertainties} absolviert.
+Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnitten angegeben.
+Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert. 
+Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib} erstellt.\\
+\subsection{Bestimmung des Elastizitätsmodul mit einseitger Einspannung}
+In der Tabelle \ref{tab:einseitig} sind die zu den Weglängen $x$ gemessenen Durchbiegungen $D_1$ bis $D_4$ aufgelistet.
+Die Inzides stehen jeweils für die Nummerierung des verwendeten Stabs.
+Die zu den Stäben gehörigen Gewichte und Abmessungen sind in der Tabelle \ref{tab:Abmessungen} aufgeführt. 
+Dabei steht $h$ für die Höhe, $b$ für die Breite, $L$ für die Länge und $D$ für den Durchmesser, falls der Stab rund ist.
+In den Abbildungen \ref{fig:probe1single}, \ref{fig:probe2single}, \ref{fig:probe3single} und \ref{fig:probe4single} sind die 
+zu den jeweiligen Stäben gehörenden Messwerte graphisch dargestellt. 
+Jedoch sind die Durchbiegungen $D$ gegen nicht gegen $x$ sondern gegen $Lx^2 - \sfrac{x^3}{3}$ aufgetragen, welcher als Linearisierungsterm dient.
+Die Gleichung \eqref{eqn:deins} lässt sich in eine Regressionsgerade 
+\begin{equation}
+  y = m  z + b 
+\end{equation}
+umschreiben, wobei $y = D$, $m=\sfrac{F}{2EI}$ und $z = Lx^2 - \sfrac{x^3}{3}$ gilt.
+Somit lässt sich Das Elastizitätsmodul mit $E = \sfrac{F}{2mI}$ ermitteln.
+In der Tabelle \ref{tab:regression} sind zu allen Stäben die Regressionsparamter und damit der errechnete Elastizitätsmodul aufgetragen.
+\begin{table}
+  \centering
+  \caption{Messwerte bei einseitiger Einspannung}
+  \label{tab:einseitig}
+  \begin{tabular}{S[table-format=2.1] S[table-format=1.3] S[table-format=1.3] S[table-format=1.2] S[table-format=1.2]}
+  \toprule
+  {$x \mathbin{/} \si{\centi\metre}$} & {$D_1 \mathbin{/} \si{\milli\metre}$} & {$D_2 \mathbin{/} \si{\milli\metre}$}
+  & {$D_3 \mathbin{/} \si{\milli\metre}$} & {$D_4 \mathbin{/} \si{\milli\metre}$} \\
+  \midrule
+  5    & 0.07 & 0.075 & 0.17  & 0.15 \\
+  10   & 0.06 & 0.2   & 0.52  & 0.58 \\
+  15   & 0.03 & 0.39  & 1.7   & 1.11 \\
+  20   & 0.03 & 0.49  & 1.76  & 1.95 \\
+  25   & 0.1  & 0.99  & 2.58  & 2.62 \\
+  30   & 0.14 & 1.33  & 3.56  & 4.05 \\
+  35   & 0.255& 1.72  & 4.63  & 4.55 \\
+  40   & 1.14 & 2.13  & 5.6   & 6.26 \\
+  45   & 1.27 & 2.55  & 6.78  & 6.43 \\
+  49.7 & 1.32 & 2.82  & 7.3   & 7.18 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+\begin{table}
+  \centering
+  \caption{Abmessungen der Stäbe}
+  \label{tab:Abmessungen}
+  \begin{tabular}{S[table-format=4.0] S[table-format=3.1] S[table-format=1] S[table-format=1] S[table-format=1] S[table-format=2.1]}
+  \toprule
+  & {$M \mathbin{/} \si{\gram}$} & {$h \mathbin{/} \si{\centi\metre}$} & {$b \mathbin{/} \si{\centi\metre}$}
+  & {$D \mathbin{/} \si{\centi\metre}$} & {$L \mathbin{/} \si{\centi\metre}$}\\
+  \midrule
+  {$\text{Stab 1}$}  & 365.1 & {-} & {-} &  1  & 60.1\\
+  {$\text{Stab 2}$}  & 463.7 & 1   & 1   & {-} & 60.1\\
+  {$\text{Stab 3}$}  & 166.8 & 1   & 1   & {-} & 60.1\\
+  {$\text{Stab 4}$}  & 378.5 & {-} & {-} &  1  & 60.1\\
+  \bottomrule
+  \end{tabular}
+\end{table}
 \begin{figure}
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
+  \caption{Messwerte und Regressionsgerade der Probe 1}
+  \label{fig:probe1single}
+  \includegraphics{build/probe1single.pdf}
 \end{figure}
-
-
-Siehe \autoref{fig:plot}!
+\begin{figure}
+  \centering
+  \caption{Messwerte und Regressionsgerade der Probe 2}
+  \label{fig:probe2single}
+  \includegraphics{build/probe2single.pdf}
+\end{figure}
+\begin{figure}
+  \centering
+  \caption{Messwerte und Regressionsgerade der Probe 3}
+  \label{fig:probe3single}
+  \includegraphics{build/probe3single.pdf}
+\end{figure}
+\begin{figure}
+  \centering
+  \caption{Messwerte und Regressionsgerade der Probe 4}
+  \label{fig:probe4single}
+  \includegraphics{build/probe4single.pdf}
+\end{figure}
+\begin{table}
+  \centering
+  \caption{Regressionsparamter und Elastizitätsmodul der Stäbe}
+  \label{tab:regression}
+  \begin{tabular} {S[table-format=3.0] 
+    S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2]
+    S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2] 
+    S[table-format=3.2] @{${}\pm{}$} S[table-format=2.2]}
+  \toprule
+  & \multicolumn{2}{c}{$m \mathbin{/} \si{\metre\tothe{-2}} \cdot \num{e-2}$} & 
+    \multicolumn{2}{c}{$b \mathbin{/} \si{\metre} \cdot \num{e-4}$} & 
+    \multicolumn{2}{c}{$E \mathbin{/} \si{\giga\pascal}$}\\
+  \midrule
+  {$\text{Stab 1}$}  & 1.37 & 0.22 & 1.79 & 1.25 & 265.42 & 42.20\\
+  {$\text{Stab 2}$}  & 2.69 & 0.07 & 0.54 & 0.42 & 79.83  & 2.2  \\
+  {$\text{Stab 3}$}  & 6.8  & 0.26 & 3.88 & 1.47 & 32.74  & 1.24 \\ 
+  {$\text{Stab 4}$}  & 6.87 & 0.38 & 3.89 & 2.19 & 55.08  & 3.07 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+Der Fehler Des Elastizitätsmoduls ergibt sich nach Gauß mit
+\begin{equation*}
+  \symup{\Delta} E = \left | \frac{\partial E}{\partial m}  \symup{\Delta} m \right |
+\end{equation*}
+\FloatBarrier
+\subsection{Bestimmung des Elastizitätsmodul mit beidseitiger Einspannung}
+\begin{figure}
+  \centering
+  \includegraphics{build/probe1double.pdf}
+  \caption{Messwerte und Regressionsgerade der Probe 1}
+  \label{fig:probe1double}
+\end{figure}

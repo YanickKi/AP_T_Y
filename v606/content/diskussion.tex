@@ -1,2 +1,37 @@
 \section{Diskussion}
 \label{sec:Diskussion}
+In dem Abschnitt \ref{sec:filter} wurden die beiden Abbildungen \ref{fig:frequence} und \ref{fig:frequencefine} erstellt, da in der ersten Abbildungen keine 
+Struktur der Filterkurve des Selektiv-Verstärkers ersichtlich wurde. Somit würden auch die interessanten Größen wie z.B. die Güte sehr ungenau bestimmt werden können.
+Folglich wurde die zweite Abbildung erstellt, um die Filterkurve in dem interssanten Bereich erkennen zu können, wodurch auch die Bestimmung der Güte deutlich präziser wurde.
+Mögliche starke systematische Fehler in der Messung könnten an dem digitalen Messgerät liegen, da dieses bei Umstellung von einer auf eine andere Skala Sprünge in der
+Spannung vorwies. Somit sind die Sprünge in der Tabelle \ref{tab:frequence} und in der Abbildung \ref{fig:frequence} aller Messwerte erkenntlich.
+Da in der Abbildung, welche den Bereich um die Resonanzfrequenz darstellt, keine Sprünge vorhanden ist, stärkt dies die These, dass die Fehler an dem Wechsel der
+Skalierung an dem Messgerät liegen könnten, da dort nur mit einer Skala gemessen wurde. 
+Die experimentell bestimmte Güte weicht von der theoretischen Güte um
+\begin{equation*}
+    \frac{Q_\text{theo}-Q_\text{exp}}{Q_\text{theo}} = \SI{10.492}{\percent}
+\end{equation*}
+ab, woraus sich schließen lässt, dass die Güte relativ genau gemessen werden konnte. \\
+In der Tabelle \ref{tab:abweichen} sind die Suszeptibilitäten zusammengefasst mit den Abweichungen aufgelistet. 
+\begin{table}
+    \centering
+    \caption{Experimentell bestimmte und theoretische Werte mit der dazugehörigen Abweichung}
+    \label{tab:abweichen}
+    \begin{tabular} {S[table-format=3.0] S[table-format=1.2] S[table-format=2.2] S[table-format=1.2] S[table-format=3.2] S[table-format=3.2]}
+        \toprule
+        {$\text{Probe}$} & {$\chi_R \cdot \num{e-2}$} & {$\chi_U \cdot \num{e-2}$} & {$\chi_\text{theo} \cdot \num{e-2}$} & 
+        {$\eta_R \mathbin{/} \si{\percent}$} & {$\eta_U \mathbin{/} \si{\percent}$} \\
+    \midrule
+    {$\ce{Dy2O3}$} & 2.42 & 12.2  & 2.54 & 4.72 & 380.31 \\
+    {$\ce{Nd2O3}$} & 0.61 & 0.71  & 0.25 & 144  & 184    \\
+    \bottomrule
+\end{tabular}
+\end{table}
+Bei der Betrachtung der Tabelle \ref{tab:abweichen} fällt auf, dass die mit der Spannungsdifferenz bestimmten Suszeptibilitäten stärker von dem 
+theoretischen Wert abweichen, so dass die Vermutung nahe liegt, dass diese Methode ungenauer ist. 
+In der Gleichung \eqref{eqn:chil} wird erkenntlich, dass dies  eine Annäherung für sehr große Frequenzen ist, so dass diese Annährung zu Ungenauigkeiten 
+führen kann.
+Ebenfalls sticht die experimentell bestimmte Suszeptibilität für $\ce{Nd2O3}$ heraus, da diese größere Abweichungen als die von $\ce{Dy2O3}$
+besitzt.
+Dies könnte der Tatsache geschuldet sein, dass die Spannungs- und Widerstandsdifferenzen deutlich geringer sind und das Auflösungsvermögen der Messgeräte 
+nicht ausreicht, um solche Größenordnungen mit einer hohen Genauigkeit aufzunehmen.

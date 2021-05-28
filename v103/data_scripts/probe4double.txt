@@ -1,0 +1,8 @@
+# rund braun/gelb, 378.5, 1 * 60.1cm, Gewichtslast von: 2355.3g
+
+#cr/cm   xl/cm   Dr/mm Dl/mm
+5       55      0.06    0.12
+10      50      0.22    0.25
+15      45      0.41    0.46
+20      40      0.59    0.66
+25      35      0.75    0.81
