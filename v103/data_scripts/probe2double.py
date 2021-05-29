@@ -28,7 +28,7 @@ plt.ylabel(r'$D \mathbin{/} \si{\milli\metre}$')
 plt.title(r"$0 \leq x \leq \sfrac{L}{2} $")
 plt.ylim(0.02, 0.29)
 plt.legend()
-
+ 
 plt.subplot(1, 2, 2)
 plt.plot(linearleft, Dl*1e3, '.', label = 'Messwerte')
 plt.plot(x_plotleft, (params2[0] * x_plotleft + params2[1]) * 1e3, label = 'Regressionsgerade')

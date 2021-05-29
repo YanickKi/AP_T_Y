@@ -26,15 +26,15 @@ plt.plot(x_plotright, (params1[0] * x_plotright + params1[1]) * 1e3, label = 'Re
 plt.xlabel(r'$3L^2x-4x^3 \mathbin{/} \si{\metre}$')
 plt.ylabel(r'$D \mathbin{/} \si{\milli\metre}$')
 plt.title(r"$0 \leq x \leq \sfrac{L}{2} $")
-plt.ylim(-0.02, 1.22)
+plt.ylim(-0.02, 1.25)
 plt.legend()
-
+ 
 plt.subplot(1, 2, 2)
 plt.plot(linearleft, Dl*1e3, '.', label = 'Messwerte')
 plt.plot(x_plotleft, (params2[0] * x_plotleft + params2[1]) * 1e3, label = 'Regressionsgerade')
 plt.xlabel(r'$4x^3-12Lx^2+9L^2x-L^3  \mathbin{/} \si{\metre}$')
 plt.title(r"$\sfrac{L}{2} \leq x \leq L $")
-plt.ylim(-0.02, 1.22)
+plt.ylim(-0.02, 1.25)
 plt.legend()
 
 print(f'der Paremter m von der Probe3 rechts ist = {params1[0]} pm {errors1[0]}')

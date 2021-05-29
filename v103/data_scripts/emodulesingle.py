@@ -9,17 +9,13 @@ m4 = ufloat(0.0686618330681571  , 0.0038252793921409213) # rund braun/gelb, 378.
 mrund = np.array([m1, m4])
 meckig = np.array([m2, m3])
 
-Mrund = np.array([0.3651, 0.3785])
-Meckig= np.array([0.4637, 0.1668])
-
-Frund = 9.81 * Mrund  
-Feckig = 9.81 * Meckig
+F= 9.81 * 1.0451
 
 Irund = np.pi/64    *1e-8
 Ieckig= 1/12        *1e-8
 
-Erund =  Frund/(2*mrund*Irund)
-Eeckig =  Frund/(2*meckig*Ieckig)
+Erund =  F/(2*mrund*Irund)
+Eeckig = F/(2*meckig*Ieckig)
 
 print(f'runde Elastizitätsmodule: {Erund}')
 print(f'eckige Elastizitätsmodule: {Eeckig}')

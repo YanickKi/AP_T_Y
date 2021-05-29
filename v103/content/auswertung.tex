@@ -4,7 +4,7 @@ Jegliche Fehlerrechnung wurde mit der python-Bibliothek uncertainties \cite{unce
 Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnitten angegeben.
 Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert. 
 Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib} erstellt.\\
-\subsection{Bestimmung des Elastizitätsmodul mit einseitger Einspannung}
+\subsection{Bestimmung des Elastizitätsmodul mit einseitger Einspannung} \label{sec:einseitig}
 In der Tabelle \ref{tab:einseitig} sind die zu den Weglängen $x$ gemessenen Durchbiegungen $D_1$ bis $D_4$ aufgelistet.
 Die Inzides stehen jeweils für die Nummerierung des verwendeten Stabs.
 Die zu den Stäben gehörigen Gewichte und Abmessungen sind in der Tabelle \ref{tab:Abmessungen} aufgeführt. 
@@ -90,27 +90,38 @@ In der Tabelle \ref{tab:regression} sind zu allen Stäben die Regressionsparamte
     S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2] 
     S[table-format=3.2] @{${}\pm{}$} S[table-format=2.2]}
   \toprule
-  & \multicolumn{2}{c}{$m \mathbin{/} \si{\metre\tothe{-2}} \cdot \num{e-2}$} & 
+  & \multicolumn{2}{c}{$m \mathbin{/} \si{\metre\tothe{-2}} \cdot \num{e-3}$} & 
     \multicolumn{2}{c}{$b \mathbin{/} \si{\metre} \cdot \num{e-4}$} & 
     \multicolumn{2}{c}{$E \mathbin{/} \si{\giga\pascal}$}\\
   \midrule
-  {$\text{Stab 1}$}  & 1.37 & 0.22 & 1.79 & 1.25 & 265.42 & 42.20\\
-  {$\text{Stab 2}$}  & 2.69 & 0.07 & 0.54 & 0.42 & 79.83  & 2.2  \\
-  {$\text{Stab 3}$}  & 6.8  & 0.26 & 3.88 & 1.47 & 32.74  & 1.24 \\ 
-  {$\text{Stab 4}$}  & 6.87 & 0.38 & 3.89 & 2.19 & 55.08  & 3.07 \\
+  {$\text{Stab 1}$}  & 1.37 & 0.22 & 1.79 & 1.25 & 759.77 & 12.08\\
+  {$\text{Stab 2}$}  & 2.69 & 0.07 & 0.54 & 0.42 & 228.52 & 6.29  \\
+  {$\text{Stab 3}$}  & 6.8  & 0.26 & 3.88 & 1.47 & 90.4   & 3.41 \\ 
+  {$\text{Stab 4}$}  & 6.87 & 0.38 & 3.89 & 2.19 & 152.09 & 8.47 \\
   \bottomrule
   \end{tabular}
 \end{table}
 Der Fehler Des Elastizitätsmoduls ergibt sich nach Gauß mit
 \begin{equation*}
-  \symup{\Delta} E = \left | \frac{\partial E}{\partial m}  \symup{\Delta} m \right |
+  \symup{\Delta} E = \left | \frac{\partial E}{\partial m}  \symup{\Delta} m \right | \label{eqn:gauss}
 \end{equation*}
 \FloatBarrier
 \subsection{Bestimmung des Elastizitätsmodul mit beidseitiger Einspannung}
 In der Tabelle \ref{tab:beidseitigrechts} sind die gemessenen Durchbiegungen $D$ für gemessene Weglängen $x_R$, welche sich auf 
 die Reichte Seite beziehen, aufgeführt.
 In der Tabelle \ref{tab:beidseitiglinks} sind die Messwerte analog zur ebend genannten Tabelle für die linke Seite aufgelistet.
-
+Bei den Messwerten rechts von der mitte ($0 \leq x \leq \sfrac{L}{2}$) lautet der Linearisierungsterm $3L^2x-4x^3$.
+Die linken Messwerte ($\sfrac{L}{2} \leq x \leq L$) werden mit Hilfe von $4x^3-12Lx^2+9L^2x-L^3$ linearisiert.
+Zu den jeweiligen Stäben wurden die Abbildungen \ref{fig:probe1double}, \ref{fig:probe2double}, \ref{fig:probe3double} und \ref{fig:probe4double} erstellt,
+welche die Messwerte und die Regressionsgeraden enthalten.
+Die Regressionsvorschrift für die rechten Messwerten laute ähnlich wie in Abschnitt \ref{sec:einseitig}
+\begin{equation}
+  y = m z +b
+\end{equation}
+wobei $m = \sfrac{F}{48EI}$ gilt. Je nach Linearisierung gilt $z = 3L^2x-4x^3$ oder $z = 4x^3-12Lx^2+9L^2x-L^3$.
+Nach Durchführung der Regression lässt sich das Elastizitätsmodul mit Hilfe von $E = \sfrac{F}{48mI}$ ermitteln.
+In der Tabelle \ref{tab:regressiondouble} sind die Regressionsparamter und der dazugehörige Elastizitätsmodul für die rechte Seite aufgelistet.
+Für die linke Seite dient die Tabelle \ref{tab:regressiondoublelinks}.
 \begin{table}
   \centering
   \caption{Messwerte bei beidseitiger Einspannung für {$0 \leq x \leq \sfrac{L}{2}$}}
@@ -169,3 +180,46 @@ In der Tabelle \ref{tab:beidseitiglinks} sind die Messwerte analog zur ebend gen
   \caption{Messwerte und Regressionsgerade der Probe 4}
   \label{fig:probe4double}
 \end{figure}
+
+\begin{table}
+  \centering
+  \caption{Regressionsparamter und Elastizitätsmodul der Stäbe (rechts)}
+  \label{tab:regressiondouble}
+  \begin{tabular} {S[table-format=3.0] 
+    S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2]
+    S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2]  
+    S[table-format=3.2] @{${}\pm{}$} S[table-format=2.2]}
+  \toprule
+  & \multicolumn{2}{c}{$m_\text{R} \mathbin{/} \si{\metre\tothe{-2}} \cdot \num{e-3}$} & 
+    \multicolumn{2}{c}{$b_\text{R} \mathbin{/} \si{\metre} \cdot \num{e-4}$} & 
+    \multicolumn{2}{c}{$E_\text{R} \mathbin{/} \si{\giga\pascal}$}\\
+  \midrule
+  {$\text{Stab 1}$}  & 2.02 & 0.24 & -1.02 & 0.37 & 75.26 & 9.21 \\
+  {$\text{Stab 2}$}  & 1.32 & 0.11 & -0.27 & 0.16 & 67.61 & 5.43 \\
+  {$\text{Stab 3}$}  & 5.23 & 0.36 & 1.13  & 0.54 & 17.73 & 1.23 \\ 
+  {$\text{Stab 4}$}  & 4.41 & 0.34 & 2.11  & 0.51 & 35.72 & 2.73 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+\begin{table}
+  \centering
+  \caption{Regressionsparamter und Elastizitätsmodul der Stäbe (links)}
+  \label{tab:regressiondoublelinks}
+  \begin{tabular} {S[table-format=3.0]  
+    S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2]
+    S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2]
+    S[table-format=3.2] @{${}\pm{}$} S[table-format=2.2]}
+  \toprule
+  & \multicolumn{2}{c}{$m_\text{L} \mathbin{/} \si{\metre\tothe{-2}} \cdot \num{e-3}$} & 
+    \multicolumn{2}{c}{$b_\text{L} \mathbin{/} \si{\metre} \cdot \num{e-4}$} &
+    \multicolumn{2}{c}{$E_\text{L} \mathbin{/} \si{\giga\pascal}$}\\
+  \midrule
+  {$\text{Stab 1}$} & 2.32 & 0.16 & -1.01 & 0.25 & 65.31 & 4.54\\
+  {$\text{Stab 2}$} & 1.33 & 0.1  & 0.02  & 0.15 & 67.09 & 5.07\\
+  {$\text{Stab 3}$} & 7.06 & 0.15 & -3.52 & 0.23 & 13.14 & 1.23\\ 
+  {$\text{Stab 4}$} & 4.52 & 0.42 & -1.77 & 0.65 & 34.84 & 3.29\\
+  \bottomrule
+  \end{tabular}
+\end{table}
+Die Unsicherheit der beiden Elastizitätsmodulen wird genau so wie in Abschnitt \ref{sec:einseitig} mit Hilfe von der 
+Gleichung \eqref{eqn:gauss} berechnet.
