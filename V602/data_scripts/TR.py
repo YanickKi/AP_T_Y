@@ -8,7 +8,7 @@ def energie(theta):
 def radians(theta):
     return theta/180 * np.pi
 
-thetaerr = unp.uarray([20.2, 22.5, 22.2, 22.8, 20.5, 19.9], 4.9362)
+thetaerr = unp.uarray([20.2, 22.5,22.35537 ,22.84919 ,20.55552 ,20.06083], 4.9362)
 
 ka = energie(radians(thetaerr[1]))                                    / 1.602e-19
 kb = energie(radians(thetaerr[0]))                                    / 1.602e-19
