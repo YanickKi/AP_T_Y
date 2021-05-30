@@ -26,7 +26,7 @@ $\sigma_K$ für die jeweiligen Materialien gegeben.
     \bottomrule
     \end{tabular}
 \end{table}
-\subsection{Überprüfung der Bragg-Bedingung}
+\subsection{Überprüfung der Bragg-Bedingung} \label{sec:braggpr}
 Zunächst muss die Bragg-Bedingung überprüft werden. 
 Die dazu gemessenen Daten sind in der Tabelle \ref{tab:Bragg} aufgetragen. 
 Außerdem sind die Werte in der Abbildung \ref{fig:Bragg} graphisch dargestellt.
@@ -63,26 +63,51 @@ Außerdem sind die Werte in der Abbildung \ref{fig:Bragg} graphisch dargestellt.
 Das Maximum der Impulse $N_\text{max} = \num{218}$ ist bei einem Winkel von $\theta_\text{max} = \ang{28.2;;}$ gemessen worden.
 Dieser Winkel weicht vom Sollwinkel $\theta_\text{soll} = \ang{28;;}$ nur um $\ang{0.2;;}$ ab, so dass die Bragg-Bedingung erfüllt ist.
 \FloatBarrier
-\subsection{Analyse eines Emissionsspektrums der Kupfer-Röntgenröhre}
+\subsection{Analyse eines Emissionsspektrums der Kupfer-Röntgenröhre} \label{sec:kupferlinien}
 \begin{figure}
     \centering
     \caption{Das Emissionsspektrum der Kupfer-Röntgenröhre}
     \label{fig:Kupfer}
     \includegraphics{build/Kupfer.pdf}
 \end{figure}
-Die $K_\alpha$ Linie befindet sich bei  $\theta = \ang{22.5;;}$, während die $K_\beta$ bei  $\theta = \ang{20.2;;}$ wiederzufinden ist.
+Die $K_\alpha$ Linie befindet sich bei $\theta = \ang{22.5;;}$, während die $K_\beta$ bei  $\theta = \ang{20.2;;}$ wiederzufinden ist.
+Mittels linearer Interpolation lassen sich die Halbwertsbreiten bestimmen.
+Dazu werden die beiden umliegenden Punkte, welche am nächsten an der halben Maximum dran sind, verwendet um eine Interpolationsgerade
+\begin{equation*}
+    y = mx+b 
+\end{equation*}
+zur erhalten.
+Aus dieser Geraden lässt sich der Winkel, bei der die Hälfte der maximalen Impulse gemessen wurde, bestimmen, wonach die Halbwertsbreite
+aus der Differenz des Winkels links und rechts neben der $K_\alpha$ oder $K_\beta$ Linie ermittelt werden kann.
+Die Interpolationsgeraden werden durch 
+\begin{align*}
+    y &= 8359.99x - 166908.99    \\
+    y &= -8420.00x - 173877.00   \\
+    y &= 35919.99x - -800479.99  \\
+    y &= -31960.00x - 732785.00
+\end{align*}
+beschrieben. 
+Die Winkel der Halbwertsbreiten liegen bei 
+\begin{align*}
+    \theta &= \ang{20.06;;}\\
+    \theta &= \ang{20.56;;}\\
+    \theta &= \ang{22.36;;}\\
+    \theta &= \ang{22.85;;} \; \text{,}
+\end{align*}
+wobei die Geraden und die ebend genannten Winkel chronologisch zu der Abbildung \ref{fig:Kupfer} angeordnet  sind, d.h., dass in der Abbildung 
+oben nach unten rechts nach links entspräche.
 Die Halbwertsbreiten betragen
 \begin{align*}
-    \symup{\Delta}K_\alpha  &= \ang{0.6;;} \\
-    \symup{\Delta}K_\beta   &= \ang{0.6;;} \; \text{.}
+    \symup{\Delta}K_\alpha  &= \ang{0.494;;} \\
+    \symup{\Delta}K_\beta   &= \ang{0.495;;} \; \text{.}
 \end{align*}
 Mit Hilfe der Bragg Bedingung \eqref{eqn:bragg} lässt sich die Wellenlänge bestimmen, wonach die Energie bestimmt werden kann.
 Die Energien ergeben sich zu 
 \begin{align*}
     E_{K_\alpha} & =  \SI{8.04}{\kilo\electronvolt} \\
     E_{K_\beta}  & =  \SI{8.92}{\kilo\electronvolt} \\
-    \symup{\Delta}E_{K_\alpha} &= \SI{203.41}{\electronvolt} \\
-    \symup{\Delta}E_{K_\beta}  &= \SI{253.80}{\electronvolt} \; \text{.}
+    \symup{\Delta}E_{K_\alpha} &= \SI{165.84}{\electronvolt} \\
+    \symup{\Delta}E_{K_\beta}  &= \SI{206.96}{\electronvolt} \; \text{.}
 \end{align*}
 Das Auflösungsvermögen 
 \begin{equation}
@@ -90,15 +115,15 @@ Das Auflösungsvermögen
 \end{equation}
 kann daraus zu 
 \begin{align*}
-    A_{K_\alpha}&= \num{39.55} \\
-    A_{K_\beta} &= \num{35.13}
+    A_{K_\alpha}&= \num{48.50} \\
+    A_{K_\beta} &= \num{43.08}
 \end{align*}
 bestimmt werden.
 Mit Hilfe der Gleichungen \eqref{eqn:si1},\eqref{eqn:si2} und \eqref{eqn:si3} lassen sich die Abschirmkonstanten $\sigma_1$, $\sigma_2$ und $\sigma_3$ bestimmen.
 Mit $E_\text{abs} = \SI{8987.96(15)}{\electronvolt}$\cite{eabs}, der Rydberg Energie $R_\infty$ und der Kernladungszahl
 $z_\text{Kupfer} = 29 $ lässt sich
 \begin{align*}
-    \sigma_1 &= \num{3.292(21)}    \\
+    \sigma_1 &= \num{3.292(21)}  \\
     \sigma_2 &= \num{12.30(13)}  \\
     \sigma_3 &= \num{22.29(74)}
 \end{align*}
@@ -110,9 +135,28 @@ Der Fehler der n-ten Abschirmkonstante wird Mit Hilfe der Gauß-Fehlerfortpflanz
 \subsection{Bestimmung der Absorptionsenergien und -konstanten von verschiedenen Materialien}
 Bei der Aufnahme der Absorptionsspektren wurde ein LiF-Kristall, eine Beschleunigungsspannung von $\SI{35}{\kilo\volt}$ und ein Strom von $\SI{1}{\milli\ampere}$
 verwendet. 
-In den jeweiligen Unterabschnitten sind die Intensitäten $\sfrac{\text{Imp}}{\si{\second}}$ gegen den Winkel $\theta$ aufgetragen.
+In den jeweiligen Unterabschnitten sind die Intensitäten $\sfrac{\text{Imp}}{\si{\second}}$ gegen den Winkel $\theta$ aufgetragen. \\
+Um die winkel zu bestimmen muss zunächst die Mitte der Kante bestimmt werden, welche sich mit Hilfe von
+\begin{equation}
+    I_K = I_{K, \text{min}} + \frac{I_{K, \text{min}} + I_{K, \text{max}}}{2}
+\end{equation}
+berechnen lässt. 
+Folglich werden die beiden umliegenden Punkte betrachtet. 
+Mit denen wird eine Interpolation durchgeführt. 
+Mit Hilfe der Interpolationsgerade $y = mx+b$ kann ermittelt werden, wo sich die Mitte der Kante befindet, wonach auf den zugehörigen Winkel 
+geschlossen werden kann.
+Die Interpolationsgeraden sind in den jeweiligen Abbildungen schwarz eingezeichnet. 
 \subsubsection{Zink}
-Bei der Durchführung mit Zink liegt die Mitte der Absorptionskante ungefähr bei $\theta_\text{Zn} \approx \ang{18.75;;}$. Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
+Die Mitte der Kante liegt bei 
+\begin{equation*}
+    I_K = 78
+\end{equation*}
+, wobei die Interpolationsgerade durch 
+\begin{equation*}
+    y = 189.99 x - 3468.99
+\end{equation*}
+beschrieben wird.
+Bei der Durchführung mit Zink liegt die Mitte der Absorptionskante ungefähr bei $\theta_\text{Zn} \approx \ang{18.67;;}$. Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
 \begin{figure}
     \centering
     \caption{Absorptionsspektrum von Zink}
@@ -120,12 +164,21 @@ Bei der Durchführung mit Zink liegt die Mitte der Absorptionskante ungefähr be
     \includegraphics{build/zink.pdf}
 \end{figure}
 \begin{align*}
-    E_{K, \text{abs}_\text{ Zn}}  &= \SI{9.58}{\kilo\electronvolt} \\
-    \sigma_{K_\text{Zn}}         &= \num{3.668} \; \text{.}
+    E_{K, \text{abs}_\text{ Zn}}  &= \SI{9.617}{\kilo\electronvolt} \\
+    \sigma_{K_\text{Zn}}         &= \num{3.611} \; \text{.}
 \end{align*}
 \FloatBarrier
 \subsubsection{Gallium}
-Die Mitte der Absorptionskante liegt ungefähr bei $\theta_\text{Ga} \approx \ang{17.35;;}$. Die daraus errechnete Energie bzw. Abschirmkonstante beträgt
+Die Mitte der Kante liegt bei 
+\begin{equation*}
+    I_K = 140.00
+\end{equation*}
+, wobei die Interpolationsgerade durch 
+\begin{equation*}
+    y = 17.34x -2334
+\end{equation*}
+beschrieben wird.
+Die Mitte der Absorptionskante liegt ungefähr bei $\theta_\text{Ga} \approx \ang{17.34;;}$. Die daraus errechnete Energie bzw. Abschirmkonstante beträgt
 \begin{figure}
     \centering
     \caption{Absorptionsspektrum von Gallium}
@@ -133,12 +186,21 @@ Die Mitte der Absorptionskante liegt ungefähr bei $\theta_\text{Ga} \approx \an
     \includegraphics{build/gallium.pdf}
 \end{figure}
 \begin{align*}
-    E_{K, \text{abs}_\text{ Ga}}  &= \SI{10.32}{\kilo\electronvolt} \\
-    \sigma_{K_\text{Ga}}                &= \num{3.673} \; \text{.}
+    E_{K, \text{abs}_\text{ Ga}}  &= \SI{10.327}{\kilo\electronvolt} \\
+    \sigma_{K_\text{Ga}}                &= \num{3.668} \; \text{.}
 \end{align*}
 \FloatBarrier
 \subsubsection{Brom}
-Bei Brom liegt die Kante ungefähr bei $\theta_\text{Br} \approx \ang{13.25;;}$. Somit lässt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
+Die Mitte der Kante liegt bei 
+\begin{equation*}
+    I_K = 50.00
+\end{equation*}
+, wobei die Interpolationsgerade durch 
+\begin{equation*}
+    y = 13.19 x -642.00
+\end{equation*}
+beschrieben wird.
+Bei Brom liegt die Kante ungefähr bei $\theta_\text{Br} \approx \ang{13.20;;}$. Somit lässt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
 \begin{figure}
     \centering
     \caption{Absorptionsspektrum von Brom}
@@ -146,13 +208,22 @@ Bei Brom liegt die Kante ungefähr bei $\theta_\text{Br} \approx \ang{13.25;;}$.
     \includegraphics{build/brom.pdf}
 \end{figure}
 \begin{align*}
-    E_{K, \text{abs}_\text{ Br}}  &= \SI{13.43}{\kilo\electronvolt} \\
-    \sigma_{K_\text{Br}}                &= \num{3.894}
+    E_{K, \text{abs}_\text{ Br}}  &= \SI{13.480}{\kilo\electronvolt} \\
+    \sigma_{K_\text{Br}}                &= \num{3.835}
 \end{align*}
 errechnen.
 \FloatBarrier
 \subsubsection{Rubidium}
-Die Mitte der Absorptionskante von Rubidium liegt ungefähr bei $\theta_\text{Rb} \approx \ang{11.75;;}$. Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
+Die Mitte der Kante liegt bei 
+\begin{equation*}
+    I_K = 70.00
+\end{equation*}
+, wobei die Interpolationsgerade durch 
+\begin{equation*}
+    y = 11.77x - 787.00
+\end{equation*}
+beschrieben wird.
+Die Mitte der Absorptionskante von Rubidium liegt ungefähr bei $\theta_\text{Rb} \approx \ang{11.77;;}$. Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
 \begin{figure}
     \centering
     \caption{Absorptionsspektrum von Rubidium}
@@ -160,12 +231,21 @@ Die Mitte der Absorptionskante von Rubidium liegt ungefähr bei $\theta_\text{Rb
     \includegraphics{build/rubidium.pdf}
 \end{figure}
 \begin{align*}
-    E_{K, \text{abs}_\text{ Rb}}  &= \SI{15.11}{\kilo\electronvolt} \\
-    \sigma_{K_\text{Rb}}         &= \num{4.037} \; \text{.}
+    E_{K, \text{abs}_\text{ Rb}}  &= \SI{15.089}{\kilo\electronvolt} \\
+    \sigma_{K_\text{Rb}}         &= \num{4.067} \; \text{.}
 \end{align*}
 \FloatBarrier
 \subsubsection{Strontium}
-Die in der Abbildung \ref{fig:Strontium} hervorgehende Mitte der Absorptionskante liegt ungefähr bei $\theta_\text{Sr} \approx \ang{11.05;;}$. 
+Die Mitte der Kante liegt bei 
+\begin{equation*}
+    I_K = 310.00
+\end{equation*}
+, wobei die Interpolationsgerade durch 
+\begin{equation*}
+    y = 11.09x -3321.00
+\end{equation*}
+beschrieben wird.
+Die in der Abbildung \ref{fig:Strontium} hervorgehende Mitte der Absorptionskante liegt ungefähr bei $\theta_\text{Sr} \approx \ang{11.09;;}$. 
 Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
 \begin{figure}
     \centering
@@ -174,12 +254,21 @@ Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von
     \includegraphics{build/strontium.pdf}
 \end{figure}
 \begin{align*}
-    E_{K, \text{abs}_\text{ Sr}}  &= \SI{16.06}{\kilo\electronvolt} \\
-    \sigma_{K_\text{Sr}}         &= \num{4.041} \; \text{.}
+    E_{K, \text{abs}_\text{ Sr}}  &= \SI{15.998}{\kilo\electronvolt} \\
+    \sigma_{K_\text{Sr}}         &= \num{4.109} \; \text{.}
 \end{align*}
 \FloatBarrier
 \subsubsection{Zirkonium}
-Bei Zirkonium liegt die Mitte der Absorptionskante liegt ungefähr bei $\theta_\text{Zr} \approx \ang{9.95;;}$. 
+Die Mitte der Kante liegt bei 
+\begin{equation*}
+    I_K =  449.99
+\end{equation*}
+, wobei die Interpolationsgerade durch 
+\begin{equation*}
+    y = 9.96x -4274.99
+\end{equation*}
+beschrieben wird.
+Bei Zirkonium liegt die Mitte der Absorptionskante liegt ungefähr bei $\theta_\text{Zr} \approx \ang{9.96;;}$. 
 Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von 
 \begin{figure}
     \centering
@@ -188,8 +277,8 @@ Daraus ergibt sich eine Absorptionsenergie bzw. Abschirmkonstante von
     \includegraphics{build/zirkonium.pdf}
 \end{figure}
 \begin{align*}
-    E_{K, \text{abs}_\text{ Zr}}  &= \SI{17.82}{\kilo\electronvolt} \\
-    \sigma_{K_\text{Zr}}         &= \num{4.28} \; \text{.}
+    E_{K, \text{abs}_\text{ Zr}}  &= \SI{17.800}{\kilo\electronvolt} \\
+    \sigma_{K_\text{Zr}}         &= \num{4.296} \; \text{.}
 \end{align*}
 \FloatBarrier
 \subsection{Berechnung der Rydbergenergie}
@@ -205,8 +294,8 @@ In Regressionsparameter überführt nimmt die Beziehung die Gestalt
 an.
 Mittels Durchführung der linearen Regression lassen sich die Regressionsparameter zu 
 \begin{align*}
-        m & = \left( \num{3.568(18)} \right)   \sqrt{\si{\electronvolt}} \\
-        b & = \left( \num{-9.086(628)} \right) \sqrt{\si{\electronvolt}}
+        m & = \left( \num{3.538(17)} \right)   \sqrt{\si{\electronvolt}} \\
+        b & = \left( \num{-8.024(636)} \right) \sqrt{\si{\electronvolt}}
 \end{align*}
 \begin{figure}
     \centering
@@ -215,9 +304,13 @@ Mittels Durchführung der linearen Regression lassen sich die Regressionsparamet
     \includegraphics{build/rydberg.pdf}
 \end{figure}
 bestimmen.
-Daraus kann die Rydbergfrequenz zu 
+Daraus kann die Rydbergfrequenz mit
 \begin{equation*}
-    R = \SI{3.079(31)}{\hertz}
+    R = \frac{m^2}{h}
+\end{equation*}
+zu 
+\begin{equation*}
+    R = \SI{3.028(31)e15}{\hertz}
 \end{equation*}
 errechnet werden.
 Abschließend lässt sich die Rydbergenergie aus der Formel
@@ -226,7 +319,7 @@ Abschließend lässt sich die Rydbergenergie aus der Formel
 \end{equation}
 zu
 \begin{equation*}
-    R_\infty = \SI{12.74(13)}{\electronvolt}
+    R_\infty = \SI{12.52(13)}{\electronvolt}
 \end{equation*}
 bestimmen.
 Die Unsicherheiten der Rydbergfrequenz und der Rydbergenergie ist

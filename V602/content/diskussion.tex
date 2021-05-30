@@ -1,7 +1,19 @@
 \section{Diskussion}
 \label{sec:Diskussion}
+Bei der Überprüfung der Bragg-Bedingung \ref{sec:braggpr} wurde eine Abweichung von $\ang{0.2;;}$ festgestellt, welche noch unter einem Grad und somit 
+im Toleranzbereich liegt.
+Allerdings könnten durch diese kleine Abweichung gößere Abweichungen in den folgenden Messungen bzw. Berechnungen entstehen.
+Die in dem Abschnitt \ref{sec:kupferlinien} berechneten Werte für die Energien für die $K_\alpha$ und $K_\alpha$ Linien
+$E_{K_\alpha} = \SI{8.04}{\electronvolt}$ und $E_{K_\beta} = \SI{8.92}{\electronvolt}$ weichen von den Literaturwerten um
+$E_{K_\alpha, \text{Lit}} = \SI{8.048}{\electronvolt}$ und $E_{K_\alpha, \text{Lit}} = \SI{8.905}{\electronvolt}$
+\begin{align*}
+    \eta_\alpha &= \SI{0.1}{\percent} \\
+    \eta_\beta  &= \SI{0.17}{\percent}
+\end{align*}
+ab. 
+Somit lässt sich sagen, dass die Energien der beiden Linien mit einer sehr hohen Genauigkeit gemessen werden konnten.
 In der der Tabelle \ref{tab:vgllit} sind die Literaturwerte für die Abschirmkonstanten $\sigma_{K\text{, Lit}}$ die experimentell 
-bestimmten Abschirmkonstanten $\sigma_K$ und die daraus errechneten Verhältnisse $\eta$ aufgetragen.
+bestimmten Abschirmkonstanten $\sigma_K$ und die daraus errechneten Abweichungen $\eta$ aufgetragen.
 \begin{table}
     \centering
     \caption{Vergleich der berechneten Abschirmkonstanten mit den Literaturwerten}
@@ -10,12 +22,12 @@ bestimmten Abschirmkonstanten $\sigma_K$ und die daraus errechneten Verhältniss
         \toprule
         & {$\sigma_{K\text{, Lit}}$} & {$\sigma_K$} & {$\eta \mathbin{/} \si{\percent}$} \\
     \midrule
-    {Zn} & 3.566 & 3.668 & 102.85 \\
-    {Ga} & 3.677 & 3.673 & 99.90 \\
-    {Br} & 3.848 & 3.894 & 101.19 \\
-    {Rb} & 3.944 & 4.037 & 102.36 \\
-    {Sr} & 3.999 & 4.041 & 101.05 \\
-    {Zr} & 4.101 & 4.28  & 104.37 \\
+    {Zn} & 3.566 & 3.611 & 1.26 \\
+    {Ga} & 3.677 & 3.668 & 0.24 \\
+    {Br} & 3.848 & 3.835 & 0.34 \\
+    {Rb} & 3.944 & 4.067 & 3.11 \\
+    {Sr} & 3.999 & 4.109 & 2.75 \\
+    {Zr} & 4.101 & 4.296 & 4.75 \\
     \bottomrule
     \end{tabular}
 \end{table}
@@ -23,8 +35,8 @@ Nach Betrachtung der Tabelle \ref{tab:vgllit} fällt auf, dass alle berechneten 
 Somit lässt sich vermuten, dass die Ursache ein systematischer Fehler ist.
 Das Verhältnis der errechneten Rydbergenergie und des Literaturwertes beträgt
 \begin{equation}
-    \mu = \frac{R_\infty}{R_{\infty_\text{Lit}}} = \frac{\SI{12.74}{\electronvolt}}{\SI{13.606}{\electronvolt}} = \SI{93.63}{\percent} \; \text{.}
+    \eta = \frac{R_{\infty_\text{Lit}}-R_\infty}{R_{\infty_\text{Lit}}} \cdot 100= \frac{\SI{13.606}{\electronvolt} - \SI{12.52}{\electronvolt}}{\SI{13.606}{\electronvolt}} \cdot 100 = \SI{7.98}{\percent} \; \text{.}
 \end{equation}
-Dies entspricht einer Abweichung von  etwa $\SI{7}{\percent}$, was im Vergleich zu der oben stehenden Tabelle \ref{tab:vgllit} eine etwas erhöhte Abweichung ist.
+Diese Abweichung ist im Vergleich zu der oben stehenden Tabelle \ref{tab:vgllit} eine etwas erhöhte Abweichung.
 Dies könnte an Rundung von Dezimalstellen liegen. Anderseits könnte die Ursache bei der Abweichung der Absorptionsenergien liegen, da aus diesen die Rydbergfrequenz und somit 
 auch die Rydbergenergie bestimmt  worden ist.

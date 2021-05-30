@@ -16,12 +16,12 @@ def constant(z, energie):
 
 
 z = [30, 31, 35, 37, 38, 40]
-Ezink       = energie(radians(18.75)) 
-Egallium    = energie(radians(17.35))
-Ebrom       = energie(radians(13.25))
-Erubidium   = energie(radians(11.75))
-Estrontium  = energie(radians(11.05))
-Ezirkonium  = energie(radians(9.95))
+Ezink       = energie(radians(18.668421052631572)) 
+Egallium    = energie(radians(17.342857142857145))
+Ebrom       = energie(radians(13.199999999999996))
+Erubidium   = energie(radians(11.77142857142858))
+Estrontium  = energie(radians(11.093548387096776))
+Ezirkonium  = energie(radians(9.958888888888882))
 constantzink       = constant(z[0], Ezink) 
 constantgallium    = constant(z[1], Egallium)
 constantbrom       = constant(z[2], Ebrom)
@@ -60,7 +60,7 @@ plt.ylabel(r'$\sqrt{E_K} \mathbin{/} \sqrt{\si{\electronvolt}}$')
 m = ufloat(params[0], errors[0])
 
 R = m**2 * 1.602e-19 / 6.626e-34
-
+ 
 Renergie = 6.626e-34 * R /  1.602e-19
 
 print(f'Regressionsparameter m = {params[0]} pm {errors[0]}')
@@ -69,9 +69,9 @@ print(f'Rydbergfrequenz = {R}')
 print(f'Rydbergenergie = {Renergie}')
 plt.legend()
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('build/rydberg.pdf')
+plt.savefig('build/rydberg.pdf') 
 
-litconstant = np.array([3.566, 3.677, 3.848, 3.944, 3.999, 4.101])
-eta = Constants / litconstant * 100
-
-print(eta)
+#litconstant = np.array([3.566, 3.677, 3.848, 3.944, 3.999, 4.101])
+#eta = Constants / litconstant * 100
+#
+#print(eta)

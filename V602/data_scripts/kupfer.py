@@ -18,9 +18,10 @@ def f(x1, x2, y1, y2, ymax, string):
     x = np.array([x1, x2])
     y = np.array([y1, y2])
     params = np.polyfit(x, y, deg=1)
-    #print(f'Die Steigung von {string} ist {params[0]}')
-    #print(f'Der y-Achsenabschnitt von {string } ist {params[1]}')
+    print(f'Die Steigung von {string} ist {params[0]}')
+    print(f'Der y-Achsenabschnitt von {string } ist {params[1]}')
     print(f'Die Schnittstelle von {string} ist bei {ymax/2 *1/params[0] - params[1]/params[0]}')
+    plt.plot(x, params[0] * x + params[1], 'k', linewidth = 0.5)
     return ymax/2 *1/params[0] - params[1]/params[0]
 
 xl1=f(20.0, 20.1, 291.0, 1127.0, 1599, 'links links')

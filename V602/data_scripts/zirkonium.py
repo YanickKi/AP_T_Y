@@ -3,10 +3,27 @@ import matplotlib.pyplot as plt
 
 theta, imp = np.genfromtxt('data_scripts/Zirkonium.dat', unpack = True)
 
-plt.plot(theta, imp,'.')
-plt.vlines(x = 9.95, ymin = -1000, ymax = 206.5, color = 'tab:orange', label = r'$\text{Mitte der Absorptionskante}$')
+IK = min(imp) + (max(imp) - min(imp)) / 2
+ 
+def f(x1, x2, y1, y2, ymax):
+    x = np.array([x1, x2])
+    y = np.array([y1, y2])
+    params = np.polyfit(x, y, deg=1)
+    print(f'Die Steigung von Zirkonium ist {params[0]}')
+    print(f'Der y-Achsenabschnitt von Zirkonium ist {params[1]}')
+    print(f'Die Schnittstelle bei Zirkonium ist bei {ymax *1/params[0] - params[1]/params[0]}')
+    print(f'IK ist bei Zirkonium {ymax}')
+    plt.plot(x, params[0] * x + params[1], 'k', linewidth = 0.5)
+    return ymax*1/params[0] - params[1]/params[0]
 
-plt.ylim(101, 320)
+x = f(9.9, 10, 180, 225, IK)
+
+plt.plot(theta, imp,'.')
+plt.plot(x, IK, 'x', color = 'tab:orange', label = r'$I_K$')
+
+plt.plot(9.5, 112, 'g.', label = 'Minium')
+plt.plot(10.4, 301,  'r.', label = 'Maximum')
+
 plt.xlabel(r'$\theta \mathbin{/} \si{\degree}$')
 plt.ylabel(r'$N$')
 
