@@ -72,30 +72,33 @@ Dieser Winkel weicht vom Sollwinkel $\theta_\text{soll} = \ang{28;;}$ nur um $\a
 \end{figure}
 Die $K_\alpha$ Linie befindet sich bei $\theta = \ang{22.5;;}$, während die $K_\beta$ bei  $\theta = \ang{20.2;;}$ wiederzufinden ist.
 Mittels linearer Interpolation lassen sich die Halbwertsbreiten bestimmen.
-Dazu werden die beiden umliegenden Punkte, welche am nächsten an der halben Maximum dran sind, verwendet um eine Interpolationsgerade
+Dazu werden die beiden umliegenden Punkte, welche am nächsten an dem halben Maximum dran sind, verwendet um eine Interpolationsgerade
 \begin{equation*}
     y = mx+b 
 \end{equation*}
-zur erhalten.
+zu erhalten.
 Aus dieser Geraden lässt sich der Winkel, bei der die Hälfte der maximalen Impulse gemessen wurde, bestimmen, wonach die Halbwertsbreite
 aus der Differenz des Winkels links und rechts neben der $K_\alpha$ oder $K_\beta$ Linie ermittelt werden kann.
+Der maximale Impuls liegt bei der $K_\beta$ Linie bei $1599$ Impulsen. 
+Bei der $K_\alpha$ Linie wurde ein maximaler Impuls von $5050$ gemessen.
 Die Interpolationsgeraden werden durch 
 \begin{align*}
-    y &= 8359.99x - 166908.99    \\
-    y &= -8420.00x - 173877.00   \\
-    y &= 35919.99x - -800479.99  \\
-    y &= -31960.00x - 732785.00
+    y_{\beta, 1} &= 8359.99x - 166908.99    \\
+    y_{\beta, 2} &= -8420.00x - 173877.00   \\
+    y_{\alpha, 1} &= 35919.99x - -800479.99  \\
+    y_{\alpha, 2} &= -31960.00x - 732785.00
 \end{align*}
-beschrieben. 
+beschrieben.
 Die Winkel der Halbwertsbreiten liegen bei 
 \begin{align*}
-    \theta &= \ang{20.06;;}\\
-    \theta &= \ang{20.56;;}\\
-    \theta &= \ang{22.36;;}\\
-    \theta &= \ang{22.85;;} \; \text{,}
+    \theta_{\beta, 1} &= \ang{20.06;;}\\
+    \theta_{\beta, 2} &= \ang{20.56;;}\\
+    \theta_{\alpha, 1} &= \ang{22.36;;}\\
+    \theta_{\alpha, 2} &= \ang{22.85;;} \; \text{,}
 \end{align*}
-wobei die Geraden und die ebend genannten Winkel chronologisch zu der Abbildung \ref{fig:Kupfer} angeordnet  sind, d.h., dass in der Abbildung 
-oben nach unten rechts nach links entspräche.
+wobei die Geraden und die eben genannten Winkel chronologisch zu der Abbildung \ref{fig:Kupfer} angeordnet  sind, d.h., dass in der Abbildung 
+oben nach unten links nach rechts entspräche.
+Die Interpolationsgeraden sind in der Abbildung \ref{fig:Kupfer} schwarz eingezeichnet.
 Die Halbwertsbreiten betragen
 \begin{align*}
     \symup{\Delta}K_\alpha  &= \ang{0.494;;} \\
@@ -132,21 +135,22 @@ Der Fehler der n-ten Abschirmkonstante wird Mit Hilfe der Gauß-Fehlerfortpflanz
 \begin{equation}
     \symup{\Delta} \sigma_n = \left | \frac{\partial \sigma_n}{\partial E_\text{abs} } \symup{\Delta} E_\text{abs} \right | 
 \end{equation} 
+beschrieben.
 \subsection{Bestimmung der Absorptionsenergien und -konstanten von verschiedenen Materialien}
 Bei der Aufnahme der Absorptionsspektren wurde ein LiF-Kristall, eine Beschleunigungsspannung von $\SI{35}{\kilo\volt}$ und ein Strom von $\SI{1}{\milli\ampere}$
 verwendet. 
 In den jeweiligen Unterabschnitten sind die Intensitäten $\sfrac{\text{Imp}}{\si{\second}}$ gegen den Winkel $\theta$ aufgetragen. \\
-Um die winkel zu bestimmen muss zunächst die Mitte der Kante bestimmt werden, welche sich mit Hilfe von
+Um die Winkel zu bestimmen, muss zunächst die Mitte der Kante bestimmt werden, welche sich mit Hilfe von
 \begin{equation}
     I_K = I_{K, \text{min}} + \frac{I_{K, \text{min}} + I_{K, \text{max}}}{2}
 \end{equation}
 berechnen lässt. 
 Folglich werden die beiden umliegenden Punkte betrachtet. 
-Mit denen wird eine Interpolation durchgeführt. 
+Mit diesen wird eine Interpolation durchgeführt. 
 Mit Hilfe der Interpolationsgerade $y = mx+b$ kann ermittelt werden, wo sich die Mitte der Kante befindet, wonach auf den zugehörigen Winkel 
 geschlossen werden kann.
 Die Interpolationsgeraden sind in den jeweiligen Abbildungen schwarz eingezeichnet. 
-Die Energien lassen sich mit der Bragg-Bedingung \ref{eqn:bragg} bestimmen, woraus sich nach Gleichung \eqref{eqn:abschirmkonstante} 
+Die Energien lassen sich mit der Bragg-Bedingung \eqref{eqn:bragg} bestimmen, woraus sich nach Gleichung \eqref{eqn:abschirmkonstante} 
 die Abschirmkonstante errechnen lässt.
 \subsubsection{Zink}
 Die Mitte der Kante liegt bei 
