@@ -9,7 +9,7 @@ m4 = ufloat(0.0686618330681571  , 0.0038252793921409213) # rund braun/gelb, 378.
 mrund = np.array([m1, m4])
 meckig = np.array([m2, m3])
 
-F= 9.81 * 1.0451
+F = 9.81 * 1.0451
 
 Irund = np.pi/64    *1e-8
 Ieckig= 1/12        *1e-8
