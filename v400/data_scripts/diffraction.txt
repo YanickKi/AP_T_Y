@@ -1,0 +1,9 @@
+#Grünes Licht und Rotes licht, 532nm und 635nm
+#   100l/mm         300 l/mm        600l/mm
+#grün   rot     grün    rot     grün    rot
+0       0       0       0       0       0
+3       3.5     8.5     10.1    17.9    21.5
+5.8     7       17.3    21      0       0
+8.7    10.5    21.9    33      0       0
+11.6    14      0       0       0       0
+14.7    17.7    0       0       0       0
