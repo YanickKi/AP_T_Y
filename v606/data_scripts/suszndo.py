@@ -5,8 +5,8 @@ from uncertainties import ufloat
 
 Uo, Ro, Um, Rm = np.genfromtxt('nd.txt', unpack = True)
 
-Uo *= 1e-3 #in Volt umrechnen
-Um *= 1e-3 #in Volt umrechnen
+Uo *= 1e-4 #in Volt umrechnen
+Um *= 1e-4 #in Volt umrechnen
 Ro *= 5e-3 #in Ohm umrechnen
 Rm *= 5e-3 #in Ohm umrechnen
 R3 = 1000  #R = 1kOhm
