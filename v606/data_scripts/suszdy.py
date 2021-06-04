@@ -6,8 +6,8 @@ from uncertainties import ufloat
 
 Uo, Ro, Um, Rm = np.genfromtxt('dy.txt', unpack = True)
 
-Uo *= 1e-3
-Um *= 1e-3
+Uo *= 1e-4
+Um *= 1e-4
 Ro *= 5e-3 #in Ohm umrechnen
 Rm *= 5e-3 #in Ohm umrechnen
 
