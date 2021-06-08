@@ -2,14 +2,13 @@
 \label{sec:Auswertung}
 Jegliche Fehlerrechnung wurde mit der python-Bibliothek uncertainties \cite{uncertainties} absolviert.
 Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert. 
-Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib} erstellt.\\
 \subsection{Überprüfung des Reflexionsgesetzes}
-Die Gleichung $REFERENZ$ besagt, dass der Ausfallswinkel immer dem Einfallswinkel gleicht.
+Die Gleichung \eqref{eqn:refl} besagt, dass der Ausfallswinkel immer dem Einfallswinkel gleicht.
 Zur Überprüfung dieses Gesetzes wurden die gemessenen Einfallswinkel $\alpha_1$ und die Ausfallswinkel $\alpha_2$
 , welche in der Tabelle \ref{tab:reflection} stehen, aufgenommen.
 \begin{table}
     \centering
-    \caption{Gemessene Einfallswinkel $\alpha_1$ und Ausfallswinkel $\alpha_2$}
+    \caption{Gemessene Einfallswinkel $\alpha_1$ und Ausfallswinkel $\alpha_2$.}
     \label{tab:reflection}
     \begin{tabular} {S[table-format=2.0] S[table-format=2.1] }
         \toprule
@@ -25,13 +24,13 @@ Zur Überprüfung dieses Gesetzes wurden die gemessenen Einfallswinkel $\alpha_1
     \bottomrule
 \end{tabular}
 \end{table}
-\subsection{Berechnung des Brechungsindex und die Lichtgeschwindigkeit in Plexiglas} \label{sec:refraction}
+\subsection{Berechnung des Brechungsindex und der Lichtgeschwindigkeit in Plexiglas} \label{sec:refraction}
 In der Tabelle \ref{tab:refraction} sind die Einfallswinkel $\alpha$ und die dazugehörigen 
-Brechungswinkel $\beta$, welche in der planaren Plexiglasplatte enstanden sind, und der daraus berechnete Brechungsindex $n$ aufgelistet.
-Der Brechungsindex lässt sich gemäß der Beziehung $REFERENZ$ errechnen.
+Brechungswinkel $\beta$, welche in der planaren Plexiglasplatte enstanden sind und der daraus berechnete Brechungsindex $n$ aufgelistet.
+Der Brechungsindex lässt sich gemäß der Beziehung \eqref{eqn:index} errechnen.
 \begin{table}
     \centering
-    \caption{Gemessene Einfallswinkel $\alpha$ und Brechungsinkel $\beta$}
+    \caption{Gemessene Einfallswinkel $\alpha$ und Brechungsinkel $\beta$.}
     \label{tab:refraction}
     \begin{tabular} {S[table-format=2.2] S[table-format=2.1] S[table-format=1.4] }
         \toprule
@@ -51,25 +50,26 @@ Aus den Einzelwerten ergibt sich ein Mittelwert von
 \begin{equation}
     \bar{n}_\text{Plexi} = \num{1.4921(118)} \label{eqn:refractonplexi} \; \text{.}
 \end{equation}
-Nach dem Brechungsgetz mit einem Brechungsindex von $\approx 1$ des optisch dünneren Medium, welches in unserem Fall Luft ist,
+Nach dem Brechungsgesetz mit einem Brechungsindex von $\approx 1$ des optisch dünneren Mediums, welches in unserem Fall Luft ist,
 gilt für die Lichtgeschwindigkeit in dem optisch dichteren Medium 
 \begin{equation}
     c_\text{Plexi} = \frac{c_\text{Luft}}{\bar{n}_\text{Plexi}} \; \text{.}
 \end{equation}
 Mit der Lichtgeschwindigkeit in Luft von $c_\text{Luft} = \SI{2.9979e8}{\metre\per\second}$ und dem eben berechnten 
-Brechungsindex von Plexiglas \eqref{eqn:refractonplexi} lässt sich die Lichtgeschwindigkeit in Plexiglas zu 
+Brechungsindex von Plexiglas\eqref{eqn:refractonplexi} lässt sich die Lichtgeschwindigkeit in Plexiglas zu 
 \begin{equation*}
     c_\text{Plexi} = \SI{2.009(16)e8}{\metre\per\second}
 \end{equation*}
 berechnen.
-\subsection{Bestimmung des Strahlenversatzes}
+\subsection{Bestimmung des Strahlversatzes}
 In der Tabelle \ref{tab:offset} sind erneut die gemessene Winkel aus dem Abschnitt \ref{sec:refraction} der Vollständigkeit halber aufgeführt.
-Dazu sind die, mit der Gleichung $REFERENZ$ berechneten, Strahlenversätze $s$ aufgelistet.
-Ebenso sind die Strahlenversätze $\tilde{s}$, welche mit Hilfe des Brechungsgetzes $REFERENZ$ und den Brechungswinkel $\tilde{\beta}$, 
-welche mit Hilfe des Brechungsindex \eqref{eqn:refractonplexi} aus Abschnitt \ref{sec:refraction} brechnet worden sind, dort eingetragen.
+Dazu sind die, mit der Gleichung \eqref{eqn:strahlversatz} berechneten, Strahlversätze $s$ aufgelistet.
+Ebenso sind die Strahlversätze $\tilde{s}$, welche mit Hilfe des Brechungsgetzes\eqref{eqn:index} und des Brechungswinkels $\tilde{\beta}$ berechnet wurden,
+dort eingetragen.
+Dieser Winkel wird mittels des Brechungsindex\eqref{eqn:refractonplexi} aus Abschnitt \ref{sec:refraction} berechnet.
 \begin{table}
     \centering
-    \caption{Gemessene Einfallswinkel $\alpha$ und Brechungsinkel $\beta$ und der daraus errechnete Strahlenversatz $s$ und $\tilde{s}$}
+    \caption{Gemessene Einfallswinkel $\alpha$ und Brechungsinkel $\beta$ und der daraus errechnete Strahlversatz $s$ und $\tilde{s}$.}
     \label{tab:offset}
     \begin{tabular} {S[table-format=2.0] S[table-format=2.1] S[table-format=2.2] S[table-format=1.4] S[table-format=1.4]}
         \toprule
@@ -87,9 +87,9 @@ welche mit Hilfe des Brechungsindex \eqref{eqn:refractonplexi} aus Abschnitt \re
 \end{tabular}
 \end{table}
 \subsection{Bestimmung der Ablenkung}
-Mit Hilfe der Gleichung $REFERENZ$ kann die Ablenkung $\delta$ bestimmt werden.
-Hierzu wird der Brechungsindex von Kronglas benötigt, welcher den Wert $n_\text{Kron} = 1.555$\cite{Lit} hat.
-Der benötigte Winkel $\beta_1$ kann mittels des Brechungsgetzes zu
+Mit Hilfe der Gleichung \eqref{eqn:ablenk} kann die Ablenkung $\delta$ bestimmt werden.
+Hierzu wird der Brechungsindex von Kronglas benötigt, welcher den Wert $n_\text{Kron} = 1.555$\cite{lit} hat.
+Der benötigte Winkel $\beta_1$ kann mittels des Brechungsgesetzes\eqref{eqn:index} zu
 \begin{equation*}
     \beta_1 = \arcsin \left( \frac{\sin \alpha_1 }{n} \right)
 \end{equation*}
@@ -98,12 +98,12 @@ berechnet werden, wonach der Winkel $\beta_2$ durch
     \beta_2 = \gamma - \beta_1
 \end{equation*}
 bestimmt werden kann. Dabei gilt $\gamma = \ang{60;;}$.
-In der Tablle \ref{tab:prisma} ist der gemessene Einfallswinkel $\alpha_1$, gemessene Ausfallswinkel des Lichtstrahls $\alpha_2$ 
-und die Ablenkung $\delta$ aufgeführt, wobei die Indizes g und r für grün bzw. rot steht. 
+In der Tabelle \ref{tab:prisma} ist der gemessene Einfallswinkel $\alpha_1$, der gemessene Ausfallswinkel des Lichtstrahls $\alpha_2$ 
+und die Ablenkung $\delta$ aufgeführt, wobei die Indizes g und r für grün bzw. rot stehen. 
 \begin{table}
     \centering
-    \caption{Gemessene Einfallswinkel $\alpha_1$ und Austrittswinkel $\alpha_2$ und die daraus errechnete Ablenkung $\delta$ für 
-    grünes und rotes licht.}
+    \caption{Gemessene Einfallswinkel $\alpha_1$ und Austrittswinkel $\alpha_2$ mit der daraus errechneten Ablenkung $\delta$ für 
+    grünes und rotes Licht.}
     \label{tab:prisma}
     \begin{tabular} {S[table-format=2.0] S[table-format=2.1] S[table-format=2.2] S[table-format=1.4] S[table-format=1.4]}
         \toprule
@@ -123,7 +123,7 @@ und die Ablenkung $\delta$ aufgeführt, wobei die Indizes g und r für grün bzw
 Die gemessenen Beugungswinkel $\varphi$ verschiedener Beugungsordnungen $k$ bei verschiedenen Gitterkonstanten $d$ sind in 
 der Tabelle \ref{tab:diffractionangle} aufgelistet.
 Der Index g und r stehen dabei für grünes oder rotes Licht.
-Aus den gemessenen Beungswinkeln und Beugungsordnungen lässt sich die Wellenlänge des verwendeten Lasers mittels $REFERENZ$ ermitteln.
+Aus den gemessenen Beugungswinkeln und Beugungsordnungen lässt sich die Wellenlänge des verwendeten Lasers mittels \eqref{eqn:gitter} ermitteln.
 \begin{table}
     \centering
     \caption{Gemessene Beugungswinkel verschiedener Beugungsordnungen von grünem und rotem Licht bei verschiedenen Gitterkonstanten.}
@@ -154,7 +154,7 @@ Aus den gemessenen Beungswinkeln und Beugungsordnungen lässt sich die Wellenlä
 Die aus den Messwerten ermittelten Wellenlänge sind in der Tabelle \ref{tab:diffractionwavelength} aufgeführt.
 \begin{table}
     \centering
-    \caption{Berechnete Wellenlängen zu den gemessenen zu den gemessenen Beugungswinkeln von grünem und rotem Licht.}
+    \caption{Berechnete Wellenlängen zu den gemessenen Beugungswinkeln von grünem und rotem Licht.}
     \label{tab:diffractionwavelength}
     \begin{tabular} {S[table-format=1.0] 
                      S[table-format=3.2]  S[table-format=3.2]
@@ -179,7 +179,7 @@ Die aus den Messwerten ermittelten Wellenlänge sind in der Tabelle \ref{tab:dif
     \bottomrule
 \end{tabular}
 \end{table}
-Über alle berechneten Wellenlängen des jeweiligen Lichts ergibt sich der Mittelwert der Wellenlänge von dem grünem bzw. rotem Laser zu
+Über alle berechneten Wellenlängen des jeweiligen Lichts  gemittelt, ergibt sich der Mittelwert der Wellenlänge von dem grünem bzw. rotem Laser zu
 \begin{align*}
     \bar{\lambda}_\text{g} & = \SI{495.34(5504)}{\nano\metre} \\
     \bar{\lambda}_\text{r} & = \SI{604.22(6714)}{\nano\metre} \, \text{.}
