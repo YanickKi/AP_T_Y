@@ -18,14 +18,18 @@ def correction(N):
 def wavelength(theta):
     return 2 * 201.4e-12 * np.sin(radians(theta))
 
-def uncI(N):
-    return abs((1/N * correction(N) + 9e-5/N * correction(N)**2)*np.sqrt(N))
+def uncI(N, Nerr):
+    return abs(1/(1-90e-6*N)**2 * Nerr)
 
 def uncT(Nohne, Nmit, Nerrohne, Nerrmit):
     return np.sqrt((1/Nohne * Nerrohne)**2 +  (Nmit/Nohne**2 * Nerrmit)**2) 
 
-Nohneerr= uncI(Nohne)
-Nmiterr = uncI(Nmit)
+
+Nohneerr = np.sqrt(Nohne * 200)   / 200
+Nmiterr = np.sqrt(Nmit   * 200)   / 200
+
+Nohneerr= uncI(Nohne, Nohneerr)
+Nmiterr = uncI(Nmit, Nmiterr)
 Nohne = correction(Nohne) 
 Nmit = correction(Nmit)
 
@@ -35,7 +39,7 @@ T = Nmit/Nohne
 np.savetxt(
     'Transmisson.txt',
     np.column_stack([T, Terr]),
-    fmt=['%.2f', '%.2f'],    
+    fmt=['%.3f', '%.3f'],    
     header='T,Terr',
 )
 
