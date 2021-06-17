@@ -1,2 +1,30 @@
 \section{Auswertung}
-\label{sec:Auswertung}
+\label{sec:Auswertung}Jegliche Fehlerrechnung wurde mit der python-Bibliothek uncertainties \cite{uncertainties} absolviert.
+Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnitten angegeben.
+Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert. 
+Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib}
+\subsection{Verifizierung der Funktion eines phasenempfindlichen Gleichrichters}
+\begin{table}
+    \centering
+    \caption{Gemessen Ausgangsspannunge $U_\text{out}$}
+    \label{tab:refraction}
+    \begin{tabular} {S[table-format=3.0] S[table-format=1.2]}
+        \toprule
+        {$\Phi \mathbin{/} \si{\degree}$} & {$U_\text{out} \mathbin{/} \si{\milli\volt}$}\\
+    \midrule
+    0       & 4.8 \\
+    30      & 4.3 \\
+    60      & 2.9 \\
+    90      & 3.7 \\
+    120     & 5.5 \\
+    150     & 5   \\
+    180     & 4.8 \\    
+    \bottomrule
+\end{tabular}
+\end{table}
+\begin{figure}
+    \centering
+    \caption{Gemessene $U_\text{out}$ mit Regressionskurve}
+    \label{fig:Uwo}
+    \includegraphics{build/Uwo.pdf}
+\end{figure}

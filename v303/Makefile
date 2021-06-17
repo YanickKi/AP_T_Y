@@ -4,8 +4,11 @@ all: build/main.pdf
 #build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
 #	TEXINPUTS=$$(pwd): python plot.py
 
+build/Uwo.pdf: data_scripts/Uwo.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/Uwo.py
+
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-#build/main.pdf: build/plot.pdf
+build/main.pdf: build/Uwo.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
