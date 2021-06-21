@@ -1,9 +1,23 @@
 \section{Auswertung}
 \label{sec:Auswertung}Jegliche Fehlerrechnung wurde mit der python-Bibliothek uncertainties \cite{uncertainties} absolviert.
 Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnitten angegeben.
-Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert. 
+Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert.  
 Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib}
 \subsection{Verifizierung der Funktion eines phasenempfindlichen Gleichrichters}
+\begin{figure}
+    \begin{subfigure}{0.48 \textwidth}
+        \centering
+        \includegraphics{data_scripts/pics/0o.jpeg}
+        \caption{Ohne Rauschen}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48 \textwidth}
+            \centering
+            \includegraphics{data_scripts/pics/0m.jpeg}
+            \caption{Mit Rauschen}
+    \end{subfigure}
+    \caption{Ausgangsspannung bei $\Phi = \ang{0;;}$}
+\end{figure}
 In der Tabelle \ref{tab:voltage} sind die gemessenen Ausgangsspannungen in Abhängigkit von der Phase
 $\Phi$ aufgezeichnet. 
 Dabei ist $U_\text{out}$ die unverrauschte Spannung und $U_\text{out}$ die verrauschte Spannung.
@@ -17,8 +31,8 @@ Dabei ist $U_\text{out}$ die unverrauschte Spannung und $U_\text{out}$ die verra
     \midrule
     0       & 96 & 96\\
     30      & 86 & 86\\
-    60      & 58 & 58\\
-    90      & 74 & 74\\
+    60      & 58 & 33\\
+    90      & 74 & 44\\
     120     & 110 & 110\\
     150     & 100 & 100\\
     180     & 96 & 96\\    
@@ -42,10 +56,10 @@ Für die unverrauschte Spannung ergeben sich die Parameter zu
 \end{align*}
 Die Regressionsparameter der verrauschten Messwerte werden zu
 \begin{align*}
-    a_\text{noise} &= \num{-0.63(32)} \\           
-    b_\text{noise} &= \num{2.81(40)}  \\            
-    c_\text{noise} &= \num{112.03(79)}\\
-    d_\text{noise} &= \num{3.30(22)}
+    a_\text{noise} &= \num{0.68(13)} \\           
+    b_\text{noise} &= \num{2.11(19)}  \\            
+    c_\text{noise} &= \num{113.64(35)}\\
+    d_\text{noise} &= \num{2.54(9)}
 \end{align*}
 berechnet.
 \begin{figure}
@@ -60,18 +74,42 @@ berechnet.
     \label{fig:Uwi}
     \includegraphics{build/Uwi.pdf}
 \end{figure}
-Somit können die Spannungsaplituden $U_0$ zu 
+Somit können die Spannungsaplituden $U_0$ gemäß
+\begin{equation*}
+    U_0 = \frac{\pi}{2} a
+\end{equation*}
+zu 
 \begin{align*}
-    U_0                 & = \SI{22.09(594)}{\milli\volt} \\
-    U_{0 \text{, noise}}& = \SI{-0.63(32)}{\milli\volt}
+    U_0                 & = \SI{33.7}{\milli\volt} \\
+    U_{0 \text{, noise}}& = \SI{1.07}{\milli\volt}
 \end{align*}
 bestimmt werden.
+\FloatBarrier
 \subsection{Überprüfung der Rauschunterdückung des Lock-In-Verstärkers mit einer Photodetektorschaltung}
+In der Tabelle \ref{tab:distance} ist die gemessene Sapnnung $U$ in Abhängigkeit des Abstands $r$
+zwischen der LED und der Photodiode aufgelistet.
+Dazu sind die Messwerte inklusive Regressionskurven mit einer $\sfrac{1}{r}$- und 
+$\sfrac{1}{r²}$-Abhängigkeit in der Abbildung \ref{fig:distance} aufgetragen.
+Die Regressionskurven haben die Form
+\begin{equation*}
+    U = \frac{a_1}{r} + b_1
+\end{equation*}
+und
+\begin{equation*}
+    U = \frac{a_2}{r²} + b_2 \; \text{.}
+\end{equation*}
+Dabei ergeben sich die Parameter zu
+\begin{align*}
+    a_1 &= \num{10.23(18)} \\
+    b_1 &= \num{0.44(5)}    \\
+    a_2 &= \num{41.72(28)}  \\
+    b_2 &= \num{3.78(6)}    \; \text{.}
+\end{align*}
 \begin{table}
     \centering
-    \caption{Gemessen Spannungen $U$ und in Abhängigkeit des Abstands}
+    \caption{Gemessene Spannungen $U$ und in Abhängigkeit des Abstands}
     \label{tab:distance}
-    \begin{tabular} {S[table-format=2.1] S[table-format=1.2]}
+    \begin{tabular} {S[table-format=2.1] S[table-format=1.2 ]}
         \toprule
         {$r \mathbin{/} \si{\centi\metre}$} & {$U \mathbin{/} \si{\volt}$}\\
     \midrule
