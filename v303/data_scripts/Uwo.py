@@ -14,8 +14,10 @@ phase = radians(phase)
 Uwo *= 20 #SI 
 
 
-params, covariance_matrix = curve_fit(f, phase, Uwo)
+params, covariance_matrix = curve_fit(f, phase, Uwo, p0=(30, 1, 113.92815598932053, 86.57729155463478))
 uncertainties = np.sqrt(np.diag(covariance_matrix))
+
+print(*params)
 
 x_plot = np.linspace(phase[0], phase[-1], 1000)
 
@@ -24,7 +26,7 @@ plt.plot(x_plot, f(x_plot, *params), label = 'Regressionskurve')
 np.savetxt(
     'Uwo.txt',
     Uwo,
-    fmt='%.2f',       # first column integer, second 4 digits float
+    fmt='%.2f',
 )
 
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
