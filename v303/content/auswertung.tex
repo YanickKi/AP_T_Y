@@ -4,27 +4,103 @@ Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnit
 Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert. 
 Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib}
 \subsection{Verifizierung der Funktion eines phasenempfindlichen Gleichrichters}
+In der Tabelle \ref{tab:voltage} sind die gemessenen Ausgangsspannungen in Abhängigkit von der Phase
+$\Phi$ aufgezeichnet. 
+Dabei ist $U_\text{out}$ die unverrauschte Spannung und $U_\text{out}$ die verrauschte Spannung.
 \begin{table}
     \centering
-    \caption{Gemessen Ausgangsspannunge $U_\text{out}$}
-    \label{tab:refraction}
-    \begin{tabular} {S[table-format=3.0] S[table-format=1.2]}
+    \caption{Gemessen Ausgangsspannungen $U_\text{out}$ und $U_\text{out, noise}$}
+    \label{tab:voltage}
+    \begin{tabular} {S[table-format=3.0] S[table-format=3.0] S[table-format=3.0]}
         \toprule
-        {$\Phi \mathbin{/} \si{\degree}$} & {$U_\text{out} \mathbin{/} \si{\milli\volt}$}\\
+        {$\Phi \mathbin{/} \si{\degree}$} & {$U_\text{out} \mathbin{/} \si{\milli\volt}$} & {$U_\text{out, noise} \mathbin{/} \si{\milli\volt}$}\\
     \midrule
-    0       & 4.8 \\
-    30      & 4.3 \\
-    60      & 2.9 \\
-    90      & 3.7 \\
-    120     & 5.5 \\
-    150     & 5   \\
-    180     & 4.8 \\    
+    0       & 96 & 96\\
+    30      & 86 & 86\\
+    60      & 58 & 58\\
+    90      & 74 & 74\\
+    120     & 110 & 110\\
+    150     & 100 & 100\\
+    180     & 96 & 96\\    
+    \bottomrule
+\end{tabular}
+\end{table}
+Aus der Tabelle \ref{tab:voltage} ergibt sich einerseits die Abbildung \ref{fig:Uwo} mit den unverrauschten 
+Spannungen, anderseits die Tabelle \ref{fig:Uwi} mit den verrauschten Sapnnungen.
+Dort sin die gemessenen Spannungen gegen die Phase aufgetragen.
+Zusätzlich ist dort esine Ausgleichskurve eingezeichnete welche sich mittels 
+\begin{equation}
+    U_\text{out} = a\cos \left ( b \, \Phi + c \right ) + d
+\end{equation}
+beschreiben lässt, wobei der Parameter $a$ die Amplitude $U_0$ ist.
+Für die unverrauschte Spannung ergeben sich die Parameter zu    
+\begin{align*}
+    a &= \num{22.09(594)}       \\
+    b &= \num{2.17(22)}         \\
+    c &= \num{113.93(44)}       \\
+    d &= \num{86.58(413)} \; \text{.}
+\end{align*}
+Die Regressionsparameter der verrauschten Messwerte werden zu
+\begin{align*}
+    a_\text{noise} &= \num{-0.63(32)} \\           
+    b_\text{noise} &= \num{2.81(40)}  \\            
+    c_\text{noise} &= \num{112.03(79)}\\
+    d_\text{noise} &= \num{3.30(22)}
+\end{align*}
+berechnet.
+\begin{figure}
+    \centering
+    \caption{Gemessene Spannungen $U_\text{out}$ mit Regressionskurve}
+    \label{fig:Uwo}
+    \includegraphics{build/Uwo.pdf}
+\end{figure}
+\begin{figure}
+    \centering
+    \caption{Gemessene Spannungen $U_\text{out, noise}$ mit Regressionskurve}
+    \label{fig:Uwi}
+    \includegraphics{build/Uwi.pdf}
+\end{figure}
+Somit können die Spannungsaplituden $U_0$ zu 
+\begin{align*}
+    U_0                 & = \SI{22.09(594)}{\milli\volt} \\
+    U_{0 \text{, noise}}& = \SI{-0.63(32)}{\milli\volt}
+\end{align*}
+bestimmt werden.
+\subsection{Überprüfung der Rauschunterdückung des Lock-In-Verstärkers mit einer Photodetektorschaltung}
+\begin{table}
+    \centering
+    \caption{Gemessen Spannungen $U$ und in Abhängigkeit des Abstands}
+    \label{tab:distance}
+    \begin{tabular} {S[table-format=2.1] S[table-format=1.2]}
+        \toprule
+        {$r \mathbin{/} \si{\centi\metre}$} & {$U \mathbin{/} \si{\volt}$}\\
+    \midrule
+    4.7  &1.90 \\
+    5.0  &1.70 \\
+    6.0  &1.50 \\
+    7.0  &1.40 \\
+    8.0  &1.30 \\
+    9.0  &1.15 \\
+    10.0 & 1.00\\
+    11.0 & 0.85\\
+    12.0 & 0.70\\
+    13.0 & 0.60\\
+    14.0 & 0.50\\
+    15.0 & 0.45\\
+    16.0 & 0.40\\
+    17.0 & 0.35\\
+    18.0 & 0.30\\
+    19.0 & 0.30\\
+    20.0 & 0.25\\
+    21.0 & 0.23\\
+    28.0 & 0.10\\
+    50.0 & 0.05\\
+    80.0 & 0.04\\  
     \bottomrule
 \end{tabular}
 \end{table}
 \begin{figure}
-    \centering
-    \caption{Gemessene $U_\text{out}$ mit Regressionskurve}
-    \label{fig:Uwo}
-    \includegraphics{build/Uwo.pdf}
+    \caption{Gemessene Spannungen und Regressionskurven in Abhängigkeit des Abstands}
+    \label{fig:distance}
+    \includegraphics{build/distance.pdf}
 \end{figure}
