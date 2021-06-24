@@ -25,7 +25,7 @@ np.savetxt(
     'Uwo.txt',
     Uwo,  
     fmt='%.2f',
-) 
+)
 
 plt.xlabel(r'$\Phi \mathbin{/} \si{\radian}$')
 plt.ylabel(r'$U_\text{out} \mathbin{/} \si{\milli\volt}$')

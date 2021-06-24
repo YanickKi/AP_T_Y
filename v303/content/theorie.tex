@@ -11,7 +11,10 @@ In Abbildung \ref{fig:aug} wird der grundsätzliche Aufbau des Verstärkers darg
     \includegraphics[width = 0.6 \textwidth]{Pics/gauf.png}
 \end{figure}
 Das verrauschte Signal wird durch einen Bandpass von Rauschanteilen höherer und tieferer Frequenzen befreit. In einem Mischer
-wird mit einem Referenzsignal der Frequenz $\omega_0$ das Signal multipliziert. Mit Hilfe eines Phasenverschiebers kann die Phasenlage $\varphi$
+wird mit einem Referenzsignal der Frequenz $\omega_0$ das Signal multipliziert. Mit Hilfe eines Phasenverschiebers kann die Phasenlage $\phi$
 des Referenzsignals variiert werden und so mit dem Signal synchronisiert werden. Hinter dem Mischer ist ein Tiefpass eingeschaltet, der das Mischsignal $U_\text{sig} \times
-U_\text{ref}$ über mehrere Perioden der Modulationsfrequenz integriert. Das Ausgangssignal $U_\text{out}$ ist eine Gleichspannung
-$U_\text{out} \propto U_0 \cos \varphi $ die proportional zur Eingangsspannung ist.
+U_\text{ref}$ über mehrere Perioden der Modulationsfrequenz integriert. Das Ausgangssignal $U_\text{out}$ ist eine Gleichspannung mit
+\begin{equation}
+    U_\text{out} =  \frac{2}{\pi}U_0 \cos \phi \; \text{,} \label{eqn:cosine}
+\end{equation}
+welche proportional zur Eingangsspannung ist.

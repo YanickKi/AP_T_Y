@@ -4,22 +4,107 @@ Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnit
 Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert.  
 Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib}
 \subsection{Verifizierung der Funktion eines phasenempfindlichen Gleichrichters}
+\label{sec:phase}
 \begin{figure}
     \begin{subfigure}{0.48 \textwidth}
         \centering
-        \includegraphics{data_scripts/pics/0o.jpeg}
+        \includegraphics[height = 3.5cm]{data_scripts/pics/0o.jpeg}
         \caption{Ohne Rauschen}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.48 \textwidth}
             \centering
-            \includegraphics{data_scripts/pics/0m.jpeg}
+            \includegraphics[height = 3.5cm]{data_scripts/pics/0m.jpeg}
             \caption{Mit Rauschen}
     \end{subfigure}
-    \caption{Ausgangsspannung bei $\Phi = \ang{0;;}$}
+    \caption{Ausgangsspannung bei $\phi = \ang{0;;}$}
+\end{figure}
+\begin{figure}
+    \begin{subfigure}{0.48 \textwidth}
+        \centering
+        \includegraphics[height = 3.5cm]{data_scripts/pics/30o.jpeg}
+        \caption{Ohne Rauschen}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48 \textwidth}
+            \centering
+            \includegraphics[height = 3.5cm]{data_scripts/pics/30m.jpeg}
+            \caption{Mit Rauschen}
+    \end{subfigure}
+    \caption{Ausgangsspannung bei $\phi = \ang{30;;}$}
+\end{figure}
+\begin{figure}
+    \begin{subfigure}{0.48 \textwidth}
+        \centering
+        \includegraphics[height = 3.5cm]{data_scripts/pics/60o.jpeg}
+        \caption{Ohne Rauschen}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48 \textwidth}
+            \centering
+            \includegraphics[height = 3.5cm]{data_scripts/pics/60m.jpeg}
+            \caption{Mit Rauschen}
+    \end{subfigure}
+    \caption{Ausgangsspannung bei $\phi = \ang{60;;}$}
+\end{figure}
+\begin{figure}
+    \begin{subfigure}{0.48 \textwidth}
+        \centering
+        \includegraphics[height = 3.5cm]{data_scripts/pics/90o.jpeg}
+        \caption{Ohne Rauschen}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48 \textwidth}
+            \centering
+            \includegraphics[height = 3.5cm]{data_scripts/pics/90m.jpeg}
+            \caption{Mit Rauschen}
+    \end{subfigure}
+    \caption{Ausgangsspannung bei $\phi = \ang{90;;}$}
+\end{figure}
+\begin{figure}
+    \begin{subfigure}{0.48 \textwidth}
+        \centering
+        \includegraphics[height = 3.5cm]{data_scripts/pics/120o.jpeg}
+        \caption{Ohne Rauschen}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48 \textwidth}
+            \centering
+            \includegraphics[height = 3.5cm]{data_scripts/pics/120m.jpeg}
+            \caption{Mit Rauschen}
+    \end{subfigure}
+    \caption{Ausgangsspannung bei $\phi = \ang{120;;}$}
+\end{figure}
+\begin{figure}
+    \begin{subfigure}{0.48 \textwidth}
+        \centering
+        \includegraphics[height = 3.5cm]{data_scripts/pics/150o.jpeg}
+        \caption{Ohne Rauschen}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48 \textwidth}
+            \centering
+            \includegraphics[height = 3.5cm]{data_scripts/pics/150m.jpeg}
+            \caption{Mit Rauschen}
+    \end{subfigure}
+    \caption{Ausgangsspannung bei $\phi = \ang{150;;}$}
+\end{figure}
+\begin{figure}
+    \begin{subfigure}{0.48 \textwidth}
+        \centering
+        \includegraphics[height = 3.5cm]{data_scripts/pics/180o.jpeg}
+        \caption{Ohne Rauschen}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48 \textwidth}
+            \centering
+            \includegraphics[height = 3.5cm]{data_scripts/pics/180m.jpeg}
+            \caption{Mit Rauschen}
+    \end{subfigure}
+    \caption{Ausgangsspannung bei $\phi = \ang{180;;}$}
 \end{figure}
 In der Tabelle \ref{tab:voltage} sind die gemessenen Ausgangsspannungen in Abhängigkit von der Phase
-$\Phi$ aufgezeichnet. 
+$\phi$ aufgezeichnet. 
 Dabei ist $U_\text{out}$ die unverrauschte Spannung und $U_\text{out}$ die verrauschte Spannung.
 \begin{table}
     \centering
@@ -27,7 +112,7 @@ Dabei ist $U_\text{out}$ die unverrauschte Spannung und $U_\text{out}$ die verra
     \label{tab:voltage}
     \begin{tabular} {S[table-format=3.0] S[table-format=3.0] S[table-format=3.0]}
         \toprule
-        {$\Phi \mathbin{/} \si{\degree}$} & {$U_\text{out} \mathbin{/} \si{\milli\volt}$} & {$U_\text{out, noise} \mathbin{/} \si{\milli\volt}$}\\
+        {$\phi \mathbin{/} \si{\degree}$} & {$U_\text{out} \mathbin{/} \si{\milli\volt}$} & {$U_\text{out, noise} \mathbin{/} \si{\milli\volt}$}\\
     \midrule
     0       & 96 & 96\\
     30      & 86 & 86\\
@@ -41,10 +126,10 @@ Dabei ist $U_\text{out}$ die unverrauschte Spannung und $U_\text{out}$ die verra
 \end{table}
 Aus der Tabelle \ref{tab:voltage} ergibt sich einerseits die Abbildung \ref{fig:Uwo} mit den unverrauschten 
 Spannungen, anderseits die Tabelle \ref{fig:Uwi} mit den verrauschten Sapnnungen.
-Dort sin die gemessenen Spannungen gegen die Phase aufgetragen.
-Zusätzlich ist dort esine Ausgleichskurve eingezeichnete welche sich mittels 
+Dort sind die gemessenen Spannungen gegen die Phase aufgetragen.
+Zusätzlich ist dort eine Ausgleichskurve gemäß der Beziehung \eqref{eqn:cosine} eingezeichnet, welche sich mittels 
 \begin{equation}
-    U_\text{out} = a\cos \left ( b \, \Phi + c \right ) + d
+    U_\text{out} = a\cos \left ( b \, \phi + c \right ) + d
 \end{equation}
 beschreiben lässt, wobei der Parameter $a$ die Amplitude $U_0$ ist.
 Für die unverrauschte Spannung ergeben sich die Parameter zu    
@@ -89,7 +174,7 @@ bestimmt werden.
 In der Tabelle \ref{tab:distance} ist die gemessene Sapnnung $U$ in Abhängigkeit des Abstands $r$
 zwischen der LED und der Photodiode aufgelistet.
 Dazu sind die Messwerte inklusive Regressionskurven mit einer $\sfrac{1}{r}$- und 
-$\sfrac{1}{r²}$-Abhängigkeit in der Abbildung \ref{fig:distance} aufgetragen.
+$\sfrac{1}{r²}$ -Abhängigkeit in der Abbildung \ref{fig:distance} aufgetragen.
 Die Regressionskurven haben die Form
 \begin{equation*}
     U = \frac{a_1}{r} + b_1
