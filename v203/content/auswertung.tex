@@ -1,2 +1,52 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+In der Tabelle \ref{tab:tiefdruck} sind die gemessenen Temperaturen $T_\text{g}$ und $T_\text{f}$ mit dem dazugehörigen Druck $p$
+aufgetragen. Dabei stehen die Indizes für den gasförmigen bzw. flüssigen Zustand.
+\begin{table}
+    \centering
+    \caption{Gemessener Druck $p$ bei den Temperaturen $T_\text{f}$ und $T_\text{g}$.}
+    \label{tab:tiefdruck}
+    \begin{tabular} {S[table-format=2.0] S[table-format=3.1] S[table-format=3.0]}
+        \toprule
+        {$T_f \mathbin{/} \si{\celsius}$} & {$T_g \mathbin{/} \si{\celsius}$} & {$p \mathbin{/} \si{\milli\bar}$}\\
+    \midrule
+    30   &   25   &74  \\
+    35   &   36   &86  \\
+    40   &   38   &96  \\
+    45   &   40   &110 \\
+    50   &   49   &127 \\
+    55   &   54   &160 \\
+    60   &   59.5 &200 \\
+    65   &   64   &247 \\
+    70   &   70   &307 \\
+    75   &   71   &372 \\
+    80   &   82   &460 \\
+    85   &   99   &550 \\
+    90   &   106.5&648 \\
+    \bottomrule
+\end{tabular}
+\end{table}
+Dazu ist der durch den Normaldruck $p_0 \approx \SI{1}{\bar}$ geteilte Druck $p$ logarithmisch gegen die reziproke Absoluttemperatur 
+$T_\text{g}$ in Der Abbildung \ref{fig:tiefdruck} graphisch dargestellt. 
+\begin{figure}
+    \centering
+    \caption{Der gemessene Druck gegen die reziproke absolute Gastemperatur.}
+    \label{fig:tiefdruck}
+    \includegraphics{build/tiefdruck.pdf}
+\end{figure}
+Die Beziehung $REFERENZ$ lässt sich in eine Regressionsgerade der Form 
+\begin{equation*}
+    y = mx+b
+\end{equation*}
+umschreiben, wobei $y=\ln \left ( \sfrac{p}{p_0} \right)$ und $m=\sfrac{-L}{R}$ gilt.
+Dabei ergeben sich die Parameter zu 
+\begin{align*}
+    m &= \SI{-3369.90(17463)}{\mole\kelvin}\\
+    b &= \SI{0.65(53)} \; \text{.}
+\end{align*}
+Die universelle Gaskonstante hat den Wert $R = \SI{8.31446261815324}{\kilo\gram\metre\squared\per\second\squared\per\mole\per\kelvin}$\cite{gasconstant}, womit sich
+eine Verdampfungswärme von 
+\begin{equation*}
+    L = \SI{2.80(15)e04}{\joule\per\mole}
+\end{equation*}
+errechnen lässt.
