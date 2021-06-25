@@ -4,7 +4,7 @@ from uncertainties import ufloat
 
 p, Tl, Tw = np.genfromtxt('data_scripts/tiefdruck.txt', unpack = True)
 
-p *= 1e-2 #p in SI
+p *= 1e2 #p in SI
 p0 = 1e5 #atomespheric pressure
 Tl += 273.15 #Tl in SI
 R = 8.31446261815324 #general gas constant
