@@ -7,8 +7,11 @@ all: build/main.pdf
 
 build/tiefdruck.pdf: data_scripts/tiefdruck.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python data_scripts/tiefdruck.py
+
+build/hochdruck.pdf: data_scripts/hochdruck.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/hochdruck.py
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/tiefdruck.pdf
+build/main.pdf: build/tiefdruck.pdf build/hochdruck.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

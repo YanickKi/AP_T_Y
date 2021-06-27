@@ -2,6 +2,7 @@
 \label{sec:Auswertung}
 In der Tabelle \ref{tab:tiefdruck} sind die gemessenen Temperaturen $T_\text{g}$ und $T_\text{f}$ mit dem dazugehörigen Druck $p$
 aufgetragen. Dabei stehen die Indizes für den gasförmigen bzw. flüssigen Zustand.
+\subsection{Berechnung der gemittelten Verdampfungswärme von Wasser}
 \begin{table}
     \centering
     \caption{Gemessener Druck $p$ bei den Temperaturen $T_\text{f}$ und $T_\text{g}$.}
@@ -50,3 +51,59 @@ eine Verdampfungswärme von
     L = \SI{2.80(15)e04}{\joule\per\mole}
 \end{equation*}
 errechnen lässt.
+\subsection{Bestimmung der Zeitabhängigkeit der Verdampfungswärme}
+In der Tabelle \ref{tab:hochdruck} sind der gemessene Druck und die Temperatur für den Bereich $p > \SI{1}{\bar}$ aufeführt.
+\begin{table}
+    \centering
+    \caption{Gemessener Druck $p$ bei den Temperaturen $T_\text{f}$ und $T_\text{g}$.}
+    \label{tab:hochdruck}
+    \begin{tabular} {S[table-format=2.0] S[table-format=3.1] S[table-format=3.0]}
+        \toprule
+        {$T_f \mathbin{/} \si{\celsius}$} & {$T_g \mathbin{/} \si{\celsius}$} & {$p \mathbin{/} \si{\milli\bar}$}\\
+    \midrule
+    30   &   25   &74  \\
+    35   &   36   &86  \\
+    40   &   38   &96  \\
+    45   &   40   &110 \\
+    50   &   49   &127 \\
+    55   &   54   &160 \\
+    60   &   59.5 &200 \\
+    65   &   64   &247 \\
+    70   &   70   &307 \\
+    75   &   71   &372 \\
+    80   &   82   &460 \\
+    85   &   99   &550 \\
+    90   &   106.5&648 \\
+    \bottomrule
+\end{tabular}
+\end{table}
+Die Messwerte sind dazu in der Abbildung \ref{fig:hochdruck} graphisch dargestellt.
+Die Regressionskurve wird durch ein Polynom dritten Grads der Form 
+\begin{equation*}
+    y = ax^3+bx^2+cx+d    
+\end{equation*}
+errechnet, wobei sich die Parameter zu
+\begin{align*}
+    a &= \SI{1.93(50)}{\pascal\per\kelvin\tothe{3}}                 \\
+    b &= \SI{-2299.79(64999)}{\pascal\per\kelvin\tothe{2}}          \\
+    c &= \SI{923918.92(28013445)}{\pascal\per\kelvin}     \\
+    d &= \SI{-124836792.62(4018067192)}{\pascal\per\kelvin} \; \text{.}
+\end{align*}
+Diese Regressionskurve wird nach T abgeleitet und in die nach L umgestellte Clausius-Clapeyronsche Gleichung $REFERENZ$ eingesetzt.
+Jedoch kann $V_\text{D}$ nicht mehr mittels der allgemeinen Gasgleichung bestimmt werden sondern muss mittels der Näherung
+\begin{equation*}
+    \left( p + \frac{a}{V^2}\right) V = RT
+\end{equation*}
+bestimmt werden.
+Das Volumen des in dem flüssigen Zustand kann erneut vernachlässigt werden.
+Somit ergibt sich für die Verdampfungswärme die Zeitabhängigkeit
+\begin{equation*}
+    L = \left( \frac{RT}{2p} \pm \sqrt{\frac{R^2T^2}{4p^2} + \frac{a}{p}}- V_\text{F}\right)\left( 5.79 T^3 + 4599.58 T^2 + 923918.92T \right) \; \text{.}
+\end{equation*} 
+wobei $a = \SI{0.9}{\joule\metre\tothe{3}\per\mole\squared}$ gilt.
+\begin{figure}
+    \centering
+    \caption{Gegen die Temperatur aufgetragener Druck.}
+    \label{fig:hochdruck}
+    \includegraphics{build/hochdruck.pdf}
+\end{figure}
