@@ -1,11 +1,14 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+Jegliche Fehlerrechnung wurde mit der python-Bibliothek uncertainties \cite{uncertainties} absolviert.
+Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert. 
+Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib} erstellt.\\
+\subsection{Berechnung der gemittelten Verdampfungswärme von Wasser}
 In der Tabelle \ref{tab:tiefdruck} sind die gemessenen Temperaturen $T_\text{g}$ und $T_\text{f}$ mit dem dazugehörigen Druck $p$
 aufgetragen. Dabei stehen die Indizes für den gasförmigen bzw. flüssigen Zustand.
-\subsection{Berechnung der gemittelten Verdampfungswärme von Wasser}
 \begin{table}
     \centering
-    \caption{Gemessener Druck $p$ bei den Temperaturen $T_\text{f}$ und $T_\text{g}$.}
+    \caption{Gemessener Druck $p$ bei den Temperaturen $T_\text{f}$ und $T_\text{g}$ für $p < \SI{1}{\bar}$.}
     \label{tab:tiefdruck}
     \begin{tabular} {S[table-format=2.0] S[table-format=3.1] S[table-format=3.0]}
         \toprule
@@ -27,22 +30,22 @@ aufgetragen. Dabei stehen die Indizes für den gasförmigen bzw. flüssigen Zust
     \bottomrule
 \end{tabular}
 \end{table}
-Dazu ist der durch den Normaldruck $p_0 \approx \SI{1}{\bar}$ geteilte Druck $p$ logarithmisch gegen die reziproke Absoluttemperatur 
-$T_\text{g}$ in Der Abbildung \ref{fig:tiefdruck} graphisch dargestellt. 
+\noindent Dazu ist der durch den Normaldruck $p_0 \approx \SI{1}{\bar}$ geteilte Druck $p$ logarithmisch gegen die reziproke Absoluttemperatur 
+$T_\text{g}$ in der Abbildung \ref{fig:tiefdruck} graphisch dargestellt. 
 \begin{figure}
     \centering
-    \caption{Der gemessene Druck gegen die reziproke absolute Gastemperatur.}
+    \caption{Der gemessene Druck gegen die reziproke absolute Gastemperatur für $p < \SI{1}{\bar}$.}
     \label{fig:tiefdruck}
     \includegraphics{build/tiefdruck.pdf}
 \end{figure}
-Die Beziehung $REFERENZ$ lässt sich in eine Regressionsgerade der Form 
+Die Beziehung \eqref{eqn:log} lässt sich in eine Regressionsgerade der Form 
 \begin{equation*}
     \ln \left ( \sfrac{p}{p_0} \right) = \frac{m}{T}+b
 \end{equation*}
 umschreiben, wobei $m=\sfrac{-L}{R}$ gilt.
 Dabei ergeben sich die Parameter zu 
 \begin{align*}
-    m &= \SI{-3369.90(17463)}{\mole\kelvin}\\
+    m &= \SI{-3369.90(17463)}{\kelvin}\\
     b &= \SI{0.65(53)} \; \text{.}
 \end{align*}
 Die universelle Gaskonstante hat den Wert $R = \SI{8.31446261815324}{\kilo\gram\metre\squared\per\second\squared\per\mole\per\kelvin}$\cite{gasconstant}, womit sich
@@ -52,10 +55,10 @@ eine Verdampfungswärme von
 \end{equation*}
 errechnen lässt.
 Somit lässt sich die Arbeit $L_\text{i}$, welche zur Überwindung der molekularen Anziehungskräfte erforderlich ist, berechnen.
-Zuerst wird mittles der idealen Gasgleichung $REFERENZ$ die Verdampfungswärme $L_\text{a} = RT$ mit $T = \SI{373}{\kelvin}$ berechnet.
+Zuerst wird mittles der idealen Gasgleichung \eqref{eqn:ideal} die Verdampfungswärme $L_\text{a} = RT$ mit $T = \SI{373}{\kelvin}$ berechnet.
 Somit ergibt sich 
 \begin{equation*}
-    L_\text{i} = L - L_\text{a} = \SI{2.80(15)e04}{\joule\per\mole} - RT = \SI{2.49(15)e04}{\joule\per\mole} 
+    L_\text{i} = L - L_\text{a} = \SI{2.80(15)e04}{\joule\per\mole} - RT = \SI{2.49(15)e04}{\joule\per\mole} \; \text{.}
 \end{equation*}
 Um nun $L_\text{i}$ pro Molekül zu erhalten, wird durch die Avogadro-Konstante $N_\text{A} = \SI{6.02214076e23}{\per\mole}$\cite{avogadro} geteilt,
 woraus sich 
@@ -63,29 +66,31 @@ woraus sich
     L_\text{i, Molekül} = \SI{0.258(15)}{\electronvolt}
 \end{equation*}
 ergibt.
-\subsection{Bestimmung der Zeitabhängigkeit der Verdampfungswärme}
-In der Tabelle \ref{tab:hochdruck} sind der gemessene Druck und die Temperatur für den Bereich $p > \SI{1}{\bar}$ aufeführt.
+\subsection{Bestimmung der Temperaturabhängigkeit der Verdampfungswärme}
+In der Tabelle \ref{tab:hochdruck} sind der gemessene Druck und die Temperatur für den Bereich $p > \SI{1}{\bar}$ aufgeführt.
 \begin{table}
     \centering
-    \caption{Gemessener Druck $p$ bei den Temperaturen $T_\text{f}$ und $T_\text{g}$.}
+    \caption{Gemessener Druck $p$ bei der Temperatur $T$ für $p > \SI{1}{\bar}$.}
     \label{tab:hochdruck}
-    \begin{tabular} {S[table-format=2.0] S[table-format=3.1] S[table-format=3.0]}
+    \begin{tabular} {S[table-format=2.0] S[table-format=3.0]}
         \toprule
-        {$T_f \mathbin{/} \si{\celsius}$} & {$T_g \mathbin{/} \si{\celsius}$} & {$p \mathbin{/} \si{\milli\bar}$}\\
+        {$T \mathbin{/} \si{\celsius}$} & {$p \mathbin{/} \si{\bar}$}\\
     \midrule
-    30   &   25   &74  \\
-    35   &   36   &86  \\
-    40   &   38   &96  \\
-    45   &   40   &110 \\
-    50   &   49   &127 \\
-    55   &   54   &160 \\
-    60   &   59.5 &200 \\
-    65   &   64   &247 \\
-    70   &   70   &307 \\
-    75   &   71   &372 \\
-    80   &   82   &460 \\
-    85   &   99   &550 \\
-    90   &   106.5&648 \\
+    120 & 1  \\
+    132 & 2  \\
+    141 & 3  \\
+    150 & 4  \\
+    156 & 5  \\
+    161 & 6  \\
+    167 & 7  \\
+    172 & 8  \\
+    177 & 9  \\
+    180 & 10 \\
+    184 & 11 \\
+    187 & 12 \\
+    191 & 13 \\
+    192 & 14 \\
+    195 & 15 \\
     \bottomrule
 \end{tabular}
 \end{table}
@@ -102,29 +107,29 @@ errechnet, wobei sich die Parameter zu
     d &= \SI{-124836792.62(4018067192)}{\pascal\per\kelvin} \; \text{.}
 \end{align*}
 ergeben.
-Diese Regressionskurve wird nach T abgeleitet und in die nach L umgestellte Clausius-Clapeyronsche Gleichung $REFERENZ$ eingesetzt.
+Diese Regressionskurve wird nach T abgeleitet und in die nach L umgestellte Clausius-Clapeyronsche Gleichung \eqref{eqn:claus} eingesetzt.
 Jedoch kann $V_\text{D}$ nicht mehr mittels der allgemeinen Gasgleichung bestimmt werden sondern muss mittels der Näherung
 \begin{equation*}
     \left( p + \frac{a}{V^2}\right) V = RT
 \end{equation*}
 bestimmt werden.
-Das Volumen des in dem flüssigen Zustand kann erneut vernachlässigt werden.
-Somit ergibt sich für die Verdampfungswärme die Zeitabhängigkeit
+Das Volumen in dem flüssigen Zustand kann erneut vernachlässigt werden.
+Somit ergibt sich für die Verdampfungswärme die Temperaturabhängigkeit
 \begin{equation*}
-    L_\pm = \left( \frac{RT}{2p} \pm \sqrt{\frac{R^2T^2}{4p^2} + \frac{a}{p}}\right)\left( 3aT^3 + 2bT^2 + cT \right) \; \text{.}
+    L_\pm = \left( \frac{RT}{2p} \pm \sqrt{\frac{R^2T^2}{4p^2} + \frac{a}{p}}\right)\left( 3aT^3 + 2bT^2 + cT \right) \; \text{,}
 \end{equation*} 
 wobei $a = \SI{0.9}{\joule\metre\tothe{3}\per\mole\squared}$ gilt.
 \begin{figure}
     \centering
-    \caption{Gegen die Temperatur aufgetragener Druck.}
+    \caption{Gegen die Temperatur aufgetragener Druck für $p > \SI{1}{\bar}$.}
     \label{fig:hochdruck}
     \includegraphics{build/hochdruck.pdf}
 \end{figure}
-In der Abbildung \ref{fig:Zeitabhaengigkeit} ist dieser errchnete Zusammenhang zwischen Temperatur und Verdampfungswärme graphisch dargestellt, wobei zwischen der Addition und 
+In der Abbildung \ref{fig:Zeitabhaengigkeit} ist dieser errechnete Zusammenhang zwischen Temperatur und Verdampfungswärme graphisch dargestellt, wobei zwischen der Addition und 
 Subtraktion der Wurzel mit $L_+$ und $L_-$ unterschieden wird.
 \begin{figure}
     \centering
-    \caption{Die Verdampfungswärme in Abhängigkeit von der Temperatur.}
+    \caption{Die Verdampfungswärme in Abhängigkeit von der Temperatur für $p > \SI{1}{\bar}$.}
     \label{fig:Zeitabhaengigkeit}
     \includegraphics{build/zeitabhaengigkeit.pdf}
 \end{figure}
