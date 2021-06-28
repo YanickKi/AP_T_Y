@@ -1,11 +1,11 @@
 \section{Theorie}
 \label{sec:Theorie}
-In diesem Versuch soll die Verdampfungswärme von Wasser bestimmt werden und die Dampfdruckkurve erstellt werden.
+In diesem Versuch soll die Verdampfungswärme von Wasser bestimmt und die Dampfdruckkurve erstellt werden.
 Außerdem wird die Temperaturabhängigkeit der Verdampfungswärme überprüft.
 \\
 Im Allgemeinen liegen Stoffe in einer der drei Phasen fest, flüssig oder gasförmig vor.
-Ein Zustandsdiagramm kann die Phasen eines Stoffes darstellen. Dabei ist der Druck $\rho$ gegen die Temperatur $T$ aufgetragen. Innerhalb eines abgeschlossenen Bereichs 
-hat das System zwei Freiheitsgrade. Das bedeutet, dass sich die Temperatur als auch der Druck ohne Phasenänderung ändern können. Wird jedoch eine Grenzlinie überschritten
+Ein Zustandsdiagramm kann die Phasen eines Stoffs darstellen. Dabei ist der Druck $\rho$ gegen die Temperatur $T$ aufgetragen. Innerhalb eines abgeschlossenen Bereichs 
+hat das System zwei Freiheitsgrade. Das bedeutet, dass sich die Temperatur als auch der Druck ohne Phasenänderung ändern können. Wird jedoch eine Grenzlinie überschritten,
 kommt es zu einer Phasenänderung. 
 In diesem Versuch wird die Phasenänderung von flüssig auf gasförmig des Wassers untersucht. 
 \begin{figure}
@@ -16,16 +16,16 @@ In diesem Versuch wird die Phasenänderung von flüssig auf gasförmig des Wasse
 \end{figure}
 Das Zustandsdiagramm von Wasser ist in Abbildung \ref{fig:zus} zu sehen. Die Dampfdruckkurve ist hierbei die Grenzlinie zwischen der festen und der gasförmigen Phase und befindet sich zwischen dem Tripelpunkt und dem kritischen Punkt.
 An dem Tripelpunkt liegen alle drei Phasen vor, während am kritischen Punkt die gasförmige und flüssige Phase koexistieren. Der Verlauf der Kurve wird durch 
-die Verdampfungswärme $L$ festgelegt, welche eine charakteristische Größe für jeden Stoff darstellt. Sie ist Temperaturabhängig und verschwindet in der nähe der Temperatur die
-zum Kurvenpunkt K.P. gehört. Es existiert jedoch ein weiter Temperaturbereich in dem $L$ nahezu konstant ist. Dort werden die Aufnahmen der Dampfdruckkurve und die Bestimmung
+die Verdampfungswärme $L$ festgelegt, welche eine charakteristische Größe für jeden Stoff darstellt. Sie ist temperaturabhängig und verschwindet in der Nähe der Temperatur die
+zum Kurvenpunkt K.P. gehört. Es existiert jedoch ein weiterer Temperaturbereich in dem $L$ nahezu konstant ist. Dort werden die Aufnahmen der Dampfdruckkurve und die Bestimmung
 der Verdampfungswärme in diesem Versuch durchgeführt. 
 \\
 Die molare Verdampfungswärme $L$ gibt an wie viel Wärmeenergie nötig ist um ein Mol einer Flüssigkeit isotherm und isobar zu verdampfen. 
 Die Verdampfung besteht darin, dass diejenigen Moleküle, die gemäß der Maxwellschen Geschwindigkeitsverteilung maximale kinetische Energie haben, die Flüssigkeitsoberfläche verlassen.
-Um in die gasförmige Phase zu gelangen, müssen die Teilchen die molekulare Bindungskraft überwinden. Die dazu nötige Energie muss entweder von außen hinzugefügt werdenoder dem Wasser entzogen werden, wodurch dieses abkühlt.
+Um in die gasförmige Phase zu gelangen, müssen die Teilchen die molekulare Bindungskraft überwinden. Die dazu nötige Energie muss entweder von außen hinzugefügt werden oder dem Wasser entzogen werden, wodurch dieses abkühlt.
 Auch im gasförmigen Zustand sind die Geschwindigkeiten Maxwell verteilt, weshalb der Prozess auch umgekehrt abläuft. Nach einiger Zeit stellt sich ein Gleichgewicht ein, wobei der dann herrschende Druck 
-Sättigungsdampfdruck genannt wird. Da dieser Druck nicht vom Volumen des Gasraumes abhängt, kann nicht mit der idealen Gasgleichung gerechnet werden.
-Die Dampfdruckkurve kann mit Hilfe der Berechnung eines reversiblen Kreisprozess für ein Mol eines Stoffes hergeleitet werden. Dieser Kreisprozess ist in Abbildung \ref{fig:kreis} zu sehen.
+Sättigungsdampfdruck genannt wird. Da dieser Druck nicht vom Volumen des Gasraums abhängt, kann nicht mit der idealen Gasgleichung gerechnet werden.
+Die Dampfdruckkurve kann mit Hilfe der Berechnung eines reversiblen Kreisprozess für ein Mol eines Stoffs hergeleitet werden. Dieser Kreisprozess ist in Abbildung \ref{fig:kreis} zu sehen.
 \begin{figure}
     \centering
     \caption{Kreisprozess von Wasser im p-V-Diagramm.\cite{v203}}
@@ -49,6 +49,7 @@ der Thermodynamik
 woraus sich mit weiteren Vereinfachungen die Clausius-Clapeyronsche Gleichung
 \begin{equation}
     (V_D-V_F)dp = \frac{L}{T}dT
+    \label{eqn:claus}
 \end{equation}
 ergibt. Die Integration dieser Gleichung ist im allgemeinen Falle schwierig, da $V_D$, $V_F$ und $L$ komplizierte Funktionen der Temperatur sein können.
 Allerdings können bei Temperaturen weit unter der kritischen Temperatur $T_{kr}$, die in Abbildung \ref{fig:kreis} eingeführt wurde und das obere Ende der Dampfdruckkurve beschreibt
@@ -58,14 +59,18 @@ folgende Näherungsannahmen genutzt werden. Diese lauten
     \item $V_D$ lässt sich mir der idealen Gasgleichung
         \begin{equation}
             V_D(p,T) =R \frac{T}{p}
+            \label{eqn:ideal}
         \end{equation}
         beschreiben.
     \item $L$ ist druck- und Temperaturunabhängig.
 \end{itemize}
 und daraus folgt durch Integration die Formel
-\begin{gather}
-    \ln p = - \frac{L}{R} \frac{1}{T} + \text{const} \\
-    \text{oder} \\
+\begin{equation}
+    \ln p = - \frac{L}{R} \frac{1}{T} + \text{const}
+    \label{eqn:log}
+\end{equation}
+oder
+\begin{equation}
     p= p_0 \exp \left(- \frac{L}{R} \frac{1}{T}\right)
-\end{gather}
+\end{equation}
 mit der Konstanten $C= \ln p_0$.
