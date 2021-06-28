@@ -29,7 +29,12 @@ plt.savefig('build/tiefdruck.pdf')
 
 L = - m * R #heat of evaporation 
 
+L_i = L - R * 373
+
+L_iMol = L_i / 6.02214076e23 / 1.602e-19
 
 print(f'Die Steigung der Ausgleichsgeraden Tiefdruck ist {m:.2f}')
 print(f'Der Achsenabschnitt der Ausgleichsgeraden Tiefdruck ist {b:.2f}')
 print(f'Die Verdampfungswärme beträgt {L}')
+print(f'L_i beträgt {L_i}')
+print(f'L_i pro Molekül beträgt in eV {L_iMol}')

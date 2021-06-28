@@ -37,9 +37,9 @@ $T_\text{g}$ in Der Abbildung \ref{fig:tiefdruck} graphisch dargestellt.
 \end{figure}
 Die Beziehung $REFERENZ$ lässt sich in eine Regressionsgerade der Form 
 \begin{equation*}
-    y = mx+b
+    \ln \left ( \sfrac{p}{p_0} \right) = \frac{m}{T}+b
 \end{equation*}
-umschreiben, wobei $y=\ln \left ( \sfrac{p}{p_0} \right)$ und $m=\sfrac{-L}{R}$ gilt.
+umschreiben, wobei $m=\sfrac{-L}{R}$ gilt.
 Dabei ergeben sich die Parameter zu 
 \begin{align*}
     m &= \SI{-3369.90(17463)}{\mole\kelvin}\\
@@ -51,6 +51,18 @@ eine Verdampfungswärme von
     L = \SI{2.80(15)e04}{\joule\per\mole}
 \end{equation*}
 errechnen lässt.
+Somit lässt sich die Arbeit $L_\text{i}$, welche zur Überwindung der molekularen Anziehungskräfte erforderlich ist, berechnen.
+Zuerst wird mittles der idealen Gasgleichung $REFERENZ$ die Verdampfungswärme $L_\text{a} = RT$ mit $T = \SI{373}{\kelvin}$ berechnet.
+Somit ergibt sich 
+\begin{equation*}
+    L_\text{i} = L - L_\text{a} = \SI{2.80(15)e04}{\joule\per\mole} - RT = \SI{2.49(15)e04}{\joule\per\mole} 
+\end{equation*}
+Um nun $L_\text{i}$ pro Molekül zu erhalten, wird durch die Avogadro-Konstante $N_\text{A} = \SI{6.02214076e23}{\per\mole}$\cite{avogadro} geteilt,
+woraus sich 
+\begin{equation*}
+    L_\text{i, Molekül} = \SI{0.258(15)}{\electronvolt}
+\end{equation*}
+ergibt.
 \subsection{Bestimmung der Zeitabhängigkeit der Verdampfungswärme}
 In der Tabelle \ref{tab:hochdruck} sind der gemessene Druck und die Temperatur für den Bereich $p > \SI{1}{\bar}$ aufeführt.
 \begin{table}
@@ -80,7 +92,7 @@ In der Tabelle \ref{tab:hochdruck} sind der gemessene Druck und die Temperatur f
 Die Messwerte sind dazu in der Abbildung \ref{fig:hochdruck} graphisch dargestellt.
 Die Regressionskurve wird durch ein Polynom dritten Grads der Form 
 \begin{equation*}
-    y = ax^3+bx^2+cx+d    
+    p \left(T\right) = aT^3+bT^2+cT+d    
 \end{equation*}
 errechnet, wobei sich die Parameter zu
 \begin{align*}
@@ -89,6 +101,7 @@ errechnet, wobei sich die Parameter zu
     c &= \SI{923918.92(28013445)}{\pascal\per\kelvin}     \\
     d &= \SI{-124836792.62(4018067192)}{\pascal\per\kelvin} \; \text{.}
 \end{align*}
+ergeben.
 Diese Regressionskurve wird nach T abgeleitet und in die nach L umgestellte Clausius-Clapeyronsche Gleichung $REFERENZ$ eingesetzt.
 Jedoch kann $V_\text{D}$ nicht mehr mittels der allgemeinen Gasgleichung bestimmt werden sondern muss mittels der Näherung
 \begin{equation*}
@@ -98,7 +111,7 @@ bestimmt werden.
 Das Volumen des in dem flüssigen Zustand kann erneut vernachlässigt werden.
 Somit ergibt sich für die Verdampfungswärme die Zeitabhängigkeit
 \begin{equation*}
-    L = \left( \frac{RT}{2p} \pm \sqrt{\frac{R^2T^2}{4p^2} + \frac{a}{p}}- V_\text{F}\right)\left( 5.79 T^3 + 4599.58 T^2 + 923918.92T \right) \; \text{.}
+    L_\pm = \left( \frac{RT}{2p} \pm \sqrt{\frac{R^2T^2}{4p^2} + \frac{a}{p}}\right)\left( 3aT^3 + 2bT^2 + cT \right) \; \text{.}
 \end{equation*} 
 wobei $a = \SI{0.9}{\joule\metre\tothe{3}\per\mole\squared}$ gilt.
 \begin{figure}
@@ -106,4 +119,12 @@ wobei $a = \SI{0.9}{\joule\metre\tothe{3}\per\mole\squared}$ gilt.
     \caption{Gegen die Temperatur aufgetragener Druck.}
     \label{fig:hochdruck}
     \includegraphics{build/hochdruck.pdf}
+\end{figure}
+In der Abbildung \ref{fig:Zeitabhaengigkeit} ist dieser errchnete Zusammenhang zwischen Temperatur und Verdampfungswärme graphisch dargestellt, wobei zwischen der Addition und 
+Subtraktion der Wurzel mit $L_+$ und $L_-$ unterschieden wird.
+\begin{figure}
+    \centering
+    \caption{Die Verdampfungswärme in Abhängigkeit von der Temperatur.}
+    \label{fig:Zeitabhaengigkeit}
+    \includegraphics{build/zeitabhaengigkeit.pdf}
 \end{figure}
