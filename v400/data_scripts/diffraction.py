@@ -3,12 +3,6 @@ from uncertainties import ufloat
 
 gsmall, rsmall, gmiddle, rmiddle, gbig, rbig = np.genfromtxt('diffraction.txt', unpack = True)
 
-def radians(theta):
-    return theta/180 * np.pi
-
-def degree(theta):
-    return theta/np.pi * 180
-
 def wavelength(d, phi):
     k = 1
     value= np.zeros(6)
@@ -21,12 +15,12 @@ d1 = 1e-5
 d2 = 1/3*1e-5
 d3 = 1/6*1e-5
 
-wgsmall  = wavelength(d1, radians(gsmall))
-wrsmall  = wavelength(d1, radians(rsmall)) 
-wgmiddle = wavelength(d2, radians(gmiddle))
-wrmiddle = wavelength(d2, radians(rmiddle))
-wgbig    = wavelength(d3, radians(gbig))
-wrbig    = wavelength(d3, radians(rbig))
+wgsmall  = wavelength(d1, np.deg2rad(gsmall))
+wrsmall  = wavelength(d1, np.deg2rad(rsmall)) 
+wgmiddle = wavelength(d2, np.deg2rad(gmiddle))
+wrmiddle = wavelength(d2, np.deg2rad(rmiddle))
+wgbig    = wavelength(d3, np.deg2rad(gbig))
+wrbig    = wavelength(d3, np.deg2rad(rbig))
 
 
 np.savetxt(
