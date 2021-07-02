@@ -1,8 +1,7 @@
 \section{Auswertung}
-\label{sec:Auswertung}Jegliche Fehlerrechnung wurde mit der python-Bibliothek uncertainties \cite{uncertainties} absolviert.
-Trotz dessen sind die Formeln für die Unsicherheiten in den jeweiligen Abschnitten angegeben.
+\label{sec:Auswertung}
 Allgemeine Rechnungen wurden mit der python-Bibliothek numpy \cite{numpy} automatisiert.  
-Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib}
+Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotlib \cite{matplotlib} erstellt.
 \subsection{Verifizierung der Funktion eines phasenempfindlichen Gleichrichters}
 \label{sec:phase}
 \begin{figure}
@@ -103,12 +102,12 @@ Die graphischen Unterstützungen wurden mit Hilfe der python-Bibliothek matplotl
     \end{subfigure}
     \caption{Ausgangsspannung bei $\phi = \ang{180;;}$}
 \end{figure}
-In der Tabelle \ref{tab:voltage} sind die gemessenen Ausgangsspannungen in Abhängigkit von der Phase
+\noindent In der Tabelle \ref{tab:voltage} sind die gemessenen Ausgangsspannungen in Abhängigkit von der Phase
 $\phi$ aufgezeichnet. 
-Dabei ist $U_\text{out}$ die unverrauschte Spannung und $U_\text{out}$ die verrauschte Spannung.
+Dabei ist $U_\text{out}$ die unverrauschte Spannung und $U_\text{out, noise}$ die verrauschte Spannung.
 \begin{table}
     \centering
-    \caption{Gemessen Ausgangsspannungen $U_\text{out}$ und $U_\text{out, noise}$}
+    \caption{Gemessen Ausgangsspannungen $U_\text{out}$ und $U_\text{out, noise}$.}
     \label{tab:voltage}
     \begin{tabular} {S[table-format=3.0] S[table-format=3.0] S[table-format=3.0]}
         \toprule
@@ -131,7 +130,7 @@ Zusätzlich ist dort eine Ausgleichskurve gemäß der Beziehung \eqref{eqn:cosin
 \begin{equation}
     U_\text{out} = a\cos \left ( b \, \phi + c \right ) + d
 \end{equation}
-beschreiben lässt, wobei der Parameter $a$ die Amplitude $U_0$ ist.
+beschreiben lässt.
 Für die unverrauschte Spannung ergeben sich die Parameter zu    
 \begin{align*}
     a &= \num{22.09(594)}       \\
@@ -141,39 +140,39 @@ Für die unverrauschte Spannung ergeben sich die Parameter zu
 \end{align*}
 Die Regressionsparameter der verrauschten Messwerte werden zu
 \begin{align*}
-    a_\text{noise} &= \num{0.68(13)} \\           
-    b_\text{noise} &= \num{2.11(19)}  \\            
+    a_\text{noise} &= \num{13.64(251)} \\           
+    b_\text{noise} &= \num{2.12(35)}  \\            
     c_\text{noise} &= \num{113.64(35)}\\
-    d_\text{noise} &= \num{2.54(9)}
+    d_\text{noise} &= \num{50.85(188)}
 \end{align*}
 berechnet.
 \begin{figure}
     \centering
-    \caption{Gemessene Spannungen $U_\text{out}$ mit Regressionskurve}
+    \caption{Gemessene Spannungen $U_\text{out}$ mit Regressionskurve.}
     \label{fig:Uwo}
     \includegraphics{build/Uwo.pdf}
 \end{figure}
 \begin{figure}
     \centering
-    \caption{Gemessene Spannungen $U_\text{out, noise}$ mit Regressionskurve}
+    \caption{Gemessene Spannungen $U_\text{out, noise}$ mit Regressionskurve.}
     \label{fig:Uwi}
     \includegraphics{build/Uwi.pdf}
 \end{figure}
-Somit können die Spannungsaplituden $U_0$ gemäß
+Somit können die Spannungsamplituden $U_0$ gemäß
 \begin{equation*}
     U_0 = \frac{\pi}{2} a
 \end{equation*}
 zu 
 \begin{align*}
     U_0                 & = \SI{33.7}{\milli\volt} \\
-    U_{0 \text{, noise}}& = \SI{1.07}{\milli\volt}
+    U_{0 \text{, noise}}& = \SI{21.42}{\milli\volt}
 \end{align*}
 bestimmt werden.
 \FloatBarrier
 \subsection{Überprüfung der Rauschunterdückung des Lock-In-Verstärkers mit einer Photodetektorschaltung}
 In der Tabelle \ref{tab:distance} ist die gemessene Sapnnung $U$ in Abhängigkeit des Abstands $r$
 zwischen der LED und der Photodiode aufgelistet.
-Dazu sind die Messwerte inklusive Regressionskurven mit einer $\sfrac{1}{r}$- und 
+Dazu sind die Messwerte inklusive Regressionskurven mit einer $\sfrac{1}{r}$ - und 
 $\sfrac{1}{r²}$ -Abhängigkeit in der Abbildung \ref{fig:distance} aufgetragen.
 Die Regressionskurven haben die Form
 \begin{equation*}
@@ -192,7 +191,7 @@ Dabei ergeben sich die Parameter zu
 \end{align*}
 \begin{table}
     \centering
-    \caption{Gemessene Spannungen $U$ und in Abhängigkeit des Abstands}
+    \caption{Gemessene Spannungen $U$ in Abhängigkeit des Abstands.}
     \label{tab:distance}
     \begin{tabular} {S[table-format=2.1] S[table-format=1.2 ]}
         \toprule
@@ -223,7 +222,7 @@ Dabei ergeben sich die Parameter zu
 \end{tabular}
 \end{table}
 \begin{figure}
-    \caption{Gemessene Spannungen und Regressionskurven in Abhängigkeit des Abstands}
+    \caption{Gemessene Spannungen und Regressionskurven in Abhängigkeit des Abstands.}
     \label{fig:distance}
     \includegraphics{build/distance.pdf}
 \end{figure}

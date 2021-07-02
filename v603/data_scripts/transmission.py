@@ -61,7 +61,7 @@ plt.savefig('build/transmission.pdf')
 
 I0= 2731
 I1= 1180
-I2= 1024
+I2= 1024 
 
 m = ufloat(params[0], errors[0])
 b = ufloat(params[1], errors[1])
