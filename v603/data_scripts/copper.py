@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 
 theta, N = np.genfromtxt('data_scripts/EmissionCu.dat', unpack = True)
 
-plt.plot(theta, N, '.', markersize = 0.5, label = r'$\text{Messwerte}$')
-plt.vlines(x = 20.2,ymin = 0, ymax = 1599, linewidth = 0.3, label = r'$K_\beta \text{ Linie}$' , color = 'tab:orange')
-plt.vlines(x = 22.5,ymin = 0, ymax = 5050, linewidth = 0.3, label = r'$K_\alpha\text{ Linie}$', color = 'tab:green')
+plt.plot(theta, N, '.', markersize = 0.7, label = r'$\text{Messwerte}$')
+plt.vlines(x = 20.2,ymin = 0, ymax = 1599, linewidth = 0.5, label = r'$K_\beta \text{ Linie}$' , color = 'tab:orange')
+plt.vlines(x = 22.5,ymin = 0, ymax = 5050, linewidth = 0.5, label = r'$K_\alpha\text{ Linie}$', color = 'tab:green')
 
 plt.xlabel(r'$\theta \mathbin{/} \si{\degree}$')
 plt.ylabel(r'$\text{N}$')

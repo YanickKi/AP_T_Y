@@ -11,7 +11,7 @@ def f(phi, a, b, c, d):
     return a*np.cos(b*phi+c) + d
 
 phase = radians(phase)
-Uwo *= 20 #SI 
+Uwi *= 20 #SI 
 
 
 params, covariance_matrix = curve_fit(f, phase, Uwi, p0=(30, 1, 113.92815598932053, 86.57729155463478))
