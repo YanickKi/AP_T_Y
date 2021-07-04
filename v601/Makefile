@@ -4,8 +4,21 @@ all: build/main.pdf
 #build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
 #	TEXINPUTS=$$(pwd): python plot.py
 
+build/frankherz1.pdf: data_scripts/frankherz1.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/frankherz1.py
+
+
+build/frankherz2.pdf: data_scripts/frankherz2.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/frankherz2.py
+
+build/potentialroom.pdf: data_scripts/potentialroom.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/potentialroom.py
+
+build/potentialhot.pdf: data_scripts/potentialhot.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python data_scripts/potentialhot.py
+
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-#build/main.pdf: build/plot.pdf
+build/main.pdf: build/frankherz1.pdf build/frankherz2.pdf build/potentialroom.pdf build/potentialhot.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
